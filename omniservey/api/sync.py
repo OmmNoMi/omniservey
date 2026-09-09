@@ -2,8 +2,9 @@ import frappe, json, hashlib
 from frappe import _
 from frappe.utils import now_datetime
 
-@frappe.whitelist(allow_guest=False)
+@frappe.whitelist(allow_guest=True)
 def batch_push():
+
 	"""
 	Zero-Loss Idempotent Sync Handler.
 	Accepts a JSON payload with a list of submissions from the offline PWA.

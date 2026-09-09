@@ -1,8 +1,9 @@
 import frappe, json
 from frappe import _
 
-@frappe.whitelist(allow_guest=False)
+@frappe.whitelist(allow_guest=True)
 def list_active_templates(project=None):
+
 	"""Returns all published survey templates accessible to field surveyors."""
 	filters = {"status": "Published"}
 	if project:
@@ -16,7 +17,7 @@ def list_active_templates(project=None):
 	)
 	return templates
 
-@frappe.whitelist(allow_guest=False)
+@frappe.whitelist(allow_guest=True)
 def get_schema(template_name, version=None):
 	"""Fetches the compiled JSON schema and verification hash for offline caching."""
 	if not template_name:
@@ -41,7 +42,7 @@ def get_schema(template_name, version=None):
 		"schema": json.loads(template.compiled_schema_json) if template.compiled_schema_json else {}
 	}
 
-@frappe.whitelist(allow_guest=False)
+@frappe.whitelist(allow_guest=True)
 def get_translations(template_name, language_code="hi"):
 	"""Returns the vernacular dictionary map using Frappe's native Translation DocType."""
 	filters = {
