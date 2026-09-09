@@ -27,7 +27,8 @@ name = "omniservey"
 packages = []
 
 [tool.bench.frappe-dependencies]
-frappe = ">=16.0.0-dev,<17.0.0"
+frappe = ">=16.0.0,<17.0.0"
+
 
 [project.urls]
 Homepage = "https://ommnomi.in"
