@@ -43,25 +43,25 @@ def get_schema(template_name, version=None):
 
 @frappe.whitelist(allow_guest=False)
 def get_translations(template_name, language_code="hi"):
-	"""Returns the vernacular dictionary map for a specific survey template and language."""
+	"""Returns the vernacular dictionary map using Frappe's native Translation DocType."""
+	filters = {
+		"language": language_code
+	}
+	if template_name:
+		filters["context"] = template_name
+		
 	translations = frappe.get_all(
-		"OmniServey Translation",
-		filters={
-			"survey_template": template_name,
-			"language_code": language_code
-		},
-		fields=["question_code", "translated_label", "translated_options_json", "translated_help_text"]
+		"Translation",
+		filters=filters,
+		fields=["source_text", "translated_text", "context"]
 	)
 	
-	dict_map = {}
-	for t in translations:
-		dict_map[t.question_code] = {
-			"label": t.translated_label,
-			"options": json.loads(t.translated_options_json) if t.translated_options_json else None,
-			"help_text": t.translated_help_text
-		}
+	# If no specific context translations found, fallback to general translations for this language
+	dict_map = {t.source_text: t.translated_text for t in translations}
+	
 	return {
 		"survey_template": template_name,
 		"language_code": language_code,
 		"translations": dict_map
 	}
+
