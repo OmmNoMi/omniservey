@@ -11,32 +11,21 @@ dependencies = [
     # "frappe~=16.0.0" # Installed and managed by bench.
 ]
 
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"
+
 [build-system]
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
-[tool.flit.module]
-name = "omniservey"
-
-# These dependencies are only installed when developer mode is enabled
 [tool.bench.dev-dependencies]
-# package_name = "~=1.1.0"
 
-# These apt dependencies will be installed from Ubuntu repositories when you host your app on Frappe Cloud
 [deploy.dependencies.apt]
 packages = []
 
-[tool.bench.frappe-dependencies]
-frappe = ">=16.0.0,<17.0.0"
-
-
-[project.urls]
-Homepage = "https://ommnomi.in"
-Repository = "https://github.com/OmmNoMi/omniservey.git"
-
 [tool.ruff]
 line-length = 110
-target-version = "py310"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = [
