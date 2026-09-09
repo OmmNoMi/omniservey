@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ENT-{entrepreneur_uid}",
+ "creation": "2026-09-10 01:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "entrepreneur_uid",
+  "full_name",
+  "phone_hash",
+  "phone_number",
+  "column_break_basic",
+  "age",
+  "caste_category",
+  "education_level",
+  "shg_name",
+  "section_enterprise",
+  "enterprise_name",
+  "enterprise_category",
+  "annual_turnover",
+  "employee_count",
+  "column_break_loc",
+  "village",
+  "block",
+  "district",
+  "state",
+  "gps_latitude",
+  "gps_longitude",
+  "section_security",
+  "aadhaar_encrypted",
+  "bank_account_encrypted",
+  "upi_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "entrepreneur_uid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Beneficiary UID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_hash",
+   "fieldtype": "Data",
+   "label": "Phone Search Hash",
+   "description": "SHA-256 for fast offline lookup",
+   "search_index": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_basic",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "caste_category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "General\nOBC\nSC\nST\nOther"
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Select",
+   "label": "Education Level",
+   "options": "No Formal Schooling\nPrimary\nMiddle\nSecondary (10th)\nSenior Secondary (12th)\nGraduate\nPost Graduate\nVocational"
+  },
+  {
+   "fieldname": "shg_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SHG Name / Group"
+  },
+  {
+   "fieldname": "section_enterprise",
+   "fieldtype": "Section Break",
+   "label": "Enterprise Profile"
+  },
+  {
+   "fieldname": "enterprise_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Enterprise Name"
+  },
+  {
+   "fieldname": "enterprise_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sector / Category",
+   "options": "Agriculture\nDairy & Livestock\nHandicrafts & Handlooms\nFood Processing\nRetail & Trading\nTextiles\nServices\nOther"
+  },
+  {
+   "default": "0",
+   "fieldname": "annual_turnover",
+   "fieldtype": "Currency",
+   "label": "Annual Turnover (INR)"
+  },
+  {
+   "default": "0",
+   "fieldname": "employee_count",
+   "fieldtype": "Int",
+   "label": "Total Employees / Helpers"
+  },
+  {
+   "fieldname": "column_break_loc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Village"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Data",
+   "label": "Block"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "District"
+  },
+  {
+   "default": "Himachal Pradesh",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "gps_latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "7"
+  },
+  {
+   "fieldname": "gps_longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "7"
+  },
+  {
+   "fieldname": "section_security",
+   "fieldtype": "Section Break",
+   "label": "Encrypted PII & Bank Details"
+  },
+  {
+   "fieldname": "aadhaar_encrypted",
+   "fieldtype": "Password",
+   "label": "Aadhaar / ID (Encrypted)"
+  },
+  {
+   "fieldname": "bank_account_encrypted",
+   "fieldtype": "Password",
+   "label": "Bank Account Details (Encrypted)"
+  },
+  {
+   "fieldname": "upi_id",
+   "fieldtype": "Data",
+   "label": "UPI ID"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-09-10 01:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "OmniServey",
+ "name": "OmniServey Entrepreneur",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "All",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

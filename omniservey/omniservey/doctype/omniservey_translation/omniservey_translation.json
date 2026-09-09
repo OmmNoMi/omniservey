@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-10 01:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "survey_template",
+  "question_code",
+  "language_code",
+  "translated_label",
+  "translated_options_json",
+  "translated_help_text"
+ ],
+ "fields": [
+  {
+   "fieldname": "survey_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Survey Template",
+   "options": "OmniServey Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question / Section Code",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "hi",
+   "fieldname": "language_code",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Language",
+   "options": "hi\nmr\ngu\nta\nte\nkn\nbn\nor\npa\nml\nen",
+   "reqd": 1
+  },
+  {
+   "fieldname": "translated_label",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Translated Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "translated_options_json",
+   "fieldtype": "Code",
+   "label": "Translated Options (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "translated_help_text",
+   "fieldtype": "Small Text",
+   "label": "Translated Help Text"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-09-10 01:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "OmniServey",
+ "name": "OmniServey Translation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All",
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
