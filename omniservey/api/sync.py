@@ -128,7 +128,7 @@ def batch_push():
 				"doc_name": resp_doc.name,
 				"synced_at": str(resp_doc.synced_at)
 			})
-			except Exception as e:
+		except Exception as e:
 			frappe.db.rollback(save_point=savepoint)
 			frappe.log_error(f"OmniServey Sync Error for {idempotency_key}", str(e))
 			
@@ -149,6 +149,7 @@ def batch_push():
 				"status": "FAILED",
 				"error": str(e)
 			})
+
 			
 	frappe.db.commit()
 	return {"results": results}
