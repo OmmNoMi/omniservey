@@ -1,0 +1,28 @@
+/* OmniServey PWA Custom Styles */
+body {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+input, textarea, select {
+  user-select: auto;
+}
+
+/* Custom Scrollbar for low memory */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Signature Pad Canvas */
+.signature-canvas {
+  touch-action: none;
+}

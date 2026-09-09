@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>OmniServey · Ultra-Light Offline Field Platform</title>
+  <meta name="theme-color" content="#1e293b">
+  <meta name="description" content="Next-Gen Dynamic Survey Engine & Zero-Data-Loss Offline PWA">
+  <link rel="manifest" href="/assets/omniservey/pwa/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/omniservey/pwa/icon-192.png">
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/dexie@3.2.4/dist/dexie.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/assets/omniservey/pwa/style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen">
+  <div id="app"></div>
+  <script src="/assets/omniservey/pwa/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/assets/omniservey/pwa/sw.js')
+        .then(reg => console.log('OmniServey SW registered:', reg.scope))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
+</body>
+</html>
