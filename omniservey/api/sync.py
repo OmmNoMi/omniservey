@@ -74,7 +74,7 @@ def batch_push():
 			resp_doc.idempotency_key = idempotency_key
 			resp_doc.survey_template = sub.get("survey_template")
 			resp_doc.template_version = sub.get("template_version") or 1
-			resp_doc.entrepreneur = sub.get("entrepreneur")
+			resp_doc.respondent = sub.get("respondent") or sub.get("entrepreneur")
 			resp_doc.surveyor = sub.get("surveyor") or surveyor_name or current_user
 			resp_doc.survey_status = "Submitted"
 			resp_doc.gps_latitude = sub.get("gps_latitude")

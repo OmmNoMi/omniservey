@@ -50,12 +50,13 @@
    "reqd": 1
   },
   {
-   "fieldname": "entrepreneur",
+   "fieldname": "respondent",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Beneficiary",
-   "options": "OmniServey Entrepreneur"
+   "label": "Respondent (Optional)",
+   "options": "OmniServey Respondent",
+   "reqd": 0
   },
   {
    "fieldname": "surveyor",
