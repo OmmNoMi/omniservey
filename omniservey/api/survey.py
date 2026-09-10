@@ -169,37 +169,20 @@ def get_translations(template_name=None, language_code="hi"):
 
 @frappe.whitelist(allow_guest=True)
 def get_available_languages():
-	"""Returns all enabled languages in Frappe sorted with prominent Indian vernaculars first."""
-	try:
-		langs = frappe.get_all(
-			"Language",
-			filters={"enabled": 1},
-			fields=["language_code", "language_name"],
-			order_by="language_name asc"
-		)
-	except Exception:
-		langs = frappe.get_all(
-			"Language",
-			fields=["language_code", "language_name"],
-			order_by="language_name asc"
-		)
-
-	# Priority sort for high-relevance languages
-	priority_codes = ["en", "hi", "mr", "gu", "pa", "bn", "ta", "te", "kn", "ml", "ur", "ar", "fr", "es"]
-	sorted_langs = []
-	seen = set()
-
-	for code in priority_codes:
-		match = next((l for l in langs if l.language_code == code), None)
-		if match:
-			sorted_langs.append({"code": match.language_code, "label": match.language_name})
-			seen.add(match.language_code)
-
-	for l in langs:
-		if l.language_code not in seen:
-			sorted_langs.append({"code": l.language_code, "label": l.language_name})
-
-	return sorted_langs
+	"""Returns strictly supported Indian vernacular languages + English for OmniServey field operations."""
+	return [
+		{"code": "en", "label": "English"},
+		{"code": "hi", "label": "हिन्दी (Hindi)"},
+		{"code": "mr", "label": "मराठी (Marathi)"},
+		{"code": "gu", "label": "ગુજરાતી (Gujarati)"},
+		{"code": "pa", "label": "ਪੰਜਾਬੀ (Punjabi)"},
+		{"code": "bn", "label": "বাংলা (Bengali)"},
+		{"code": "ta", "label": "தமிழ் (Tamil)"},
+		{"code": "te", "label": "తెలుగు (Telugu)"},
+		{"code": "kn", "label": "ಕನ್ನಡ (Kannada)"},
+		{"code": "ml", "label": "മലയാളം (Malayalam)"},
+		{"code": "ur", "label": "اردو (Urdu)"}
+	]
 
 @frappe.whitelist(allow_guest=True)
 def get_service_worker():

@@ -3432,9 +3432,11 @@ const app = createApp({
     const storagePersisted = ref(false);
     const permissionStatus = ref('loading'); // 'loading' | 'authorized' | 'restricted'
 
-    // Multi-Language Management
+    // Multi-Language Management (Exclusively Indian Regional Languages + English)
+    const INDIAN_LANG_CODES = new Set(['en', 'hi', 'mr', 'gu', 'pa', 'bn', 'ta', 'te', 'kn', 'ml', 'ur']);
     const currentLang = ref(localStorage.getItem('omniservey_lang') || 'hi');
     const languages = ref([
+      { code: 'en', label: 'English' },
       { code: 'hi', label: 'हिन्दी (Hindi)' },
       { code: 'mr', label: 'मराठी (Marathi)' },
       { code: 'gu', label: 'ગુજરાતી (Gujarati)' },
@@ -3444,8 +3446,7 @@ const app = createApp({
       { code: 'te', label: 'తెలుగు (Telugu)' },
       { code: 'kn', label: 'ಕನ್ನಡ (Kannada)' },
       { code: 'ml', label: 'മലയാളം (Malayalam)' },
-      { code: 'ur', label: 'اردو (Urdu)' },
-      { code: 'en', label: 'English' }
+      { code: 'ur', label: 'اردو (Urdu)' }
     ]);
 
     // Active Templates & Form State
@@ -3471,26 +3472,24 @@ const app = createApp({
     // Signature Canvas Registry
     const signaturePads = {};
 
-    // Toast Notification System
+    // Form Submission & Validation State
     const toastMessage = ref('');
-    const toastType = ref('success');
-    let toastTimeout = null;
-
-    function showToast(msg, type = 'success') {
-      toastMessage.value = msg;
-      toastType.value = type;
-      if (toastTimeout) clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toastMessage.value = '';
-      }, 3500);
-    }
-
-    // Validation Sheet / Modal State
+    const toastType = ref('success'); // 'success' | 'error' | 'info'
     const validationModalOpen = ref(false);
     const validationErrors = ref([]);
     const highlightedQuestion = ref('');
 
-    // Authenticated Surveyor Profile
+    function showToast(msg, type = 'success') {
+      toastMessage.value = msg;
+      toastType.value = type;
+      setTimeout(() => {
+        if (toastMessage.value === msg) {
+          toastMessage.value = '';
+        }
+      }, 3500);
+    }
+
+    // Current User Profile
     const currentUser = reactive({
       user: 'Guest',
       is_guest: true,
@@ -3532,8 +3531,8 @@ const app = createApp({
       localStorage.setItem('omniservey_lang', newLang);
       translationsMap.value = {};
       await loadTranslations(activeTemplate.value ? activeTemplate.value.name : null, newLang);
-      const langObj = languages.value.find(l => l.language_code === newLang);
-      const name = langObj ? langObj.language_name : newLang;
+      const langObj = languages.value.find(l => l.code === newLang);
+      const name = langObj ? langObj.label : newLang;
       showToast(`Language: ${name}`, 'info');
     });
 
@@ -3559,21 +3558,23 @@ const app = createApp({
       }
     });
 
-    // Fetch All Enabled Languages from Server
+    // Fetch Enabled Indian Languages from Server
     async function fetchAvailableLanguages() {
       try {
         const resp = await fetch('/api/method/omniservey.api.survey.get_available_languages');
         if (resp.ok) {
           const data = await resp.json();
           if (data.message && data.message.length > 0) {
-            languages.value = data.message.map(l => ({
-              code: l.code || l.language_code,
-              label: l.label || l.language_name || l.name
-            }));
+            const filtered = data.message
+              .map(l => ({ code: l.code || l.language_code, label: l.label || l.language_name || l.name }))
+              .filter(l => INDIAN_LANG_CODES.has(l.code));
+            if (filtered.length > 0) {
+              languages.value = filtered;
+            }
           }
         }
       } catch (err) {
-        console.warn('[Languages] Using pre-configured local language list');
+        console.warn('[Languages] Using pre-configured Indian language list');
       }
     }
 
