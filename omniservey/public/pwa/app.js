@@ -3999,14 +3999,7 @@ const app = createApp({
           </div>
 
           <!-- Top Action Controls -->
-          <div class="flex items-center space-x-2">
-            
-            <!-- Dedicated Top-Bar Save Offline Button (Always Visible in Form View) -->
-            <button v-if="currentView === 'form'" @click="saveOffline(false)" 
-                    class="min-h-[38px] px-2.5 py-1.5 rounded-xl bg-emerald-600/90 hover:bg-emerald-600 text-white text-xs font-bold flex items-center space-x-1 touch-press shadow-sm">
-              <span>💾</span>
-              <span class="hidden sm:inline">{{ t('Save Offline') }}</span>
-            </button>
+          <div class="flex items-center space-x-2 shrink-0">
 
             <!-- Network Status Pill -->
             <div :class="isOnline ? 'bg-emerald-950/80 border-emerald-700 text-emerald-300' : 'bg-rose-950/80 border-rose-700 text-rose-300'"
@@ -4017,7 +4010,7 @@ const app = createApp({
 
             <!-- Vernacular Language Switcher (10 Vernacular Languages) -->
             <select v-model="currentLang" 
-                    class="bg-slate-800 text-white text-xs font-semibold py-1.5 px-2.5 rounded-xl border border-slate-700 outline-none cursor-pointer">
+                    class="bg-slate-800 text-white text-xs font-semibold py-1.5 px-2.5 rounded-xl border border-slate-700 outline-none cursor-pointer max-w-[130px] truncate">
               <option v-for="lang in languages" :key="lang.code" :value="lang.code">
                 {{ lang.label }}
               </option>
@@ -4112,14 +4105,16 @@ const app = createApp({
             </div>
 
             <!-- Horizontal Section Progress Tabs -->
-            <div class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none">
-              <button v-for="(sec, sIdx) in sections" :key="sec.section_code"
-                      @click="activeSectionIndex = sIdx"
-                      :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-600')"
-                      class="px-3 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1">
-                <span v-if="isSectionComplete(sec)" class="text-[10px]">✓</span>
-                <span>{{ t(sec.section_title) }}</span>
-              </button>
+            <div class="w-full max-w-full overflow-hidden">
+              <div class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none w-full">
+                <button v-for="(sec, sIdx) in sections" :key="sec.section_code"
+                        @click="activeSectionIndex = sIdx"
+                        :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-600')"
+                        class="px-3 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1 shrink-0">
+                  <span v-if="isSectionComplete(sec)" class="text-[10px]">✓</span>
+                  <span>{{ t(sec.section_title) }}</span>
+                </button>
+              </div>
             </div>
           </div>
 
