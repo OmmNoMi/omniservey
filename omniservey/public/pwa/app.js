@@ -3472,77 +3472,118 @@ const app = createApp({
     // Signature Canvas Registry
     const signaturePads = {};
 
-    // Form Submission & Validation State
+    // Toast & Validation Notifications
     const toastMessage = ref('');
-    const toastType = ref('success'); // 'success' | 'error' | 'info'
+    const toastType = ref('info'); // 'info' | 'success' | 'error'
     const validationModalOpen = ref(false);
     const validationErrors = ref([]);
-    const highlightedQuestion = ref('');
+    const highlightedQuestion = ref(null);
+    const liveAnnouncement = ref('');
 
-    function showToast(msg, type = 'success') {
-      toastMessage.value = msg;
-      toastType.value = type;
-      setTimeout(() => {
-        if (toastMessage.value === msg) {
-          toastMessage.value = '';
-        }
-      }, 3500);
+    function announce(msg) {
+      liveAnnouncement.value = '';
+      nextTick(() => {
+        liveAnnouncement.value = msg;
+      });
     }
 
-    // Current User Profile
+    // Current User Profile State
     const currentUser = reactive({
-      user: 'Guest',
-      is_guest: true,
-      roles: [],
-      full_name: 'Guest Surveyor'
+      user: 'Administrator',
+      full_name: 'Administrator',
+      roles: ['System Manager'],
+      is_guest: false
     });
 
-    // WAL Submissions Queue
+    // Write-Ahead Log (WAL) State
     const walSubmissions = ref([]);
-    const pendingCount = computed(() => walSubmissions.value.filter(s => s.status === 'PENDING_SYNC').length);
+    const pendingCount = computed(() => {
+      return walSubmissions.value.filter(s => s.status === 'PENDING_SYNC' || s.status === 'DRAFT_OFFLINE').length;
+    });
 
-    // Multi-Language Translation Helper
-    function t(text, questionCode = null) {
+    // Computed Survey Schema Properties
+    const sections = computed(() => {
+      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.sections) {
+        return [];
+      }
+      return activeTemplate.value.schema.sections;
+    });
+
+    const activeSection = computed(() => {
+      if (sections.value.length === 0) return null;
+      return sections.value[activeSectionIndex.value] || sections.value[0];
+    });
+
+    const activeQuestions = computed(() => {
+      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions) {
+        return [];
+      }
+      const secCode = activeSection.value ? activeSection.value.section_code : null;
+      return activeTemplate.value.schema.questions.filter(q => q.section === secCode);
+    });
+
+    const categories = computed(() => {
+      const cats = new Set(['All']);
+      templates.value.forEach(t => {
+        if (t.target_category) cats.add(t.target_category);
+      });
+      return Array.from(cats);
+    });
+
+    const filteredTemplates = computed(() => {
+      return templates.value.filter(t => {
+        const matchesCategory = selectedCategory.value === 'All' || t.target_category === selectedCategory.value;
+        const matchesSearch = !searchQuery.value || 
+          (t.title && t.title.toLowerCase().includes(searchQuery.value.toLowerCase())) ||
+          (t.project && t.project.toLowerCase().includes(searchQuery.value.toLowerCase()));
+        return matchesCategory && matchesSearch;
+      });
+    });
+
+    // Translation Lookup Function
+    function t(text) {
       if (!text) return '';
       const lang = currentLang.value;
-      if (lang === 'en') return text;
 
-      // 1. Check Built-in Complete Vernacular Dictionary for Target Language
-      if (BUILTIN_TRANSLATIONS[lang] && BUILTIN_TRANSLATIONS[lang][text]) {
-        return BUILTIN_TRANSLATIONS[lang][text];
-      }
-
-      // 2. Check Server-Synced Dynamic Template Translation Map
+      // 1. Dynamic Server Translations
       if (translationsMap.value && translationsMap.value[text]) {
         return translationsMap.value[text];
       }
 
-      // 3. Fallback to Hindi if regional translation missing
-      if (lang !== 'hi' && BUILTIN_TRANSLATIONS.hi && BUILTIN_TRANSLATIONS.hi[text]) {
-        return BUILTIN_TRANSLATIONS.hi[text];
+      // 2. Built-in Client Dictionary
+      if (BUILTIN_TRANSLATIONS[lang] && BUILTIN_TRANSLATIONS[lang][text]) {
+        return BUILTIN_TRANSLATIONS[lang][text];
       }
 
-      // 4. Default to Original English Text
+      // 3. Fallback to Hindi
+      if (lang !== 'hi' && BUILTIN_TRANSLATIONS['hi'] && BUILTIN_TRANSLATIONS['hi'][text]) {
+        return BUILTIN_TRANSLATIONS['hi'][text];
+      }
+
+      // 4. Default to Original Text
       return text;
     }
 
     // Reactive Language Switcher Watcher
     watch(currentLang, async (newLang) => {
       localStorage.setItem('omniservey_lang', newLang);
+      document.documentElement.lang = newLang;
       translationsMap.value = {};
       await loadTranslations(activeTemplate.value ? activeTemplate.value.name : null, newLang);
       const langObj = languages.value.find(l => l.code === newLang);
       const name = langObj ? langObj.label : newLang;
       showToast(`Language: ${name}`, 'info');
+      announce(`Language changed to ${name}`);
     });
 
     // Initial Bootstrap
     onMounted(async () => {
+      document.documentElement.lang = currentLang.value || 'en';
       if (navigator.storage && navigator.storage.persist) {
         storagePersisted.value = await navigator.storage.persist();
       }
-      window.addEventListener('online', () => { isOnline.value = true; autoSync(); });
-      window.addEventListener('offline', () => { isOnline.value = false; });
+      window.addEventListener('online', () => { isOnline.value = true; autoSync(); announce('Network online'); });
+      window.addEventListener('offline', () => { isOnline.value = false; announce('Network offline'); });
 
       await fetchCurrentUserInfo();
       await loadTemplatesFromDB();
@@ -3673,18 +3714,18 @@ const app = createApp({
     async function startSurvey(template, existingSubmission = null) {
       activeTemplate.value = template;
       activeSectionIndex.value = 0;
+      validationErrors.value = [];
+      highlightedQuestion.value = null;
 
+      // Clear reactive form data
       Object.keys(formData).forEach(k => delete formData[k]);
-      currentGPS.latitude = null;
-      currentGPS.longitude = null;
-      currentGPS.accuracy = null;
-      currentGPS.altitude = null;
-      currentGPS.error = null;
 
       if (existingSubmission) {
-        currentUUID.value = existingSubmission.idempotency_key || generateUUID();
-        if (existingSubmission.formDataRaw) {
-          Object.assign(formData, existingSubmission.formDataRaw);
+        currentUUID.value = existingSubmission.idempotency_key;
+        if (existingSubmission.items) {
+          existingSubmission.items.forEach(item => {
+            formData[item.question_code] = item.response_value;
+          });
         }
         if (existingSubmission.gps_latitude) {
           currentGPS.latitude = existingSubmission.gps_latitude;
@@ -3693,55 +3734,145 @@ const app = createApp({
         }
       } else {
         currentUUID.value = generateUUID();
+        currentGPS.latitude = null;
+        currentGPS.longitude = null;
+        currentGPS.accuracy = null;
+        currentGPS.error = null;
       }
 
       await loadTranslations(template.name, currentLang.value);
       currentView.value = 'form';
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      announce(`Started survey ${template.title}. Step 1 of ${sections.value.length}`);
     }
 
-    async function loadTranslations(templateName, lang) {
-      if (lang === 'en') {
+    async function loadTranslations(templateName, langCode) {
+      if (langCode === 'en') {
         translationsMap.value = {};
         return;
       }
+
       try {
-        const local = await db.translations.get([templateName || 'GLOBAL', lang]);
-        if (local && local.dictionary) {
-          translationsMap.value = local.dictionary;
+        if (templateName) {
+          const cached = await db.translations.get([templateName, langCode]);
+          if (cached && cached.translations) {
+            translationsMap.value = cached.translations;
+            return;
+          }
         }
 
         if (isOnline.value) {
-          const url = templateName 
-            ? `/api/method/omniservey.api.survey.get_translations?template_name=${encodeURIComponent(templateName)}&language_code=${lang}`
-            : `/api/method/omniservey.api.survey.get_translations?language_code=${lang}`;
+          let url = `/api/method/omniservey.api.survey.get_translations?language_code=${encodeURIComponent(langCode)}`;
+          if (templateName) {
+            url += `&template_name=${encodeURIComponent(templateName)}`;
+          }
           const resp = await fetch(url);
           if (resp.ok) {
             const data = await resp.json();
-            if (data.message) {
-              translationsMap.value = { ...translationsMap.value, ...data.message };
-              await db.translations.put(JSON.parse(JSON.stringify({
-                survey_template: templateName || 'GLOBAL',
-                language_code: lang,
-                dictionary: translationsMap.value
-              })));
+            if (data.message && data.message.translations) {
+              translationsMap.value = data.message.translations;
+              if (templateName) {
+                await db.translations.put({
+                  survey_template: templateName,
+                  language_code: langCode,
+                  translations: data.message.translations
+                });
+              }
             }
           }
         }
       } catch (err) {
-        console.warn('[Translation] Using local/fallback translation dictionaries');
+        console.warn('[Translation] Using client dictionary for', langCode);
       }
     }
 
-    async function fetchGPS() {
-      currentGPS.fetching = true;
-      currentGPS.error = null;
+    function showToast(msg, type = 'info') {
+      toastMessage.value = msg;
+      toastType.value = type;
+      setTimeout(() => {
+        if (toastMessage.value === msg) {
+          toastMessage.value = '';
+        }
+      }, 3500);
+    }
 
-      if (!('geolocation' in navigator)) {
-        currentGPS.error = 'Hardware Geolocation is not supported by your device browser.';
-        currentGPS.fetching = false;
+    function isSectionComplete(sec) {
+      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions) return false;
+      const qList = activeTemplate.value.schema.questions.filter(q => q.section === sec.section_code);
+      if (qList.length === 0) return true;
+      const mandatory = qList.filter(q => q.is_mandatory);
+      if (mandatory.length === 0) return true;
+      return mandatory.every(q => {
+        const val = formData[q.question_code];
+        return val !== undefined && val !== null && String(val).trim() !== '';
+      });
+    }
+
+    function nextSection() {
+      if (activeSectionIndex.value < sections.value.length - 1) {
+        activeSectionIndex.value++;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollTabIntoView(activeSectionIndex.value);
+        announce(`Moved to Step ${activeSectionIndex.value + 1}: ${t(activeSection.value.section_title)}`);
+      }
+    }
+
+    function prevSection() {
+      if (activeSectionIndex.value > 0) {
+        activeSectionIndex.value--;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollTabIntoView(activeSectionIndex.value);
+        announce(`Moved back to Step ${activeSectionIndex.value + 1}: ${t(activeSection.value.section_title)}`);
+      }
+    }
+
+    function scrollTabs(direction) {
+      const container = document.getElementById('section_tabs_container');
+      if (container) {
+        const scrollAmount = direction === 'left' ? -180 : 180;
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
+
+    function scrollTabIntoView(index) {
+      nextTick(() => {
+        const tab = document.getElementById('sec_tab_' + index);
+        if (tab && tab.scrollIntoView) {
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    }
+
+    function jumpToQuestion(questionCode, secIndex) {
+      validationModalOpen.value = false;
+      activeSectionIndex.value = secIndex;
+      scrollTabIntoView(secIndex);
+      nextTick(() => {
+        highlightedQuestion.value = questionCode;
+        const el = document.getElementById('q_card_' + questionCode);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const inputEl = document.getElementById('input_' + questionCode);
+          if (inputEl) inputEl.focus();
+        }
+        setTimeout(() => {
+          if (highlightedQuestion.value === questionCode) {
+            highlightedQuestion.value = null;
+          }
+        }, 3000);
+      });
+    }
+
+    function fetchGPS() {
+      if (!navigator.geolocation) {
+        currentGPS.error = 'Geolocation is not supported on this device/browser.';
+        showToast(currentGPS.error, 'error');
         return;
       }
+
+      currentGPS.fetching = true;
+      currentGPS.error = null;
+      announce('Acquiring high precision GPS fix');
 
       navigator.geolocation.getCurrentPosition(
         (pos) => {
@@ -3750,12 +3881,21 @@ const app = createApp({
           currentGPS.accuracy = pos.coords.accuracy;
           currentGPS.altitude = pos.coords.altitude;
           currentGPS.fetching = false;
-          showToast(`✓ GPS Fix Acquired (±${pos.coords.accuracy.toFixed(1)}m)`, 'success');
+
+          if (activeTemplate.value && activeTemplate.value.schema && activeTemplate.value.schema.questions) {
+            const gpsQ = activeTemplate.value.schema.questions.find(q => q.field_type === 'GPS Location');
+            if (gpsQ) {
+              formData[gpsQ.question_code] = `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
+            }
+          }
+          showToast(`GPS Acquired: ±${pos.coords.accuracy.toFixed(0)}m`, 'success');
+          announce(`GPS location acquired with accuracy ${pos.coords.accuracy.toFixed(0)} meters`);
         },
         (err) => {
           currentGPS.fetching = false;
-          currentGPS.error = `GPS Signal Error: ${err.message} (Code ${err.code})`;
+          currentGPS.error = `GPS Error: ${err.message} (Code: ${err.code})`;
           showToast(currentGPS.error, 'error');
+          announce(currentGPS.error);
         },
         {
           enableHighAccuracy: true,
@@ -3765,314 +3905,173 @@ const app = createApp({
       );
     }
 
-    function initSignaturePad(canvasEl, questionCode) {
-      if (!canvasEl) return;
-      
-      const rect = canvasEl.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
-      canvasEl.width = rect.width * dpr;
-      canvasEl.height = (rect.height || 140) * dpr;
-      
-      const ctx = canvasEl.getContext('2d');
-      ctx.scale(dpr, dpr);
-      ctx.strokeStyle = '#0f172a';
-      ctx.lineWidth = 2.5;
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-
-      let isDrawing = false;
-      let lastX = 0;
-      let lastY = 0;
-
-      function getPos(e) {
-        const r = canvasEl.getBoundingClientRect();
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        return [clientX - r.left, clientY - r.top];
-      }
-
-      function startDraw(e) {
-        isDrawing = true;
-        [lastX, lastY] = getPos(e);
-      }
-
-      function draw(e) {
-        if (!isDrawing) return;
-        if (e.cancelable) e.preventDefault();
-        const [x, y] = getPos(e);
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(x, y);
-        ctx.stroke();
-        [lastX, lastY] = [x, y];
-      }
-
-      function stopDraw() {
-        if (isDrawing) {
-          isDrawing = false;
-          formData[questionCode] = canvasEl.toDataURL('image/png');
-        }
-      }
-
-      canvasEl.onmousedown = startDraw;
-      canvasEl.onmousemove = draw;
-      window.addEventListener('mouseup', stopDraw);
-
-      canvasEl.ontouchstart = startDraw;
-      canvasEl.ontouchmove = draw;
-      window.addEventListener('touchend', stopDraw);
-
-      signaturePads[questionCode] = { canvasEl, ctx };
-
-      if (formData[questionCode]) {
-        const img = new Image();
-        img.src = formData[questionCode];
-        img.onload = () => {
-          ctx.drawImage(img, 0, 0, rect.width, (rect.height || 140));
-        };
-      }
-    }
-
-    function clearSignature(questionCode) {
-      const pad = signaturePads[questionCode];
-      if (pad) {
-        const { canvasEl, ctx } = pad;
-        ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-      }
-      delete formData[questionCode];
-      showToast('Signature cleared', 'info');
-    }
-
     async function handlePhotoUpload(questionCode, event) {
       const file = event.target.files[0];
       if (!file) return;
 
       try {
-        const compressedDataUrl = await compressImage(file, currentGPS);
-        formData[questionCode] = compressedDataUrl;
-        showToast('✓ Photo compressed with GPS watermark', 'success');
+        showToast('Compressing photo & stamping GPS watermark...', 'info');
+        const compressedBase64 = await compressImage(file, currentGPS);
+        formData[questionCode] = compressedBase64;
+        showToast('Photo attached successfully', 'success');
+        announce('Photo compressed and attached');
       } catch (err) {
-        showToast('Image error: ' + err.message, 'error');
+        console.error('Image compression error:', err);
+        showToast('Failed to process image file', 'error');
       }
     }
 
     function removePhoto(questionCode) {
       delete formData[questionCode];
+      showToast('Photo removed', 'info');
+      announce('Photo removed');
     }
 
-    const sections = computed(() => {
-      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.sections) return [];
-      return activeTemplate.value.schema.sections;
-    });
+    function initSignaturePad(canvas, questionCode) {
+      if (!canvas) return;
+      let isDrawing = false;
+      const ctx = canvas.getContext('2d');
+      ctx.lineWidth = 2.5;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = '#0f172a';
 
-    const activeSection = computed(() => {
-      if (!sections.value || sections.value.length === 0) return null;
-      return sections.value[activeSectionIndex.value] || null;
-    });
-
-    const activeQuestions = computed(() => {
-      if (!activeTemplate.value || !activeSection.value) return [];
-      const secCode = activeSection.value.section_code;
-      return (activeTemplate.value.schema.questions || []).filter(q => {
-        if (q.section_code !== secCode) return false;
-        if (q.conditional_logic) {
-          const depField = q.conditional_logic.depends_on;
-          const targetVal = q.conditional_logic.equals;
-          if (depField && targetVal !== undefined && formData[depField] !== targetVal) {
-            return false;
-          }
-        }
-        return true;
-      });
-    });
-
-    function isSectionComplete(section) {
-      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions) return false;
-      const questions = activeTemplate.value.schema.questions.filter(q => q.section_code === section.section_code);
-      if (questions.length === 0) return true;
-
-      for (const q of questions) {
-        if (q.conditional_logic) {
-          const depField = q.conditional_logic.depends_on;
-          const targetVal = q.conditional_logic.equals;
-          if (depField && targetVal !== undefined && formData[depField] !== targetVal) {
-            continue;
-          }
-        }
-        if (q.is_mandatory) {
-          const val = formData[q.question_code];
-          if (q.field_type === 'GPS Location') {
-            if (!currentGPS.latitude) return false;
-          } else if (val === undefined || val === null || val === '') {
-            return false;
-          }
-        }
+      function resize() {
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
       }
-      return true;
-    }
+      resize();
 
-    const categories = computed(() => {
-      const set = new Set(['All']);
-      for (const t of templates.value) {
-        if (t.target_category) set.add(t.target_category);
+      function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return {
+          x: clientX - rect.left,
+          y: clientY - rect.top
+        };
       }
-      return Array.from(set);
-    });
 
-    const filteredTemplates = computed(() => {
-      return templates.value.filter(t => {
-        const matchesCategory = selectedCategory.value === 'All' || t.target_category === selectedCategory.value;
-        const q = searchQuery.value.toLowerCase().trim();
-        const matchesQuery = !q || t.title.toLowerCase().includes(q) || (t.project && t.project.toLowerCase().includes(q));
-        return matchesCategory && matchesQuery;
-      });
-    });
-
-    function nextSection() {
-      if (activeSectionIndex.value < sections.value.length - 1) {
-        activeSectionIndex.value++;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      function startDraw(e) {
+        e.preventDefault();
+        isDrawing = true;
+        const pos = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
       }
-    }
 
-    function prevSection() {
-      if (activeSectionIndex.value > 0) {
-        activeSectionIndex.value--;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      function draw(e) {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const pos = getPos(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
       }
-    }
 
-    function jumpToQuestion(errItem) {
-      validationModalOpen.value = false;
-      activeSectionIndex.value = errItem.section_idx;
-      highlightedQuestion.value = errItem.question_code;
-      nextTick(() => {
-        const el = document.getElementById('q_card_' + errItem.question_code);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      });
-      setTimeout(() => {
-        if (highlightedQuestion.value === errItem.question_code) {
-          highlightedQuestion.value = '';
-        }
-      }, 4000);
-    }
-
-    // Auto-scroll active tab into view whenever section changes
-    watch(activeSectionIndex, (newIdx) => {
-      nextTick(() => {
-        const el = document.getElementById('sec_tab_' + newIdx);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      });
-    });
-
-    function scrollTabs(direction) {
-      const container = document.getElementById('section_tabs_container');
-      if (container) {
-        const offset = direction === 'left' ? -180 : 180;
-        container.scrollBy({ left: offset, behavior: 'smooth' });
+      function endDraw(e) {
+        if (!isDrawing) return;
+        isDrawing = false;
+        formData[questionCode] = canvas.toDataURL('image/png');
       }
+
+      canvas.addEventListener('mousedown', startDraw);
+      canvas.addEventListener('mousemove', draw);
+      canvas.addEventListener('mouseup', endDraw);
+      canvas.addEventListener('touchstart', startDraw, { passive: false });
+      canvas.addEventListener('touchmove', draw, { passive: false });
+      canvas.addEventListener('touchend', endDraw, { passive: false });
+
+      signaturePads[questionCode] = { canvas, ctx, resize };
     }
 
-    // ==========================================================
-    // ZERO-LOSS WRITE-AHEAD LOG (WAL) PERSISTENCE ENGINE
-    // ==========================================================
-    async function saveOffline(isFinalSubmission = false) {
+    function clearSignature(questionCode) {
+      const pad = signaturePads[questionCode];
+      if (pad) {
+        pad.ctx.clearRect(0, 0, pad.canvas.width, pad.canvas.height);
+      }
+      delete formData[questionCode];
+      showToast('Signature cleared', 'info');
+      announce('Signature cleared');
+    }
+
+    async function saveOffline(isFinalSubmit = false) {
       try {
-        if (!currentUUID.value) {
-          currentUUID.value = generateUUID();
+        if (!activeTemplate.value) {
+          showToast('No active survey template', 'error');
+          return;
         }
 
-        const items = [];
-        for (const q of (activeTemplate.value.schema.questions || [])) {
-          const val = formData[q.question_code];
-          if (val !== undefined && val !== null && val !== '') {
-            items.push({
-              question_code: q.question_code,
-              question_label: q.label_en,
-              value: val
+        const answers = [];
+        for (const [code, val] of Object.entries(formData)) {
+          if (val !== undefined && val !== null && String(val).trim() !== '') {
+            answers.push({
+              question_code: code,
+              response_value: typeof val === 'object' ? JSON.stringify(val) : String(val)
             });
           }
-        }
-
-        const status = isFinalSubmission ? 'PENDING_SYNC' : 'DRAFT_OFFLINE';
-
-        let cleanFormData = {};
-        try {
-          cleanFormData = JSON.parse(JSON.stringify(formData));
-        } catch (e) {
-          cleanFormData = { ...formData };
         }
 
         const submission = {
           idempotency_key: currentUUID.value,
           survey_template: activeTemplate.value.name,
-          template_version: activeTemplate.value.version || 1,
-          surveyor: currentUser.full_name || 'Field Surveyor',
-          status: status,
+          template_version: activeTemplate.value.version,
+          gps_latitude: currentGPS.latitude || null,
+          gps_longitude: currentGPS.longitude || null,
+          gps_accuracy: currentGPS.accuracy || null,
           captured_at_local: new Date().toISOString(),
-          gps_latitude: currentGPS.latitude,
-          gps_longitude: currentGPS.longitude,
-          gps_accuracy: currentGPS.accuracy,
-          items: items,
-          formDataRaw: cleanFormData,
+          status: isFinalSubmit ? 'PENDING_SYNC' : 'DRAFT_OFFLINE',
+          items: answers,
           retry_count: 0
         };
 
         await db.wal.put(JSON.parse(JSON.stringify(submission)));
         await loadWALFromDB();
 
-        if (isFinalSubmission) {
-          validationModalOpen.value = false;
-          showToast(t('✓ Survey Submitted & Stored Locally in WAL!'), 'success');
-          currentView.value = 'queue';
+        if (isFinalSubmit) {
+          showToast('Survey submitted and queued in WAL', 'success');
+          announce('Survey submitted successfully');
           if (isOnline.value) {
-            autoSync().catch(e => console.warn('[AutoSync] Network sync err:', e));
+            autoSync();
           }
+          currentView.value = 'queue';
         } else {
-          validationModalOpen.value = false;
-          showToast(t('💾 Draft Saved to Offline Device Storage!'), 'success');
+          showToast('Offline draft saved locally', 'success');
+          announce('Draft saved locally');
         }
       } catch (err) {
-        console.error('[SaveOffline Error]', err);
-        showToast('Storage error: ' + (err.message || err), 'error');
+        console.error('[saveOffline Error]', err);
+        showToast('Error saving record: ' + (err.message || err), 'error');
       }
     }
 
-    // Submit Survey with Interactive Multi-Section Validation Sheet
     async function commitToWAL() {
       try {
-        const missingMandatory = [];
-        for (const q of (activeTemplate.value.schema.questions || [])) {
-          if (q.conditional_logic) {
-            const depField = q.conditional_logic.depends_on;
-            const targetVal = q.conditional_logic.equals;
-            if (depField && targetVal !== undefined && formData[depField] !== targetVal) {
-              continue;
-            }
-          }
-          if (q.is_mandatory) {
-            const val = formData[q.question_code];
-            let isMissing = false;
-            if (q.field_type === 'GPS Location') {
-              if (!currentGPS.latitude) isMissing = true;
-            } else if (val === undefined || val === null || val === '') {
-              isMissing = true;
-            }
+        if (!activeTemplate.value) {
+          showToast('No active survey template', 'error');
+          return;
+        }
 
-            if (isMissing) {
-              const secIdx = sections.value.findIndex(s => s.section_code === q.section_code);
-              const secObj = sections.value[secIdx];
-              missingMandatory.push({
-                question_code: q.question_code,
-                label: t(q.label_en),
-                section_idx: secIdx >= 0 ? secIdx : 0,
-                section_title: secObj ? t(secObj.section_title) : '',
-                field_type: q.field_type
-              });
+        const missingMandatory = [];
+        const allSections = activeTemplate.value.schema.sections || [];
+        const allQuestions = activeTemplate.value.schema.questions || [];
+
+        for (let sIdx = 0; sIdx < allSections.length; sIdx++) {
+          const sec = allSections[sIdx];
+          const secQuestions = allQuestions.filter(q => q.section === sec.section_code);
+          
+          for (const q of secQuestions) {
+            if (q.is_mandatory) {
+              const val = formData[q.question_code];
+              if (val === undefined || val === null || String(val).trim() === '') {
+                missingMandatory.push({
+                  question_code: q.question_code,
+                  label: q.label_en,
+                  section_title: sec.section_title,
+                  section_index: sIdx,
+                  field_type: q.field_type
+                });
+              }
             }
           }
         }
@@ -4080,6 +4079,7 @@ const app = createApp({
         if (missingMandatory.length > 0) {
           validationErrors.value = missingMandatory;
           validationModalOpen.value = true;
+          announce(`Validation error: ${missingMandatory.length} mandatory questions pending`);
           return;
         }
 
@@ -4104,6 +4104,7 @@ const app = createApp({
         await db.wal.delete(idempotency_key);
         await loadWALFromDB();
         showToast('Item removed from local storage', 'info');
+        announce('Item removed from local storage');
       }
     }
 
@@ -4159,6 +4160,7 @@ const app = createApp({
           }
         }
         await loadWALFromDB();
+        announce('Background sync complete');
       } catch (err) {
         console.warn('[Sync] Background sync paused (offline/network error)', err);
       } finally {
@@ -4175,6 +4177,7 @@ const app = createApp({
       downloadAnchor.click();
       downloadAnchor.remove();
       showToast('Offline WAL backup exported', 'success');
+      announce('Offline WAL backup exported');
     }
 
     return {
@@ -4200,6 +4203,7 @@ const app = createApp({
       validationModalOpen,
       validationErrors,
       highlightedQuestion,
+      liveAnnouncement,
       currentUser,
       walSubmissions,
       pendingCount,
@@ -4229,32 +4233,44 @@ const app = createApp({
   template: `
     <div class="min-h-screen flex flex-col bg-slate-100 text-slate-900 pb-20 sm:pb-0">
 
-      <!-- FLOATING TOAST NOTIFICATION -->
-      <div v-if="toastMessage" 
-           class="fixed top-16 left-4 right-4 z-50 max-w-md mx-auto p-3.5 rounded-2xl shadow-xl border flex items-center justify-between text-xs font-bold transition-all duration-300 animate-bounce"
-           :class="toastType === 'success' ? 'bg-emerald-600 text-white border-emerald-500' : (toastType === 'error' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-900 text-white border-slate-700')">
-        <div class="flex items-center space-x-2">
-          <span>{{ toastType === 'success' ? '✓' : (toastType === 'error' ? '⚠️' : 'ℹ️') }}</span>
-          <span>{{ toastMessage }}</span>
-        </div>
-        <button @click="toastMessage = ''" class="ml-2 text-white/80 hover:text-white font-bold text-sm">✕</button>
+      <!-- ARIA LIVE REGION FOR SCREEN READERS -->
+      <div aria-live="polite" role="status" class="sr-only">
+        {{ liveAnnouncement }}
       </div>
 
-      <!-- 1. STICKY TOP HEADER (Phone & Desktop) -->
-      <header class="bg-slate-900 text-white shadow-md sticky top-0 z-40 border-b border-slate-800 pt-safe">
+      <!-- FLOATING TOAST NOTIFICATION -->
+      <div v-if="toastMessage" 
+           role="alert"
+           aria-live="assertive"
+           class="fixed top-16 left-4 right-4 z-50 max-w-md mx-auto p-3.5 rounded-2xl shadow-xl border flex items-center justify-between text-xs font-bold transition-all duration-300 animate-bounce"
+           :class="toastType === 'success' ? 'bg-emerald-700 text-white border-emerald-600' : (toastType === 'error' ? 'bg-rose-700 text-white border-rose-600' : 'bg-slate-900 text-white border-slate-700')">
+        <div class="flex items-center space-x-2">
+          <span aria-hidden="true">{{ toastType === 'success' ? '✓' : (toastType === 'error' ? '⚠️' : 'ℹ️') }}</span>
+          <span>{{ toastMessage }}</span>
+        </div>
+        <button type="button" @click="toastMessage = ''" aria-label="Dismiss notification" class="ml-2 min-h-[32px] min-w-[32px] flex items-center justify-center text-white hover:text-slate-200 font-bold text-sm">✕</button>
+      </div>
+
+      <!-- 1. STICKY TOP HEADER (WCAG Banner Landmark) -->
+      <header role="banner" class="bg-slate-900 text-white shadow-md sticky top-0 z-40 border-b border-slate-800 pt-safe">
         <div class="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
           
-          <!-- Logo & Brand -->
-          <div class="flex items-center space-x-2.5 cursor-pointer touch-press" @click="currentView = 'templates'">
-            <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center font-black text-white text-base shadow-sm">
+          <!-- Logo & Brand (Interactive Link) -->
+          <div role="button" 
+               tabindex="0"
+               @click="currentView = 'templates'" 
+               @keydown.enter="currentView = 'templates'"
+               @keydown.space.prevent="currentView = 'templates'"
+               class="flex items-center space-x-2.5 cursor-pointer touch-press rounded-xl p-1 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+            <div aria-hidden="true" class="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center font-black text-white text-base shadow-sm">
               Ω
             </div>
             <div>
               <div class="font-bold text-sm leading-tight tracking-tight flex items-center space-x-1.5">
                 <span>{{ t('OmniServey') }}</span>
-                <span class="text-[10px] bg-slate-800 text-indigo-300 px-1.5 py-0.2 rounded font-mono">v16</span>
+                <span class="text-[10px] bg-slate-800 text-indigo-300 px-1.5 py-0.2 rounded font-mono font-bold">v16</span>
               </div>
-              <div class="text-[10px] text-slate-400 font-medium truncate max-w-[130px]">
+              <div class="text-[10px] text-slate-300 font-medium truncate max-w-[130px]">
                 {{ currentUser.full_name }}
               </div>
             </div>
@@ -4264,27 +4280,34 @@ const app = createApp({
           <div class="flex items-center space-x-2 shrink-0">
 
             <!-- Network Status Pill -->
-            <div :class="isOnline ? 'bg-emerald-950/80 border-emerald-700 text-emerald-300' : 'bg-rose-950/80 border-rose-700 text-rose-300'"
+            <div role="status"
+                 :aria-label="'Network status: ' + (isOnline ? 'Online' : 'Offline')"
+                 :class="isOnline ? 'bg-emerald-950 border-emerald-600 text-emerald-200' : 'bg-rose-950 border-rose-600 text-rose-200'"
                  class="flex items-center space-x-1 px-2.5 py-1 rounded-full text-[11px] font-bold border">
-              <span :class="isOnline ? 'bg-emerald-400' : 'bg-rose-400'" class="w-2 h-2 rounded-full animate-pulse"></span>
+              <span aria-hidden="true" :class="isOnline ? 'bg-emerald-400' : 'bg-rose-400'" class="w-2 h-2 rounded-full animate-pulse"></span>
               <span>{{ isOnline ? t('Online') : t('Offline') }}</span>
             </div>
 
-            <!-- Vernacular Language Switcher (10 Vernacular Languages) -->
-            <select v-model="currentLang" 
-                    class="bg-slate-800 text-white text-xs font-semibold py-1.5 px-2.5 rounded-xl border border-slate-700 outline-none cursor-pointer max-w-[130px] truncate">
-              <option v-for="lang in languages" :key="lang.code" :value="lang.code">
-                {{ lang.label }}
-              </option>
-            </select>
+            <!-- Vernacular Language Switcher with Accessible Name -->
+            <div class="relative">
+              <label for="omniservey_lang_select" class="sr-only">{{ t('Select Language') }}</label>
+              <select id="omniservey_lang_select"
+                      v-model="currentLang" 
+                      aria-label="Select Language"
+                      class="bg-slate-800 text-white text-xs font-semibold min-h-[38px] py-1.5 px-2.5 rounded-xl border border-slate-700 focus:ring-2 focus:ring-indigo-400 focus:outline-none cursor-pointer max-w-[130px] truncate">
+                <option v-for="lang in languages" :key="lang.code" :value="lang.code">
+                  {{ lang.label }}
+                </option>
+              </select>
+            </div>
 
           </div>
 
         </div>
       </header>
 
-      <!-- 2. MAIN CONTENT BODY -->
-      <main class="flex-1 max-w-3xl w-full mx-auto p-3.5 sm:p-5">
+      <!-- 2. MAIN CONTENT BODY (WCAG Main Landmark) -->
+      <main role="main" class="flex-1 max-w-3xl w-full mx-auto p-3.5 sm:p-5">
 
         <!-- ========================================== -->
         <!-- VIEW 1: TEMPLATE DISCOVERY & RBAC CATALOG  -->
@@ -4293,8 +4316,9 @@ const app = createApp({
           
           <div class="flex items-center justify-between">
             <h1 class="text-xl font-black text-slate-900 tracking-tight">{{ t('Surveys') }}</h1>
-            <button @click="currentView = 'queue'" 
-                    class="min-h-[38px] px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center space-x-1.5 shadow-sm touch-press">
+            <button type="button" 
+                    @click="currentView = 'queue'" 
+                    class="min-h-[44px] px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center space-x-1.5 shadow-sm touch-press focus:ring-2 focus:ring-indigo-500 focus:outline-none">
               <span>{{ t('WAL Queue') }}</span>
               <span v-if="pendingCount > 0" class="bg-amber-400 text-slate-950 px-1.5 py-0.2 rounded-full text-[10px] font-black animate-pulse">
                 {{ pendingCount }}
@@ -4304,39 +4328,40 @@ const app = createApp({
 
           <!-- Template Cards List -->
           <div v-if="filteredTemplates.length > 0" class="space-y-3">
-            <div v-for="tmpl in filteredTemplates" :key="tmpl.name" 
-                 class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-400 transition-all space-y-3">
+            <article v-for="tmpl in filteredTemplates" :key="tmpl.name" 
+                     class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-400 transition-all space-y-3">
               
               <div class="flex items-start justify-between">
                 <div>
-                  <h3 class="font-bold text-slate-900 text-base leading-snug">{{ tmpl.title }}</h3>
-                  <div class="text-xs text-slate-500 font-medium mt-0.5">{{ tmpl.project }}</div>
+                  <h2 class="font-bold text-slate-900 text-base leading-snug">{{ tmpl.title }}</h2>
+                  <div class="text-xs text-slate-600 font-medium mt-0.5">{{ tmpl.project }}</div>
                 </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300">
                   v{{ tmpl.version }}
                 </span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-slate-100">
-                <div class="text-xs text-slate-500">
+                <div class="text-xs text-slate-600 font-medium">
                   <span>{{ tmpl.schema ? (tmpl.schema.sections ? tmpl.schema.sections.length : 0) : 0 }} {{ t('Pages') }}</span> · 
                   <span>{{ tmpl.schema ? (tmpl.schema.questions ? tmpl.schema.questions.length : 0) : 0 }} {{ t('Questions') }}</span>
                 </div>
 
-                <button @click="startSurvey(tmpl)" 
-                        class="min-h-[42px] px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow touch-press flex items-center space-x-1.5">
+                <button type="button" 
+                        @click="startSurvey(tmpl)" 
+                        class="min-h-[44px] px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow touch-press flex items-center space-x-1.5 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                   <span>{{ t('Start Survey Form') }}</span>
-                  <span>→</span>
+                  <span aria-hidden="true">→</span>
                 </button>
               </div>
 
-            </div>
+            </article>
           </div>
 
           <div v-else class="text-center py-12 bg-white rounded-2xl border border-slate-200 p-6 space-y-3">
-            <div class="text-3xl">📋</div>
+            <div aria-hidden="true" class="text-3xl">📋</div>
             <div class="text-sm font-bold text-slate-800">No Survey Templates Found</div>
-            <button @click="fetchServerTemplates" class="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-xl text-xs font-bold border border-indigo-100">
+            <button type="button" @click="fetchServerTemplates" class="min-h-[44px] px-4 py-2 bg-indigo-50 text-indigo-700 rounded-xl text-xs font-bold border border-indigo-200 focus:ring-2 focus:ring-indigo-500">
               ⟳ Refresh Templates
             </button>
           </div>
@@ -4351,53 +4376,61 @@ const app = createApp({
           <!-- Top Breadcrumb & Title Bar -->
           <div class="bg-white p-3.5 sm:p-4 rounded-2xl shadow-sm border border-slate-200 space-y-3">
             <div class="flex items-center justify-between">
-              <button @click="currentView = 'templates'" class="text-xs text-slate-600 hover:text-slate-900 font-bold flex items-center space-x-1 touch-press">
+              <button type="button" @click="currentView = 'templates'" 
+                      class="min-h-[38px] px-2 py-1 text-xs text-slate-700 hover:text-slate-900 font-bold flex items-center space-x-1 touch-press focus:ring-2 focus:ring-indigo-500 rounded-lg">
+                <span aria-hidden="true">←</span>
                 <span>{{ t('Exit Form') }}</span>
               </button>
               
-              <div class="text-xs font-bold text-slate-500 font-mono">
+              <div class="text-xs font-bold text-slate-600 font-mono" aria-live="polite">
                 {{ t('Step') }} {{ activeSectionIndex + 1 }} {{ t('of') }} {{ sections.length }}
               </div>
             </div>
 
             <div>
-              <h2 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">
+              <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">
                 {{ activeTemplate.title }}
-              </h2>
+              </h1>
             </div>
 
             <!-- Horizontal Section Progress Tabs with Smooth Touch & Scroll Chevrons -->
-            <div class="relative w-full max-w-full flex items-center">
+            <nav aria-label="Survey Form Sections" class="relative w-full max-w-full flex items-center">
               <button type="button" @click="scrollTabs('left')" 
-                      class="shrink-0 w-6 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-black flex items-center justify-center mr-1 touch-press">
+                      aria-label="Scroll section tabs left"
+                      class="shrink-0 w-7 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center mr-1 touch-press focus:ring-2 focus:ring-indigo-500">
                 ◀
               </button>
               
               <div id="section_tabs_container" 
+                   role="tablist"
                    class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none w-full scroll-smooth">
                 <button v-for="(sec, sIdx) in sections" :key="sec.section_code"
                         :id="'sec_tab_' + sIdx"
+                        role="tab"
+                        :aria-selected="activeSectionIndex === sIdx ? 'true' : 'false'"
+                        :aria-label="'Step ' + (sIdx + 1) + ': ' + t(sec.section_title)"
                         @click="activeSectionIndex = sIdx"
-                        :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold scale-[1.02]' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-600')"
-                        class="px-3 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1 shrink-0">
-                  <span v-if="isSectionComplete(sec)" class="text-[10px]">✓</span>
+                        :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold scale-[1.02]' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-900 border border-emerald-300 font-semibold' : 'bg-slate-100 text-slate-700 font-medium')"
+                        class="min-h-[44px] px-3.5 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1 shrink-0 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <span v-if="isSectionComplete(sec)" aria-hidden="true" class="text-[10px] font-black">✓</span>
                   <span>{{ t(sec.section_title) }}</span>
                 </button>
               </div>
 
               <button type="button" @click="scrollTabs('right')" 
-                      class="shrink-0 w-6 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-black flex items-center justify-center ml-1 touch-press">
+                      aria-label="Scroll section tabs right"
+                      class="shrink-0 w-7 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center ml-1 touch-press focus:ring-2 focus:ring-indigo-500">
                 ▶
               </button>
-            </div>
+            </nav>
           </div>
 
           <!-- Section Heading -->
-          <div class="bg-indigo-50/70 border border-indigo-100 p-3 rounded-xl flex items-center justify-between">
-            <div class="text-xs font-bold text-indigo-900">
+          <div class="bg-indigo-50 border border-indigo-200 p-3 rounded-xl flex items-center justify-between">
+            <h2 class="text-xs font-bold text-indigo-950">
               {{ activeSection ? t(activeSection.section_title) : '' }}
-            </div>
-            <div class="text-[11px] text-indigo-600 font-medium">
+            </h2>
+            <div class="text-[11px] text-indigo-800 font-bold">
               {{ activeQuestions.length }} {{ t('Questions') }}
             </div>
           </div>
@@ -4410,79 +4443,104 @@ const app = createApp({
                  :class="highlightedQuestion === q.question_code ? 'ring-4 ring-rose-500/60 bg-rose-50/50 shadow-md animate-pulse' : ''">
               
               <!-- Question Label & Mandatory Asterisk -->
-              <label class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                <span class="text-indigo-600 font-mono text-xs mr-1">Q{{ qIndex + 1 }}.</span>
+              <label :id="'q_label_' + q.question_code"
+                     :for="'input_' + q.question_code"
+                     class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                <span class="text-indigo-700 font-mono text-xs mr-1 font-bold">Q{{ qIndex + 1 }}.</span>
                 {{ t(q.label_en) }}
-                <span v-if="q.is_mandatory" class="text-rose-500 font-bold ml-0.5">*</span>
+                <span v-if="q.is_mandatory" class="text-rose-600 font-bold ml-0.5" aria-hidden="true">*</span>
+                <span v-if="q.is_mandatory" class="sr-only"> (required)</span>
               </label>
 
               <!-- TYPE 1: TEXT / STRING -->
               <div v-if="q.field_type === 'Text'">
-                <input type="text" v-model="formData[q.question_code]" 
+                <input :id="'input_' + q.question_code"
+                       type="text" 
+                       v-model="formData[q.question_code]" 
+                       :aria-required="q.is_mandatory ? 'true' : 'false'"
+                       :aria-invalid="validationErrors.some(e => e.question_code === q.question_code) ? 'true' : 'false'"
                        :placeholder="t('Enter response here...')" 
-                       class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-base focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all">
+                       class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-base focus:border-indigo-600 focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
               </div>
 
               <!-- TYPE 2: NUMERIC / CURRENCY -->
               <div v-if="q.field_type === 'Integer' || q.field_type === 'Decimal' || q.field_type === 'Currency (INR)'" class="relative">
-                <span v-if="q.field_type === 'Currency (INR)'" class="absolute left-3.5 top-3 text-slate-400 font-bold">₹</span>
-                <input type="number" v-model="formData[q.question_code]" 
+                <span v-if="q.field_type === 'Currency (INR)'" aria-hidden="true" class="absolute left-3.5 top-3 text-slate-600 font-bold">₹</span>
+                <input :id="'input_' + q.question_code"
+                       type="number" 
+                       v-model="formData[q.question_code]" 
+                       :aria-required="q.is_mandatory ? 'true' : 'false'"
+                       :aria-invalid="validationErrors.some(e => e.question_code === q.question_code) ? 'true' : 'false'"
                        :class="q.field_type === 'Currency (INR)' ? 'pl-8' : 'pl-3.5'"
                        placeholder="0.00" 
-                       class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-base focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all">
+                       class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-base focus:border-indigo-600 focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
               </div>
 
-              <!-- TYPE 3: SINGLE CHOICE RADIO CARDS -->
-              <div v-if="q.field_type === 'Single Choice (Radio)'" class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+              <!-- TYPE 3: SINGLE CHOICE RADIO CARDS (Accessible Radiogroup) -->
+              <fieldset v-if="q.field_type === 'Single Choice (Radio)'" 
+                        role="radiogroup" 
+                        :aria-labelledby="'q_label_' + q.question_code"
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-0 m-0 p-0">
+                <legend class="sr-only">{{ t(q.label_en) }}</legend>
                 <div v-for="opt in (q.options || ['Yes', 'No'])" :key="opt"
+                     role="radio"
+                     :aria-checked="formData[q.question_code] === opt ? 'true' : 'false'"
+                     tabindex="0"
                      @click="formData[q.question_code] = opt"
-                     :class="formData[q.question_code] === opt ? 'bg-indigo-50/80 border-indigo-600 text-indigo-950 font-bold shadow-sm' : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'"
-                     class="flex items-center justify-between p-3.5 rounded-xl border cursor-pointer touch-press transition-all min-h-[48px]">
+                     @keydown.enter.prevent="formData[q.question_code] = opt"
+                     @keydown.space.prevent="formData[q.question_code] = opt"
+                     :class="formData[q.question_code] === opt ? 'bg-indigo-50 border-indigo-600 text-indigo-950 font-bold shadow-sm' : 'bg-white border-slate-300 text-slate-800 hover:bg-slate-50'"
+                     class="flex items-center justify-between p-3.5 rounded-xl border cursor-pointer touch-press transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-indigo-500">
                   <span class="text-sm">{{ t(opt) }}</span>
-                  <div :class="formData[q.question_code] === opt ? 'border-indigo-600 bg-indigo-600' : 'border-slate-300 bg-white'"
+                  <div :class="formData[q.question_code] === opt ? 'border-indigo-600 bg-indigo-600' : 'border-slate-400 bg-white'"
                        class="w-5 h-5 rounded-full border flex items-center justify-center transition-all">
                     <span v-if="formData[q.question_code] === opt" class="w-2 h-2 rounded-full bg-white"></span>
                   </div>
                 </div>
-              </div>
+              </fieldset>
 
               <!-- TYPE 4: GPS LOCATION -->
               <div v-if="q.field_type === 'GPS Location'" class="space-y-2.5">
                 <button type="button" @click="fetchGPS" :disabled="currentGPS.fetching" 
-                        class="w-full min-h-[48px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-3 rounded-xl flex items-center justify-center space-x-2 touch-press shadow-sm">
-                  <span v-if="currentGPS.fetching" class="animate-spin text-sm">⟳</span>
-                  <span v-else class="text-sm">📍</span>
+                        aria-label="Capture high precision GPS satellite location"
+                        class="w-full min-h-[48px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-3 rounded-xl flex items-center justify-center space-x-2 touch-press shadow-sm focus:ring-2 focus:ring-indigo-500">
+                  <span v-if="currentGPS.fetching" class="animate-spin text-sm" aria-hidden="true">⟳</span>
+                  <span v-else class="text-sm" aria-hidden="true">📍</span>
                   <span>{{ currentGPS.fetching ? 'Locking Satellite GPS...' : t('Capture GPS Coordinates') }}</span>
                 </button>
 
-                <div v-if="currentGPS.latitude" class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl space-y-1.5">
+                <div v-if="currentGPS.latitude" role="status" class="p-3.5 bg-emerald-50 border border-emerald-300 rounded-xl space-y-1.5">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-emerald-900 flex items-center">
-                      <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+                    <span class="text-xs font-bold text-emerald-950 flex items-center">
+                      <span aria-hidden="true" class="w-2 h-2 rounded-full bg-emerald-600 mr-1.5 animate-pulse"></span>
                       {{ t('GPS Fix Acquired ✓') }}
                     </span>
-                    <span :class="currentGPS.accuracy <= 15 ? 'bg-emerald-200 text-emerald-900' : 'bg-amber-200 text-amber-900'"
-                          class="text-[10px] font-bold px-2 py-0.5 rounded-full">
+                    <span :class="currentGPS.accuracy <= 15 ? 'bg-emerald-200 text-emerald-950' : 'bg-amber-200 text-amber-950'"
+                          class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-400">
                       ±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(1) : 0 }}m
                     </span>
                   </div>
                   
-                  <div class="text-xs font-mono text-emerald-800">
+                  <div class="text-xs font-mono text-emerald-900 font-semibold">
                     Lat: {{ currentGPS.latitude.toFixed(6) }}° · Lng: {{ currentGPS.longitude.toFixed(6) }}°
                   </div>
 
-                  <div class="pt-1 flex items-center space-x-3 text-[11px]">
+                  <div class="pt-1 flex items-center space-x-3 text-xs">
                     <a :href="'https://maps.google.com/?q=' + currentGPS.latitude + ',' + currentGPS.longitude" target="_blank"
-                       class="text-indigo-600 font-bold underline">
+                       rel="noopener noreferrer"
+                       aria-label="View current GPS coordinates on Google Maps in a new window"
+                       class="text-indigo-700 hover:text-indigo-900 font-bold underline">
                       {{ t('View on Map →') }}
                     </a>
-                    <button type="button" @click="fetchGPS" class="text-slate-500 hover:text-slate-800 underline">
+                    <button type="button" @click="fetchGPS" 
+                            aria-label="Re-acquire GPS satellite fix"
+                            class="text-slate-700 hover:text-slate-900 underline font-semibold">
                       {{ t('Re-acquire Fix') }}
                     </button>
                   </div>
                 </div>
 
-                <div v-if="currentGPS.error" class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-700">
+                <div v-if="currentGPS.error" role="alert" class="p-3 bg-rose-50 border border-rose-300 rounded-xl text-xs text-rose-900 font-medium">
                   ⚠️ {{ currentGPS.error }}
                 </div>
               </div>
@@ -4490,20 +4548,28 @@ const app = createApp({
               <!-- TYPE 5: PHOTO CAPTURE WITH WATERMARK -->
               <div v-if="q.field_type === 'Photo Upload'" class="space-y-2">
                 <div v-if="!formData[q.question_code]">
-                  <label class="w-full min-h-[48px] border-2 border-dashed border-slate-300 hover:border-indigo-500 rounded-xl flex items-center justify-center space-x-2 text-xs font-semibold text-slate-600 cursor-pointer p-4 bg-slate-50/50 touch-press">
-                    <span class="text-lg">📷</span>
+                  <label :for="'photo_input_' + q.question_code" 
+                         class="w-full min-h-[48px] border-2 border-dashed border-slate-300 hover:border-indigo-500 rounded-xl flex items-center justify-center space-x-2 text-xs font-bold text-slate-700 cursor-pointer p-4 bg-slate-50 touch-press focus-within:ring-2 focus-within:ring-indigo-500">
+                    <span aria-hidden="true" class="text-lg">📷</span>
                     <span>{{ t('Take Photo / Choose File') }}</span>
-                    <input type="file" accept="image/*" capture="environment" @change="handlePhotoUpload(q.question_code, $event)" class="hidden">
+                    <input :id="'photo_input_' + q.question_code"
+                           type="file" 
+                           accept="image/*" 
+                           capture="environment" 
+                           :aria-label="t(q.label_en)"
+                           @change="handlePhotoUpload(q.question_code, $event)" 
+                           class="hidden">
                   </label>
                 </div>
                 
                 <div v-else class="relative inline-block mt-2">
-                  <img :src="formData[q.question_code]" class="w-full max-w-xs h-44 object-cover rounded-xl border border-slate-200 shadow-sm">
+                  <img :src="formData[q.question_code]" alt="Uploaded survey photo attachment" class="w-full max-w-xs h-44 object-cover rounded-xl border border-slate-300 shadow-sm">
                   <button type="button" @click="removePhoto(q.question_code)" 
-                          class="absolute top-2 right-2 bg-rose-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold shadow-md">
+                          aria-label="Remove uploaded photo"
+                          class="absolute top-2 right-2 bg-rose-700 hover:bg-rose-800 text-white rounded-full w-8 h-8 flex items-center justify-center text-xs font-bold shadow-md focus:ring-2 focus:ring-white">
                     ✕
                   </button>
-                  <div class="text-[10px] text-emerald-600 font-medium mt-1">
+                  <div class="text-[10px] text-emerald-800 font-bold mt-1">
                     ✓ Compressed with GPS & Timestamp Watermark
                   </div>
                 </div>
@@ -4513,19 +4579,23 @@ const app = createApp({
               <div v-if="q.field_type === 'Digital Signature'" class="space-y-2">
                 <div class="relative bg-white rounded-xl border-2 border-dashed border-slate-300 overflow-hidden">
                   <canvas :ref="el => initSignaturePad(el, q.question_code)" 
-                          class="signature-canvas w-full h-36 block"></canvas>
+                          role="img"
+                          :aria-label="t(q.label_en) + ' digital signature drawing canvas'"
+                          tabindex="0"
+                          class="signature-canvas w-full h-36 block focus:ring-2 focus:ring-indigo-500"></canvas>
                   
-                  <div class="absolute bottom-2 left-3 text-[10px] text-slate-400 pointer-events-none select-none">
+                  <div class="absolute bottom-2 left-3 text-[10px] text-slate-500 pointer-events-none select-none font-medium">
                     {{ t('Sign inside box with finger or stylus') }}
                   </div>
                 </div>
 
                 <div class="flex items-center justify-between text-xs">
                   <button type="button" @click="clearSignature(q.question_code)" 
-                          class="text-rose-600 hover:text-rose-800 font-semibold px-2 py-1 touch-press">
+                          aria-label="Clear digital signature box"
+                          class="min-h-[38px] px-3 py-1.5 text-rose-700 hover:text-rose-900 font-bold touch-press focus:ring-2 focus:ring-rose-500 rounded-lg">
                     {{ t('Clear Signature') }}
                   </button>
-                  <span v-if="formData[q.question_code]" class="text-emerald-600 font-bold text-[11px]">
+                  <span v-if="formData[q.question_code]" role="status" class="text-emerald-800 font-bold text-[11px]">
                     ✓ {{ t('Signature Recorded') }}
                   </span>
                 </div>
@@ -4535,21 +4605,21 @@ const app = createApp({
 
           </div>
 
-          <!-- FIXED BOTTOM ACTION BAR -->
-          <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-lg pb-safe">
+          <!-- FIXED BOTTOM ACTION BAR (Accessible Navigation Landmark) -->
+          <nav aria-label="Survey Form Navigation" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-lg pb-safe">
             <div class="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between space-x-2.5">
               
               <!-- CASE 1: NORMAL FORM FILLING (Sections 1 to N-1) -> Exactly TWO balanced buttons: Back and Next -->
               <template v-if="activeSectionIndex < (sections.length - 1)">
                 <!-- Back Button -->
                 <button type="button" @click="prevSection" :disabled="activeSectionIndex === 0"
-                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-700 disabled:opacity-30 disabled:pointer-events-none touch-press flex items-center justify-center space-x-1 shadow-sm transition-all">
+                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-800 disabled:opacity-30 disabled:pointer-events-none touch-press flex items-center justify-center space-x-1 shadow-sm transition-all focus:ring-2 focus:ring-indigo-500">
                   <span>{{ t('Previous') }}</span>
                 </button>
 
                 <!-- Next Button -->
                 <button type="button" @click="nextSection"
-                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md touch-press flex items-center justify-center space-x-1 transition-all">
+                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md touch-press flex items-center justify-center space-x-1 transition-all focus:ring-2 focus:ring-indigo-400">
                   <span>{{ t('Next') }}</span>
                 </button>
               </template>
@@ -4558,27 +4628,27 @@ const app = createApp({
               <template v-else>
                 <!-- Back Button -->
                 <button type="button" @click="prevSection"
-                        class="min-h-[48px] px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-700 touch-press flex items-center justify-center space-x-1 shadow-sm shrink-0 transition-all">
+                        class="min-h-[48px] px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-800 touch-press flex items-center justify-center space-x-1 shadow-sm shrink-0 transition-all focus:ring-2 focus:ring-indigo-500">
                   <span>{{ t('Previous') }}</span>
                 </button>
 
                 <!-- Short / Compact Save Draft Button -->
                 <button type="button" @click="saveOffline(false)" 
-                        class="min-h-[48px] px-3 sm:px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm touch-press flex items-center justify-center space-x-1 shrink-0 transition-all">
-                  <span>💾</span>
+                        class="min-h-[48px] px-3.5 sm:px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-sm touch-press flex items-center justify-center space-x-1 shrink-0 transition-all focus:ring-2 focus:ring-emerald-400">
+                  <span aria-hidden="true">💾</span>
                   <span>{{ t('Draft') }}</span>
                 </button>
 
                 <!-- Prominent Submit Survey Button -->
                 <button type="button" @click="commitToWAL"
-                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md touch-press flex items-center justify-center space-x-1.5 transition-all">
+                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md touch-press flex items-center justify-center space-x-1.5 transition-all focus:ring-2 focus:ring-indigo-400">
                   <span>{{ t('Submit Survey') }}</span>
-                  <span>✓</span>
+                  <span aria-hidden="true">✓</span>
                 </button>
               </template>
 
             </div>
-          </div>
+          </nav>
 
         </div>
 
@@ -4589,55 +4659,59 @@ const app = createApp({
           <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200">
             <div class="flex items-center justify-between mb-3">
               <div>
-                <h2 class="text-base sm:text-lg font-bold text-slate-900">{{ t('Write-Ahead Log (WAL)') }}</h2>
-                <div class="text-xs text-slate-500">{{ t('Atomic zero-loss local storage queue') }}</div>
+                <h1 class="text-base sm:text-lg font-bold text-slate-900">{{ t('Write-Ahead Log (WAL)') }}</h1>
+                <div class="text-xs text-slate-600 font-medium">{{ t('Atomic zero-loss local storage queue') }}</div>
               </div>
-              <button @click="autoSync" :disabled="isSyncing || !isOnline" 
-                      class="min-h-[40px] px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold disabled:opacity-50 touch-press shadow-sm">
+              <button type="button" @click="autoSync" :disabled="isSyncing || !isOnline" 
+                      class="min-h-[44px] px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold disabled:opacity-50 touch-press shadow-sm focus:ring-2 focus:ring-indigo-500">
                 {{ isSyncing ? '...' : t('Sync Now') }}
               </button>
             </div>
 
-            <div v-if="walSubmissions.length === 0" class="text-center py-12 text-slate-400 text-xs">
+            <div v-if="walSubmissions.length === 0" class="text-center py-12 text-slate-500 text-xs font-medium">
               No local survey records stored yet.
             </div>
 
             <div v-else class="space-y-3">
-              <div v-for="sub in walSubmissions" :key="sub.idempotency_key" 
-                   class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex items-center justify-between">
+              <article v-for="sub in walSubmissions" :key="sub.idempotency_key" 
+                       class="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-between">
                 <div>
                   <div class="flex items-center space-x-2">
-                    <span :class="sub.status === 'SYNCED' ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : (sub.status === 'DRAFT_OFFLINE' ? 'bg-indigo-50 text-indigo-600 border-indigo-200' : 'bg-amber-50 text-amber-600 border-amber-200')"
+                    <span :class="sub.status === 'SYNCED' ? 'bg-emerald-50 text-emerald-900 border-emerald-300' : (sub.status === 'DRAFT_OFFLINE' ? 'bg-indigo-50 text-indigo-900 border-indigo-300' : 'bg-amber-50 text-amber-950 border-amber-300')"
                           class="text-[10px] font-bold px-2 py-0.5 rounded border">
                       {{ sub.status === 'SYNCED' ? 'Synced with Server ✓' : (sub.status === 'DRAFT_OFFLINE' ? 'Offline Draft 💾' : 'Pending Server Sync ⟳') }}
                     </span>
-                    <span class="text-[10px] text-slate-400 font-mono">{{ sub.idempotency_key ? sub.idempotency_key.slice(0, 8) : '' }}...</span>
+                    <span class="text-[10px] text-slate-600 font-mono">{{ sub.idempotency_key ? sub.idempotency_key.slice(0, 8) : '' }}...</span>
                   </div>
-                  <div class="font-bold text-slate-800 text-sm mt-1">{{ sub.survey_template }}</div>
-                  <div class="text-xs text-slate-500 mt-0.5">Captured: {{ new Date(sub.captured_at_local).toLocaleString() }}</div>
+                  <div class="font-bold text-slate-900 text-sm mt-1">{{ sub.survey_template }}</div>
+                  <div class="text-xs text-slate-600 mt-0.5 font-medium">Captured: {{ new Date(sub.captured_at_local).toLocaleString() }}</div>
                 </div>
 
                 <div class="text-right space-y-1">
-                  <div class="text-[11px] text-slate-500">{{ sub.items ? sub.items.length : 0 }} Answers</div>
+                  <div class="text-[11px] text-slate-600 font-semibold">{{ sub.items ? sub.items.length : 0 }} Answers</div>
                   <div class="flex items-center space-x-1.5 justify-end">
-                    <button v-if="sub.status !== 'SYNCED'" @click="resumeDraft(sub)"
-                            class="px-2.5 py-1 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-lg border border-indigo-100 touch-press">
+                    <button type="button" v-if="sub.status !== 'SYNCED'" @click="resumeDraft(sub)"
+                            aria-label="Resume filling this survey draft"
+                            class="min-h-[38px] px-3 py-1 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 text-xs font-bold rounded-lg border border-indigo-200 touch-press focus:ring-2 focus:ring-indigo-500">
                       Resume →
                     </button>
-                    <button @click="deleteWALItem(sub.idempotency_key)"
-                            class="px-2 py-1 text-rose-600 hover:bg-rose-50 text-xs font-bold rounded-lg">
+                    <button type="button" @click="deleteWALItem(sub.idempotency_key)"
+                            aria-label="Delete this survey draft from local storage"
+                            class="min-h-[38px] min-w-[38px] flex items-center justify-center text-rose-700 hover:bg-rose-50 text-xs font-bold rounded-lg focus:ring-2 focus:ring-rose-500">
                       ✕
                     </button>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
 
             <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <button @click="exportWALBackup" class="text-xs text-slate-600 hover:text-slate-900 font-bold underline">
+              <button type="button" @click="exportWALBackup" 
+                      class="text-xs text-slate-700 hover:text-slate-900 font-bold underline p-2 focus:ring-2 focus:ring-indigo-500 rounded-lg">
                 Export Local JSON Backup
               </button>
-              <button @click="currentView = 'templates'" class="px-4 py-2 bg-slate-900 text-white rounded-xl text-xs font-bold">
+              <button type="button" @click="currentView = 'templates'" 
+                      class="min-h-[44px] px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold focus:ring-2 focus:ring-indigo-500">
                 ← Back to Surveys
               </button>
             </div>
@@ -4647,57 +4721,64 @@ const app = createApp({
       </main>
 
       <!-- ========================================== -->
-      <!-- SLIDE-UP INTERACTIVE VALIDATION MODAL      -->
+      <!-- SLIDE-UP ACCESSIBLE VALIDATION MODAL       -->
       <!-- ========================================== -->
       <div v-if="validationModalOpen" 
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="validation_modal_title"
+           aria-describedby="validation_modal_desc"
            class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm p-3 sm:p-4">
         <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] animate-slide-up">
           
           <!-- Header -->
-          <div class="p-4 bg-rose-50 border-b border-rose-100 flex items-start justify-between">
+          <div class="p-4 bg-rose-50 border-b border-rose-200 flex items-start justify-between">
             <div class="flex items-center space-x-2.5">
-              <span class="text-2xl">⚠️</span>
+              <span aria-hidden="true" class="text-2xl">⚠️</span>
               <div>
-                <h3 class="font-bold text-sm sm:text-base text-rose-950">
+                <h2 id="validation_modal_title" class="font-bold text-sm sm:text-base text-rose-950">
                   {{ t('Required Questions Pending') }} ({{ validationErrors.length }})
-                </h3>
-                <p class="text-[11px] text-rose-700 leading-tight mt-0.5">
+                </h2>
+                <p id="validation_modal_desc" class="text-[11px] text-rose-800 font-medium leading-tight mt-0.5">
                   {{ t('Please fill in these required fields before final submission, or save as an offline draft anytime.') }}
                 </p>
               </div>
             </div>
-            <button @click="validationModalOpen = false" class="text-rose-400 hover:text-rose-700 font-black text-base p-1">✕</button>
+            <button type="button" @click="validationModalOpen = false" 
+                    aria-label="Close dialog"
+                    class="min-h-[38px] min-w-[38px] flex items-center justify-center text-rose-700 hover:text-rose-950 font-black text-base p-1 focus:ring-2 focus:ring-rose-500 rounded-lg">✕</button>
           </div>
 
           <!-- Pending Questions List -->
           <div class="p-4 overflow-y-auto space-y-2 flex-1 divide-y divide-slate-100">
             <div v-for="(err, idx) in validationErrors" :key="err.question_code"
-                 @click="jumpToQuestion(err)"
-                 class="pt-2 first:pt-0 flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer touch-press group transition-all">
+                 class="pt-2 first:pt-0 flex items-center justify-between">
               <div>
-                <div class="text-[10px] font-bold text-indigo-600">{{ err.section_title }}</div>
-                <div class="text-xs font-semibold text-slate-800">{{ err.label }}</div>
+                <div class="text-xs font-bold text-slate-900 leading-snug">
+                  {{ idx + 1 }}. {{ t(err.label) }}
+                </div>
+                <div class="text-[10px] text-indigo-700 font-medium">
+                  {{ t(err.section_title) }}
+                </div>
               </div>
-              <span class="text-indigo-600 font-bold text-xs group-hover:translate-x-0.5 transition-transform">→</span>
+              <button type="button" @click="jumpToQuestion(err.question_code, err.section_index)"
+                      class="min-h-[38px] px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs border border-indigo-200 shrink-0 ml-2 touch-press focus:ring-2 focus:ring-indigo-500">
+                Fix →
+              </button>
             </div>
           </div>
 
-          <!-- Footer Actions -->
-          <div class="p-4 bg-slate-50 border-t border-slate-200 space-y-2">
-            <button @click="jumpToQuestion(validationErrors[0])"
-                    class="w-full min-h-[46px] bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow touch-press flex items-center justify-center space-x-1.5">
-              <span>{{ t('Go to First Pending Question') }}</span>
+          <!-- Modal Footer Actions -->
+          <div class="p-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between space-x-2">
+            <button type="button" @click="saveOffline(false); validationModalOpen = false"
+                    class="min-h-[44px] px-3 sm:px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold touch-press flex items-center space-x-1 focus:ring-2 focus:ring-slate-500">
+              <span aria-hidden="true">💾</span>
+              <span>{{ t('Draft') }}</span>
             </button>
-            <div class="flex items-center space-x-2">
-              <button @click="saveOffline(false)" 
-                      class="flex-1 min-h-[42px] bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-sm touch-press flex items-center justify-center space-x-1">
-                <span>{{ t('Save as Offline Draft Anyway') }}</span>
-              </button>
-              <button @click="validationModalOpen = false"
-                      class="px-4 min-h-[42px] bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl touch-press">
-                {{ t('Close') }}
-              </button>
-            </div>
+            <button type="button" @click="validationModalOpen = false"
+                    class="min-h-[44px] flex-1 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow touch-press focus:ring-2 focus:ring-indigo-400">
+              {{ t('Continue Editing') }}
+            </button>
           </div>
 
         </div>
