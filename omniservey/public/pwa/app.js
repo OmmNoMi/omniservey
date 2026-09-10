@@ -3392,7 +3392,7 @@ const app = createApp({
               if (schemaResp.ok) {
                 const sData = await schemaResp.json();
                 if (sData.message) {
-                  await db.templates.put({
+                  await db.templates.put(JSON.parse(JSON.stringify({
                     name: sData.message.template_name,
                     title: sData.message.title,
                     project: sData.message.project,
@@ -3401,7 +3401,7 @@ const app = createApp({
                     target_category: item.target_category || 'General',
                     schema_hash_sha256: sData.message.schema_hash_sha256,
                     schema: sData.message.schema
-                  });
+                  })));
                 }
               }
             } catch (schemaErr) {
@@ -3477,11 +3477,11 @@ const app = createApp({
             const data = await resp.json();
             if (data.message) {
               translationsMap.value = { ...translationsMap.value, ...data.message };
-              await db.translations.put({
+              await db.translations.put(JSON.parse(JSON.stringify({
                 survey_template: templateName || 'GLOBAL',
                 language_code: lang,
                 dictionary: translationsMap.value
-              });
+              })));
             }
           }
         }
@@ -3761,7 +3761,7 @@ const app = createApp({
           retry_count: 0
         };
 
-        await db.wal.put(submission);
+        await db.wal.put(JSON.parse(JSON.stringify(submission)));
         await loadWALFromDB();
 
         if (isFinalSubmission) {
@@ -3886,15 +3886,15 @@ const app = createApp({
               sub.status = 'SYNCED';
               sub.synced_at = new Date().toISOString();
               sub.server_doc_name = res.doc_name;
-              await db.wal.put(sub);
+              await db.wal.put(JSON.parse(JSON.stringify(sub)));
             } else {
               sub.retry_count = (sub.retry_count || 0) + 1;
               sub.last_error = res.error || 'Sync rejected';
-              await db.wal.put(sub);
+              await db.wal.put(JSON.parse(JSON.stringify(sub)));
             }
           } else {
             sub.retry_count = (sub.retry_count || 0) + 1;
-            await db.wal.put(sub);
+            await db.wal.put(JSON.parse(JSON.stringify(sub)));
           }
         }
         await loadWALFromDB();
