@@ -1,4 +1,4 @@
-const CACHE_NAME = 'omniservey-cache-v2';
+const CACHE_NAME = 'omniservey-cache-v3';
 const STATIC_ASSETS = [
   '/assets/omniservey/pwa/index.html',
   '/assets/omniservey/pwa/style.css',
@@ -12,7 +12,7 @@ const STATIC_ASSETS = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async cache => {
-      console.log('[SW] Caching static offline assets');
+      console.log('[SW] Pre-caching static offline assets');
       for (const asset of STATIC_ASSETS) {
         try {
           await cache.add(asset);
@@ -44,26 +44,15 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
-  // Cache-first for all local PWA static assets
-  if (event.request.url.includes('/assets/omniservey/pwa/')) {
-    event.respondWith(
-      caches.match(event.request).then(cached => {
-        if (cached) return cached;
-        return fetch(event.request).then(response => {
-          if (response && response.status === 200) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then(c => c.put(event.request, clone));
-          }
-          return response;
-        });
-      })
-    );
-    return;
-  }
-
-  // Network-first falling back to cache
+  // Network-first with instant offline cache fallback for PWA assets & API
   event.respondWith(
-    fetch(event.request).catch(() => {
+    fetch(event.request).then(response => {
+      if (response && response.status === 200) {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(c => c.put(event.request, clone));
+      }
+      return response;
+    }).catch(() => {
       return caches.match(event.request).then(cached => {
         if (cached) return cached;
         if (event.request.mode === 'navigate') {
