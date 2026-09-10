@@ -256,3 +256,14 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+# Permissions & RBAC
+# ------------------
+permission_query_conditions = {
+	"OmniServey Template": "omniservey.api.survey.get_template_permission_query_conditions",
+}
+
+has_permission = {
+	"OmniServey Template": "omniservey.api.survey.has_template_doc_permission",
+}
+
+

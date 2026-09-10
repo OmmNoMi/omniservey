@@ -1,20 +1,25 @@
-const CACHE_NAME = 'omniservey-cache-v1';
+const CACHE_NAME = 'omniservey-cache-v2';
 const STATIC_ASSETS = [
-  '/pwa',
+  '/assets/omniservey/pwa/index.html',
   '/assets/omniservey/pwa/style.css',
   '/assets/omniservey/pwa/app.js',
   '/assets/omniservey/pwa/manifest.json',
-  'https://cdn.tailwindcss.com',
-  'https://unpkg.com/vue@3/dist/vue.global.prod.js',
-  'https://unpkg.com/dexie@3.2.4/dist/dexie.min.js',
-  'https://unpkg.com/lucide@latest'
+  '/assets/omniservey/pwa/vendor/tailwindcss.js',
+  '/assets/omniservey/pwa/vendor/vue.global.prod.js',
+  '/assets/omniservey/pwa/vendor/dexie.min.js'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      console.log('[SW] Pre-caching static assets');
-      return cache.addAll(STATIC_ASSETS).catch(err => console.warn('[SW] Cache add warning:', err));
+    caches.open(CACHE_NAME).then(async cache => {
+      console.log('[SW] Caching static offline assets');
+      for (const asset of STATIC_ASSETS) {
+        try {
+          await cache.add(asset);
+        } catch (e) {
+          console.warn('[SW] Pre-cache warning:', asset, e);
+        }
+      }
     })
   );
   self.skipWaiting();
@@ -38,21 +43,34 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
-  
+
+  // Cache-first for all local PWA static assets
+  if (event.request.url.includes('/assets/omniservey/pwa/')) {
+    event.respondWith(
+      caches.match(event.request).then(cached => {
+        if (cached) return cached;
+        return fetch(event.request).then(response => {
+          if (response && response.status === 200) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(c => c.put(event.request, clone));
+          }
+          return response;
+        });
+      })
+    );
+    return;
+  }
+
+  // Network-first falling back to cache
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      if (cached) return cached;
-      return fetch(event.request).then(networkResp => {
-        if (networkResp && networkResp.status === 200 && event.request.url.startsWith(self.location.origin)) {
-          const respClone = networkResp.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, respClone));
-        }
-        return networkResp;
-      }).catch(() => {
+    fetch(event.request).catch(() => {
+      return caches.match(event.request).then(cached => {
+        if (cached) return cached;
         if (event.request.mode === 'navigate') {
-          return caches.match('/pwa');
+          return caches.match('/assets/omniservey/pwa/index.html');
         }
       });
     })
   );
 });
+

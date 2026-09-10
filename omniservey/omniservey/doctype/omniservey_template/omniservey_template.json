@@ -14,6 +14,10 @@
   "column_break_meta",
   "schema_hash_sha256",
   "published_at",
+  "access_tab",
+  "is_public",
+  "allowed_roles",
+  "allowed_users",
   "sections_tab",
   "sections",
   "questions_tab",
@@ -76,6 +80,30 @@
    "fieldtype": "Datetime",
    "label": "Published Timestamp",
    "read_only": 1
+  },
+  {
+   "fieldname": "access_tab",
+   "fieldtype": "Tab Break",
+   "label": "Access & Permissions"
+  },
+  {
+   "default": "0",
+   "description": "If checked, all users and field surveyors can access and fill this survey template.",
+   "fieldname": "is_public",
+   "fieldtype": "Check",
+   "label": "Is Public (Accessible to All)"
+  },
+  {
+   "description": "Comma-separated Frappe Roles permitted to access this template (e.g. System Manager, OmniTrack Manager, Surveyor). Leave empty if unrestricted.",
+   "fieldname": "allowed_roles",
+   "fieldtype": "Small Text",
+   "label": "Allowed Roles"
+  },
+  {
+   "description": "Comma-separated user emails permitted to access this template (e.g. user@example.com).",
+   "fieldname": "allowed_users",
+   "fieldtype": "Small Text",
+   "label": "Allowed Users"
   },
   {
    "fieldname": "sections_tab",

@@ -1,6 +1,7 @@
 import frappe, json, hashlib
 from frappe import _
 from frappe.utils import now_datetime
+from omniservey.api.survey import user_has_template_permission
 
 @frappe.whitelist(allow_guest=True)
 def batch_push():
@@ -62,7 +63,17 @@ def batch_push():
 				"message": "Submission already processed safely."
 			})
 			continue
-			
+
+		# 1.5 Verify Survey Template Permission
+		template_name = sub.get("survey_template")
+		if not user_has_template_permission(template_name, current_user):
+			results.append({
+				"idempotency_key": idempotency_key,
+				"status": "REJECTED",
+				"error": f"Access denied: No permission to submit responses for template '{template_name}'"
+			})
+			continue
+
 		# 2. Atomic Ingestion
 		savepoint = f"sp_sync_{idempotency_key.replace('-', '_')}"
 		try:
