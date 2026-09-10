@@ -3958,6 +3958,24 @@ const app = createApp({
       }, 4000);
     }
 
+    // Auto-scroll active tab into view whenever section changes
+    watch(activeSectionIndex, (newIdx) => {
+      nextTick(() => {
+        const el = document.getElementById('sec_tab_' + newIdx);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    });
+
+    function scrollTabs(direction) {
+      const container = document.getElementById('section_tabs_container');
+      if (container) {
+        const offset = direction === 'left' ? -180 : 180;
+        container.scrollBy({ left: offset, behavior: 'smooth' });
+      }
+    }
+
     // ==========================================================
     // ZERO-LOSS WRITE-AHEAD LOG (WAL) PERSISTENCE ENGINE
     // ==========================================================
@@ -4203,6 +4221,7 @@ const app = createApp({
       initSignaturePad,
       clearSignature,
       fetchServerTemplates,
+      scrollTabs,
       t
     };
   },
@@ -4346,17 +4365,29 @@ const app = createApp({
               </h2>
             </div>
 
-            <!-- Horizontal Section Progress Tabs -->
-            <div class="w-full max-w-full overflow-hidden">
-              <div class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none w-full">
+            <!-- Horizontal Section Progress Tabs with Smooth Touch & Scroll Chevrons -->
+            <div class="relative w-full max-w-full flex items-center">
+              <button type="button" @click="scrollTabs('left')" 
+                      class="shrink-0 w-6 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-black flex items-center justify-center mr-1 touch-press">
+                ◀
+              </button>
+              
+              <div id="section_tabs_container" 
+                   class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none w-full scroll-smooth">
                 <button v-for="(sec, sIdx) in sections" :key="sec.section_code"
+                        :id="'sec_tab_' + sIdx"
                         @click="activeSectionIndex = sIdx"
-                        :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-600')"
+                        :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold scale-[1.02]' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-slate-100 text-slate-600')"
                         class="px-3 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1 shrink-0">
                   <span v-if="isSectionComplete(sec)" class="text-[10px]">✓</span>
                   <span>{{ t(sec.section_title) }}</span>
                 </button>
               </div>
+
+              <button type="button" @click="scrollTabs('right')" 
+                      class="shrink-0 w-6 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 text-[10px] font-black flex items-center justify-center ml-1 touch-press">
+                ▶
+              </button>
             </div>
           </div>
 
