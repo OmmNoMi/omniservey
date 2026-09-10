@@ -3519,7 +3519,7 @@ const app = createApp({
         return [];
       }
       const secCode = activeSection.value ? activeSection.value.section_code : null;
-      return activeTemplate.value.schema.questions.filter(q => q.section === secCode);
+      return activeTemplate.value.schema.questions.filter(q => (q.section === secCode || q.section_code === secCode));
     });
 
     const categories = computed(() => {
@@ -3798,7 +3798,7 @@ const app = createApp({
 
     function isSectionComplete(sec) {
       if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions) return false;
-      const qList = activeTemplate.value.schema.questions.filter(q => q.section === sec.section_code);
+      const qList = activeTemplate.value.schema.questions.filter(q => (q.section === sec.section_code || q.section_code === sec.section_code));
       if (qList.length === 0) return true;
       const mandatory = qList.filter(q => q.is_mandatory);
       if (mandatory.length === 0) return true;
@@ -3841,6 +3841,39 @@ const app = createApp({
           tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
       });
+    }
+
+    function focusTab(index) {
+      nextTick(() => {
+        const tab = document.getElementById('sec_tab_' + index);
+        if (tab && tab.focus) {
+          tab.focus();
+        }
+      });
+    }
+
+    function handleTabKeydown(e, sIdx) {
+      let targetIdx = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        targetIdx = (sIdx + 1) % sections.value.length;
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        targetIdx = (sIdx - 1 + sections.value.length) % sections.value.length;
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        targetIdx = 0;
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        targetIdx = sections.value.length - 1;
+      }
+
+      if (targetIdx !== null) {
+        activeSectionIndex.value = targetIdx;
+        scrollTabIntoView(targetIdx);
+        focusTab(targetIdx);
+        announce(`Switched to Step ${targetIdx + 1}: ${t(sections.value[targetIdx].section_title)}`);
+      }
     }
 
     function jumpToQuestion(questionCode, secIndex) {
@@ -4058,7 +4091,7 @@ const app = createApp({
 
         for (let sIdx = 0; sIdx < allSections.length; sIdx++) {
           const sec = allSections[sIdx];
-          const secQuestions = allQuestions.filter(q => q.section === sec.section_code);
+          const secQuestions = allQuestions.filter(q => (q.section === sec.section_code || q.section_code === sec.section_code));
           
           for (const q of secQuestions) {
             if (q.is_mandatory) {
@@ -4227,6 +4260,8 @@ const app = createApp({
       clearSignature,
       fetchServerTemplates,
       scrollTabs,
+      handleTabKeydown,
+      focusTab,
       t
     };
   },
@@ -4393,9 +4428,10 @@ const app = createApp({
               </h1>
             </div>
 
-            <!-- Horizontal Section Progress Tabs with Smooth Touch & Scroll Chevrons -->
+            <!-- Horizontal Section Progress Tabs with Roving Tabindex & Arrow Key Switching -->
             <nav aria-label="Survey Form Sections" class="relative w-full max-w-full flex items-center">
               <button type="button" @click="scrollTabs('left')" 
+                      tabindex="-1"
                       aria-label="Scroll section tabs left"
                       class="shrink-0 w-7 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center mr-1 touch-press focus:ring-2 focus:ring-indigo-500">
                 ◀
@@ -4403,13 +4439,16 @@ const app = createApp({
               
               <div id="section_tabs_container" 
                    role="tablist"
+                   aria-label="Survey Sections"
                    class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none w-full scroll-smooth">
                 <button v-for="(sec, sIdx) in sections" :key="sec.section_code"
                         :id="'sec_tab_' + sIdx"
                         role="tab"
                         :aria-selected="activeSectionIndex === sIdx ? 'true' : 'false'"
+                        :tabindex="activeSectionIndex === sIdx ? 0 : -1"
                         :aria-label="'Step ' + (sIdx + 1) + ': ' + t(sec.section_title)"
                         @click="activeSectionIndex = sIdx"
+                        @keydown="handleTabKeydown($event, sIdx)"
                         :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold scale-[1.02]' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-900 border border-emerald-300 font-semibold' : 'bg-slate-100 text-slate-700 font-medium')"
                         class="min-h-[44px] px-3.5 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1 shrink-0 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                   <span v-if="isSectionComplete(sec)" aria-hidden="true" class="text-[10px] font-black">✓</span>
@@ -4418,6 +4457,7 @@ const app = createApp({
               </div>
 
               <button type="button" @click="scrollTabs('right')" 
+                      tabindex="-1"
                       aria-label="Scroll section tabs right"
                       class="shrink-0 w-7 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center ml-1 touch-press focus:ring-2 focus:ring-indigo-500">
                 ▶
