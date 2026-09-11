@@ -4495,33 +4495,33 @@ const app = createApp({
       </div>
 
       <!-- TOP APP HEADER -->
-      <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800 w-full overflow-hidden">
+        <div class="max-w-4xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-2 w-full box-border">
           
           <!-- Logo & Platform Badge -->
-          <div class="flex items-center space-x-3 cursor-pointer" @click="currentView = 'templates'">
-            <div class="w-11 h-11 rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-2xl shadow-md">
+          <div class="flex items-center space-x-2 cursor-pointer shrink-0 min-w-0" @click="currentView = 'templates'">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-lg sm:text-xl shadow-md shrink-0">
               Ω
             </div>
-            <div>
-              <div class="flex items-center space-x-2">
-                <span class="font-black text-xl tracking-tight leading-none">OmniServey</span>
-                <span class="text-xs font-extrabold bg-indigo-500/30 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/40">v16</span>
+            <div class="min-w-0">
+              <div class="flex items-center space-x-1.5">
+                <span class="font-black text-base sm:text-xl tracking-tight leading-none">OmniServey</span>
+                <span class="text-[9px] sm:text-xs font-extrabold bg-indigo-500/30 text-indigo-300 px-1.5 py-0.5 rounded-full border border-indigo-500/40">v16</span>
               </div>
-              <div class="text-xs text-slate-400 font-semibold truncate max-w-[160px] sm:max-w-none">
+              <div class="text-[10px] sm:text-xs text-slate-400 font-semibold truncate max-w-[90px] sm:max-w-none hidden sm:block">
                 {{ currentUser }}
               </div>
             </div>
           </div>
 
           <!-- Vernacular Language Picker (Accessible Large Target) -->
-          <div class="flex items-center space-x-2">
+          <div class="flex items-center shrink min-w-0">
             <label for="app_lang_select" class="sr-only">Select Language</label>
             <select id="app_lang_select"
                     v-model="currentLang" 
                     @change="localStorage.setItem('omniservey_lang', currentLang); announce('Language changed to ' + currentLang)"
                     aria-label="ભાષા પસંદ કરો / Select Language"
-                    class="min-h-[44px] px-3.5 py-1.5 bg-slate-800 text-white text-sm sm:text-base font-bold rounded-2xl border-2 border-slate-700 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 outline-none cursor-pointer">
+                    class="min-h-[38px] sm:min-h-[42px] max-w-[125px] sm:max-w-[200px] px-2 sm:px-3 py-1 bg-slate-800 text-white text-xs sm:text-sm font-bold rounded-xl sm:rounded-2xl border border-slate-700 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 outline-none cursor-pointer truncate">
               <option v-for="lang in languages" :key="lang.code" :value="lang.code">
                 {{ lang.name }}
               </option>
@@ -4532,7 +4532,7 @@ const app = createApp({
       </header>
 
       <!-- MAIN CONTENT CONTAINER -->
-      <main class="flex-1 max-w-3xl w-full mx-auto p-4 sm:p-6">
+      <main class="flex-1 max-w-3xl w-full mx-auto p-3 sm:p-6 min-w-0">
 
         <!-- ========================================== -->
         <!-- VIEW 1: TEMPLATES DIRECTORY (Simple List)  -->
@@ -4598,10 +4598,10 @@ const app = createApp({
         <!-- ========================================== -->
         <!-- VIEW 2: DYNAMIC ACTIVE SURVEY FORM         -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6 pb-28">
+        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6 pb-28 min-w-0">
           
           <!-- Top Breadcrumb & Page Progress Header -->
-          <div class="bg-white p-5 sm:p-6 rounded-3xl shadow-sm border-2 border-slate-200 space-y-4">
+          <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-sm border-2 border-slate-200 space-y-4 min-w-0">
             
             <div class="flex items-center justify-between">
               <button type="button" @click="currentView = 'templates'" 
@@ -4616,7 +4616,7 @@ const app = createApp({
             </div>
 
             <!-- Survey Title -->
-            <h1 class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+            <h1 class="text-lg sm:text-2xl font-black text-slate-900 leading-tight">
               {{ t(activeTemplate.title) }}
             </h1>
 
@@ -4628,15 +4628,15 @@ const app = createApp({
             </div>
 
             <!-- Section Tabs (Accessible Roving Tabindex) -->
-            <div class="relative pt-2">
-              <div class="flex items-center space-x-2">
+            <div class="relative pt-2 w-full min-w-0">
+              <div class="flex items-center space-x-1.5 w-full min-w-0">
                 <button type="button" @click="scrollTabs(-1)" aria-label="Scroll tabs left" 
-                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
+                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[40px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
                   ◀
                 </button>
                 
                 <div role="tablist" aria-label="Survey Sections" 
-                     class="flex-1 flex space-x-2 overflow-x-auto py-1 scroll-smooth no-scrollbar">
+                     class="flex-1 min-w-0 flex space-x-2 overflow-x-auto py-1 scroll-smooth no-scrollbar">
                   <button v-for="(sec, sIdx) in sections" :key="sIdx"
                           :id="'tab-btn-' + sIdx"
                           type="button"
@@ -4653,7 +4653,7 @@ const app = createApp({
                 </div>
 
                 <button type="button" @click="scrollTabs(1)" aria-label="Scroll tabs right" 
-                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
+                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[40px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
                   ▶
                 </button>
               </div>
