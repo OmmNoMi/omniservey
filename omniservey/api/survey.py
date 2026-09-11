@@ -204,6 +204,35 @@ def get_service_worker():
 		"Cache-Control": "no-cache, no-store, must-revalidate"
 	}
 
-
-
-
+@frappe.whitelist(allow_guest=True)
+def get_bootstrap_data():
+	"""Returns bootstrap user info and full authorized templates with compiled schema."""
+	current_user = frappe.session.user
+	user_info = get_current_user_info()
+	templates = frappe.get_all(
+		"OmniServey Template",
+		filters={"status": "Published"},
+		fields=[
+			"name", "title", "project", "version", "target_category",
+			"is_public", "allowed_roles", "allowed_users",
+			"schema_hash_sha256", "published_at", "compiled_schema_json"
+		],
+		order_by="published_at desc"
+	)
+	authorized = []
+	for t in templates:
+		if user_has_template_permission(t, current_user):
+			schema_data = json.loads(t.compiled_schema_json) if t.compiled_schema_json else {}
+			authorized.append({
+				"name": t.name,
+				"title": t.title,
+				"project": t.project,
+				"version": t.version,
+				"target_category": t.target_category,
+				"schema_hash_sha256": t.schema_hash_sha256,
+				"schema": schema_data
+			})
+	return {
+		"user": user_info,
+		"templates": authorized
+	}

@@ -10,7 +10,7 @@ db.version(1).stores({
   respondents: 'respondent_uid, primary_name, respondent_type, phone_hash, village_city, district'
 });
 
-// 2. Comprehensive 10-Language Vernacular Dictionary (100% Offline Compatible)
+// 2. Comprehensive 11-Language Vernacular Dictionary
 const BUILTIN_TRANSLATIONS = {
   "en": {
     "OmniServey": "OmniServey",
@@ -25,7 +25,7 @@ const BUILTIN_TRANSLATIONS = {
     "कतार (ऑफलाइन)": "WAL Queue",
     "System": "System",
     "सिस्टम": "System",
-    "Exit Form": "Exit Form",
+    "Exit Form": "← Exit Form",
     "← बाहर निकलें": "Exit Form",
     "Step": "Step",
     "चरण": "Step",
@@ -37,7 +37,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "Questions",
     "Previous": "Previous",
     "← पिछला": "Previous",
-    "Next": "Next",
+    "Next": "Next →",
     "अगला →": "Next",
     "Save Offline": "Save Offline",
     "ऑफलाइन सेव करें": "Save Offline",
@@ -314,7 +314,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "Save Draft",
     "ಕರಡು ಉಳಿಸಿ": "Save Draft",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "Save Draft",
-    "ڈرافٹ محفوظ کریں": "Save Draft"
+    "ڈرافٹ محفوظ کریں": "Save Draft",
+    "Listen": "Listen",
+    "Speaking...": "Speaking...",
+    "Page": "Page",
+    "Get My Location": "Get My Location",
+    "Location Acquired": "Location Acquired",
+    "Take Photo": "Take Photo",
+    "Change Photo": "Change Photo",
+    "Sign here with finger": "Sign here with finger",
+    "Done / Send": "Done / Send",
+    "Save Work": "Save Work",
+    "Back": "← Back",
+    "+ Add Item / Asset": "+ Add Item / Asset",
+    "Equipment / Asset Name": "Equipment / Asset Name",
+    "Quantity": "Quantity",
+    "Approx Value (₹)": "Approx Value (₹)",
+    "Item": "Item",
+    "Remove": "Remove",
+    "e.g. Tractor, Water Pump, Sewing Machine": "e.g. Tractor, Water Pump, Sewing Machine",
+    "Enter answer...": "Enter answer..."
   },
   "hi": {
     "OmniServey": "ओमनीसर्वे",
@@ -341,7 +360,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "प्रश्न",
     "Previous": "← पिछला",
     "← पिछला": "← पिछला",
-    "Next": "अगला →",
+    "Next": "आगे →",
     "अगला →": "अगला →",
     "Save Offline": "ऑफलाइन सेव करें",
     "ऑफलाइन सेव करें": "ऑफलाइन सेव करें",
@@ -349,13 +368,13 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "सबमिट करें",
     "Capture GPS Coordinates": "जीपीएस लोकेशन रिकॉर्ड करें",
     "जीपीएस लोकेशन रिकॉर्ड करें": "जीपीएस लोकेशन रिकॉर्ड करें",
-    "GPS Fix Acquired ✓": "जीपीएस लोकेशन प्राप्त हुआ ✓",
+    "GPS Fix Acquired ✓": "जीपीएस लॉक हुआ ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "जीपीएस लोकेशन प्राप्त हुआ ✓",
     "Take Photo / Choose File": "फोटो लें / फाइल चुनें",
     "फोटो लें / फाइल चुनें": "फोटो लें / फाइल चुनें",
     "Sign inside box with finger or stylus": "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें",
-    "Clear Signature": "हस्ताक्षर मिटाएं",
+    "Clear Signature": "हस्ताक्षर हटाएं",
     "हस्ताक्षर मिटाएं": "हस्ताक्षर मिटाएं",
     "Signature Recorded": "हस्ताक्षर दर्ज हुआ",
     "हस्ताक्षर दर्ज हुआ": "हस्ताक्षर दर्ज हुआ",
@@ -381,7 +400,7 @@ const BUILTIN_TRANSLATIONS = {
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण",
     "Sync Now": "⟳ अभी सिंक करें",
     "⟳ अभी सिंक करें": "⟳ अभी सिंक करें",
-    "View on Map →": "नक्शे पर देखें →",
+    "View on Map →": "मानचित्र पर देखें →",
     "नक्शे पर देखें →": "नक्शे पर देखें →",
     "Re-acquire Fix": "पुनः प्रयास करें",
     "पुनः प्रयास करें": "पुनः प्रयास करें",
@@ -618,7 +637,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "ड्राफ्ट सेव करें",
     "ಕರಡು ಉಳಿಸಿ": "ड्राफ्ट सेव करें",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ड्राफ्ट सेव करें",
-    "ڈرافٹ محفوظ کریں": "ड्राफ्ट सेव करें"
+    "ڈرافٹ محفوظ کریں": "ड्राफ्ट सेव करें",
+    "Listen": "सुनें",
+    "Speaking...": "बोल रहा है...",
+    "Page": "पृष्ठ",
+    "Get My Location": "मेरा स्थान प्राप्त करें",
+    "Location Acquired": "स्थान प्राप्त हुआ",
+    "Take Photo": "फोटो खीचें",
+    "Change Photo": "फोटो बदलें",
+    "Sign here with finger": "यहाँ उंगली से हस्ताक्षर करें",
+    "Done / Send": "जमा करें",
+    "Save Work": "सुरक्षित रखें",
+    "Back": "← पीछे",
+    "+ Add Item / Asset": "+ उपकरण / संपत्ति जोड़ें",
+    "Equipment / Asset Name": "उपकरण / संपत्ति का नाम",
+    "Quantity": "संख्या",
+    "Approx Value (₹)": "अनुमानित मूल्य (₹)",
+    "Item": "वस्तु",
+    "Remove": "हटाएं",
+    "e.g. Tractor, Water Pump, Sewing Machine": "उदा. ट्रैक्टर, पानी पंप, सिलाई मशीन",
+    "Enter answer...": "उत्तर दर्ज करें..."
   },
   "mr": {
     "OmniServey": "ओम्नीसर्व्हे",
@@ -645,7 +683,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "प्रश्न",
     "Previous": "← मागील",
     "← पिछला": "← मागील",
-    "Next": "पुढील →",
+    "Next": "पुढे →",
     "अगला →": "पुढील →",
     "Save Offline": "ऑफलाइन जतन करा",
     "ऑफलाइन सेव करें": "ऑफलाइन जतन करा",
@@ -653,7 +691,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "सबमिट करा",
     "Capture GPS Coordinates": "जीपीएस स्थान नोंदवा",
     "जीपीएस लोकेशन रिकॉर्ड करें": "जीपीएस स्थान नोंदवा",
-    "GPS Fix Acquired ✓": "जीपीएस स्थान प्राप्त झाले ✓",
+    "GPS Fix Acquired ✓": "GPS प्राप्त झाले ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "जीपीएस स्थान प्राप्त झाले ✓",
     "Take Photo / Choose File": "फोटो घ्या / फाईल निवडा",
     "फोटो लें / फाइल चुनें": "फोटो घ्या / फाईल निवडा",
@@ -661,7 +699,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "आपल्या बोटाने किंवा स्टायलसने बॉक्समध्ये स्वाक्षरी करा",
     "Clear Signature": "स्वाक्षरी पुसा",
     "हस्ताक्षर मिटाएं": "स्वाक्षरी पुसा",
-    "Signature Recorded": "स्वाक्षरी नोंदवली",
+    "Signature Recorded": "स्वाक्षरी नोंदवली गेली",
     "हस्ताक्षर दर्ज हुआ": "स्वाक्षरी नोंदवली",
     "Enter response here...": "येथे उत्तर प्रविष्ट करा...",
     "यहाँ उत्तर दर्ज करें...": "येथे उत्तर प्रविष्ट करा...",
@@ -685,7 +723,7 @@ const BUILTIN_TRANSLATIONS = {
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "शून्य डेटा हानी सुरक्षित स्थानिक साठवण",
     "Sync Now": "⟳ आता सिंक करा",
     "⟳ अभी सिंक करें": "⟳ आता सिंक करा",
-    "View on Map →": "नక्शावर पहा →",
+    "View on Map →": "नकाशावर पहा →",
     "नक्शे पर देखें →": "नక्शावर पहा →",
     "Re-acquire Fix": "पुन्हा प्रयत्न करा",
     "पुनः प्रयास करें": "पुन्हा प्रयत्न करा",
@@ -922,7 +960,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "मसुदा जतन करा",
     "ಕರಡು ಉಳಿಸಿ": "मसुदा जतन करा",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "मसुदा जतन करा",
-    "ڈرافٹ محفوظ کریں": "मसुदा जतन करा"
+    "ڈرافٹ محفوظ کریں": "मसुदा जतन करा",
+    "Listen": "ऐका",
+    "Speaking...": "बोलत आहे...",
+    "Page": "पान",
+    "Get My Location": "माझे स्थान मिळवा",
+    "Location Acquired": "स्थान प्राप्त झाले",
+    "Take Photo": "फोटो काढा",
+    "Change Photo": "फोटो बदला",
+    "Sign here with finger": "येथे बोटाने स्वाक्षरी करा",
+    "Done / Send": "सबमिट करा",
+    "Save Work": "मसुदा जतन करा",
+    "Back": "← मागे",
+    "+ Add Item / Asset": "+ उपकरण / मालमत्ता जोडा",
+    "Equipment / Asset Name": "उपकरणाचे / मालमत्तेचे नाव",
+    "Quantity": "संख्या",
+    "Approx Value (₹)": "अंदाजे किंमत (₹)",
+    "Item": "वस्तू",
+    "Remove": "काढून टाका",
+    "e.g. Tractor, Water Pump, Sewing Machine": "उदा. ट्रॅक्टर, पाणी पंप, शिलाई मशीन",
+    "Enter answer...": "उत्तर प्रविष्ट करा..."
   },
   "gu": {
     "OmniServey": "ઓમ્નીસર્વે",
@@ -957,7 +1014,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "સબમિટ કરો",
     "Capture GPS Coordinates": "જીપીએસ સ્થાન મેળવો",
     "जीपीएस लोकेशन रिकॉर्ड करें": "જીપીએસ સ્થાન મેળવો",
-    "GPS Fix Acquired ✓": "જીપીએસ સ્થાન પ્રાપ્ત થયું ✓",
+    "GPS Fix Acquired ✓": "GPS મળ્યું ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "જીપીએસ સ્થાન પ્રાપ્ત થયું ✓",
     "Take Photo / Choose File": "ફોટો લો / ફાઇલ પસંદ કરો",
     "फोटो लें / फाइल चुनें": "ફોટો લો / ફાઇલ પસંદ કરો",
@@ -965,7 +1022,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "તમારી આંગળી અથવા સ્ટાઇલસથી બૉક્સમાં સહી કરો",
     "Clear Signature": "સહી સાફ કરો",
     "हस्ताक्षर मिटाएं": "સહી સાફ કરો",
-    "Signature Recorded": "સહી નોંધાઈ",
+    "Signature Recorded": "સહી નોંધાઈ ગઈ",
     "हस्ताक्षर दर्ज हुआ": "સહી નોંધાઈ",
     "Enter response here...": "અહીં જવાબ દાખલ કરો...",
     "यहाँ उत्तर दर्ज करें...": "અહીં જવાબ દાખલ કરો...",
@@ -991,7 +1048,7 @@ const BUILTIN_TRANSLATIONS = {
     "⟳ अभी सिंक करें": "⟳ હમણાં સિંક કરો",
     "View on Map →": "નકશા પર જુઓ →",
     "नक्शे पर देखें →": "નકશા પર જુઓ →",
-    "Re-acquire Fix": "ફરીથી પ્રયાસ કરો",
+    "Re-acquire Fix": "ફરીથી મેળવો",
     "पुनः प्रयास करें": "ફરીથી પ્રયાસ કરો",
     "Section A: Basic Details": "વિભાગ અ: મૂળભૂત વિગતો",
     "भाग क: बुनियादी विवरण": "વિભાગ અ: મૂળભૂત વિગતો",
@@ -1226,7 +1283,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "ડ્રાફ્ટ સાચવો",
     "ಕರಡು ಉಳಿಸಿ": "ડ્રાફ્ટ સાચવો",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ડ્રાફ્ટ સાચવો",
-    "ڈرافٹ محفوظ کریں": "ડ્રાફ્ટ સાચવો"
+    "ڈرافٹ محفوظ کریں": "ડ્રાફ્ટ સાચવો",
+    "Listen": "સાંભળો",
+    "Speaking...": "બોલે છે...",
+    "Page": "પાનું",
+    "Get My Location": "મારું લોકેશન મેળવો",
+    "Location Acquired": "લોકેશન મળી ગયું",
+    "Take Photo": "ફોટો પાડો",
+    "Change Photo": "ફોટો બદલો",
+    "Sign here with finger": "અહીં આંગળીથી સહી કરો",
+    "Done / Send": "સબમિટ કરો",
+    "Save Work": "ડ્રાફ્ટ સાચવો",
+    "Back": "← પાછળ",
+    "+ Add Item / Asset": "+ સાધન / મિલકત ઉમેરો",
+    "Equipment / Asset Name": "સાધન / મિલકતનું નામ",
+    "Quantity": "સંખ્યા",
+    "Approx Value (₹)": "અંદાજિત કિંમત (₹)",
+    "Item": "વસ્તુ",
+    "Remove": "કાઢી નાખો",
+    "e.g. Tractor, Water Pump, Sewing Machine": "દા.ત. ટ્રેક્ટર, પાણીનો પંપ, સિલાઈ મશીન",
+    "Enter answer...": "જવાબ લખો..."
   },
   "pa": {
     "OmniServey": "ਓਮਨੀਸਰਵੇ",
@@ -1241,11 +1317,11 @@ const BUILTIN_TRANSLATIONS = {
     "कतार (ऑफलाइन)": "ਕਤਾਰ (ਔਫਲਾਈਨ)",
     "System": "ਸਿਸਟਮ",
     "सिस्टम": "ਸਿਸਟਮ",
-    "Exit Form": "← ਬਾਹਰ ਜਾਓ",
+    "Exit Form": "← ਬਾਹਰ ਨਿਕਲੋ",
     "← बाहर निकलें": "← ਬਾਹਰ ਜਾਓ",
     "Step": "ਕਦਮ",
     "चरण": "ਕਦਮ",
-    "of": "ਦਾ",
+    "of": "ਵਿੱਚੋਂ",
     "का": "ਦਾ",
     "Pages": "ਪੰਨੇ",
     "पृष्ठ": "ਪੰਨੇ",
@@ -1253,7 +1329,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "ਸਵਾਲ",
     "Previous": "← ਪਿਛਲਾ",
     "← पिछला": "← ਪਿਛਲਾ",
-    "Next": "ਅਗਲਾ →",
+    "Next": "ਅੱਗੇ →",
     "अगला →": "ਅਗਲਾ →",
     "Save Offline": "ਔਫਲਾਈਨ ਸੇਵ ਕਰੋ",
     "ऑफलाइन सेव करें": "ਔਫਲਾਈਨ ਸੇਵ ਕਰੋ",
@@ -1261,13 +1337,13 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "ਸਬਮਿਟ ਕਰੋ",
     "Capture GPS Coordinates": "ਜੀਪੀਐਸ ਸਥਾਨ ਰਿਕਾਰਡ ਕਰੋ",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ਜੀਪੀਐਸ ਸਥਾਨ ਰਿਕਾਰਡ ਕਰੋ",
-    "GPS Fix Acquired ✓": "ਜੀਪੀਐਸ ਸਥਾਨ ਪ੍ਰਾਪਤ ਹੋਇਆ ✓",
+    "GPS Fix Acquired ✓": "GPS ਲੌਕ ਹੋ ਗਿਆ ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ਜੀਪੀਐਸ ਸਥਾਨ ਪ੍ਰਾਪਤ ਹੋਇਆ ✓",
     "Take Photo / Choose File": "ਫੋਟੋ ਲਓ / ਫਾਈਲ ਚੁਣੋ",
     "फोटो लें / फाइल चुनें": "ਫੋਟੋ ਲਓ / ਫਾਈਲ ਚੁਣੋ",
     "Sign inside box with finger or stylus": "ਆਪਣੀ ਉਂਗਲ ਜਾਂ ਸਟਾਈਲਸ ਨਾਲ ਬਾਕਸ ਵਿੱਚ ਦਸਤਖਤ ਕਰੋ",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "ਆਪਣੀ ਉਂਗਲ ਜਾਂ ਸਟਾਈਲਸ ਨਾਲ ਬਾਕਸ ਵਿੱਚ ਦਸਤਖਤ ਕਰੋ",
-    "Clear Signature": "ਦਸਤਖਤ ਮਿਟਾਓ",
+    "Clear Signature": "ਦਸਤਖਤ ਸਾਫ਼ ਕਰੋ",
     "हस्ताक्षर मिटाएं": "ਦਸਤਖਤ ਮਿਟਾਓ",
     "Signature Recorded": "ਦਸਤਖਤ ਦਰਜ ਹੋਏ",
     "हस्ताक्षर दर्ज हुआ": "ਦਸਤਖਤ ਦਰਜ ਹੋਏ",
@@ -1293,9 +1369,9 @@ const BUILTIN_TRANSLATIONS = {
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "ਜ਼ੀਰੋ ਡੇਟਾ ਨੁਕਸਾਨ ਸੁਰੱਖਿਅਤ ਸਥਾਨਕ ਸਟੋਰੇਜ",
     "Sync Now": "⟳ ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
     "⟳ अभी सिंक करें": "⟳ ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
-    "View on Map →": "ਨਕਸ਼ੇ ਤੇ ਦੇਖੋ →",
+    "View on Map →": "ਨਕਸ਼ੇ 'ਤੇ ਵੇਖੋ →",
     "नक्शे पर देखें →": "ਨਕਸ਼ੇ ਤੇ ਦੇਖੋ →",
-    "Re-acquire Fix": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "Re-acquire Fix": "ਮੁੜ ਪ੍ਰਾਪਤ ਕਰੋ",
     "पुनः प्रयास करें": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
     "Section A: Basic Details": "ਭਾਗ ੳ: ਮੁੱਢਲੇ ਵੇਰਵੇ",
     "भाग क: बुनियादी विवरण": "ਭਾਗ ੳ: ਮੁੱਢਲੇ ਵੇਰਵੇ",
@@ -1530,7 +1606,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
     "ಕರಡು ಉಳಿಸಿ": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
-    "ڈرافٹ محفوظ کریں": "ਡਰਾਫਟ ਸੰਭਾਲੋ"
+    "ڈرافٹ محفوظ کریں": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
+    "Listen": "ਸੁਣੋ",
+    "Speaking...": "ਬੋਲ ਰਿਹਾ ਹੈ...",
+    "Page": "ਪੰਨਾ",
+    "Get My Location": "ਮੇਰਾ ਸਥਾਨ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "Location Acquired": "ਸਥਾਨ ਪ੍ਰਾਪਤ ਹੋ ਗਿਆ",
+    "Take Photo": "ਫੋਟੋ ਖਿੱਚੋ",
+    "Change Photo": "ਫੋਟੋ ਬਦਲੋ",
+    "Sign here with finger": "ਇੱਥੇ ਉਂਗਲ ਨਾਲ ਦਸਤਖਤ ਕਰੋ",
+    "Done / Send": "ਜਮ੍ਹਾ ਕਰੋ",
+    "Save Work": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
+    "Back": "← ਪਿੱਛੇ",
+    "+ Add Item / Asset": "+ ਉਪਕਰਣ / ਸੰਪਤੀ ਸ਼ਾਮਲ ਕਰੋ",
+    "Equipment / Asset Name": "ਉਪਕਰਣ / ਸੰਪਤੀ ਦਾ ਨਾਮ",
+    "Quantity": "ਗਿਣਤੀ",
+    "Approx Value (₹)": "ਅੰਦਾਜ਼ਨ ਮੁੱਲ (₹)",
+    "Item": "ਆਈਟਮ",
+    "Remove": "ਹਟਾਓ",
+    "e.g. Tractor, Water Pump, Sewing Machine": "ਜਿਵੇਂ ਟਰੈਕਟਰ, ਪਾਣੀ ਵਾਲਾ ਪੰਪ, ਸਿਲਾਈ ਮਸ਼ੀਨ",
+    "Enter answer...": "ਜਵਾਬ ਦਰਜ ਕਰੋ..."
   },
   "bn": {
     "OmniServey": "অমনিসার্ভে",
@@ -1545,7 +1640,7 @@ const BUILTIN_TRANSLATIONS = {
     "कतार (ऑफलाइन)": "সারি (অফলাইন)",
     "System": "সিস্টেম",
     "सिस्टम": "সিস্টেম",
-    "Exit Form": "← প্রস্থান",
+    "Exit Form": "← বের হন",
     "← बाहर निकलें": "← প্রস্থান",
     "Step": "ধাপ",
     "चरण": "ধাপ",
@@ -1557,7 +1652,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "প্রশ্ন",
     "Previous": "← পূর্ববর্তী",
     "← पिछला": "← পূর্ববর্তী",
-    "Next": "পরবর্তী →",
+    "Next": "সামনে →",
     "अगला →": "পরবর্তী →",
     "Save Offline": "অফলাইনে সংরক্ষণ করুন",
     "ऑफलाइन सेव करें": "অফলাইনে সংরক্ষণ করুন",
@@ -1565,7 +1660,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "জমা দিন",
     "Capture GPS Coordinates": "জিপিএস লোকেশন সংরক্ষণ করুন",
     "जीपीएस लोकेशन रिकॉर्ड करें": "জিপিএস লোকেশন সংরক্ষণ করুন",
-    "GPS Fix Acquired ✓": "জিপিএস লোকেশন পাওয়া গেছে ✓",
+    "GPS Fix Acquired ✓": "GPS লক হয়েছে ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "জিপিএস লোকেশন পাওয়া গেছে ✓",
     "Take Photo / Choose File": "ছবি তুলুন / ফাইল বাছাই করুন",
     "फोटो लें / फाइल चुनें": "ছবি তুলুন / ফাইল বাছাই করুন",
@@ -1573,7 +1668,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "আপনার আঙুল বা স্টাইলাস দিয়ে বাক্সে স্বাক্ষর করুন",
     "Clear Signature": "স্বাক্ষর মুছুন",
     "हस्ताक्षर मिटाएं": "স্বাক্ষর মুছুন",
-    "Signature Recorded": "স্বাক্ষর রেকর্ড করা হয়েছে",
+    "Signature Recorded": "স্বাক্ষর সংরক্ষিত হয়েছে",
     "हस्ताक्षर दर्ज हुआ": "স্বাক্ষর রেকর্ড করা হয়েছে",
     "Enter response here...": "এখানে উত্তর লিখুন...",
     "यहाँ उत्तर दर्ज करें...": "এখানে উত্তর লিখুন...",
@@ -1834,7 +1929,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "খসড়া সংরক্ষণ",
     "ಕರಡು ಉಳಿಸಿ": "খসড়া সংরক্ষণ",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "খসড়া সংরক্ষণ",
-    "ڈرافٹ محفوظ کریں": "খসড়া সংরক্ষণ"
+    "ڈرافٹ محفوظ کریں": "খসড়া সংরক্ষণ",
+    "Listen": "শুনুন",
+    "Speaking...": "বলছে...",
+    "Page": "পৃষ্ঠা",
+    "Get My Location": "আমার অবস্থান পান",
+    "Location Acquired": "অবস্থান পাওয়া গেছে",
+    "Take Photo": "ছবি তুলুন",
+    "Change Photo": "ছবি পরিবর্তন করুন",
+    "Sign here with finger": "এখানে আঙুল দিয়ে স্বাক্ষর করুন",
+    "Done / Send": "জমা দিন",
+    "Save Work": "সংরক্ষণ করুন",
+    "Back": "← পেছনে",
+    "+ Add Item / Asset": "+ সরঞ্জাম / সম্পদ যোগ করুন",
+    "Equipment / Asset Name": "সরঞ্জাম / সম্পদের নাম",
+    "Quantity": "পরিমাণ",
+    "Approx Value (₹)": "আনুমানিক মূল্য (₹)",
+    "Item": "আইটেম",
+    "Remove": "মুছুন",
+    "e.g. Tractor, Water Pump, Sewing Machine": "যেমন ট্রাক্টর, জলের পাম্প, সেলাই মেশিন",
+    "Enter answer...": "উত্তর লিখুন..."
   },
   "ta": {
     "OmniServey": "ஓம்னிசர்வே",
@@ -1861,7 +1975,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "கேள்விகள்",
     "Previous": "← முந்தையது",
     "← पिछला": "← முந்தையது",
-    "Next": "அடுத்தது →",
+    "Next": "அடுத்து →",
     "अगला →": "அடுத்தது →",
     "Save Offline": "ஆஃப்லைனில் சேமிக்கவும்",
     "ऑफलाइन सेव करें": "ஆஃப்லைனில் சேமிக்கவும்",
@@ -1869,7 +1983,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "சமர்ப்பிக்கவும்",
     "Capture GPS Coordinates": "ஜிபிஎஸ் இருப்பிடத்தை பதிவு செய்",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ஜிபிஎஸ் இருப்பிடத்தை பதிவு செய்",
-    "GPS Fix Acquired ✓": "ஜிபிஎஸ் நிலை பெறப்பட்டது ✓",
+    "GPS Fix Acquired ✓": "GPS பெறப்பட்டது ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ஜிபிஎஸ் நிலை பெறப்பட்டது ✓",
     "Take Photo / Choose File": "படம் எடுக்கவும் / கோப்பை தேர்ந்தெடுக்கவும்",
     "फोटो लें / फाइल चुनें": "படம் எடுக்கவும் / கோப்பை தேர்ந்தெடுக்கவும்",
@@ -1877,7 +1991,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "விரல் அல்லது ஸ்டைலஸால் பெட்டியில் கையொப்பமிடுங்கள்",
     "Clear Signature": "கையொப்பத்தை அழிக்கவும்",
     "हस्ताक्षर मिटाएं": "கையொப்பத்தை அழிக்கவும்",
-    "Signature Recorded": "கையொப்பம் பதிவு செய்யப்பட்டது",
+    "Signature Recorded": "கையொப்பம் பதிவானது",
     "हस्ताक्षर दर्ज हुआ": "கையொப்பம் பதிவு செய்யப்பட்டது",
     "Enter response here...": "இங்கே பதில் உள்ளிடவும்...",
     "यहाँ उत्तर दर्ज करें...": "இங்கே பதில் உள்ளிடவும்...",
@@ -1901,9 +2015,9 @@ const BUILTIN_TRANSLATIONS = {
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "பூஜ்ஜிய தரவு இழப்பு பாதுகாப்பான உள்ளூர் சேமிப்பு",
     "Sync Now": "⟳ இப்போது ஒத்திசைக்கவும்",
     "⟳ अभी सिंक करें": "⟳ இப்போது ஒத்திசைக்கவும்",
-    "View on Map →": "வரைபடத்தில் பார்க்கவும் →",
+    "View on Map →": "வரைபடத்தில் பார்க்க →",
     "नक्शे पर देखें →": "வரைபடத்தில் பார்க்கவும் →",
-    "Re-acquire Fix": "மீண்டும் முயற்சிக்கவும்",
+    "Re-acquire Fix": "மீண்டும் பெறுக",
     "पुनः प्रयास करें": "மீண்டும் முயற்சிக்கவும்",
     "Section A: Basic Details": "பிரிவு அ: அடிப்படை விவரங்கள்",
     "भाग क: बुनियादी विवरण": "பிரிவு அ: அடிப்படை விவரங்கள்",
@@ -2138,7 +2252,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "வரைவு சேமி",
     "ಕರಡು ಉಳಿಸಿ": "வரைவு சேமி",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "வரைவு சேமி",
-    "ڈرافٹ محفوظ کریں": "வரைவு சேமி"
+    "ڈرافٹ محفوظ کریں": "வரைவு சேமி",
+    "Listen": "கேளுங்கள்",
+    "Speaking...": "பேசுகிறது...",
+    "Page": "பக்கம்",
+    "Get My Location": "எனது இருப்பிடத்தைப் பெறுக",
+    "Location Acquired": "இருப்பிடம் பெறப்பட்டது",
+    "Take Photo": "புகைப்படம் எடுங்கள்",
+    "Change Photo": "புகைப்படத்தை மாற்றவும்",
+    "Sign here with finger": "விரலால் கையொப்பமிடுங்கள்",
+    "Done / Send": "சமர்ப்பிக்கவும்",
+    "Save Work": "சேமிக்கவும்",
+    "Back": "← பின்னால்",
+    "+ Add Item / Asset": "+ உபகரணம் / சொத்து சேர்க்க",
+    "Equipment / Asset Name": "உபகரணம் / சொத்தின் பெயர்",
+    "Quantity": "எண்ணிக்கை",
+    "Approx Value (₹)": "தோராய மதிப்பு (₹)",
+    "Item": "பொருள்",
+    "Remove": "நீக்கு",
+    "e.g. Tractor, Water Pump, Sewing Machine": "எ.கா. டிராக்டர், நீர் பம்ப், தையல் இயந்திரம்",
+    "Enter answer...": "பதிலை உள்ளிடவும்..."
   },
   "te": {
     "OmniServey": "ఓమ్నీసర్వే",
@@ -2157,7 +2290,7 @@ const BUILTIN_TRANSLATIONS = {
     "← बाहर निकलें": "← నిష్క్రమించు",
     "Step": "దశ",
     "चरण": "దశ",
-    "of": "యొక్క",
+    "of": "లో",
     "का": "యొక్క",
     "Pages": "పేజీలు",
     "पृष्ठ": "పేజీలు",
@@ -2165,7 +2298,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "ప్రశ్నలు",
     "Previous": "← మునుపటి",
     "← पिछला": "← మునుపటి",
-    "Next": "తదుపరి →",
+    "Next": "తరువాత →",
     "अगला →": "తదుపరి →",
     "Save Offline": "ఆఫ్‌లైన్‌లో భద్రపరచండి",
     "ऑफलाइन सेव करें": "ఆఫ్‌లైన్‌లో భద్రపరచండి",
@@ -2173,15 +2306,15 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "సమర్పించండి",
     "Capture GPS Coordinates": "జీపీఎస్ స్థానాన్ని రికార్డ్ చేయండి",
     "जीपीएस लोकेशन रिकॉर्ड करें": "జీపీఎస్ స్థానాన్ని రికార్డ్ చేయండి",
-    "GPS Fix Acquired ✓": "జీపీఎస్ స్థానం పొందబడింది ✓",
+    "GPS Fix Acquired ✓": "GPS లాక్ చేయబడింది ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "జీపీఎస్ స్థానం పొందబడింది ✓",
     "Take Photo / Choose File": "ఫోటో తీయండి / ఫైల్ ఎంచుకోండి",
     "फोटो लें / फाइल चुनें": "ఫోటో తీయండి / ఫైల్ ఎంచుకోండి",
     "Sign inside box with finger or stylus": "మీ వేలితో లేదా స్టైలస్‌తో పెట్టెలో సంతకం చేయండి",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "మీ వేలితో లేదా స్టైలస్‌తో పెట్టెలో సంతకం చేయండి",
-    "Clear Signature": "సంతకాన్ని క్లియర్ చేయండి",
+    "Clear Signature": "సంతకం క్లియర్ చేయండి",
     "हस्ताक्षर मिटाएं": "సంతకాన్ని క్లియర్ చేయండి",
-    "Signature Recorded": "సంతకం నమోదైంది",
+    "Signature Recorded": "సంతకం నమోదు చేయబడింది",
     "हस्ताक्षर दर्ज हुआ": "సంతకం నమోదైంది",
     "Enter response here...": "ఇక్కడ సమాధానం నమోదు చేయండి...",
     "यहाँ उत्तर दर्ज करें...": "ఇక్కడ సమాధానం నమోదు చేయండి...",
@@ -2207,7 +2340,7 @@ const BUILTIN_TRANSLATIONS = {
     "⟳ अभी सिंक करें": "⟳ ఇప్పుడే సమకాలీకరించండి",
     "View on Map →": "మ్యాప్‌లో చూడండి →",
     "नक्शे पर देखें →": "మ్యాప్‌లో చూడండి →",
-    "Re-acquire Fix": "మళ్లీ ప్రయత్నించండి",
+    "Re-acquire Fix": "మళ్ళీ పొందండి",
     "पुनः प्रयास करें": "మళ్లీ ప్రయత్నించండి",
     "Section A: Basic Details": "విభాగం ఎ: ప్రాథమిక వివరాలు",
     "भाग क: बुनियादी विवरण": "విభాగం ఎ: ప్రాథమిక వివరాలు",
@@ -2442,7 +2575,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "చిత్తుప్రతి భద్రపరచు",
     "ಕರಡು ಉಳಿಸಿ": "చిత్తుప్రతి భద్రపరచు",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "చిత్తుప్రతి భద్రపరచు",
-    "ڈرافٹ محفوظ کریں": "చిత్తుప్రతి భద్రపరచు"
+    "ڈرافٹ محفوظ کریں": "చిత్తుప్రతి భద్రపరచు",
+    "Listen": "వినండి",
+    "Speaking...": "మాట్లాడుతోంది...",
+    "Page": "పేజీ",
+    "Get My Location": "నా స్థానాన్ని పొందండి",
+    "Location Acquired": "స్థానం పొందబడింది",
+    "Take Photo": "ఫోటో తీయండి",
+    "Change Photo": "ఫోటోను మార్చండి",
+    "Sign here with finger": "వేలితో సంతకం చేయండి",
+    "Done / Send": "సమర్పించండి",
+    "Save Work": "సేవ్ చేయండి",
+    "Back": "← వెనుకకు",
+    "+ Add Item / Asset": "+ పరికరం / ఆస్తి జోడించండి",
+    "Equipment / Asset Name": "పరికరం / ఆస్తి పేరు",
+    "Quantity": "పరిమాణం",
+    "Approx Value (₹)": "సుమారు విలువ (₹)",
+    "Item": "వస్తువు",
+    "Remove": "తొలగించు",
+    "e.g. Tractor, Water Pump, Sewing Machine": "ఉదా. ట్రాక్టర్, నీటి పంపు, కుట్టు యంత్రం",
+    "Enter answer...": "సమాధానం నమోదు చేయండి..."
   },
   "kn": {
     "OmniServey": "ಓಮ್ನಿಸರ್ವೆ",
@@ -2461,7 +2613,7 @@ const BUILTIN_TRANSLATIONS = {
     "← बाहर निकलें": "← ನಿರ್ಗಮಿಸಿ",
     "Step": "ಹಂತ",
     "चरण": "ಹಂತ",
-    "of": "ರ",
+    "of": "ರಲ್ಲಿ",
     "का": "ರ",
     "Pages": "ಪುಟಗಳು",
     "पृष्ठ": "ಪುಟಗಳು",
@@ -2477,13 +2629,13 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "ಸಲ್ಲಿಸಿ",
     "Capture GPS Coordinates": "ಜಿಪಿಎಸ್ ಸ್ಥಳವನ್ನು ದಾಖಲಿಸಿ",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ಜಿಪಿಎಸ್ ಸ್ಥಳವನ್ನು ದಾಖಲಿಸಿ",
-    "GPS Fix Acquired ✓": "ಜಿಪಿಎಸ್ ಸ್ಥಳ ಪಡೆಯಲಾಗಿದೆ ✓",
+    "GPS Fix Acquired ✓": "GPS ಲಾಕ್ ಆಗಿದೆ ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ಜಿಪಿಎಸ್ ಸ್ಥಳ ಪಡೆಯಲಾಗಿದೆ ✓",
     "Take Photo / Choose File": "ಫೋಟೋ ತೆಗೆಯಿರಿ / ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ",
     "फोटो लें / फाइल चुनें": "ಫೋಟೋ ತೆಗೆಯಿರಿ / ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ",
     "Sign inside box with finger or stylus": "ನಿಮ್ಮ ಬೆರಳು ಅಥವಾ ಸ್ಟೈಲಸ್ ಬಳಸಿ ಸಹಿ ಮಾಡಿ",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "ನಿಮ್ಮ ಬೆರಳು ಅಥವಾ ಸ್ಟೈಲಸ್ ಬಳಸಿ ಸಹಿ ಮಾಡಿ",
-    "Clear Signature": "ಸಹಿಯನ್ನು ಅಳಿಸಿ",
+    "Clear Signature": "ಸಹಿ ತೆರವುಗೊಳಿಸಿ",
     "हस्ताक्षर मिटाएं": "ಸಹಿಯನ್ನು ಅಳಿಸಿ",
     "Signature Recorded": "ಸಹಿ ದಾಖಲಾಗಿದೆ",
     "हस्ताक्षर दर्ज हुआ": "ಸಹಿ ದಾಖಲಾಗಿದೆ",
@@ -2511,7 +2663,7 @@ const BUILTIN_TRANSLATIONS = {
     "⟳ अभी सिंक करें": "⟳ ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
     "View on Map →": "ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ →",
     "नक्शे पर देखें →": "ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ →",
-    "Re-acquire Fix": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+    "Re-acquire Fix": "ಮರುಪಡೆಯಿರಿ",
     "पुनः प्रयास करें": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
     "Section A: Basic Details": "ವಿಭಾಗ ಎ: ಮೂಲಭೂತ ವಿವರಗಳು",
     "भाग क: बुनियादी विवरण": "ವಿಭಾಗ ಎ: ಮೂಲಭೂತ ವಿವರಗಳು",
@@ -2746,7 +2898,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "ಕರಡು ಉಳಿಸಿ",
     "ಕರಡು ಉಳಿಸಿ": "ಕರಡು ಉಳಿಸಿ",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ಕರಡು ಉಳಿಸಿ",
-    "ڈرافٹ محفوظ کریں": "ಕರಡು ಉಳಿಸಿ"
+    "ڈرافٹ محفوظ کریں": "ಕರಡು ಉಳಿಸಿ",
+    "Listen": "ಕೇಳಿ",
+    "Speaking...": "ಮಾತನಾಡುತ್ತಿದೆ...",
+    "Page": "ಪುಟ",
+    "Get My Location": "ನನ್ನ ಸ್ಥಳವನ್ನು ಪಡೆಯಿರಿ",
+    "Location Acquired": "ಸ್ಥಳ ಲಭ್ಯವಾಗಿದೆ",
+    "Take Photo": "ಫೋಟೋ ತೆಗೆಯಿರಿ",
+    "Change Photo": "ಫೋಟೋ ಬದಲಾಯಿಸಿ",
+    "Sign here with finger": "ಇಲ್ಲಿ ಬೆರಳಿನಿಂದ ಸಹಿ ಮಾಡಿ",
+    "Done / Send": "ಸಲ್ಲಿಸಿ",
+    "Save Work": "ಉಳಿಸಿ",
+    "Back": "← ಹಿಂದೆ",
+    "+ Add Item / Asset": "+ ಉಪಕರಣ / ಆಸ್ತಿ ಸೇರಿಸಿ",
+    "Equipment / Asset Name": "ಉಪಕರಣ / ಆಸ್ತಿ ಹೆಸರು",
+    "Quantity": "ಪ್ರಮಾಣ",
+    "Approx Value (₹)": "ಅಂದಾಜು ಮೌಲ್ಯ (₹)",
+    "Item": "ವಸ್ತು",
+    "Remove": "ತೆಗೆದುಹಾಕಿ",
+    "e.g. Tractor, Water Pump, Sewing Machine": "ಉದಾ. ಟ್ರ್ಯಾಕ್ಟರ್, ನೀರಿನ ಪಂಪ್, ಹೊಲಿಗೆ ಯಂತ್ರ",
+    "Enter answer...": "ಉತ್ತರವನ್ನು ನಮೂದಿಸಿ..."
   },
   "ml": {
     "OmniServey": "ഓമ്നിസർവെ",
@@ -2765,7 +2936,7 @@ const BUILTIN_TRANSLATIONS = {
     "← बाहर निकलें": "← പുറത്തുകടക്കുക",
     "Step": "ഘട്ടം",
     "चरण": "ഘട്ടം",
-    "of": "ന്റെ",
+    "of": "ൽ",
     "का": "ന്റെ",
     "Pages": "പേജുകൾ",
     "पृष्ठ": "പേജുകൾ",
@@ -2781,7 +2952,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "സമർപ്പിക്കുക",
     "Capture GPS Coordinates": "ജിപിഎസ് ലൊക്കേഷൻ രേഖപ്പെടുത്തുക",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ജിപിഎസ് ലൊക്കേഷൻ രേഖപ്പെടുത്തുക",
-    "GPS Fix Acquired ✓": "ജിപിഎസ് ലഭിച്ചു ✓",
+    "GPS Fix Acquired ✓": "GPS ലോക്ക് ചെയ്തു ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ജിപിഎസ് ലഭിച്ചു ✓",
     "Take Photo / Choose File": "ഫോട്ടോ എടുക്കുക / ഫയൽ തിരഞ്ഞെടുക്കുക",
     "फोटो लें / फाइल चुनें": "ഫോട്ടോ എടുക്കുക / ഫയൽ തിരഞ്ഞെടുക്കുക",
@@ -2815,7 +2986,7 @@ const BUILTIN_TRANSLATIONS = {
     "⟳ अभी सिंक करें": "⟳ ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
     "View on Map →": "മാപ്പിൽ കാണുക →",
     "नक्शे पर देखें →": "മാപ്പിൽ കാണുക →",
-    "Re-acquire Fix": "വീണ്ടും ശ്രമിക്കുക",
+    "Re-acquire Fix": "വീണ്ടും എടുക്കുക",
     "पुनः प्रयास करें": "വീണ്ടും ശ്രമിക്കുക",
     "Section A: Basic Details": "വിഭാഗം എ: അടിസ്ഥാന വിവരങ്ങൾ",
     "भाग क: बुनियादी विवरण": "വിഭാഗം എ: അടിസ്ഥാന വിവരങ്ങൾ",
@@ -3050,7 +3221,26 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
     "ಕರಡು ಉಳಿಸಿ": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
-    "ڈرافٹ محفوظ کریں": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക"
+    "ڈرافٹ محفوظ کریں": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
+    "Listen": "കേൾക്കുക",
+    "Speaking...": "സംസാരിക്കുന്നു...",
+    "Page": "പേജ്",
+    "Get My Location": "എന്റെ ലൊക്കേഷൻ നേടുക",
+    "Location Acquired": "ലൊക്കേഷൻ ലഭിച്ചു",
+    "Take Photo": "ഫോട്ടോ എടുക്കുക",
+    "Change Photo": "ഫോട്ടോ മാറ്റുക",
+    "Sign here with finger": "ഇവിടെ വിരലുകൊണ്ട് ഒപ്പിടുക",
+    "Done / Send": "സമർപ്പിക്കുക",
+    "Save Work": "സൂക്ഷിക്കുക",
+    "Back": "← പുറകിലോട്ട്",
+    "+ Add Item / Asset": "+ ഉപകരണം / ആസ്തി ചേർക്കുക",
+    "Equipment / Asset Name": "ഉപകരണത്തിന്റെ / ആസ്തിയുടെ പേര്",
+    "Quantity": "എണ്ണം",
+    "Approx Value (₹)": "ഏകദേശ മൂല്യം (₹)",
+    "Item": "ഇനം",
+    "Remove": "നീക്കം ചെയ്യുക",
+    "e.g. Tractor, Water Pump, Sewing Machine": "ഉദാ. ട്രാക്ടർ, വാട്ടർ പമ്പ്, തയ്യൽ മെഷീൻ",
+    "Enter answer...": "ഉത്തരം രേഖപ്പെടുത്തുക..."
   },
   "ur": {
     "OmniServey": "اومنی سروے",
@@ -3077,7 +3267,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "سوالات",
     "Previous": "← پچھلا",
     "← पिछला": "← پچھلا",
-    "Next": "اگلا →",
+    "Next": "آگے →",
     "अगला →": "اگلا →",
     "Save Offline": "آف لائن محفوظ کریں",
     "ऑफलाइन सेव करें": "آف لائن محفوظ کریں",
@@ -3085,7 +3275,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "جمع کرائیں",
     "Capture GPS Coordinates": "جی پی ایس مقام ریکارڈ کریں",
     "जीपीएस लोकेशन रिकॉर्ड करें": "جی پی ایس مقام ریکارڈ کریں",
-    "GPS Fix Acquired ✓": "جی پی ایس حاصل ہو گیا ✓",
+    "GPS Fix Acquired ✓": "GPS لاک ہو گیا ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "جی پی ایس حاصل ہو گیا ✓",
     "Take Photo / Choose File": "تصویر لیں / فائل منتخب کریں",
     "फोटो लें / फाइल चुनें": "تصویر لیں / فائل منتخب کریں",
@@ -3093,7 +3283,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "اپنی انگلی یا اسٹائلس سے باکس میں دستخط کریں",
     "Clear Signature": "دستخط صاف کریں",
     "हस्ताक्षर मिटाएं": "دستخط صاف کریں",
-    "Signature Recorded": "دستخط درج ہو گئے",
+    "Signature Recorded": "دستخط محفوظ ہو گئے",
     "हस्ताक्षर दर्ज हुआ": "دستخط درج ہو گئے",
     "Enter response here...": "یہاں جواب درج کریں...",
     "यहाँ उत्तर दर्ज करें...": "یہاں جواب درج کریں...",
@@ -3119,7 +3309,7 @@ const BUILTIN_TRANSLATIONS = {
     "⟳ अभी सिंक करें": "⟳ ابھی سنک کریں",
     "View on Map →": "نقشے پر دیکھیں →",
     "नक्शे पर देखें →": "نقشے پر دیکھیں →",
-    "Re-acquire Fix": "دوبارہ کوشش کریں",
+    "Re-acquire Fix": "دوبارہ حاصل کریں",
     "पुनः प्रयास करें": "دوبارہ کوشش کریں",
     "Section A: Basic Details": "حصہ اول: بنیادی تفصیلات",
     "भाग क: बुनियादी विवरण": "حصہ اول: بنیادی تفصیلات",
@@ -3354,8 +3544,42 @@ const BUILTIN_TRANSLATIONS = {
     "చిత్తుప్రతి భద్రపరచు": "ڈرافٹ محفوظ کریں",
     "ಕರಡು ಉಳಿಸಿ": "ڈرافٹ محفوظ کریں",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ڈرافٹ محفوظ کریں",
-    "ڈرافٹ محفوظ کریں": "ڈرافٹ محفوظ کریں"
+    "ڈرافٹ محفوظ کریں": "ڈرافٹ محفوظ کریں",
+    "Listen": "سنیں",
+    "Speaking...": "بول رہا ہے...",
+    "Page": "صفحہ",
+    "Get My Location": "میرا مقام حاصل کریں",
+    "Location Acquired": "مقام حاصل کر لیا گیا",
+    "Take Photo": "تصویر لیں",
+    "Change Photo": "تصویر تبدیل کریں",
+    "Sign here with finger": "یہاں انگلی سے دستخط کریں",
+    "Done / Send": "جمع کرائیں",
+    "Save Work": "محفوظ کریں",
+    "Back": "← پیچھے",
+    "+ Add Item / Asset": "+ سامان / اثاثہ شامل کریں",
+    "Equipment / Asset Name": "سامان / اثاثے کا نام",
+    "Quantity": "تعداد",
+    "Approx Value (₹)": "تخمینی قیمت (₹)",
+    "Item": "آئٹم",
+    "Remove": "حذف کریں",
+    "e.g. Tractor, Water Pump, Sewing Machine": "مثلاً ٹریکٹر، واٹر پمپ، سلائی مشین",
+    "Enter answer...": "جواب درج کریں..."
   }
+};
+
+// Language to SpeechSynthesis Locale Map
+const SPEECH_LOCALE_MAP = {
+  'en': 'en-IN',
+  'hi': 'hi-IN',
+  'gu': 'gu-IN',
+  'mr': 'mr-IN',
+  'pa': 'pa-IN',
+  'bn': 'bn-IN',
+  'ta': 'ta-IN',
+  'te': 'te-IN',
+  'kn': 'kn-IN',
+  'ml': 'ml-IN',
+  'ur': 'ur-IN'
 };
 
 // 3. Client-Side Canvas Image Compressor (<150 KB JPEG + GPS Watermark)
@@ -3367,54 +3591,44 @@ async function compressImage(file, gpsCoords = null) {
       const img = new Image();
       img.src = event.target.result;
       img.onload = () => {
-        const maxWidth = 1280;
-        const maxHeight = 960;
+        const canvas = document.createElement('canvas');
+        const MAX_WIDTH = 1200;
+        const MAX_HEIGHT = 1200;
         let width = img.width;
         let height = img.height;
 
         if (width > height) {
-          if (width > maxWidth) {
-            height = Math.round((height * maxWidth) / width);
-            width = maxWidth;
+          if (width > MAX_WIDTH) {
+            height = Math.round((height * MAX_WIDTH) / width);
+            width = MAX_WIDTH;
           }
         } else {
-          if (height > maxHeight) {
-            width = Math.round((width * maxHeight) / height);
-            height = maxHeight;
+          if (height > MAX_HEIGHT) {
+            width = Math.round((width * MAX_HEIGHT) / height);
+            height = MAX_HEIGHT;
           }
         }
 
-        const canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, width, height);
 
-        // Stamp GPS & Timestamp Watermark
-        const nowStr = new Date().toISOString().replace('T', ' ').slice(0, 19);
-        let watermarkText = `OmniServey | ${nowStr}`;
-        if (gpsCoords && gpsCoords.latitude) {
-          watermarkText += ` | Lat:${gpsCoords.latitude.toFixed(5)} Lng:${gpsCoords.longitude.toFixed(5)} (±${gpsCoords.accuracy ? gpsCoords.accuracy.toFixed(0) : 0}m)`;
+        // Watermark with GPS and Timestamp
+        const now = new Date();
+        const timeStr = now.toISOString().replace('T', ' ').substring(0, 19);
+        let stampText = `OmniServey · ${timeStr}`;
+        if (gpsCoords && gpsCoords.latitude && gpsCoords.longitude) {
+          stampText += ` · Lat: ${gpsCoords.latitude.toFixed(5)}, Lng: ${gpsCoords.longitude.toFixed(5)} (±${gpsCoords.accuracy ? gpsCoords.accuracy.toFixed(0) : 0}m)`;
         }
 
-        const bannerHeight = 28;
-        ctx.fillStyle = 'rgba(15, 23, 42, 0.75)';
-        ctx.fillRect(0, height - bannerHeight, width, bannerHeight);
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.65)';
+        ctx.fillRect(0, height - 36, width, 36);
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 15px sans-serif';
+        ctx.fillText(stampText, 14, height - 12);
 
-        ctx.font = 'bold 12px monospace';
-        ctx.fillStyle = '#f8fafc';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(watermarkText, 10, height - (bannerHeight / 2));
-
-        let quality = 0.75;
-        let dataUrl = canvas.toDataURL('image/jpeg', quality);
-
-        while (dataUrl.length > 200 * 1024 && quality > 0.3) {
-          quality -= 0.1;
-          dataUrl = canvas.toDataURL('image/jpeg', quality);
-        }
-
-        resolve(dataUrl);
+        resolve(canvas.toDataURL('image/jpeg', 0.75));
       };
       img.onerror = (err) => reject(err);
     };
@@ -3422,44 +3636,34 @@ async function compressImage(file, gpsCoords = null) {
   });
 }
 
-// 4. Main Vue 3 Application Controller
+// 4. Main Vue 3 Application
 const app = createApp({
   setup() {
-    // Core Reactive State
     const currentView = ref('templates'); // 'templates' | 'form' | 'queue'
     const isOnline = ref(navigator.onLine);
     const isSyncing = ref(false);
-    const storagePersisted = ref(false);
-    const permissionStatus = ref('loading'); // 'loading' | 'authorized' | 'restricted'
+    const currentLang = ref(localStorage.getItem('omniservey_lang') || 'en');
 
-    // Multi-Language Management (Exclusively Indian Regional Languages + English)
-    const INDIAN_LANG_CODES = new Set(['en', 'hi', 'mr', 'gu', 'pa', 'bn', 'ta', 'te', 'kn', 'ml', 'ur']);
-    const currentLang = ref(localStorage.getItem('omniservey_lang') || 'hi');
-    const languages = ref([
-      { code: 'en', label: 'English' },
-      { code: 'hi', label: 'हिन्दी (Hindi)' },
-      { code: 'mr', label: 'मराठी (Marathi)' },
-      { code: 'gu', label: 'ગુજરાતી (Gujarati)' },
-      { code: 'pa', label: 'ਪੰਜਾਬੀ (Punjabi)' },
-      { code: 'bn', label: 'বাংলা (Bengali)' },
-      { code: 'ta', label: 'தமிழ் (Tamil)' },
-      { code: 'te', label: 'తెలుగు (Telugu)' },
-      { code: 'kn', label: 'ಕನ್ನಡ (Kannada)' },
-      { code: 'ml', label: 'മലയാളം (Malayalam)' },
-      { code: 'ur', label: 'اردو (Urdu)' }
-    ]);
+    const languages = [
+      { code: 'en', name: 'English' },
+      { code: 'hi', name: 'हिन्दी (Hindi)' },
+      { code: 'mr', name: 'मराठी (Marathi)' },
+      { code: 'gu', name: 'ગુજરાતી (Gujarati)' },
+      { code: 'pa', name: 'ਪੰਜਾਬੀ (Punjabi)' },
+      { code: 'bn', name: 'বাংলা (Bengali)' },
+      { code: 'ta', name: 'தமிழ் (Tamil)' },
+      { code: 'te', name: 'తెలుగు (Telugu)' },
+      { code: 'kn', name: 'ಕನ್ನಡ (Kannada)' },
+      { code: 'ml', name: 'മലയാളം (Malayalam)' },
+      { code: 'ur', name: 'اردو (Urdu)' }
+    ];
 
-    // Active Templates & Form State
     const templates = ref([]);
     const searchQuery = ref('');
     const selectedCategory = ref('All');
     const activeTemplate = ref(null);
     const activeSectionIndex = ref(0);
-    const currentUUID = ref(generateUUID());
     const formData = reactive({});
-    const translationsMap = ref({});
-
-    // High-Precision Hardware GPS
     const currentGPS = reactive({
       latitude: null,
       longitude: null,
@@ -3469,39 +3673,167 @@ const app = createApp({
       error: null
     });
 
-    // Signature Canvas Registry
-    const signaturePads = {};
-
-    // Toast & Validation Notifications
     const toastMessage = ref('');
-    const toastType = ref('info'); // 'info' | 'success' | 'error'
+    const toastType = ref('info');
+    const toastTimeout = ref(null);
     const validationModalOpen = ref(false);
     const validationErrors = ref([]);
     const highlightedQuestion = ref(null);
     const liveAnnouncement = ref('');
+    const currentUser = ref('Guest Surveyor');
+    const walSubmissions = ref([]);
+    const pendingCount = ref(0);
+    const permissionStatus = reactive({
+      gps: 'prompt',
+      camera: 'prompt'
+    });
+
+    const signaturePads = {};
+    const currentUUID = ref('');
+    const speakingQuestionCode = ref(null);
+
+    // Vernacular Translator Helper
+    function t(text) {
+      if (!text) return '';
+      const lang = currentLang.value;
+      if (BUILTIN_TRANSLATIONS[lang] && BUILTIN_TRANSLATIONS[lang][text]) {
+        return BUILTIN_TRANSLATIONS[lang][text];
+      }
+      return text;
+    }
 
     function announce(msg) {
-      liveAnnouncement.value = '';
+      liveAnnouncement.value = msg;
+    }
+
+    function showToast(msg, type = 'info') {
+      toastMessage.value = msg;
+      toastType.value = type;
+      if (toastTimeout.value) clearTimeout(toastTimeout.value);
+      toastTimeout.value = setTimeout(() => {
+        toastMessage.value = '';
+      }, 3500);
+    }
+
+    // Text-to-Speech Engine
+    function speakQuestion(q) {
+      if (!('speechSynthesis' in window)) {
+        showToast('Text-to-Speech not supported on this browser', 'error');
+        return;
+      }
+
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        if (speakingQuestionCode.value === q.question_code) {
+          speakingQuestionCode.value = null;
+          return;
+        }
+      }
+
+      speakingQuestionCode.value = q.question_code;
+
+      let textToRead = t(q.label_en);
+      if (q.options && Array.isArray(q.options) && q.options.length > 0) {
+        textToRead += '. ' + q.options.map(opt => t(opt)).join(', ');
+      }
+
+      const utterance = new SpeechSynthesisUtterance(textToRead);
+      const targetLocale = SPEECH_LOCALE_MAP[currentLang.value] || 'hi-IN';
+      utterance.lang = targetLocale;
+      utterance.rate = 0.9; // clear, comfortable pace for elderly users
+
+      const voices = window.speechSynthesis.getVoices();
+      const matchedVoice = voices.find(v => v.lang === targetLocale || v.lang.startsWith(currentLang.value));
+      if (matchedVoice) utterance.voice = matchedVoice;
+
+      utterance.onend = () => {
+        speakingQuestionCode.value = null;
+      };
+      utterance.onerror = () => {
+        speakingQuestionCode.value = null;
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Auto-Scroll to Next Question Card
+    function autoScrollToNextQuestion(currentIndex) {
       nextTick(() => {
-        liveAnnouncement.value = msg;
+        const allCards = document.querySelectorAll('.elder-card');
+        if (allCards && allCards[currentIndex + 1]) {
+          allCards[currentIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const focusTarget = allCards[currentIndex + 1].querySelector('input, [role="radio"], button, select');
+          if (focusTarget) focusTarget.focus({ preventScroll: true });
+        }
       });
     }
 
-    // Current User Profile State
-    const currentUser = reactive({
-      user: 'Administrator',
-      full_name: 'Administrator',
-      roles: ['System Manager'],
-      is_guest: false
+    // Option Selection & Auto-Advance
+    function selectOption(questionCode, optionValue, questionIndex) {
+      formData[questionCode] = optionValue;
+      saveToStorageDebounced();
+      autoScrollToNextQuestion(questionIndex);
+    }
+
+    // Dynamic Option Styling (Yes/No Color Highlights)
+    function getOptionStyle(opt, isSelected) {
+      const optStr = String(opt).toLowerCase().trim();
+      const isYes = optStr === 'yes' || optStr === 'हाँ' || optStr === 'હા' || optStr === 'होय';
+      const isNo = optStr === 'no' || optStr === 'नहीं' || optStr === 'ના' || optStr === 'नाही';
+
+      if (isSelected) {
+        if (isYes) return 'bg-emerald-600 text-white border-emerald-700 shadow-md font-extrabold';
+        if (isNo) return 'bg-rose-600 text-white border-rose-700 shadow-md font-extrabold';
+        return 'bg-indigo-600 text-white border-indigo-700 shadow-md font-extrabold';
+      }
+
+      if (isYes) return 'bg-emerald-50/70 border-emerald-200 text-emerald-950 hover:bg-emerald-100 hover:border-emerald-400 font-bold';
+      if (isNo) return 'bg-rose-50/70 border-rose-200 text-rose-950 hover:bg-rose-100 hover:border-rose-400 font-bold';
+      return 'bg-white border-slate-300 text-slate-900 hover:bg-slate-50 hover:border-indigo-400 font-semibold';
+    }
+
+    // Repeatable Dynamic Grid Row Add/Remove
+    function addGridRow(questionCode) {
+      if (!formData[questionCode] || !Array.isArray(formData[questionCode])) {
+        formData[questionCode] = [];
+      }
+      formData[questionCode].push({
+        item_name: '',
+        qty: 1,
+        estimated_val: ''
+      });
+      saveToStorageDebounced();
+    }
+
+    function removeGridRow(questionCode, index) {
+      if (formData[questionCode] && Array.isArray(formData[questionCode])) {
+        formData[questionCode].splice(index, 1);
+        saveToStorageDebounced();
+      }
+    }
+
+    // Categories Computation
+    const categories = computed(() => {
+      const set = new Set(['All']);
+      templates.value.forEach(t => {
+        if (t.project) set.add(t.project);
+      });
+      return Array.from(set);
     });
 
-    // Write-Ahead Log (WAL) State
-    const walSubmissions = ref([]);
-    const pendingCount = computed(() => {
-      return walSubmissions.value.filter(s => s.status === 'PENDING_SYNC' || s.status === 'DRAFT_OFFLINE').length;
+    // Filtered Templates
+    const filteredTemplates = computed(() => {
+      return templates.value.filter(t => {
+        const matchCat = selectedCategory.value === 'All' || t.project === selectedCategory.value;
+        const query = searchQuery.value.toLowerCase().trim();
+        const matchQuery = !query || 
+          (t.title && t.title.toLowerCase().includes(query)) ||
+          (t.project && t.project.toLowerCase().includes(query));
+        return matchCat && matchQuery;
+      });
     });
 
-    // Computed Survey Schema Properties
+    // Active Section Details
     const sections = computed(() => {
       if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.sections) {
         return [];
@@ -3510,396 +3842,204 @@ const app = createApp({
     });
 
     const activeSection = computed(() => {
-      if (sections.value.length === 0) return null;
+      if (!sections.value.length) return null;
       return sections.value[activeSectionIndex.value] || sections.value[0];
     });
 
     const activeQuestions = computed(() => {
-      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions) {
+      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions || !activeSection.value) {
         return [];
       }
-      const secCode = activeSection.value ? activeSection.value.section_code : null;
+      const secCode = activeSection.value.section_code;
       return activeTemplate.value.schema.questions.filter(q => (q.section === secCode || q.section_code === secCode));
     });
 
-    const categories = computed(() => {
-      const cats = new Set(['All']);
-      templates.value.forEach(t => {
-        if (t.target_category) cats.add(t.target_category);
-      });
-      return Array.from(cats);
-    });
-
-    const filteredTemplates = computed(() => {
-      return templates.value.filter(t => {
-        const matchesCategory = selectedCategory.value === 'All' || t.target_category === selectedCategory.value;
-        const matchesSearch = !searchQuery.value || 
-          (t.title && t.title.toLowerCase().includes(searchQuery.value.toLowerCase())) ||
-          (t.project && t.project.toLowerCase().includes(searchQuery.value.toLowerCase()));
-        return matchesCategory && matchesSearch;
-      });
-    });
-
-    // Translation Lookup Function
-    function t(text) {
-      if (!text) return '';
-      const lang = currentLang.value;
-
-      // 1. Dynamic Server Translations
-      if (translationsMap.value && translationsMap.value[text]) {
-        return translationsMap.value[text];
-      }
-
-      // 2. Built-in Client Dictionary
-      if (BUILTIN_TRANSLATIONS[lang] && BUILTIN_TRANSLATIONS[lang][text]) {
-        return BUILTIN_TRANSLATIONS[lang][text];
-      }
-
-      // 3. Fallback to Hindi
-      if (lang !== 'hi' && BUILTIN_TRANSLATIONS['hi'] && BUILTIN_TRANSLATIONS['hi'][text]) {
-        return BUILTIN_TRANSLATIONS['hi'][text];
-      }
-
-      // 4. Default to Original Text
-      return text;
-    }
-
-    // Reactive Language Switcher Watcher
-    watch(currentLang, async (newLang) => {
-      localStorage.setItem('omniservey_lang', newLang);
-      document.documentElement.lang = newLang;
-      translationsMap.value = {};
-      await loadTranslations(activeTemplate.value ? activeTemplate.value.name : null, newLang);
-      const langObj = languages.value.find(l => l.code === newLang);
-      const name = langObj ? langObj.label : newLang;
-      showToast(`Language: ${name}`, 'info');
-      announce(`Language changed to ${name}`);
-    });
-
-    // Initial Bootstrap
-    onMounted(async () => {
-      document.documentElement.lang = currentLang.value || 'en';
-      if (navigator.storage && navigator.storage.persist) {
-        storagePersisted.value = await navigator.storage.persist();
-      }
-      window.addEventListener('online', () => { isOnline.value = true; autoSync(); announce('Network online'); });
-      window.addEventListener('offline', () => { isOnline.value = false; announce('Network offline'); });
-
-      await fetchCurrentUserInfo();
-      await loadTemplatesFromDB();
-      await loadWALFromDB();
-
-      if (currentLang.value !== 'en') {
-        await loadTranslations(null, currentLang.value);
-      }
-
-      if (isOnline.value) {
-        await fetchServerTemplates();
-        await fetchAvailableLanguages();
-      }
-    });
-
-    // Fetch Enabled Indian Languages from Server
-    async function fetchAvailableLanguages() {
-      try {
-        const resp = await fetch('/api/method/omniservey.api.survey.get_available_languages');
-        if (resp.ok) {
-          const data = await resp.json();
-          if (data.message && data.message.length > 0) {
-            const filtered = data.message
-              .map(l => ({ code: l.code || l.language_code, label: l.label || l.language_name || l.name }))
-              .filter(l => INDIAN_LANG_CODES.has(l.code));
-            if (filtered.length > 0) {
-              languages.value = filtered;
-            }
+    function isSectionComplete(secIndex) {
+      if (!activeTemplate.value || !activeTemplate.value.schema) return false;
+      const sec = sections.value[secIndex];
+      if (!sec) return false;
+      const qList = activeTemplate.value.schema.questions.filter(q => (q.section === sec.section_code || q.section_code === sec.section_code));
+      for (const q of qList) {
+        if (q.is_mandatory) {
+          const val = formData[q.question_code];
+          if (val === undefined || val === null || String(val).trim() === '') {
+            return false;
           }
         }
-      } catch (err) {
-        console.warn('[Languages] Using pre-configured Indian language list');
       }
+      return true;
     }
 
-    function generateUUID() {
-      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-      });
-    }
-
-    async function fetchCurrentUserInfo() {
-      try {
-        const res = await fetch('/api/method/omniservey.api.survey.get_current_user_info');
-        if (res.ok) {
-          const data = await res.json();
-          if (data.message) {
-            currentUser.user = data.message.user;
-            currentUser.is_guest = data.message.is_guest;
-            currentUser.roles = data.message.roles || [];
-            currentUser.full_name = data.message.full_name;
-          }
-        }
-      } catch (err) {
-        console.warn('[Auth] Offline: local profile active');
-      }
-    }
-
+    // Database Loaders
     async function loadTemplatesFromDB() {
-      const stored = await db.templates.toArray();
-      templates.value = stored;
-      permissionStatus.value = stored.length > 0 ? 'authorized' : (isOnline.value ? 'loading' : 'restricted');
+      try {
+        const localTemplates = await db.templates.toArray();
+        if (localTemplates && localTemplates.length > 0) {
+          templates.value = localTemplates;
+        }
+      } catch (err) {
+        console.error('[loadTemplatesFromDB Error]', err);
+      }
     }
 
     async function loadWALFromDB() {
-      walSubmissions.value = await db.wal.reverse().sortBy('captured_at_local');
+      try {
+        const submissions = await db.wal.reverse().sortBy('captured_at_local');
+        walSubmissions.value = submissions;
+        pendingCount.value = submissions.filter(s => s.status === 'PENDING_SYNC').length;
+      } catch (err) {
+        console.error('[loadWALFromDB Error]', err);
+      }
     }
 
     async function fetchServerTemplates() {
-      permissionStatus.value = 'loading';
       try {
-        const resp = await fetch('/api/method/omniservey.api.survey.list_active_templates');
+        const resp = await fetch('/api/method/omniservey.api.survey.get_bootstrap_data');
         if (resp.ok) {
           const data = await resp.json();
-          const authorizedList = data.message || [];
-
-          if (authorizedList.length === 0) {
-            permissionStatus.value = 'restricted';
+          if (data.message && data.message.templates) {
+            templates.value = data.message.templates;
             await db.templates.clear();
-            templates.value = [];
-            return;
-          }
-
-          const authorizedNames = new Set(authorizedList.map(t => t.name));
-
-          for (const item of authorizedList) {
-            try {
-              const schemaResp = await fetch(`/api/method/omniservey.api.survey.get_schema?template_name=${encodeURIComponent(item.name)}`);
-              if (schemaResp.ok) {
-                const sData = await schemaResp.json();
-                if (sData.message) {
-                  await db.templates.put(JSON.parse(JSON.stringify({
-                    name: sData.message.template_name,
-                    title: sData.message.title,
-                    project: sData.message.project,
-                    version: sData.message.version,
-                    status: sData.message.status,
-                    target_category: item.target_category || 'General',
-                    schema_hash_sha256: sData.message.schema_hash_sha256,
-                    schema: sData.message.schema
-                  })));
-                }
-              }
-            } catch (schemaErr) {
-              console.warn('[Schema] Schema fetch error:', schemaErr);
+            await db.templates.bulkPut(JSON.parse(JSON.stringify(data.message.templates)));
+            if (data.message.user) {
+              currentUser.value = data.message.user.full_name || data.message.user.name || 'Surveyor';
             }
+            showToast('Survey templates refreshed', 'success');
+            announce('Survey templates updated successfully');
           }
-
-          const cachedTemplates = await db.templates.toArray();
-          for (const cached of cachedTemplates) {
-            if (!authorizedNames.has(cached.name)) {
-              await db.templates.delete(cached.name);
-            }
-          }
-
-          await loadTemplatesFromDB();
-          permissionStatus.value = templates.value.length > 0 ? 'authorized' : 'restricted';
-        } else {
-          permissionStatus.value = templates.value.length > 0 ? 'authorized' : 'restricted';
         }
       } catch (err) {
-        console.warn('[Sync] Offline mode: loaded cached templates');
-        permissionStatus.value = templates.value.length > 0 ? 'authorized' : 'restricted';
+        console.warn('Network offline, using local IndexedDB templates', err);
       }
     }
 
-    async function startSurvey(template, existingSubmission = null) {
+    async function startSurvey(template, existingData = null) {
       activeTemplate.value = template;
       activeSectionIndex.value = 0;
-      validationErrors.value = [];
-      highlightedQuestion.value = null;
-
-      // Clear reactive form data
       Object.keys(formData).forEach(k => delete formData[k]);
 
-      if (existingSubmission) {
-        currentUUID.value = existingSubmission.idempotency_key;
-        if (existingSubmission.items) {
-          existingSubmission.items.forEach(item => {
+      if (existingData) {
+        currentUUID.value = existingData.idempotency_key;
+        if (existingData.items) {
+          existingData.items.forEach(item => {
             formData[item.question_code] = item.response_value;
           });
         }
-        if (existingSubmission.gps_latitude) {
-          currentGPS.latitude = existingSubmission.gps_latitude;
-          currentGPS.longitude = existingSubmission.gps_longitude;
-          currentGPS.accuracy = existingSubmission.gps_accuracy;
+        if (existingData.gps_latitude) {
+          currentGPS.latitude = existingData.gps_latitude;
+          currentGPS.longitude = existingData.gps_longitude;
+          currentGPS.accuracy = existingData.gps_accuracy;
         }
       } else {
-        currentUUID.value = generateUUID();
+        currentUUID.value = 'SURV-' + Math.random().toString(36).substring(2, 9) + '-' + Date.now().toString(36);
         currentGPS.latitude = null;
         currentGPS.longitude = null;
         currentGPS.accuracy = null;
+        currentGPS.altitude = null;
         currentGPS.error = null;
       }
 
-      await loadTranslations(template.name, currentLang.value);
       currentView.value = 'form';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      announce(`Started survey ${template.title}. Step 1 of ${sections.value.length}`);
-    }
-
-    async function loadTranslations(templateName, langCode) {
-      if (langCode === 'en') {
-        translationsMap.value = {};
-        return;
-      }
-
-      try {
-        if (templateName) {
-          const cached = await db.translations.get([templateName, langCode]);
-          if (cached && cached.translations) {
-            translationsMap.value = cached.translations;
-            return;
-          }
-        }
-
-        if (isOnline.value) {
-          let url = `/api/method/omniservey.api.survey.get_translations?language_code=${encodeURIComponent(langCode)}`;
-          if (templateName) {
-            url += `&template_name=${encodeURIComponent(templateName)}`;
-          }
-          const resp = await fetch(url);
-          if (resp.ok) {
-            const data = await resp.json();
-            if (data.message && data.message.translations) {
-              translationsMap.value = data.message.translations;
-              if (templateName) {
-                await db.translations.put({
-                  survey_template: templateName,
-                  language_code: langCode,
-                  translations: data.message.translations
-                });
-              }
-            }
-          }
-        }
-      } catch (err) {
-        console.warn('[Translation] Using client dictionary for', langCode);
-      }
-    }
-
-    function showToast(msg, type = 'info') {
-      toastMessage.value = msg;
-      toastType.value = type;
-      setTimeout(() => {
-        if (toastMessage.value === msg) {
-          toastMessage.value = '';
-        }
-      }, 3500);
-    }
-
-    function isSectionComplete(sec) {
-      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions) return false;
-      const qList = activeTemplate.value.schema.questions.filter(q => (q.section === sec.section_code || q.section_code === sec.section_code));
-      if (qList.length === 0) return true;
-      const mandatory = qList.filter(q => q.is_mandatory);
-      if (mandatory.length === 0) return true;
-      return mandatory.every(q => {
-        const val = formData[q.question_code];
-        return val !== undefined && val !== null && String(val).trim() !== '';
-      });
+      window.scrollTo(0, 0);
+      announce(`Started survey: ${t(template.title)}`);
     }
 
     function nextSection() {
       if (activeSectionIndex.value < sections.value.length - 1) {
         activeSectionIndex.value++;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        scrollTabIntoView(activeSectionIndex.value);
-        announce(`Moved to Step ${activeSectionIndex.value + 1}: ${t(activeSection.value.section_title)}`);
+        window.scrollTo(0, 0);
+        focusFirstQuestion();
       }
     }
 
     function prevSection() {
       if (activeSectionIndex.value > 0) {
         activeSectionIndex.value--;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        scrollTabIntoView(activeSectionIndex.value);
-        announce(`Moved back to Step ${activeSectionIndex.value + 1}: ${t(activeSection.value.section_title)}`);
+        window.scrollTo(0, 0);
+        focusFirstQuestion();
       }
+    }
+
+    function focusFirstQuestion() {
+      nextTick(() => {
+        const firstCard = document.querySelector('.elder-card');
+        if (firstCard) {
+          const target = firstCard.querySelector('input, [role="radio"], button, select');
+          if (target) target.focus();
+        }
+      });
     }
 
     function scrollTabs(direction) {
-      const container = document.getElementById('section_tabs_container');
-      if (container) {
-        const scrollAmount = direction === 'left' ? -180 : 180;
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const tabList = document.querySelector('[role="tablist"]');
+      if (tabList) {
+        tabList.scrollBy({ left: direction * 180, behavior: 'smooth' });
       }
     }
 
-    function scrollTabIntoView(index) {
-      nextTick(() => {
-        const tab = document.getElementById('sec_tab_' + index);
-        if (tab && tab.scrollIntoView) {
-          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-      });
+    function handleTabKeydown(e, index) {
+      const tabCount = sections.value.length;
+      let newIndex = index;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        newIndex = (index + 1) % tabCount;
+        focusTab(newIndex);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        newIndex = (index - 1 + tabCount) % tabCount;
+        focusTab(newIndex);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        focusTab(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        focusTab(tabCount - 1);
+      }
     }
 
     function focusTab(index) {
+      activeSectionIndex.value = index;
       nextTick(() => {
-        const tab = document.getElementById('sec_tab_' + index);
-        if (tab && tab.focus) {
-          tab.focus();
+        const activeTabEl = document.getElementById(`tab-btn-${index}`);
+        if (activeTabEl) {
+          activeTabEl.focus();
+          activeTabEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
         }
       });
     }
 
-    function handleTabKeydown(e, sIdx) {
-      let targetIdx = null;
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        e.preventDefault();
-        targetIdx = (sIdx + 1) % sections.value.length;
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        targetIdx = (sIdx - 1 + sections.value.length) % sections.value.length;
-      } else if (e.key === 'Home') {
-        e.preventDefault();
-        targetIdx = 0;
-      } else if (e.key === 'End') {
-        e.preventDefault();
-        targetIdx = sections.value.length - 1;
-      }
-
-      if (targetIdx !== null) {
-        activeSectionIndex.value = targetIdx;
-        scrollTabIntoView(targetIdx);
-        focusTab(targetIdx);
-        announce(`Switched to Step ${targetIdx + 1}: ${t(sections.value[targetIdx].section_title)}`);
-      }
-    }
-
-    function jumpToQuestion(questionCode, secIndex) {
+    function jumpToQuestion(qCode, secIndex) {
       validationModalOpen.value = false;
       activeSectionIndex.value = secIndex;
-      scrollTabIntoView(secIndex);
+      highlightedQuestion.value = qCode;
+
       nextTick(() => {
-        highlightedQuestion.value = questionCode;
-        const el = document.getElementById('q_card_' + questionCode);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          const inputEl = document.getElementById('input_' + questionCode);
-          if (inputEl) inputEl.focus();
+        const card = document.getElementById('card_' + qCode);
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const focusable = card.querySelector('input, [role="radio"], button, select');
+          if (focusable) focusable.focus();
         }
-        setTimeout(() => {
-          if (highlightedQuestion.value === questionCode) {
-            highlightedQuestion.value = null;
-          }
-        }, 3000);
       });
+
+      setTimeout(() => {
+        highlightedQuestion.value = null;
+      }, 3500);
     }
 
-    function fetchGPS() {
+    let debounceTimer = null;
+    function saveToStorageDebounced() {
+      if (debounceTimer) clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        saveOffline(false);
+      }, 800);
+    }
+
+    async function fetchGPS() {
       if (!navigator.geolocation) {
-        currentGPS.error = 'Geolocation is not supported on this device/browser.';
+        currentGPS.error = 'Geolocation not supported by device';
         showToast(currentGPS.error, 'error');
+        announce(currentGPS.error);
         return;
       }
 
@@ -3926,7 +4066,7 @@ const app = createApp({
         },
         (err) => {
           currentGPS.fetching = false;
-          currentGPS.error = `GPS Error: ${err.message} (Code: ${err.code})`;
+          currentGPS.error = `GPS Error: ${err.message}`;
           showToast(currentGPS.error, 'error');
           announce(currentGPS.error);
         },
@@ -3964,7 +4104,7 @@ const app = createApp({
       if (!canvas) return;
       let isDrawing = false;
       const ctx = canvas.getContext('2d');
-      ctx.lineWidth = 2.5;
+      ctx.lineWidth = 3.5;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
       ctx.strokeStyle = '#0f172a';
@@ -4062,14 +4202,14 @@ const app = createApp({
         await loadWALFromDB();
 
         if (isFinalSubmit) {
-          showToast('Survey submitted and queued in WAL', 'success');
+          showToast('Survey submitted successfully', 'success');
           announce('Survey submitted successfully');
           if (isOnline.value) {
             autoSync();
           }
           currentView.value = 'queue';
         } else {
-          showToast('Offline draft saved locally', 'success');
+          showToast('Draft saved locally', 'success');
           announce('Draft saved locally');
         }
       } catch (err) {
@@ -4205,13 +4345,39 @@ const app = createApp({
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(walSubmissions.value, null, 2));
       const downloadAnchor = document.createElement('a');
       downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `OmniServey_WAL_Backup_${new Date().toISOString().slice(0, 10)}.json`);
+      downloadAnchor.setAttribute("download", `OmniServey_Backup_${new Date().toISOString().slice(0, 10)}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
-      showToast('Offline WAL backup exported', 'success');
-      announce('Offline WAL backup exported');
+      showToast('Offline backup exported', 'success');
+      announce('Offline backup exported');
     }
+
+    onMounted(async () => {
+      try {
+        await db.open();
+        await loadTemplatesFromDB();
+        await loadWALFromDB();
+        if (isOnline.value) {
+          await fetchServerTemplates();
+        }
+      } catch (e) {
+        console.error('Dexie open error', e);
+      }
+
+      window.addEventListener('online', () => {
+        isOnline.value = true;
+        showToast('Internet connected', 'info');
+        announce('Internet connection restored');
+        autoSync();
+      });
+
+      window.addEventListener('offline', () => {
+        isOnline.value = false;
+        showToast('Working offline', 'info');
+        announce('Working in offline mode');
+      });
+    });
 
     return {
       currentView,
@@ -4242,6 +4408,7 @@ const app = createApp({
       pendingCount,
       permissionStatus,
       currentUUID,
+      speakingQuestionCode,
       isSectionComplete,
       startSurvey,
       nextSection,
@@ -4262,141 +4429,166 @@ const app = createApp({
       scrollTabs,
       handleTabKeydown,
       focusTab,
+      speakQuestion,
+      selectOption,
+      getOptionStyle,
+      addGridRow,
+      removeGridRow,
       t
     };
   },
   template: `
-    <div class="min-h-screen flex flex-col bg-slate-100 text-slate-900 pb-20 sm:pb-0">
+    <div class="min-h-screen flex flex-col bg-slate-100 text-slate-900 pb-24 sm:pb-8">
 
       <!-- ARIA LIVE REGION FOR SCREEN READERS -->
       <div aria-live="polite" role="status" class="sr-only">
         {{ liveAnnouncement }}
       </div>
 
-      <!-- FLOATING TOAST NOTIFICATION -->
+      <!-- FLOATING TOAST NOTIFICATION (Large & Clear) -->
       <div v-if="toastMessage" 
            role="alert"
            aria-live="assertive"
-           class="fixed top-16 left-4 right-4 z-50 max-w-md mx-auto p-3.5 rounded-2xl shadow-xl border flex items-center justify-between text-xs font-bold transition-all duration-300 animate-bounce"
-           :class="toastType === 'success' ? 'bg-emerald-700 text-white border-emerald-600' : (toastType === 'error' ? 'bg-rose-700 text-white border-rose-600' : 'bg-slate-900 text-white border-slate-700')">
-        <div class="flex items-center space-x-2">
-          <span aria-hidden="true">{{ toastType === 'success' ? '✓' : (toastType === 'error' ? '⚠️' : 'ℹ️') }}</span>
-          <span>{{ toastMessage }}</span>
-        </div>
-        <button type="button" @click="toastMessage = ''" aria-label="Dismiss notification" class="ml-2 min-h-[32px] min-w-[32px] flex items-center justify-center text-white hover:text-slate-200 font-bold text-sm">✕</button>
+           :class="toastType === 'error' ? 'bg-rose-800 text-white' : (toastType === 'success' ? 'bg-emerald-800 text-white' : 'bg-slate-900 text-white')"
+           class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] px-6 py-3.5 rounded-2xl shadow-2xl font-black text-base flex items-center space-x-3 transition-all">
+        <span aria-hidden="true" class="text-xl">
+          {{ toastType === 'error' ? '⚠️' : (toastType === 'success' ? '✓' : 'ℹ️') }}
+        </span>
+        <span>{{ toastMessage }}</span>
       </div>
 
-      <!-- 1. STICKY TOP HEADER (WCAG Banner Landmark) -->
-      <header role="banner" class="bg-slate-900 text-white shadow-md sticky top-0 z-40 border-b border-slate-800 pt-safe">
-        <div class="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between">
+      <!-- MANDATORY VALIDATION ERROR MODAL -->
+      <div v-if="validationModalOpen" 
+           role="dialog" 
+           aria-modal="true" 
+           aria-labelledby="val_modal_title"
+           class="fixed inset-0 z-[90] bg-black/75 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl border-4 border-rose-500">
+          <div class="flex items-center space-x-3 text-rose-700">
+            <span aria-hidden="true" class="text-3xl">⚠️</span>
+            <h2 id="val_modal_title" class="text-xl sm:text-2xl font-black">{{ t('Mandatory Questions Pending') }}</h2>
+          </div>
           
-          <!-- Logo & Brand (Interactive Link) -->
-          <div role="button" 
-               tabindex="0"
-               @click="currentView = 'templates'" 
-               @keydown.enter="currentView = 'templates'"
-               @keydown.space.prevent="currentView = 'templates'"
-               class="flex items-center space-x-2.5 cursor-pointer touch-press rounded-xl p-1 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-            <div aria-hidden="true" class="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center font-black text-white text-base shadow-sm">
+          <p class="text-slate-700 text-base font-semibold">
+            {{ t('Please complete the following required fields before submitting:') }}
+          </p>
+
+          <div class="max-h-60 overflow-y-auto space-y-2 pr-1">
+            <div v-for="(err, idx) in validationErrors" :key="idx"
+                 @click="jumpToQuestion(err.question_code, err.section_index)"
+                 class="p-3 bg-rose-50 hover:bg-rose-100 rounded-2xl border-2 border-rose-200 cursor-pointer flex items-center justify-between touch-press">
+              <div>
+                <div class="text-xs font-bold text-rose-800 uppercase tracking-wide">{{ err.section_title }}</div>
+                <div class="text-sm sm:text-base font-black text-rose-950">{{ t(err.label) }}</div>
+              </div>
+              <span class="text-rose-700 font-black text-base shrink-0 ml-2">Fix →</span>
+            </div>
+          </div>
+
+          <div class="pt-2 flex justify-end">
+            <button type="button" @click="validationModalOpen = false" 
+                    class="min-h-[48px] px-6 py-2.5 bg-slate-900 text-white rounded-2xl font-black text-base touch-press focus:ring-4 focus:ring-slate-400">
+              {{ t('Understood') }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP APP HEADER -->
+      <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+          
+          <!-- Logo & Platform Badge -->
+          <div class="flex items-center space-x-3 cursor-pointer" @click="currentView = 'templates'">
+            <div class="w-11 h-11 rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-2xl shadow-md">
               Ω
             </div>
             <div>
-              <div class="font-bold text-sm leading-tight tracking-tight flex items-center space-x-1.5">
-                <span>{{ t('OmniServey') }}</span>
-                <span class="text-[10px] bg-slate-800 text-indigo-300 px-1.5 py-0.2 rounded font-mono font-bold">v16</span>
+              <div class="flex items-center space-x-2">
+                <span class="font-black text-xl tracking-tight leading-none">OmniServey</span>
+                <span class="text-xs font-extrabold bg-indigo-500/30 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/40">v16</span>
               </div>
-              <div class="text-[10px] text-slate-300 font-medium truncate max-w-[130px]">
-                {{ currentUser.full_name }}
+              <div class="text-xs text-slate-400 font-semibold truncate max-w-[160px] sm:max-w-none">
+                {{ currentUser }}
               </div>
             </div>
           </div>
 
-          <!-- Top Action Controls -->
-          <div class="flex items-center space-x-2 shrink-0">
-
-            <!-- Network Status Pill -->
-            <div role="status"
-                 :aria-label="'Network status: ' + (isOnline ? 'Online' : 'Offline')"
-                 :class="isOnline ? 'bg-emerald-950 border-emerald-600 text-emerald-200' : 'bg-rose-950 border-rose-600 text-rose-200'"
-                 class="flex items-center space-x-1 px-2.5 py-1 rounded-full text-[11px] font-bold border">
-              <span aria-hidden="true" :class="isOnline ? 'bg-emerald-400' : 'bg-rose-400'" class="w-2 h-2 rounded-full animate-pulse"></span>
-              <span>{{ isOnline ? t('Online') : t('Offline') }}</span>
-            </div>
-
-            <!-- Vernacular Language Switcher with Accessible Name -->
-            <div class="relative">
-              <label for="omniservey_lang_select" class="sr-only">{{ t('Select Language') }}</label>
-              <select id="omniservey_lang_select"
-                      v-model="currentLang" 
-                      aria-label="Select Language"
-                      class="bg-slate-800 text-white text-xs font-semibold min-h-[38px] py-1.5 px-2.5 rounded-xl border border-slate-700 focus:ring-2 focus:ring-indigo-400 focus:outline-none cursor-pointer max-w-[130px] truncate">
-                <option v-for="lang in languages" :key="lang.code" :value="lang.code">
-                  {{ lang.label }}
-                </option>
-              </select>
-            </div>
-
+          <!-- Vernacular Language Picker (Accessible Large Target) -->
+          <div class="flex items-center space-x-2">
+            <label for="app_lang_select" class="sr-only">Select Language</label>
+            <select id="app_lang_select"
+                    v-model="currentLang" 
+                    @change="localStorage.setItem('omniservey_lang', currentLang); announce('Language changed to ' + currentLang)"
+                    aria-label="ભાષા પસંદ કરો / Select Language"
+                    class="min-h-[44px] px-3.5 py-1.5 bg-slate-800 text-white text-sm sm:text-base font-bold rounded-2xl border-2 border-slate-700 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 outline-none cursor-pointer">
+              <option v-for="lang in languages" :key="lang.code" :value="lang.code">
+                {{ lang.name }}
+              </option>
+            </select>
           </div>
 
         </div>
       </header>
 
-      <!-- 2. MAIN CONTENT BODY (WCAG Main Landmark) -->
-      <main role="main" class="flex-1 max-w-3xl w-full mx-auto p-3.5 sm:p-5">
+      <!-- MAIN CONTENT CONTAINER -->
+      <main class="flex-1 max-w-3xl w-full mx-auto p-4 sm:p-6">
 
         <!-- ========================================== -->
-        <!-- VIEW 1: TEMPLATE DISCOVERY & RBAC CATALOG  -->
+        <!-- VIEW 1: TEMPLATES DIRECTORY (Simple List)  -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'templates'" class="space-y-4">
+        <div v-if="currentView === 'templates'" class="space-y-6">
           
-          <div class="flex items-center justify-between">
-            <h1 class="text-xl font-black text-slate-900 tracking-tight">{{ t('Surveys') }}</h1>
-            <button type="button" 
-                    @click="currentView = 'queue'" 
-                    class="min-h-[44px] px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center space-x-1.5 shadow-sm touch-press focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{{ t('Surveys') }}</h1>
+              <p class="text-sm sm:text-base text-slate-600 font-semibold">{{ t('Choose a survey form to start') }}</p>
+            </div>
+
+            <!-- WAL Queue Quick Access -->
+            <button type="button" @click="currentView = 'queue'"
+                    class="min-h-[48px] px-4 py-2 bg-white hover:bg-slate-50 border-2 border-slate-300 rounded-2xl text-slate-900 font-bold flex items-center space-x-2 shadow-sm touch-press focus:ring-4 focus:ring-indigo-200">
+              <span aria-hidden="true" class="text-xl">📋</span>
               <span>{{ t('WAL Queue') }}</span>
-              <span v-if="pendingCount > 0" class="bg-amber-400 text-slate-950 px-1.5 py-0.2 rounded-full text-[10px] font-black animate-pulse">
+              <span v-if="pendingCount > 0" class="ml-1 px-2 py-0.5 bg-rose-600 text-white text-xs font-black rounded-full">
                 {{ pendingCount }}
               </span>
             </button>
           </div>
 
-          <!-- Template Cards List -->
-          <div v-if="filteredTemplates.length > 0" class="space-y-3">
-            <article v-for="tmpl in filteredTemplates" :key="tmpl.name" 
-                     class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-400 transition-all space-y-3">
-              
-              <div class="flex items-start justify-between">
-                <div>
-                  <h2 class="font-bold text-slate-900 text-base leading-snug">{{ tmpl.title }}</h2>
-                  <div class="text-xs text-slate-600 font-medium mt-0.5">{{ tmpl.project }}</div>
+          <!-- Template Cards Grid -->
+          <div v-if="filteredTemplates.length > 0" class="grid grid-cols-1 gap-4">
+            <div v-for="tDoc in filteredTemplates" :key="tDoc.name"
+                 class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-sm hover:border-indigo-400 transition-all flex flex-col justify-between space-y-4">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                  {{ t(tDoc.title) }}
+                </h2>
+                <div class="flex items-center space-x-2 mt-1">
+                  <span class="text-xs font-extrabold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-xl">
+                    {{ tDoc.project }}
+                  </span>
+                  <span class="text-xs font-bold text-slate-500">v{{ tDoc.version }}</span>
                 </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-300">
-                  v{{ tmpl.version }}
-                </span>
+                <p class="text-sm sm:text-base text-slate-600 mt-2 font-medium">
+                  📄 {{ (tDoc.schema && tDoc.schema.sections && tDoc.schema.sections.length) || 1 }} {{ t('Pages') }}
+                  ·
+                  ❓ {{ (tDoc.schema && tDoc.schema.questions && tDoc.schema.questions.length) || 0 }} {{ t('Questions') }}
+                </p>
               </div>
 
-              <div class="flex items-center justify-between pt-2 border-t border-slate-100">
-                <div class="text-xs text-slate-600 font-medium">
-                  <span>{{ tmpl.schema ? (tmpl.schema.sections ? tmpl.schema.sections.length : 0) : 0 }} {{ t('Pages') }}</span> · 
-                  <span>{{ tmpl.schema ? (tmpl.schema.questions ? tmpl.schema.questions.length : 0) : 0 }} {{ t('Questions') }}</span>
-                </div>
-
-                <button type="button" 
-                        @click="startSurvey(tmpl)" 
-                        class="min-h-[44px] px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow touch-press flex items-center space-x-1.5 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-                  <span>{{ t('Start Survey Form') }}</span>
-                  <span aria-hidden="true">→</span>
-                </button>
-              </div>
-
-            </article>
+              <button type="button" @click="startSurvey(tDoc)"
+                      class="w-full min-h-[56px] bg-indigo-600 hover:bg-indigo-700 text-white text-base sm:text-lg font-black py-3.5 px-6 rounded-2xl shadow-lg touch-press flex items-center justify-center space-x-2 transition-all focus:ring-4 focus:ring-indigo-300">
+                <span>{{ t('Start Survey Form') }}</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </div>
 
-          <div v-else class="text-center py-12 bg-white rounded-2xl border border-slate-200 p-6 space-y-3">
-            <div aria-hidden="true" class="text-3xl">📋</div>
-            <div class="text-sm font-bold text-slate-800">No Survey Templates Found</div>
-            <button type="button" @click="fetchServerTemplates" class="min-h-[44px] px-4 py-2 bg-indigo-50 text-indigo-700 rounded-xl text-xs font-bold border border-indigo-200 focus:ring-2 focus:ring-indigo-500">
+          <div v-else class="text-center py-16 bg-white rounded-3xl border-2 border-slate-200 p-6 space-y-4">
+            <div aria-hidden="true" class="text-5xl">📋</div>
+            <div class="text-base sm:text-lg font-bold text-slate-800">{{ t('No Survey Templates Found') }}</div>
+            <button type="button" @click="fetchServerTemplates" class="min-h-[48px] px-6 py-2.5 bg-indigo-50 text-indigo-700 rounded-2xl text-sm font-bold border-2 border-indigo-200 focus:ring-2 focus:ring-indigo-500">
               ⟳ Refresh Templates
             </button>
           </div>
@@ -4406,192 +4598,213 @@ const app = createApp({
         <!-- ========================================== -->
         <!-- VIEW 2: DYNAMIC ACTIVE SURVEY FORM         -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'form' && activeTemplate" class="space-y-4 pb-24">
+        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6 pb-28">
           
-          <!-- Top Breadcrumb & Title Bar -->
-          <div class="bg-white p-3.5 sm:p-4 rounded-2xl shadow-sm border border-slate-200 space-y-3">
+          <!-- Top Breadcrumb & Page Progress Header -->
+          <div class="bg-white p-5 sm:p-6 rounded-3xl shadow-sm border-2 border-slate-200 space-y-4">
+            
             <div class="flex items-center justify-between">
               <button type="button" @click="currentView = 'templates'" 
-                      class="min-h-[38px] px-2 py-1 text-xs text-slate-700 hover:text-slate-900 font-bold flex items-center space-x-1 touch-press focus:ring-2 focus:ring-indigo-500 rounded-lg">
-                <span aria-hidden="true">←</span>
+                      class="min-h-[42px] px-3.5 py-1.5 text-sm sm:text-base text-slate-700 hover:text-slate-900 font-bold flex items-center space-x-1.5 touch-press focus:ring-2 focus:ring-indigo-500 rounded-xl bg-slate-100 hover:bg-slate-200">
                 <span>{{ t('Exit Form') }}</span>
               </button>
               
-              <div class="text-xs font-bold text-slate-600 font-mono" aria-live="polite">
-                {{ t('Step') }} {{ activeSectionIndex + 1 }} {{ t('of') }} {{ sections.length }}
+              <!-- Clean Step & Page Tracker -->
+              <div class="text-sm sm:text-base font-extrabold text-slate-800 bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200">
+                {{ t('Page') }} <span class="text-indigo-600 font-black">{{ activeSectionIndex + 1 }}</span> {{ t('of') }} {{ sections.length }}
               </div>
             </div>
 
-            <div>
-              <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">
-                {{ activeTemplate.title }}
-              </h1>
+            <!-- Survey Title -->
+            <h1 class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+              {{ t(activeTemplate.title) }}
+            </h1>
+
+            <!-- Visual Step Dot Indicators -->
+            <div class="flex items-center justify-center space-x-2 pt-1" aria-hidden="true">
+              <div v-for="(sec, idx) in sections" :key="idx"
+                   :class="idx === activeSectionIndex ? 'w-8 bg-indigo-600' : (isSectionComplete(idx) ? 'w-3 bg-emerald-500' : 'w-3 bg-slate-300')"
+                   class="h-3 rounded-full transition-all duration-300"></div>
             </div>
 
-            <!-- Horizontal Section Progress Tabs with Roving Tabindex & Arrow Key Switching -->
-            <nav aria-label="Survey Form Sections" class="relative w-full max-w-full flex items-center">
-              <button type="button" @click="scrollTabs('left')" 
-                      tabindex="-1"
-                      aria-label="Scroll section tabs left"
-                      class="shrink-0 w-7 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center mr-1 touch-press focus:ring-2 focus:ring-indigo-500">
-                ◀
-              </button>
-              
-              <div id="section_tabs_container" 
-                   role="tablist"
-                   aria-label="Survey Sections"
-                   class="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none w-full scroll-smooth">
-                <button v-for="(sec, sIdx) in sections" :key="sec.section_code"
-                        :id="'sec_tab_' + sIdx"
-                        role="tab"
-                        :aria-selected="activeSectionIndex === sIdx ? 'true' : 'false'"
-                        :tabindex="activeSectionIndex === sIdx ? 0 : -1"
-                        :aria-label="'Step ' + (sIdx + 1) + ': ' + t(sec.section_title)"
-                        @click="activeSectionIndex = sIdx"
-                        @keydown="handleTabKeydown($event, sIdx)"
-                        :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-sm font-bold scale-[1.02]' : (isSectionComplete(sec) ? 'bg-emerald-50 text-emerald-900 border border-emerald-300 font-semibold' : 'bg-slate-100 text-slate-700 font-medium')"
-                        class="min-h-[44px] px-3.5 py-1.5 rounded-xl text-xs whitespace-nowrap touch-press transition-all flex items-center space-x-1 shrink-0 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                  <span v-if="isSectionComplete(sec)" aria-hidden="true" class="text-[10px] font-black">✓</span>
-                  <span>{{ t(sec.section_title) }}</span>
+            <!-- Section Tabs (Accessible Roving Tabindex) -->
+            <div class="relative pt-2">
+              <div class="flex items-center space-x-2">
+                <button type="button" @click="scrollTabs(-1)" aria-label="Scroll tabs left" 
+                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
+                  ◀
+                </button>
+                
+                <div role="tablist" aria-label="Survey Sections" 
+                     class="flex-1 flex space-x-2 overflow-x-auto py-1 scroll-smooth no-scrollbar">
+                  <button v-for="(sec, sIdx) in sections" :key="sIdx"
+                          :id="'tab-btn-' + sIdx"
+                          type="button"
+                          role="tab"
+                          :aria-selected="activeSectionIndex === sIdx ? 'true' : 'false'"
+                          :tabindex="activeSectionIndex === sIdx ? 0 : -1"
+                          @click="activeSectionIndex = sIdx"
+                          @keydown="handleTabKeydown($event, sIdx)"
+                          :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-md font-black' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold'"
+                          class="min-h-[44px] px-4 py-2 rounded-2xl text-sm sm:text-base whitespace-nowrap shrink-0 transition-all flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <span v-if="isSectionComplete(sIdx)" aria-hidden="true" class="text-xs">✓</span>
+                    <span>{{ t(sec.section_title) }}</span>
+                  </button>
+                </div>
+
+                <button type="button" @click="scrollTabs(1)" aria-label="Scroll tabs right" 
+                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
+                  ▶
                 </button>
               </div>
-
-              <button type="button" @click="scrollTabs('right')" 
-                      tabindex="-1"
-                      aria-label="Scroll section tabs right"
-                      class="shrink-0 w-7 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center ml-1 touch-press focus:ring-2 focus:ring-indigo-500">
-                ▶
-              </button>
-            </nav>
-          </div>
-
-          <!-- Section Heading -->
-          <div class="bg-indigo-50 border border-indigo-200 p-3 rounded-xl flex items-center justify-between">
-            <h2 class="text-xs font-bold text-indigo-950">
-              {{ activeSection ? t(activeSection.section_title) : '' }}
-            </h2>
-            <div class="text-[11px] text-indigo-800 font-bold">
-              {{ activeQuestions.length }} {{ t('Questions') }}
             </div>
+
           </div>
 
-          <!-- Dynamic Questions Card Container -->
-          <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200 space-y-6">
-            
-            <div v-for="(q, qIndex) in activeQuestions" :key="q.question_code" :id="'q_card_' + q.question_code"
-                 class="space-y-2 border-b border-slate-100 pb-5 last:border-0 last:pb-0 p-3 rounded-2xl transition-all duration-300"
-                 :class="highlightedQuestion === q.question_code ? 'ring-4 ring-rose-500/60 bg-rose-50/50 shadow-md animate-pulse' : ''">
-              
-              <!-- Question Label & Mandatory Asterisk -->
-              <label :id="'q_label_' + q.question_code"
-                     :for="'input_' + q.question_code"
-                     class="block text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                <span class="text-indigo-700 font-mono text-xs mr-1 font-bold">Q{{ qIndex + 1 }}.</span>
-                {{ t(q.label_en) }}
-                <span v-if="q.is_mandatory" class="text-rose-600 font-bold ml-0.5" aria-hidden="true">*</span>
-                <span v-if="q.is_mandatory" class="sr-only"> (required)</span>
-              </label>
+          <!-- Section Banner -->
+          <div class="bg-indigo-50/80 border-2 border-indigo-200 p-4 sm:p-5 rounded-3xl flex items-center justify-between">
+            <h2 class="text-base sm:text-lg font-black text-indigo-950">
+              {{ t(activeSection.section_title) }}
+            </h2>
+            <span class="text-xs sm:text-sm font-extrabold bg-indigo-200/80 text-indigo-900 px-3 py-1 rounded-full">
+              {{ activeQuestions.length }} {{ t('Questions') }}
+            </span>
+          </div>
 
-              <!-- TYPE 1: TEXT / STRING -->
-              <div v-if="q.field_type === 'Text'">
+          <!-- QUESTION CARDS (Big, Finger-Friendly, High Contrast) -->
+          <div class="space-y-4">
+            
+            <div v-for="(q, qIndex) in activeQuestions" :key="q.question_code"
+                 :id="'card_' + q.question_code"
+                 :class="[
+                   highlightedQuestion === q.question_code ? 'ring-4 ring-rose-500 bg-rose-50/50' : 'bg-white',
+                   validationErrors.some(e => e.question_code === q.question_code) ? 'border-rose-400' : 'border-slate-200'
+                 ]"
+                 class="elder-card p-5 sm:p-7 rounded-3xl border-2 shadow-sm space-y-4 transition-all">
+
+              <!-- Question Header & One-Tap Voice Assistant -->
+              <div class="flex items-start justify-between gap-3">
+                
+                <label :id="'q_label_' + q.question_code" :for="'input_' + q.question_code"
+                       class="text-lg sm:text-xl font-black text-slate-900 leading-snug cursor-pointer flex-1">
+                  <span class="text-indigo-600 font-black mr-1">{{ qIndex + 1 }}.</span>
+                  <span>{{ t(q.label_en) }}</span>
+                  <span v-if="q.is_mandatory" class="text-rose-600 ml-1 font-extrabold" aria-hidden="true">*</span>
+                  <span v-if="q.is_mandatory" class="sr-only">(required)</span>
+                </label>
+
+                <!-- Big 🔊 Audio Speaker Button -->
+                <button type="button" 
+                        @click="speakQuestion(q)"
+                        :aria-label="speakingQuestionCode === q.question_code ? 'બોલવાનું બંધ કરો / Stop audio' : 'પ્રશ્ન સાંભળો / Read question aloud'"
+                        :class="speakingQuestionCode === q.question_code ? 'bg-indigo-600 text-white animate-pulse' : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200'"
+                        class="min-h-[48px] min-w-[48px] p-2.5 rounded-2xl flex items-center justify-center shrink-0 shadow-sm touch-press focus:ring-4 focus:ring-indigo-300 transition-all">
+                  <span aria-hidden="true" class="text-xl">
+                    {{ speakingQuestionCode === q.question_code ? '🔊' : '🔈' }}
+                  </span>
+                </button>
+
+              </div>
+
+              <!-- ======================================================= -->
+              <!-- QUESTION INPUT VARIANTS                                -->
+              <!-- ======================================================= -->
+
+              <!-- TYPE 1: TEXT / SMALL TEXT -->
+              <div v-if="q.field_type === 'Text' || q.field_type === 'Small Text'">
                 <input :id="'input_' + q.question_code"
                        type="text" 
                        v-model="formData[q.question_code]" 
                        :aria-required="q.is_mandatory ? 'true' : 'false'"
                        :aria-invalid="validationErrors.some(e => e.question_code === q.question_code) ? 'true' : 'false'"
-                       :placeholder="t('Enter response here...')" 
-                       class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-base focus:border-indigo-600 focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
+                       :placeholder="t('Enter answer...')" 
+                       class="w-full min-h-[56px] px-4 py-3 rounded-2xl border-2 border-slate-300 text-slate-900 text-base sm:text-lg font-medium focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100 outline-none transition-all">
               </div>
 
-              <!-- TYPE 2: NUMERIC / CURRENCY -->
-              <div v-if="q.field_type === 'Integer' || q.field_type === 'Decimal' || q.field_type === 'Currency (INR)'" class="relative">
-                <span v-if="q.field_type === 'Currency (INR)'" aria-hidden="true" class="absolute left-3.5 top-3 text-slate-600 font-bold">₹</span>
+              <!-- TYPE 2: INTEGER / CURRENCY -->
+              <div v-if="q.field_type === 'Integer' || q.field_type === 'Currency (INR)'" class="relative">
+                <span v-if="q.field_type === 'Currency (INR)'" aria-hidden="true" class="absolute left-4 top-3.5 text-slate-600 font-bold text-xl">₹</span>
                 <input :id="'input_' + q.question_code"
                        type="number" 
                        v-model="formData[q.question_code]" 
                        :aria-required="q.is_mandatory ? 'true' : 'false'"
                        :aria-invalid="validationErrors.some(e => e.question_code === q.question_code) ? 'true' : 'false'"
-                       :class="q.field_type === 'Currency (INR)' ? 'pl-8' : 'pl-3.5'"
-                       placeholder="0.00" 
-                       class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-base focus:border-indigo-600 focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
+                       :class="q.field_type === 'Currency (INR)' ? 'pl-10' : 'pl-4'"
+                       placeholder="0" 
+                       class="w-full min-h-[56px] px-4 py-3 rounded-2xl border-2 border-slate-300 text-slate-900 text-base sm:text-lg font-medium focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100 outline-none transition-all">
               </div>
 
-              <!-- TYPE 3: SINGLE CHOICE RADIO CARDS (Accessible Radiogroup) -->
+              <!-- TYPE 3: SINGLE CHOICE RADIO (Big 60px+ Touch Cards with Yes/No Color Recognition) -->
               <fieldset v-if="q.field_type === 'Single Choice (Radio)'" 
                         role="radiogroup" 
                         :aria-labelledby="'q_label_' + q.question_code"
-                        class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-0 m-0 p-0">
+                        class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 border-0 m-0 p-0">
                 <legend class="sr-only">{{ t(q.label_en) }}</legend>
                 <div v-for="opt in (q.options || ['Yes', 'No'])" :key="opt"
                      role="radio"
                      :aria-checked="formData[q.question_code] === opt ? 'true' : 'false'"
                      tabindex="0"
-                     @click="formData[q.question_code] = opt"
-                     @keydown.enter.prevent="formData[q.question_code] = opt"
-                     @keydown.space.prevent="formData[q.question_code] = opt"
-                     :class="formData[q.question_code] === opt ? 'bg-indigo-50 border-indigo-600 text-indigo-950 font-bold shadow-sm' : 'bg-white border-slate-300 text-slate-800 hover:bg-slate-50'"
-                     class="flex items-center justify-between p-3.5 rounded-xl border cursor-pointer touch-press transition-all min-h-[48px] focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                  <span class="text-sm">{{ t(opt) }}</span>
-                  <div :class="formData[q.question_code] === opt ? 'border-indigo-600 bg-indigo-600' : 'border-slate-400 bg-white'"
-                       class="w-5 h-5 rounded-full border flex items-center justify-center transition-all">
-                    <span v-if="formData[q.question_code] === opt" class="w-2 h-2 rounded-full bg-white"></span>
+                     @click="selectOption(q.question_code, opt, qIndex)"
+                     @keydown.enter.prevent="selectOption(q.question_code, opt, qIndex)"
+                     @keydown.space.prevent="selectOption(q.question_code, opt, qIndex)"
+                     :class="getOptionStyle(opt, formData[q.question_code] === opt)"
+                     class="flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer touch-press transition-all min-h-[60px] focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <span class="text-base sm:text-lg">{{ t(opt) }}</span>
+                  <div :class="formData[q.question_code] === opt ? 'border-white bg-white' : 'border-slate-400 bg-white'"
+                       class="w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all shrink-0 ml-2">
+                    <span v-if="formData[q.question_code] === opt" class="w-3 h-3 rounded-full bg-indigo-600"></span>
                   </div>
                 </div>
               </fieldset>
 
-              <!-- TYPE 4: GPS LOCATION -->
-              <div v-if="q.field_type === 'GPS Location'" class="space-y-2.5">
+              <!-- TYPE 4: GPS LOCATION (Big One-Click GPS Button) -->
+              <div v-if="q.field_type === 'GPS Location'" class="space-y-3">
                 <button type="button" @click="fetchGPS" :disabled="currentGPS.fetching" 
-                        aria-label="Capture high precision GPS satellite location"
-                        class="w-full min-h-[48px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold py-3 rounded-xl flex items-center justify-center space-x-2 touch-press shadow-sm focus:ring-2 focus:ring-indigo-500">
-                  <span v-if="currentGPS.fetching" class="animate-spin text-sm" aria-hidden="true">⟳</span>
-                  <span v-else class="text-sm" aria-hidden="true">📍</span>
-                  <span>{{ currentGPS.fetching ? 'Locking Satellite GPS...' : t('Capture GPS Coordinates') }}</span>
+                        class="w-full min-h-[58px] bg-slate-900 hover:bg-slate-800 text-white text-base font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center space-x-2.5 touch-press shadow-md focus:ring-4 focus:ring-indigo-300">
+                  <span v-if="currentGPS.fetching" class="animate-spin text-xl" aria-hidden="true">⟳</span>
+                  <span v-else class="text-xl" aria-hidden="true">📍</span>
+                  <span>{{ currentGPS.fetching ? 'Locking Satellite GPS...' : t('Get My Location') }}</span>
                 </button>
 
-                <div v-if="currentGPS.latitude" role="status" class="p-3.5 bg-emerald-50 border border-emerald-300 rounded-xl space-y-1.5">
+                <div v-if="currentGPS.latitude" role="status" class="p-4 bg-emerald-50 border-2 border-emerald-400 rounded-2xl space-y-2">
                   <div class="flex items-center justify-between">
-                    <span class="text-xs font-bold text-emerald-950 flex items-center">
-                      <span aria-hidden="true" class="w-2 h-2 rounded-full bg-emerald-600 mr-1.5 animate-pulse"></span>
-                      {{ t('GPS Fix Acquired ✓') }}
+                    <span class="text-sm sm:text-base font-extrabold text-emerald-950 flex items-center">
+                      <span aria-hidden="true" class="w-3 h-3 rounded-full bg-emerald-600 mr-2 animate-pulse"></span>
+                      {{ t('Location Acquired') }}: {{ t('GPS Fix Acquired ✓') }}
                     </span>
-                    <span :class="currentGPS.accuracy <= 15 ? 'bg-emerald-200 text-emerald-950' : 'bg-amber-200 text-amber-950'"
-                          class="text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-400">
-                      ±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(1) : 0 }}m
+                    <span class="text-xs font-black px-2.5 py-1 rounded-full bg-emerald-200 text-emerald-950 border border-emerald-400">
+                      ±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(0) : 0 }}m
                     </span>
                   </div>
                   
-                  <div class="text-xs font-mono text-emerald-900 font-semibold">
+                  <div class="text-sm font-mono text-emerald-900 font-bold">
                     Lat: {{ currentGPS.latitude.toFixed(6) }}° · Lng: {{ currentGPS.longitude.toFixed(6) }}°
                   </div>
 
-                  <div class="pt-1 flex items-center space-x-3 text-xs">
+                  <div class="pt-1 flex items-center space-x-4 text-sm font-bold">
                     <a :href="'https://maps.google.com/?q=' + currentGPS.latitude + ',' + currentGPS.longitude" target="_blank"
                        rel="noopener noreferrer"
-                       aria-label="View current GPS coordinates on Google Maps in a new window"
-                       class="text-indigo-700 hover:text-indigo-900 font-bold underline">
+                       class="text-indigo-700 hover:text-indigo-900 underline">
                       {{ t('View on Map →') }}
                     </a>
-                    <button type="button" @click="fetchGPS" 
-                            aria-label="Re-acquire GPS satellite fix"
-                            class="text-slate-700 hover:text-slate-900 underline font-semibold">
+                    <button type="button" @click="fetchGPS" class="text-slate-700 hover:text-slate-900 underline">
                       {{ t('Re-acquire Fix') }}
                     </button>
                   </div>
                 </div>
 
-                <div v-if="currentGPS.error" role="alert" class="p-3 bg-rose-50 border border-rose-300 rounded-xl text-xs text-rose-900 font-medium">
+                <div v-if="currentGPS.error" role="alert" class="p-4 bg-rose-50 border-2 border-rose-300 rounded-2xl text-sm text-rose-900 font-bold">
                   ⚠️ {{ currentGPS.error }}
                 </div>
               </div>
 
-              <!-- TYPE 5: PHOTO CAPTURE WITH WATERMARK -->
-              <div v-if="q.field_type === 'Photo Upload'" class="space-y-2">
+              <!-- TYPE 5: PHOTO CAPTURE (Giant Camera Card) -->
+              <div v-if="q.field_type === 'Photo Upload'" class="space-y-3">
                 <div v-if="!formData[q.question_code]">
                   <label :for="'photo_input_' + q.question_code" 
-                         class="w-full min-h-[48px] border-2 border-dashed border-slate-300 hover:border-indigo-500 rounded-xl flex items-center justify-center space-x-2 text-xs font-bold text-slate-700 cursor-pointer p-4 bg-slate-50 touch-press focus-within:ring-2 focus-within:ring-indigo-500">
-                    <span aria-hidden="true" class="text-lg">📷</span>
-                    <span>{{ t('Take Photo / Choose File') }}</span>
+                         class="w-full min-h-[80px] border-3 border-dashed border-indigo-300 hover:border-indigo-600 rounded-3xl flex flex-col items-center justify-center space-y-1 text-base font-bold text-indigo-900 cursor-pointer p-6 bg-indigo-50/50 touch-press focus-within:ring-4 focus-within:ring-indigo-300">
+                    <span aria-hidden="true" class="text-3xl">📷</span>
+                    <span>{{ t('Take Photo') }}</span>
                     <input :id="'photo_input_' + q.question_code"
                            type="file" 
                            accept="image/*" 
@@ -4603,86 +4816,142 @@ const app = createApp({
                 </div>
                 
                 <div v-else class="relative inline-block mt-2">
-                  <img :src="formData[q.question_code]" alt="Uploaded survey photo attachment" class="w-full max-w-xs h-44 object-cover rounded-xl border border-slate-300 shadow-sm">
+                  <img :src="formData[q.question_code]" alt="Uploaded survey photo attachment" class="w-full max-w-sm h-52 object-cover rounded-3xl border-2 border-slate-300 shadow-md">
                   <button type="button" @click="removePhoto(q.question_code)" 
                           aria-label="Remove uploaded photo"
-                          class="absolute top-2 right-2 bg-rose-700 hover:bg-rose-800 text-white rounded-full w-8 h-8 flex items-center justify-center text-xs font-bold shadow-md focus:ring-2 focus:ring-white">
+                          class="absolute top-3 right-3 bg-rose-700 hover:bg-rose-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold shadow-lg focus:ring-2 focus:ring-white">
                     ✕
                   </button>
-                  <div class="text-[10px] text-emerald-800 font-bold mt-1">
-                    ✓ Compressed with GPS & Timestamp Watermark
+                  <div class="text-xs text-emerald-800 font-bold mt-2">
+                    ✓ Photo Saved with GPS & Date Watermark
                   </div>
                 </div>
               </div>
 
               <!-- TYPE 6: TOUCH SIGNATURE PAD -->
-              <div v-if="q.field_type === 'Digital Signature'" class="space-y-2">
-                <div class="relative bg-white rounded-xl border-2 border-dashed border-slate-300 overflow-hidden">
+              <div v-if="q.field_type === 'Digital Signature'" class="space-y-3">
+                <div class="relative bg-white rounded-2xl border-2 border-dashed border-slate-300 overflow-hidden">
                   <canvas :ref="el => initSignaturePad(el, q.question_code)" 
                           role="img"
                           :aria-label="t(q.label_en) + ' digital signature drawing canvas'"
                           tabindex="0"
-                          class="signature-canvas w-full h-36 block focus:ring-2 focus:ring-indigo-500"></canvas>
+                          class="signature-canvas w-full h-44 block focus:ring-2 focus:ring-indigo-500"></canvas>
                   
-                  <div class="absolute bottom-2 left-3 text-[10px] text-slate-500 pointer-events-none select-none font-medium">
-                    {{ t('Sign inside box with finger or stylus') }}
+                  <div class="absolute bottom-3 left-4 text-xs sm:text-sm text-slate-500 pointer-events-none select-none font-bold">
+                    ✍️ {{ t('Sign here with finger') }}
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between text-xs">
+                <div class="flex items-center justify-between text-sm">
                   <button type="button" @click="clearSignature(q.question_code)" 
-                          aria-label="Clear digital signature box"
-                          class="min-h-[38px] px-3 py-1.5 text-rose-700 hover:text-rose-900 font-bold touch-press focus:ring-2 focus:ring-rose-500 rounded-lg">
+                          class="min-h-[44px] px-4 py-2 text-rose-700 hover:text-rose-900 font-bold touch-press focus:ring-2 focus:ring-rose-500 rounded-xl bg-rose-50">
                     {{ t('Clear Signature') }}
                   </button>
-                  <span v-if="formData[q.question_code]" role="status" class="text-emerald-800 font-bold text-[11px]">
+                  <span v-if="formData[q.question_code]" role="status" class="text-emerald-800 font-extrabold text-sm">
                     ✓ {{ t('Signature Recorded') }}
                   </span>
                 </div>
+              </div>
+
+              <!-- TYPE 7: DYNAMIC GRID / REPEATABLE ITEM CARDS -->
+              <div v-if="q.field_type === 'Dynamic Grid' || q.field_type === 'Table' || q.field_type === 'Grid'" class="space-y-4">
+                <div v-if="formData[q.question_code] && formData[q.question_code].length > 0" class="space-y-3">
+                  <div v-for="(row, rIdx) in formData[q.question_code]" :key="rIdx" 
+                       class="p-4 bg-slate-50 border-2 border-slate-300 rounded-2xl space-y-3 relative shadow-sm">
+                    <div class="flex items-center justify-between">
+                      <span class="text-sm font-extrabold text-indigo-900 bg-indigo-100 px-3 py-1 rounded-xl">
+                        #{{ rIdx + 1 }} {{ t('Item') }}
+                      </span>
+                      <button type="button" @click="removeGridRow(q.question_code, rIdx)" 
+                              class="min-h-[38px] px-3 py-1 text-xs font-black text-rose-700 hover:text-rose-900 bg-rose-100 hover:bg-rose-200 rounded-xl touch-press">
+                        🗑 {{ t('Remove') }}
+                      </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div>
+                        <label class="block text-xs font-bold text-slate-600 mb-1">{{ t('Equipment / Asset Name') }}</label>
+                        <input type="text" v-model="row.item_name" 
+                               :placeholder="t('e.g. Tractor, Water Pump, Sewing Machine')"
+                               class="w-full min-h-[48px] px-3 py-2 rounded-xl border-2 border-slate-300 text-sm font-medium focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none">
+                      </div>
+                      <div class="grid grid-cols-2 gap-2">
+                        <div>
+                          <label class="block text-xs font-bold text-slate-600 mb-1">{{ t('Quantity') }}</label>
+                          <input type="number" v-model="row.qty" 
+                                 placeholder="1"
+                                 class="w-full min-h-[48px] px-3 py-2 rounded-xl border-2 border-slate-300 text-sm font-medium focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none">
+                        </div>
+                        <div>
+                          <label class="block text-xs font-bold text-slate-600 mb-1">{{ t('Approx Value (₹)') }}</label>
+                          <input type="number" v-model="row.estimated_val" 
+                                 placeholder="0"
+                                 class="w-full min-h-[48px] px-3 py-2 rounded-xl border-2 border-slate-300 text-sm font-medium focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Big Add Item Button -->
+                <button type="button" @click="addGridRow(q.question_code)" 
+                        class="w-full min-h-[54px] bg-white hover:bg-indigo-50 border-2 border-dashed border-indigo-400 text-indigo-700 hover:text-indigo-900 rounded-2xl flex items-center justify-center space-x-2 font-black text-base touch-press shadow-sm focus:ring-4 focus:ring-indigo-200 transition-all">
+                  <span class="text-xl" aria-hidden="true">➕</span>
+                  <span>{{ t('+ Add Item / Asset') }}</span>
+                </button>
+              </div>
+
+              <!-- TYPE 8: FALLBACK FOR ANY OTHER UNKNOWN TYPES -->
+              <div v-if="!['Text', 'Small Text', 'Long Text', 'Integer', 'Currency (INR)', 'Single Choice (Radio)', 'Multiple Choice (Checkbox)', 'GPS Location', 'Photo Upload', 'Digital Signature', 'Dynamic Grid', 'Table', 'Grid'].includes(q.field_type)">
+                <input :id="'input_' + q.question_code"
+                       type="text" 
+                       v-model="formData[q.question_code]" 
+                       :placeholder="t('Enter answer...')"
+                       class="w-full min-h-[56px] px-4 py-3 rounded-2xl border-2 border-slate-300 text-slate-900 text-base sm:text-lg font-medium focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100 outline-none transition-all">
               </div>
 
             </div>
 
           </div>
 
-          <!-- FIXED BOTTOM ACTION BAR (Accessible Navigation Landmark) -->
-          <nav aria-label="Survey Form Navigation" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-lg pb-safe">
-            <div class="max-w-3xl mx-auto px-4 py-2.5 flex items-center justify-between space-x-2.5">
+          <!-- FIXED BOTTOM ACTION BAR (Giant Two-Button Navigation) -->
+          <nav aria-label="Survey Form Navigation" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t-2 border-slate-200 shadow-2xl pb-safe">
+            <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between space-x-3">
               
-              <!-- CASE 1: NORMAL FORM FILLING (Sections 1 to N-1) -> Exactly TWO balanced buttons: Back and Next -->
+              <!-- CASE 1: NORMAL FORM FILLING (Pages 1 to N-1) -> Two Giant Thumb Buttons -->
               <template v-if="activeSectionIndex < (sections.length - 1)">
                 <!-- Back Button -->
                 <button type="button" @click="prevSection" :disabled="activeSectionIndex === 0"
-                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-800 disabled:opacity-30 disabled:pointer-events-none touch-press flex items-center justify-center space-x-1 shadow-sm transition-all focus:ring-2 focus:ring-indigo-500">
-                  <span>{{ t('Previous') }}</span>
+                        class="flex-1 min-h-[56px] px-5 py-3 rounded-2xl border-2 border-slate-300 bg-white hover:bg-slate-50 text-sm sm:text-base font-black text-slate-800 disabled:opacity-30 disabled:pointer-events-none touch-press flex items-center justify-center space-x-2 shadow-sm transition-all focus:ring-2 focus:ring-indigo-500">
+                  <span>{{ t('Back') }}</span>
                 </button>
 
                 <!-- Next Button -->
                 <button type="button" @click="nextSection"
-                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md touch-press flex items-center justify-center space-x-1 transition-all focus:ring-2 focus:ring-indigo-400">
+                        class="flex-1 min-h-[56px] px-5 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-lg touch-press flex items-center justify-center space-x-2 transition-all focus:ring-2 focus:ring-indigo-400">
                   <span>{{ t('Next') }}</span>
                 </button>
               </template>
 
-              <!-- CASE 2: FINAL SECTION (Section N) -> THREE buttons: Visible Back, Compact Save Draft, and Prominent Submit -->
+              <!-- CASE 2: FINAL PAGE (Page N) -> Visible Back, Save Draft, and Done / Submit -->
               <template v-else>
                 <!-- Back Button -->
                 <button type="button" @click="prevSection"
-                        class="min-h-[48px] px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-800 touch-press flex items-center justify-center space-x-1 shadow-sm shrink-0 transition-all focus:ring-2 focus:ring-indigo-500">
-                  <span>{{ t('Previous') }}</span>
+                        class="min-h-[56px] px-4 sm:px-6 py-3 rounded-2xl border-2 border-slate-300 bg-white hover:bg-slate-50 text-sm sm:text-base font-black text-slate-800 touch-press flex items-center justify-center space-x-1 shadow-sm shrink-0 transition-all focus:ring-2 focus:ring-indigo-500">
+                  <span>{{ t('Back') }}</span>
                 </button>
 
-                <!-- Short / Compact Save Draft Button -->
+                <!-- Save Draft Button -->
                 <button type="button" @click="saveOffline(false)" 
-                        class="min-h-[48px] px-3.5 sm:px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-sm touch-press flex items-center justify-center space-x-1 shrink-0 transition-all focus:ring-2 focus:ring-emerald-400">
+                        class="min-h-[56px] px-4 sm:px-5 py-3 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white text-sm sm:text-base font-black shadow-md touch-press flex items-center justify-center space-x-1.5 shrink-0 transition-all focus:ring-2 focus:ring-emerald-400">
                   <span aria-hidden="true">💾</span>
-                  <span>{{ t('Draft') }}</span>
+                  <span>{{ t('Save Work') }}</span>
                 </button>
 
-                <!-- Prominent Submit Survey Button -->
+                <!-- Prominent Done / Submit Button -->
                 <button type="button" @click="commitToWAL"
-                        class="flex-1 min-h-[48px] px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md touch-press flex items-center justify-center space-x-1.5 transition-all focus:ring-2 focus:ring-indigo-400">
-                  <span>{{ t('Submit Survey') }}</span>
+                        class="flex-1 min-h-[56px] px-5 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-xl touch-press flex items-center justify-center space-x-2 transition-all focus:ring-2 focus:ring-indigo-400">
+                  <span>{{ t('Done / Send') }}</span>
                   <span aria-hidden="true">✓</span>
                 </button>
               </template>
@@ -4695,134 +4964,72 @@ const app = createApp({
         <!-- ========================================== -->
         <!-- VIEW 3: WRITE-AHEAD LOG (WAL) QUEUE       -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'queue'" class="space-y-4">
-          <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-200">
-            <div class="flex items-center justify-between mb-3">
+        <div v-if="currentView === 'queue'" class="space-y-5">
+          <div class="bg-white p-5 sm:p-6 rounded-3xl shadow-sm border-2 border-slate-200 space-y-4">
+            <div class="flex items-center justify-between">
               <div>
-                <h1 class="text-base sm:text-lg font-bold text-slate-900">{{ t('Write-Ahead Log (WAL)') }}</h1>
-                <div class="text-xs text-slate-600 font-medium">{{ t('Atomic zero-loss local storage queue') }}</div>
+                <h1 class="text-lg sm:text-xl font-black text-slate-900">{{ t('Write-Ahead Log (WAL)') }}</h1>
+                <div class="text-sm text-slate-600 font-semibold">{{ t('Atomic zero-loss local storage queue') }}</div>
               </div>
-              <button type="button" @click="autoSync" :disabled="isSyncing || !isOnline" 
-                      class="min-h-[44px] px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold disabled:opacity-50 touch-press shadow-sm focus:ring-2 focus:ring-indigo-500">
-                {{ isSyncing ? '...' : t('Sync Now') }}
+              <button type="button" @click="currentView = 'templates'"
+                      class="min-h-[44px] px-4 py-2 bg-slate-100 text-slate-800 rounded-2xl font-bold text-sm touch-press focus:ring-2 focus:ring-indigo-500">
+                ← {{ t('Back') }}
               </button>
             </div>
 
-            <div v-if="walSubmissions.length === 0" class="text-center py-12 text-slate-500 text-xs font-medium">
-              No local survey records stored yet.
-            </div>
+            <div class="flex items-center justify-between pt-2">
+              <button type="button" @click="autoSync" :disabled="isSyncing || !isOnline"
+                      class="min-h-[48px] px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm rounded-2xl shadow-md touch-press disabled:opacity-50 flex items-center space-x-2 focus:ring-4 focus:ring-indigo-300">
+                <span v-if="isSyncing" class="animate-spin text-lg">⟳</span>
+                <span>{{ isSyncing ? t('Syncing...') : t('Sync Now') }}</span>
+              </button>
 
-            <div v-else class="space-y-3">
-              <article v-for="sub in walSubmissions" :key="sub.idempotency_key" 
-                       class="p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-between">
-                <div>
-                  <div class="flex items-center space-x-2">
-                    <span :class="sub.status === 'SYNCED' ? 'bg-emerald-50 text-emerald-900 border-emerald-300' : (sub.status === 'DRAFT_OFFLINE' ? 'bg-indigo-50 text-indigo-900 border-indigo-300' : 'bg-amber-50 text-amber-950 border-amber-300')"
-                          class="text-[10px] font-bold px-2 py-0.5 rounded border">
-                      {{ sub.status === 'SYNCED' ? 'Synced with Server ✓' : (sub.status === 'DRAFT_OFFLINE' ? 'Offline Draft 💾' : 'Pending Server Sync ⟳') }}
-                    </span>
-                    <span class="text-[10px] text-slate-600 font-mono">{{ sub.idempotency_key ? sub.idempotency_key.slice(0, 8) : '' }}...</span>
-                  </div>
-                  <div class="font-bold text-slate-900 text-sm mt-1">{{ sub.survey_template }}</div>
-                  <div class="text-xs text-slate-600 mt-0.5 font-medium">Captured: {{ new Date(sub.captured_at_local).toLocaleString() }}</div>
+              <button type="button" @click="exportWALBackup"
+                      class="min-h-[48px] px-4 py-2.5 bg-emerald-50 text-emerald-800 border-2 border-emerald-300 hover:bg-emerald-100 font-black text-sm rounded-2xl touch-press flex items-center space-x-1.5 focus:ring-2 focus:ring-emerald-500">
+                <span aria-hidden="true">💾</span>
+                <span>{{ t('Export Backup') }}</span>
+              </button>
+            </div>
+          </div>
+
+          <div v-if="walSubmissions.length > 0" class="space-y-3">
+            <div v-for="sub in walSubmissions" :key="sub.idempotency_key"
+                 class="bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm flex items-center justify-between">
+              <div class="space-y-1 max-w-[70%]">
+                <div class="text-xs font-mono font-bold text-slate-500">{{ sub.idempotency_key }}</div>
+                <div class="text-sm sm:text-base font-black text-slate-900 truncate">{{ sub.survey_template }}</div>
+                <div class="text-xs text-slate-600 font-semibold">
+                  {{ sub.captured_at_local ? sub.captured_at_local.replace('T', ' ').slice(0, 19) : '' }} · {{ (sub.items && sub.items.length) || 0 }} answers
                 </div>
+              </div>
 
-                <div class="text-right space-y-1">
-                  <div class="text-[11px] text-slate-600 font-semibold">{{ sub.items ? sub.items.length : 0 }} Answers</div>
-                  <div class="flex items-center space-x-1.5 justify-end">
-                    <button type="button" v-if="sub.status !== 'SYNCED'" @click="resumeDraft(sub)"
-                            aria-label="Resume filling this survey draft"
-                            class="min-h-[38px] px-3 py-1 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 text-xs font-bold rounded-lg border border-indigo-200 touch-press focus:ring-2 focus:ring-indigo-500">
-                      Resume →
-                    </button>
-                    <button type="button" @click="deleteWALItem(sub.idempotency_key)"
-                            aria-label="Delete this survey draft from local storage"
-                            class="min-h-[38px] min-w-[38px] flex items-center justify-center text-rose-700 hover:bg-rose-50 text-xs font-bold rounded-lg focus:ring-2 focus:ring-rose-500">
-                      ✕
-                    </button>
-                  </div>
-                </div>
-              </article>
+              <div class="flex items-center space-x-2">
+                <span :class="sub.status === 'SYNCED' ? 'bg-emerald-100 text-emerald-900 border-emerald-300' : 'bg-amber-100 text-amber-900 border-amber-300'"
+                      class="text-xs font-black px-3 py-1.5 rounded-full border">
+                  {{ sub.status }}
+                </span>
+                
+                <button type="button" @click="resumeDraft(sub)" 
+                        aria-label="Edit survey draft"
+                        class="min-h-[40px] px-3 py-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 font-bold text-xs rounded-xl touch-press">
+                  ✎
+                </button>
+                <button type="button" @click="deleteWALItem(sub.idempotency_key)" 
+                        aria-label="Delete survey draft"
+                        class="min-h-[40px] px-3 py-1.5 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold text-xs rounded-xl touch-press">
+                  ✕
+                </button>
+              </div>
             </div>
+          </div>
 
-            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-              <button type="button" @click="exportWALBackup" 
-                      class="text-xs text-slate-700 hover:text-slate-900 font-bold underline p-2 focus:ring-2 focus:ring-indigo-500 rounded-lg">
-                Export Local JSON Backup
-              </button>
-              <button type="button" @click="currentView = 'templates'" 
-                      class="min-h-[44px] px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold focus:ring-2 focus:ring-indigo-500">
-                ← Back to Surveys
-              </button>
-            </div>
+          <div v-else class="text-center py-12 bg-white rounded-3xl border-2 border-slate-200 p-6 space-y-2">
+            <div class="text-3xl">📭</div>
+            <div class="text-base font-bold text-slate-700">{{ t('No records in local storage queue') }}</div>
           </div>
         </div>
 
       </main>
-
-      <!-- ========================================== -->
-      <!-- SLIDE-UP ACCESSIBLE VALIDATION MODAL       -->
-      <!-- ========================================== -->
-      <div v-if="validationModalOpen" 
-           role="dialog"
-           aria-modal="true"
-           aria-labelledby="validation_modal_title"
-           aria-describedby="validation_modal_desc"
-           class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm p-3 sm:p-4">
-        <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[85vh] animate-slide-up">
-          
-          <!-- Header -->
-          <div class="p-4 bg-rose-50 border-b border-rose-200 flex items-start justify-between">
-            <div class="flex items-center space-x-2.5">
-              <span aria-hidden="true" class="text-2xl">⚠️</span>
-              <div>
-                <h2 id="validation_modal_title" class="font-bold text-sm sm:text-base text-rose-950">
-                  {{ t('Required Questions Pending') }} ({{ validationErrors.length }})
-                </h2>
-                <p id="validation_modal_desc" class="text-[11px] text-rose-800 font-medium leading-tight mt-0.5">
-                  {{ t('Please fill in these required fields before final submission, or save as an offline draft anytime.') }}
-                </p>
-              </div>
-            </div>
-            <button type="button" @click="validationModalOpen = false" 
-                    aria-label="Close dialog"
-                    class="min-h-[38px] min-w-[38px] flex items-center justify-center text-rose-700 hover:text-rose-950 font-black text-base p-1 focus:ring-2 focus:ring-rose-500 rounded-lg">✕</button>
-          </div>
-
-          <!-- Pending Questions List -->
-          <div class="p-4 overflow-y-auto space-y-2 flex-1 divide-y divide-slate-100">
-            <div v-for="(err, idx) in validationErrors" :key="err.question_code"
-                 class="pt-2 first:pt-0 flex items-center justify-between">
-              <div>
-                <div class="text-xs font-bold text-slate-900 leading-snug">
-                  {{ idx + 1 }}. {{ t(err.label) }}
-                </div>
-                <div class="text-[10px] text-indigo-700 font-medium">
-                  {{ t(err.section_title) }}
-                </div>
-              </div>
-              <button type="button" @click="jumpToQuestion(err.question_code, err.section_index)"
-                      class="min-h-[38px] px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs border border-indigo-200 shrink-0 ml-2 touch-press focus:ring-2 focus:ring-indigo-500">
-                Fix →
-              </button>
-            </div>
-          </div>
-
-          <!-- Modal Footer Actions -->
-          <div class="p-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between space-x-2">
-            <button type="button" @click="saveOffline(false); validationModalOpen = false"
-                    class="min-h-[44px] px-3 sm:px-4 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold touch-press flex items-center space-x-1 focus:ring-2 focus:ring-slate-500">
-              <span aria-hidden="true">💾</span>
-              <span>{{ t('Draft') }}</span>
-            </button>
-            <button type="button" @click="validationModalOpen = false"
-                    class="min-h-[44px] flex-1 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow touch-press focus:ring-2 focus:ring-indigo-400">
-              {{ t('Continue Editing') }}
-            </button>
-          </div>
-
-        </div>
-      </div>
 
     </div>
   `
