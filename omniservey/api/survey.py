@@ -233,6 +233,6 @@ def get_bootstrap_data():
 				"schema": schema_data
 			})
 	return {
-		"user": user_info,
+		"user": (user_info.get("full_name") or user_info.get("user") or "Guest Surveyor") if isinstance(user_info, dict) else str(user_info),
 		"templates": authorized
 	}

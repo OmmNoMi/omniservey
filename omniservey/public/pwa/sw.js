@@ -1,4 +1,4 @@
-const CACHE_NAME = 'omniservey-cache-v13';
+const CACHE_NAME = 'omniservey-cache-v14';
 const STATIC_ASSETS = [
   '/assets/omniservey/pwa/index.html',
   '/assets/omniservey/pwa/style.css',

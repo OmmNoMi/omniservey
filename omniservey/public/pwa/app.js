@@ -333,7 +333,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "Item",
     "Remove": "Remove",
     "e.g. Tractor, Water Pump, Sewing Machine": "e.g. Tractor, Water Pump, Sewing Machine",
-    "Enter answer...": "Enter answer..."
+    "Enter answer...": "Enter answer...",
+    "Select Language": "Select Language",
+    "Language": "Language",
+    "Menu": "Menu",
+    "Choose your preferred language": "Choose your preferred language",
+    "Quick Actions": "Quick Actions",
+    "Syncing...": "Syncing..."
   },
   "hi": {
     "OmniServey": "ओमनीसर्वे",
@@ -344,7 +350,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ऑफलाइन",
     "Surveys": "सर्वेक्षण",
     "सर्वेक्षण": "सर्वेक्षण",
-    "WAL Queue": "कतार (ऑफलाइन)",
+    "WAL Queue": "लोकल कतार",
     "कतार (ऑफलाइन)": "कतार (ऑफलाइन)",
     "System": "सिस्टम",
     "सिस्टम": "सिस्टम",
@@ -398,7 +404,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "राइट-अहेड लॉग (WAL कतार)",
     "Atomic zero-loss local storage queue": "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण",
-    "Sync Now": "⟳ अभी सिंक करें",
+    "Sync Now": "अभी सिंक करें",
     "⟳ अभी सिंक करें": "⟳ अभी सिंक करें",
     "View on Map →": "मानचित्र पर देखें →",
     "नक्शे पर देखें →": "नक्शे पर देखें →",
@@ -656,7 +662,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "वस्तु",
     "Remove": "हटाएं",
     "e.g. Tractor, Water Pump, Sewing Machine": "उदा. ट्रैक्टर, पानी पंप, सिलाई मशीन",
-    "Enter answer...": "उत्तर दर्ज करें..."
+    "Enter answer...": "उत्तर दर्ज करें...",
+    "Select Language": "भाषा चुनें",
+    "Language": "भाषा",
+    "Menu": "मेनू",
+    "Choose your preferred language": "अपनी पसंदीदा भाषा चुनें",
+    "Quick Actions": "त्वरित कार्य",
+    "Syncing...": "सिंक हो रहा है..."
   },
   "mr": {
     "OmniServey": "ओम्नीसर्व्हे",
@@ -667,7 +679,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ऑफलाइन",
     "Surveys": "सर्वेक्षण",
     "सर्वेक्षण": "सर्वेक्षण",
-    "WAL Queue": "रांग (ऑफलाइन)",
+    "WAL Queue": "स्थानिक रांग",
     "कतार (ऑफलाइन)": "रांग (ऑफलाइन)",
     "System": "प्रणाली",
     "सिस्टम": "प्रणाली",
@@ -721,7 +733,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "राइट-अहेड लॉग (WAL रांग)",
     "Atomic zero-loss local storage queue": "शून्य डेटा हानी सुरक्षित स्थानिक साठवण",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "शून्य डेटा हानी सुरक्षित स्थानिक साठवण",
-    "Sync Now": "⟳ आता सिंक करा",
+    "Sync Now": "आता सिंक करा",
     "⟳ अभी सिंक करें": "⟳ आता सिंक करा",
     "View on Map →": "नकाशावर पहा →",
     "नक्शे पर देखें →": "नక्शावर पहा →",
@@ -979,7 +991,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "वस्तू",
     "Remove": "काढून टाका",
     "e.g. Tractor, Water Pump, Sewing Machine": "उदा. ट्रॅक्टर, पाणी पंप, शिलाई मशीन",
-    "Enter answer...": "उत्तर प्रविष्ट करा..."
+    "Enter answer...": "उत्तर प्रविष्ट करा...",
+    "Select Language": "भाषा निवडा",
+    "Language": "भाषा",
+    "Menu": "मेनू",
+    "Choose your preferred language": "तुमची पसंतीची भाषा निवडा",
+    "Quick Actions": "त्वरित कृती",
+    "Syncing...": "सिंक होत आहे..."
   },
   "gu": {
     "OmniServey": "ઓમ્નીસર્વે",
@@ -990,7 +1008,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ઓફલાઇન",
     "Surveys": "સર્વેક્ષણ",
     "सर्वेक्षण": "સર્વેક્ષણ",
-    "WAL Queue": "કતાર (ઓફલાઇન)",
+    "WAL Queue": "ઓફલાઇન કતાર",
     "कतार (ऑफलाइन)": "કતાર (ઓફલાઇન)",
     "System": "સિસ્ટમ",
     "सिस्टम": "સિસ્ટમ",
@@ -1044,7 +1062,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "રાઇટ-અહેડ લૉગ (WAL કતાર)",
     "Atomic zero-loss local storage queue": "શૂન્ય ડેટા નુકશાન સુરક્ષિત સ્થાનિક સ્ટોરેજ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "શૂન્ય ડેટા નુકશાન સુરક્ષિત સ્થાનિક સ્ટોરેજ",
-    "Sync Now": "⟳ હમણાં સિંક કરો",
+    "Sync Now": "હમણાં સિંક કરો",
     "⟳ अभी सिंक करें": "⟳ હમણાં સિંક કરો",
     "View on Map →": "નકશા પર જુઓ →",
     "नक्शे पर देखें →": "નકશા પર જુઓ →",
@@ -1302,7 +1320,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "વસ્તુ",
     "Remove": "કાઢી નાખો",
     "e.g. Tractor, Water Pump, Sewing Machine": "દા.ત. ટ્રેક્ટર, પાણીનો પંપ, સિલાઈ મશીન",
-    "Enter answer...": "જવાબ લખો..."
+    "Enter answer...": "જવાબ લખો...",
+    "Select Language": "ભાષા પસંદ કરો",
+    "Language": "ભાષા",
+    "Menu": "મેનુ",
+    "Choose your preferred language": "તમારી મનપસંદ ભાષા પસંદ કરો",
+    "Quick Actions": "ઝડપી ક્રિયાઓ",
+    "Syncing...": "સિંક થઈ રહ્યું છે..."
   },
   "pa": {
     "OmniServey": "ਓਮਨੀਸਰਵੇ",
@@ -1313,7 +1337,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ਔਫਲਾਈਨ",
     "Surveys": "ਸਰਵੇਖਣ",
     "सर्वेक्षण": "ਸਰਵੇਖਣ",
-    "WAL Queue": "ਕਤਾਰ (ਔਫਲਾਈਨ)",
+    "WAL Queue": "ਸਥਾਨਕ ਕਤਾਰ",
     "कतार (ऑफलाइन)": "ਕਤਾਰ (ਔਫਲਾਈਨ)",
     "System": "ਸਿਸਟਮ",
     "सिस्टम": "ਸਿਸਟਮ",
@@ -1367,7 +1391,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "ਰਾਈਟ-ਅਹੈੱਡ ਲੌਗ (WAL ਕਤਾਰ)",
     "Atomic zero-loss local storage queue": "ਜ਼ੀਰੋ ਡੇਟਾ ਨੁਕਸਾਨ ਸੁਰੱਖਿਅਤ ਸਥਾਨਕ ਸਟੋਰੇਜ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "ਜ਼ੀਰੋ ਡੇਟਾ ਨੁਕਸਾਨ ਸੁਰੱਖਿਅਤ ਸਥਾਨਕ ਸਟੋਰੇਜ",
-    "Sync Now": "⟳ ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
+    "Sync Now": "ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
     "⟳ अभी सिंक करें": "⟳ ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
     "View on Map →": "ਨਕਸ਼ੇ 'ਤੇ ਵੇਖੋ →",
     "नक्शे पर देखें →": "ਨਕਸ਼ੇ ਤੇ ਦੇਖੋ →",
@@ -1625,7 +1649,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "ਆਈਟਮ",
     "Remove": "ਹਟਾਓ",
     "e.g. Tractor, Water Pump, Sewing Machine": "ਜਿਵੇਂ ਟਰੈਕਟਰ, ਪਾਣੀ ਵਾਲਾ ਪੰਪ, ਸਿਲਾਈ ਮਸ਼ੀਨ",
-    "Enter answer...": "ਜਵਾਬ ਦਰਜ ਕਰੋ..."
+    "Enter answer...": "ਜਵਾਬ ਦਰਜ ਕਰੋ...",
+    "Select Language": "ਭਾਸ਼ਾ ਚੁਣੋ",
+    "Language": "ਭਾਸ਼ਾ",
+    "Menu": "ਮੇਨੂ",
+    "Choose your preferred language": "ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਚੁਣੋ",
+    "Quick Actions": "ਤੇਜ਼ ਕਾਰਵਾਈਆਂ",
+    "Syncing...": "ਸਿੰਕ ਹੋ ਰਿਹਾ ਹੈ..."
   },
   "bn": {
     "OmniServey": "অমনিসার্ভে",
@@ -1636,7 +1666,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "অফলাইন",
     "Surveys": "জরিপ",
     "सर्वेक्षण": "জরিপ",
-    "WAL Queue": "সারি (অফলাইন)",
+    "WAL Queue": "স্থানীয় সারি",
     "कतार (ऑफलाइन)": "সারি (অফলাইন)",
     "System": "সিস্টেম",
     "सिस्टम": "সিস্টেম",
@@ -1690,7 +1720,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "রাইট-অ্যাহেড লগ (WAL সারি)",
     "Atomic zero-loss local storage queue": "শূন্য ডেটা ক্ষতি নিরাপদ স্থানীয় সঞ্চয়স্থান",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "শূন্য ডেটা ক্ষতি নিরাপদ স্থানীয় সঞ্চয়স্থান",
-    "Sync Now": "⟳ এখনই সিঙ্ক করুন",
+    "Sync Now": "এখন সিঙ্ক করুন",
     "⟳ अभी सिंक करें": "⟳ এখনই সিঙ্ক করুন",
     "View on Map →": "মানচিত্রে দেখুন →",
     "नक्शे पर देखें →": "মানচিত্রে দেখুন →",
@@ -1948,7 +1978,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "আইটেম",
     "Remove": "মুছুন",
     "e.g. Tractor, Water Pump, Sewing Machine": "যেমন ট্রাক্টর, জলের পাম্প, সেলাই মেশিন",
-    "Enter answer...": "উত্তর লিখুন..."
+    "Enter answer...": "উত্তর লিখুন...",
+    "Select Language": "ভাষা নির্বাচন করুন",
+    "Language": "ভাষা",
+    "Menu": "মেনু",
+    "Choose your preferred language": "আপনার পছন্দের ভাষা নির্বাচন করুন",
+    "Quick Actions": "দ্রুত পদক্ষেপ",
+    "Syncing...": "সিঙ্ক হচ্ছে..."
   },
   "ta": {
     "OmniServey": "ஓம்னிசர்வே",
@@ -1957,9 +1993,9 @@ const BUILTIN_TRANSLATIONS = {
     "ऑनलाइन": "ஆன்லைன்",
     "Offline": "ஆஃப்லைன்",
     "ऑफलाइन": "ஆஃப்லைன்",
-    "Surveys": "கணிப்புகள்",
+    "Surveys": "கணக்கெடுப்புகள்",
     "सर्वेक्षण": "கணிப்புகள்",
-    "WAL Queue": "வரிசை (ஆஃப்லைன்)",
+    "WAL Queue": "உள்ளூர் வரிசை",
     "कतार (ऑफलाइन)": "வரிசை (ஆஃப்லைன்)",
     "System": "கணினி",
     "सिस्टम": "கணினி",
@@ -2013,7 +2049,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "ரைட்-அஹெட் லாக் (WAL வரிசை)",
     "Atomic zero-loss local storage queue": "பூஜ்ஜிய தரவு இழப்பு பாதுகாப்பான உள்ளூர் சேமிப்பு",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "பூஜ்ஜிய தரவு இழப்பு பாதுகாப்பான உள்ளூர் சேமிப்பு",
-    "Sync Now": "⟳ இப்போது ஒத்திசைக்கவும்",
+    "Sync Now": "இப்போது ஒத்திசைக்கவும்",
     "⟳ अभी सिंक करें": "⟳ இப்போது ஒத்திசைக்கவும்",
     "View on Map →": "வரைபடத்தில் பார்க்க →",
     "नक्शे पर देखें →": "வரைபடத்தில் பார்க்கவும் →",
@@ -2271,7 +2307,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "பொருள்",
     "Remove": "நீக்கு",
     "e.g. Tractor, Water Pump, Sewing Machine": "எ.கா. டிராக்டர், நீர் பம்ப், தையல் இயந்திரம்",
-    "Enter answer...": "பதிலை உள்ளிடவும்..."
+    "Enter answer...": "பதிலை உள்ளிடவும்...",
+    "Select Language": "மொழியைத் தேர்ந்தெடுக்கவும்",
+    "Language": "மொழி",
+    "Menu": "பட்டி",
+    "Choose your preferred language": "உங்கள் விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்",
+    "Quick Actions": "விரைவு செயல்கள்",
+    "Syncing...": "ஒத்திசைக்கப்படுகிறது..."
   },
   "te": {
     "OmniServey": "ఓమ్నీసర్వే",
@@ -2282,7 +2324,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ఆఫ్‌లైన్",
     "Surveys": "సర్వేలు",
     "सर्वेक्षण": "సర్వేలు",
-    "WAL Queue": "క్యూ (ఆఫ్‌లైన్)",
+    "WAL Queue": "స్థానిక క్యూ",
     "कतार (ऑफलाइन)": "క్యూ (ఆఫ్‌లైన్)",
     "System": "సిస్టమ్",
     "सिस्टम": "సిస్టమ్",
@@ -2336,7 +2378,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "రైట్-అహెడ్ లాగ్ (WAL క్యూ)",
     "Atomic zero-loss local storage queue": "సున్నా డేటా నష్టం సురక్షిత స్థానిక నిల్వ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "సున్నా డేటా నష్టం సురక్షిత స్థానిక నిల్వ",
-    "Sync Now": "⟳ ఇప్పుడే సమకాలీకరించండి",
+    "Sync Now": "ఇప్పుడే సమకాలీకరించండి",
     "⟳ अभी सिंक करें": "⟳ ఇప్పుడే సమకాలీకరించండి",
     "View on Map →": "మ్యాప్‌లో చూడండి →",
     "नक्शे पर देखें →": "మ్యాప్‌లో చూడండి →",
@@ -2594,7 +2636,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "వస్తువు",
     "Remove": "తొలగించు",
     "e.g. Tractor, Water Pump, Sewing Machine": "ఉదా. ట్రాక్టర్, నీటి పంపు, కుట్టు యంత్రం",
-    "Enter answer...": "సమాధానం నమోదు చేయండి..."
+    "Enter answer...": "సమాధానం నమోదు చేయండి...",
+    "Select Language": "భాషను ఎంచుకోండి",
+    "Language": "భాష",
+    "Menu": "మెనూ",
+    "Choose your preferred language": "మీ ప్రాధాన్యత గల భాషను ఎంచుకోండి",
+    "Quick Actions": "శీఘ్ర చర్యలు",
+    "Syncing...": "సమకాలీకరిస్తోంది..."
   },
   "kn": {
     "OmniServey": "ಓಮ್ನಿಸರ್ವೆ",
@@ -2605,7 +2653,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ಆಫ್‌ಲೈನ್",
     "Surveys": "ಸಮೀಕ್ಷೆಗಳು",
     "सर्वेक्षण": "ಸಮೀಕ್ಷೆಗಳು",
-    "WAL Queue": "ಕ್ಯೂ (ಆಫ್‌ಲೈನ್)",
+    "WAL Queue": "ಸ್ಥಳೀಯ ಸರತಿ ಸಾಲು",
     "कतार (ऑफलाइन)": "ಕ್ಯೂ (ಆಫ್‌ಲೈನ್)",
     "System": "ವ್ಯವಸ್ಥೆ",
     "सिस्टम": "ವ್ಯವಸ್ಥೆ",
@@ -2659,7 +2707,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "ರೈಟ್-ಅಹೆಡ್ ಲಾಗ್ (WAL ಕ್ಯೂ)",
     "Atomic zero-loss local storage queue": "ಶೂನ್ಯ ಡೇಟಾ ನಷ್ಟ ಸುರಕ್ಷಿತ ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣೆ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "ಶೂನ್ಯ ಡೇಟಾ ನಷ್ಟ ಸುರಕ್ಷಿತ ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣೆ",
-    "Sync Now": "⟳ ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
+    "Sync Now": "ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
     "⟳ अभी सिंक करें": "⟳ ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
     "View on Map →": "ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ →",
     "नक्शे पर देखें →": "ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ →",
@@ -2917,7 +2965,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "ವಸ್ತು",
     "Remove": "ತೆಗೆದುಹಾಕಿ",
     "e.g. Tractor, Water Pump, Sewing Machine": "ಉದಾ. ಟ್ರ್ಯಾಕ್ಟರ್, ನೀರಿನ ಪಂಪ್, ಹೊಲಿಗೆ ಯಂತ್ರ",
-    "Enter answer...": "ಉತ್ತರವನ್ನು ನಮೂದಿಸಿ..."
+    "Enter answer...": "ಉತ್ತರವನ್ನು ನಮೂದಿಸಿ...",
+    "Select Language": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "Language": "ಭಾಷೆ",
+    "Menu": "ಮೆನು",
+    "Choose your preferred language": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    "Quick Actions": "ತ್ವರಿತ ಕ್ರಿಯೆಗಳು",
+    "Syncing...": "ಸಿಂಕ್ ಆಗುತ್ತಿದೆ..."
   },
   "ml": {
     "OmniServey": "ഓമ്നിസർവെ",
@@ -2928,7 +2982,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ഓഫ്‌ലൈൻ",
     "Surveys": "സർവേകൾ",
     "सर्वेक्षण": "സർവേകൾ",
-    "WAL Queue": "ക്യൂ (ഓഫ്‌ലൈൻ)",
+    "WAL Queue": "പ്രാദേശിക ക്യൂ",
     "कतार (ऑफलाइन)": "ക്യൂ (ഓഫ്‌ലൈൻ)",
     "System": "സിസ്റ്റം",
     "सिस्टम": "സിസ്റ്റം",
@@ -2982,7 +3036,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "റൈറ്റ്-എഹെഡ് ലോഗ് (WAL ക്യൂ)",
     "Atomic zero-loss local storage queue": "പൂർണ്ണ ഡാറ്റാ സുരക്ഷിത പ്രാദേശിക സംഭരണം",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "പൂർണ്ണ ഡാറ്റാ സുരക്ഷിത പ്രാദേശിക സംഭരണം",
-    "Sync Now": "⟳ ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
+    "Sync Now": "ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
     "⟳ अभी सिंक करें": "⟳ ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
     "View on Map →": "മാപ്പിൽ കാണുക →",
     "नक्शे पर देखें →": "മാപ്പിൽ കാണുക →",
@@ -3240,7 +3294,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "ഇനം",
     "Remove": "നീക്കം ചെയ്യുക",
     "e.g. Tractor, Water Pump, Sewing Machine": "ഉദാ. ട്രാക്ടർ, വാട്ടർ പമ്പ്, തയ്യൽ മെഷീൻ",
-    "Enter answer...": "ഉത്തരം രേഖപ്പെടുത്തുക..."
+    "Enter answer...": "ഉത്തരം രേഖപ്പെടുത്തുക...",
+    "Select Language": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "Language": "ഭാഷ",
+    "Menu": "മെനു",
+    "Choose your preferred language": "നിങ്ങളുടെ പ്രിയപ്പെട്ട ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "Quick Actions": "ദ്രുത പ്രവർത്തനങ്ങൾ",
+    "Syncing...": "സമന്വയിപ്പിക്കുന്നു..."
   },
   "ur": {
     "OmniServey": "اومنی سروے",
@@ -3251,7 +3311,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "آف لائن",
     "Surveys": "سروے",
     "सर्वेक्षण": "سروے",
-    "WAL Queue": "قطار (آف لائن)",
+    "WAL Queue": "مقامی قطار",
     "कतार (ऑफलाइन)": "قطار (آف لائن)",
     "System": "سسٹم",
     "सिस्टम": "سسٹم",
@@ -3305,7 +3365,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "رائٹ-اہیڈ لاگ (WAL قطار)",
     "Atomic zero-loss local storage queue": "زیرو ڈیٹا نقصان محفوظ مقامی اسٹوریج",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "زیرو ڈیٹا نقصان محفوظ مقامی اسٹوریج",
-    "Sync Now": "⟳ ابھی سنک کریں",
+    "Sync Now": "ابھی سنک کریں",
     "⟳ अभी सिंक करें": "⟳ ابھی سنک کریں",
     "View on Map →": "نقشے پر دیکھیں →",
     "नक्शे पर देखें →": "نقشے پر دیکھیں →",
@@ -3563,7 +3623,13 @@ const BUILTIN_TRANSLATIONS = {
     "Item": "آئٹم",
     "Remove": "حذف کریں",
     "e.g. Tractor, Water Pump, Sewing Machine": "مثلاً ٹریکٹر، واٹر پمپ، سلائی مشین",
-    "Enter answer...": "جواب درج کریں..."
+    "Enter answer...": "جواب درج کریں...",
+    "Select Language": "زبان منتخب کریں",
+    "Language": "زبان",
+    "Menu": "مینو",
+    "Choose your preferred language": "اپنی پسندیدہ زبان منتخب کریں",
+    "Quick Actions": "فوری اقدامات",
+    "Syncing...": "سنک ہو رہا ہے..."
   }
 };
 
@@ -3643,6 +3709,7 @@ const app = createApp({
     const isOnline = ref(navigator.onLine);
     const isSyncing = ref(false);
     const currentLang = ref(localStorage.getItem('omniservey_lang') || 'en');
+    const menuOpen = ref(false);
 
     const languages = [
       { code: 'en', name: 'English' },
@@ -3657,6 +3724,16 @@ const app = createApp({
       { code: 'ml', name: 'മലയാളം (Malayalam)' },
       { code: 'ur', name: 'اردو (Urdu)' }
     ];
+
+    function setLanguage(langCode) {
+      currentLang.value = langCode;
+      localStorage.setItem('omniservey_lang', langCode);
+      const lObj = languages.find(l => l.code === langCode);
+      const lName = lObj ? lObj.name : langCode;
+      announce('Language changed to ' + lName);
+      showToast('Language: ' + lName, 'info');
+      menuOpen.value = false;
+    }
 
     const templates = ref([]);
     const searchQuery = ref('');
@@ -3763,289 +3840,263 @@ const app = createApp({
         if (allCards && allCards[currentIndex + 1]) {
           allCards[currentIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
           const focusTarget = allCards[currentIndex + 1].querySelector('input, [role="radio"], button, select');
-          if (focusTarget) focusTarget.focus({ preventScroll: true });
+          if (focusTarget) focusTarget.focus();
         }
       });
     }
 
-    // Option Selection & Auto-Advance
-    function selectOption(questionCode, optionValue, questionIndex) {
-      formData[questionCode] = optionValue;
-      saveToStorageDebounced();
-      autoScrollToNextQuestion(questionIndex);
+    function selectOption(questionCode, optionVal, qIndex) {
+      formData[questionCode] = optionVal;
+      announce(`Selected ${t(optionVal)}`);
+      autoScrollToNextQuestion(qIndex);
     }
 
-    // Dynamic Option Styling (Yes/No Color Highlights)
-    function getOptionStyle(opt, isSelected) {
-      const optStr = String(opt).toLowerCase().trim();
-      const isYes = optStr === 'yes' || optStr === 'हाँ' || optStr === 'હા' || optStr === 'होय';
-      const isNo = optStr === 'no' || optStr === 'नहीं' || optStr === 'ના' || optStr === 'नाही';
+    function getOptionStyle(questionCode, option) {
+      const isSelected = (formData[questionCode] === option);
+      const isYes = (option.toLowerCase() === 'yes' || option === 'હા' || option === 'हाँ' || option === 'होय' || option === 'ਹਾਂ');
+      const isNo = (option.toLowerCase() === 'no' || option === 'ના' || option === 'नहीं' || option === 'नाही' || option === 'ਨਹੀਂ');
 
       if (isSelected) {
-        if (isYes) return 'bg-emerald-600 text-white border-emerald-700 shadow-md font-extrabold';
-        if (isNo) return 'bg-rose-600 text-white border-rose-700 shadow-md font-extrabold';
-        return 'bg-indigo-600 text-white border-indigo-700 shadow-md font-extrabold';
+        if (isYes) return 'border-emerald-600 bg-emerald-50 ring-4 ring-emerald-200 text-emerald-950 font-black shadow-md';
+        if (isNo) return 'border-rose-600 bg-rose-50 ring-4 ring-rose-200 text-rose-950 font-black shadow-md';
+        return 'border-indigo-600 bg-indigo-50 ring-4 ring-indigo-200 text-indigo-950 font-black shadow-md';
       }
 
-      if (isYes) return 'bg-emerald-50/70 border-emerald-200 text-emerald-950 hover:bg-emerald-100 hover:border-emerald-400 font-bold';
-      if (isNo) return 'bg-rose-50/70 border-rose-200 text-rose-950 hover:bg-rose-100 hover:border-rose-400 font-bold';
-      return 'bg-white border-slate-300 text-slate-900 hover:bg-slate-50 hover:border-indigo-400 font-semibold';
+      if (isYes) return 'border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-900';
+      if (isNo) return 'border-rose-300 bg-white hover:bg-rose-50 text-rose-900';
+      return 'border-slate-300 bg-white hover:bg-slate-50 text-slate-800';
     }
 
-    // Repeatable Dynamic Grid Row Add/Remove
     function addGridRow(questionCode) {
       if (!formData[questionCode] || !Array.isArray(formData[questionCode])) {
         formData[questionCode] = [];
       }
-      formData[questionCode].push({
-        item_name: '',
-        qty: 1,
-        estimated_val: ''
-      });
-      saveToStorageDebounced();
+      formData[questionCode].push({ item: '', qty: 1, val: '' });
+      announce('New item row added');
     }
 
-    function removeGridRow(questionCode, index) {
+    function removeGridRow(questionCode, idx) {
       if (formData[questionCode] && Array.isArray(formData[questionCode])) {
-        formData[questionCode].splice(index, 1);
-        saveToStorageDebounced();
+        formData[questionCode].splice(idx, 1);
+        announce('Item row removed');
       }
     }
 
-    // Categories Computation
     const categories = computed(() => {
-      const set = new Set(['All']);
+      const cats = new Set(['All']);
       templates.value.forEach(t => {
-        if (t.project) set.add(t.project);
+        if (t.project) cats.add(t.project);
       });
-      return Array.from(set);
+      return Array.from(cats);
     });
 
-    // Filtered Templates
     const filteredTemplates = computed(() => {
       return templates.value.filter(t => {
-        const matchCat = selectedCategory.value === 'All' || t.project === selectedCategory.value;
-        const query = searchQuery.value.toLowerCase().trim();
-        const matchQuery = !query || 
-          (t.title && t.title.toLowerCase().includes(query)) ||
-          (t.project && t.project.toLowerCase().includes(query));
-        return matchCat && matchQuery;
+        const matchesCat = selectedCategory.value === 'All' || t.project === selectedCategory.value;
+        const matchesQuery = !searchQuery.value || 
+          t.title.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+          t.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+        return matchesCat && matchesQuery;
       });
     });
 
-    // Active Section Details
     const sections = computed(() => {
-      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.sections) {
-        return [];
-      }
-      return activeTemplate.value.schema.sections;
+      if (!activeTemplate.value || !activeTemplate.value.schema) return [];
+      return activeTemplate.value.schema.sections || [];
     });
 
     const activeSection = computed(() => {
-      if (!sections.value.length) return null;
+      if (!sections.value || sections.value.length === 0) return null;
       return sections.value[activeSectionIndex.value] || sections.value[0];
     });
 
     const activeQuestions = computed(() => {
-      if (!activeTemplate.value || !activeTemplate.value.schema || !activeTemplate.value.schema.questions || !activeSection.value) {
-        return [];
-      }
-      const secCode = activeSection.value.section_code;
-      return activeTemplate.value.schema.questions.filter(q => (q.section === secCode || q.section_code === secCode));
+      if (!activeTemplate.value || !activeTemplate.value.schema || !activeSection.value) return [];
+      const allQ = activeTemplate.value.schema.questions || [];
+      const sCode = activeSection.value.section_code;
+      return allQ.filter(q => (q.section === sCode || q.section_code === sCode));
     });
 
     function isSectionComplete(secIndex) {
       if (!activeTemplate.value || !activeTemplate.value.schema) return false;
       const sec = sections.value[secIndex];
       if (!sec) return false;
-      const qList = activeTemplate.value.schema.questions.filter(q => (q.section === sec.section_code || q.section_code === sec.section_code));
-      for (const q of qList) {
+      const allQ = activeTemplate.value.schema.questions || [];
+      const secQ = allQ.filter(q => (q.section === sec.section_code || q.section_code === sec.section_code));
+      for (const q of secQ) {
         if (q.is_mandatory) {
           const val = formData[q.question_code];
-          if (val === undefined || val === null || String(val).trim() === '') {
-            return false;
-          }
+          if (val === undefined || val === null || String(val).trim() === '') return false;
         }
       }
       return true;
     }
 
-    // Database Loaders
+    function scrollTabs(direction) {
+      const container = document.getElementById('section-tabs-container');
+      if (container) {
+        container.scrollBy({ left: direction * 200, behavior: 'smooth' });
+      }
+    }
+
+    function handleTabKeydown(e, idx) {
+      let targetIdx = null;
+      if (e.key === 'ArrowRight') targetIdx = (idx + 1) % sections.value.length;
+      else if (e.key === 'ArrowLeft') targetIdx = (idx - 1 + sections.value.length) % sections.value.length;
+      else if (e.key === 'Home') targetIdx = 0;
+      else if (e.key === 'End') targetIdx = sections.value.length - 1;
+
+      if (targetIdx !== null) {
+        e.preventDefault();
+        activeSectionIndex.value = targetIdx;
+        focusTab(targetIdx);
+      }
+    }
+
+    function focusTab(idx) {
+      nextTick(() => {
+        const btn = document.getElementById(`tab-btn-${idx}`);
+        if (btn) {
+          btn.focus();
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    }
+
     async function loadTemplatesFromDB() {
       try {
-        const localTemplates = await db.templates.toArray();
-        if (localTemplates && localTemplates.length > 0) {
-          templates.value = localTemplates;
+        const stored = await db.templates.toArray();
+        if (stored && stored.length > 0) {
+          templates.value = stored;
         }
       } catch (err) {
-        console.error('[loadTemplatesFromDB Error]', err);
+        console.error('[Dexie] Failed to load templates', err);
       }
     }
 
     async function loadWALFromDB() {
       try {
-        const submissions = await db.wal.reverse().sortBy('captured_at_local');
-        walSubmissions.value = submissions;
-        pendingCount.value = submissions.filter(s => s.status === 'PENDING_SYNC').length;
+        const records = await db.wal.toArray();
+        walSubmissions.value = records;
+        pendingCount.value = records.filter(r => r.status === 'PENDING_SYNC').length;
       } catch (err) {
-        console.error('[loadWALFromDB Error]', err);
+        console.error('[Dexie] Failed to load WAL', err);
       }
     }
 
     async function fetchServerTemplates() {
       try {
         const resp = await fetch('/api/method/omniservey.api.survey.get_bootstrap_data');
-        if (resp.ok) {
-          const data = await resp.json();
-          if (data.message && data.message.templates) {
-            templates.value = data.message.templates;
-            await db.templates.clear();
-            await db.templates.bulkPut(JSON.parse(JSON.stringify(data.message.templates)));
-            if (data.message.user) {
-              currentUser.value = data.message.user.full_name || data.message.user.name || 'Surveyor';
-            }
-            showToast('Survey templates refreshed', 'success');
-            announce('Survey templates updated successfully');
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const msg = data.message || {};
+
+        if (msg.user) {
+          if (typeof msg.user === 'object') {
+            currentUser.value = msg.user.full_name || msg.user.user || 'Guest Surveyor';
+          } else {
+            currentUser.value = msg.user;
+          }
+        }
+
+        if (msg.templates && Array.isArray(msg.templates)) {
+          for (const tmpl of msg.templates) {
+            await db.templates.put(JSON.parse(JSON.stringify(tmpl)));
+          }
+          await loadTemplatesFromDB();
+        }
+
+        if (msg.translations && Array.isArray(msg.translations)) {
+          for (const tr of msg.translations) {
+            await db.translations.put(JSON.parse(JSON.stringify(tr)));
           }
         }
       } catch (err) {
-        console.warn('Network offline, using local IndexedDB templates', err);
+        console.warn('[Bootstrap] Server unavailable, relying on offline cache', err);
       }
     }
 
-    async function startSurvey(template, existingData = null) {
-      activeTemplate.value = template;
+    function generateUUID() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
+    async function startSurvey(templateDoc, resumeSubmission = null) {
+      activeTemplate.value = templateDoc;
       activeSectionIndex.value = 0;
       Object.keys(formData).forEach(k => delete formData[k]);
 
-      if (existingData) {
-        currentUUID.value = existingData.idempotency_key;
-        if (existingData.items) {
-          existingData.items.forEach(item => {
-            formData[item.question_code] = item.response_value;
+      if (resumeSubmission) {
+        currentUUID.value = resumeSubmission.idempotency_key;
+        if (resumeSubmission.items && Array.isArray(resumeSubmission.items)) {
+          resumeSubmission.items.forEach(item => {
+            try {
+              formData[item.question_code] = JSON.parse(item.response_value);
+            } catch(e) {
+              formData[item.question_code] = item.response_value;
+            }
           });
         }
-        if (existingData.gps_latitude) {
-          currentGPS.latitude = existingData.gps_latitude;
-          currentGPS.longitude = existingData.gps_longitude;
-          currentGPS.accuracy = existingData.gps_accuracy;
+        if (resumeSubmission.gps_latitude) {
+          currentGPS.latitude = resumeSubmission.gps_latitude;
+          currentGPS.longitude = resumeSubmission.gps_longitude;
+          currentGPS.accuracy = resumeSubmission.gps_accuracy;
         }
       } else {
-        currentUUID.value = 'SURV-' + Math.random().toString(36).substring(2, 9) + '-' + Date.now().toString(36);
-        currentGPS.latitude = null;
-        currentGPS.longitude = null;
-        currentGPS.accuracy = null;
-        currentGPS.altitude = null;
-        currentGPS.error = null;
+        currentUUID.value = generateUUID();
+        fetchGPS();
       }
 
       currentView.value = 'form';
-      window.scrollTo(0, 0);
-      announce(`Started survey: ${t(template.title)}`);
+      announce(`Started survey: ${templateDoc.title}`);
+
+      nextTick(() => {
+        initAllSignaturePads();
+      });
+    }
+
+    function jumpToQuestion(qCode, sIndex) {
+      validationModalOpen.value = false;
+      activeSectionIndex.value = sIndex;
+      highlightedQuestion.value = qCode;
+
+      nextTick(() => {
+        const el = document.getElementById(`q_wrapper_${qCode}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const inputEl = el.querySelector('input, select, textarea, [role="radio"]');
+          if (inputEl) inputEl.focus();
+        }
+      });
     }
 
     function nextSection() {
       if (activeSectionIndex.value < sections.value.length - 1) {
         activeSectionIndex.value++;
-        window.scrollTo(0, 0);
-        focusFirstQuestion();
+        announce(`Page ${activeSectionIndex.value + 1} of ${sections.value.length}`);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        nextTick(() => initAllSignaturePads());
       }
     }
 
     function prevSection() {
       if (activeSectionIndex.value > 0) {
         activeSectionIndex.value--;
-        window.scrollTo(0, 0);
-        focusFirstQuestion();
+        announce(`Page ${activeSectionIndex.value + 1} of ${sections.value.length}`);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        nextTick(() => initAllSignaturePads());
       }
     }
 
-    function focusFirstQuestion() {
-      nextTick(() => {
-        const firstCard = document.querySelector('.elder-card');
-        if (firstCard) {
-          const target = firstCard.querySelector('input, [role="radio"], button, select');
-          if (target) target.focus();
-        }
-      });
-    }
-
-    function scrollTabs(direction) {
-      const tabList = document.querySelector('[role="tablist"]');
-      if (tabList) {
-        tabList.scrollBy({ left: direction * 180, behavior: 'smooth' });
-      }
-    }
-
-    function handleTabKeydown(e, index) {
-      const tabCount = sections.value.length;
-      let newIndex = index;
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-        e.preventDefault();
-        newIndex = (index + 1) % tabCount;
-        focusTab(newIndex);
-      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-        e.preventDefault();
-        newIndex = (index - 1 + tabCount) % tabCount;
-        focusTab(newIndex);
-      } else if (e.key === 'Home') {
-        e.preventDefault();
-        focusTab(0);
-      } else if (e.key === 'End') {
-        e.preventDefault();
-        focusTab(tabCount - 1);
-      }
-    }
-
-    function focusTab(index) {
-      activeSectionIndex.value = index;
-      nextTick(() => {
-        const activeTabEl = document.getElementById(`tab-btn-${index}`);
-        if (activeTabEl) {
-          activeTabEl.focus();
-          activeTabEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      });
-    }
-
-    function jumpToQuestion(qCode, secIndex) {
-      validationModalOpen.value = false;
-      activeSectionIndex.value = secIndex;
-      highlightedQuestion.value = qCode;
-
-      nextTick(() => {
-        const card = document.getElementById('card_' + qCode);
-        if (card) {
-          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          const focusable = card.querySelector('input, [role="radio"], button, select');
-          if (focusable) focusable.focus();
-        }
-      });
-
-      setTimeout(() => {
-        highlightedQuestion.value = null;
-      }, 3500);
-    }
-
-    let debounceTimer = null;
-    function saveToStorageDebounced() {
-      if (debounceTimer) clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
-        saveOffline(false);
-      }, 800);
-    }
-
-    async function fetchGPS() {
+    function fetchGPS() {
       if (!navigator.geolocation) {
-        currentGPS.error = 'Geolocation not supported by device';
-        showToast(currentGPS.error, 'error');
-        announce(currentGPS.error);
+        showToast('Geolocation is not supported by your device', 'error');
         return;
       }
-
       currentGPS.fetching = true;
       currentGPS.error = null;
-      announce('Acquiring high precision GPS fix');
 
       navigator.geolocation.getCurrentPosition(
         (pos) => {
@@ -4054,43 +4105,32 @@ const app = createApp({
           currentGPS.accuracy = pos.coords.accuracy;
           currentGPS.altitude = pos.coords.altitude;
           currentGPS.fetching = false;
-
-          if (activeTemplate.value && activeTemplate.value.schema && activeTemplate.value.schema.questions) {
-            const gpsQ = activeTemplate.value.schema.questions.find(q => q.field_type === 'GPS Location');
-            if (gpsQ) {
-              formData[gpsQ.question_code] = `${pos.coords.latitude.toFixed(6)},${pos.coords.longitude.toFixed(6)}`;
-            }
-          }
-          showToast(`GPS Acquired: ±${pos.coords.accuracy.toFixed(0)}m`, 'success');
-          announce(`GPS location acquired with accuracy ${pos.coords.accuracy.toFixed(0)} meters`);
+          showToast('GPS Location acquired ✓', 'success');
+          announce('GPS fix acquired');
         },
         (err) => {
           currentGPS.fetching = false;
-          currentGPS.error = `GPS Error: ${err.message}`;
-          showToast(currentGPS.error, 'error');
-          announce(currentGPS.error);
+          currentGPS.error = err.message;
+          showToast('GPS Error: ' + err.message, 'error');
         },
-        {
-          enableHighAccuracy: true,
-          timeout: 20000,
-          maximumAge: 5000
-        }
+        { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
       );
     }
 
-    async function handlePhotoUpload(questionCode, event) {
-      const file = event.target.files[0];
-      if (!file) return;
+    async function handlePhotoUpload(e, questionCode) {
+      const files = e.target.files;
+      if (!files || files.length === 0) return;
+      const file = files[0];
 
       try {
-        showToast('Compressing photo & stamping GPS watermark...', 'info');
+        showToast('Compressing photo...', 'info');
         const compressedBase64 = await compressImage(file, currentGPS);
         formData[questionCode] = compressedBase64;
-        showToast('Photo attached successfully', 'success');
-        announce('Photo compressed and attached');
+        showToast('Photo captured ✓', 'success');
+        announce('Photo captured');
       } catch (err) {
-        console.error('Image compression error:', err);
-        showToast('Failed to process image file', 'error');
+        console.error('[Photo Upload Error]', err);
+        showToast('Failed to process photo', 'error');
       }
     }
 
@@ -4100,20 +4140,37 @@ const app = createApp({
       announce('Photo removed');
     }
 
-    function initSignaturePad(canvas, questionCode) {
+    function initAllSignaturePads() {
+      if (!activeQuestions.value) return;
+      activeQuestions.value.forEach(q => {
+        if (q.field_type === 'Signature') {
+          initSignaturePad(q.question_code);
+        }
+      });
+    }
+
+    function initSignaturePad(questionCode) {
+      const canvas = document.getElementById(`sig_canvas_${questionCode}`);
       if (!canvas) return;
-      let isDrawing = false;
+
       const ctx = canvas.getContext('2d');
-      ctx.lineWidth = 3.5;
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-      ctx.strokeStyle = '#0f172a';
+      let isDrawing = false;
 
       function resize() {
         const rect = canvas.getBoundingClientRect();
         canvas.width = rect.width;
         canvas.height = rect.height;
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = '#0f172a';
+
+        if (formData[questionCode]) {
+          const img = new Image();
+          img.src = formData[questionCode];
+          img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
       }
+
       resize();
 
       function getPos(e) {
@@ -4384,7 +4441,9 @@ const app = createApp({
       isOnline,
       isSyncing,
       currentLang,
+      menuOpen,
       languages,
+      setLanguage,
       templates,
       searchQuery,
       selectedCategory,
@@ -4450,7 +4509,7 @@ const app = createApp({
            role="alert"
            aria-live="assertive"
            :class="toastType === 'error' ? 'bg-rose-800 text-white' : (toastType === 'success' ? 'bg-emerald-800 text-white' : 'bg-slate-900 text-white')"
-           class="fixed top-5 left-1/2 -translate-x-1/2 z-[100] px-6 py-3.5 rounded-2xl shadow-2xl font-black text-base flex items-center space-x-3 transition-all">
+           class="fixed top-5 left-1/2 -translate-x-1/2 z-[110] px-6 py-3.5 rounded-2xl shadow-2xl font-black text-base flex items-center space-x-3 transition-all">
         <span aria-hidden="true" class="text-xl">
           {{ toastType === 'error' ? '⚠️' : (toastType === 'success' ? '✓' : 'ℹ️') }}
         </span>
@@ -4494,42 +4553,144 @@ const app = createApp({
         </div>
       </div>
 
-      <!-- TOP APP HEADER -->
-      <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800 w-full overflow-hidden">
+      <!-- TOP APP HEADER (Ultra Clean, Zero Overflow) -->
+      <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800 w-full">
         <div class="max-w-4xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-2 w-full box-border">
           
           <!-- Logo & Platform Badge -->
-          <div class="flex items-center space-x-2 cursor-pointer shrink-0 min-w-0" @click="currentView = 'templates'">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-lg sm:text-xl shadow-md shrink-0">
+          <div class="flex items-center space-x-2.5 cursor-pointer shrink-0" @click="currentView = 'templates'">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-lg sm:text-xl shadow-md shrink-0 text-white">
               Ω
             </div>
             <div class="min-w-0">
               <div class="flex items-center space-x-1.5">
-                <span class="font-black text-base sm:text-xl tracking-tight leading-none">OmniServey</span>
+                <span class="font-black text-base sm:text-xl tracking-tight leading-none text-white">OmniServey</span>
                 <span class="text-[9px] sm:text-xs font-extrabold bg-indigo-500/30 text-indigo-300 px-1.5 py-0.5 rounded-full border border-indigo-500/40">v16</span>
               </div>
-              <div class="text-[10px] sm:text-xs text-slate-400 font-semibold truncate max-w-[90px] sm:max-w-none hidden sm:block">
-                {{ currentUser }}
+              <div class="text-[10px] sm:text-xs text-slate-400 font-semibold truncate">
+                {{ isOnline ? '🟢 Online' : '🟠 Offline' }}
               </div>
             </div>
           </div>
 
-          <!-- Vernacular Language Picker (Accessible Large Target) -->
-          <div class="flex items-center shrink min-w-0">
-            <label for="app_lang_select" class="sr-only">Select Language</label>
-            <select id="app_lang_select"
-                    v-model="currentLang" 
-                    @change="localStorage.setItem('omniservey_lang', currentLang); announce('Language changed to ' + currentLang)"
-                    aria-label="ભાષા પસંદ કરો / Select Language"
-                    class="min-h-[38px] sm:min-h-[42px] max-w-[125px] sm:max-w-[200px] px-2 sm:px-3 py-1 bg-slate-800 text-white text-xs sm:text-sm font-bold rounded-xl sm:rounded-2xl border border-slate-700 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400 outline-none cursor-pointer truncate">
-              <option v-for="lang in languages" :key="lang.code" :value="lang.code">
-                {{ lang.name }}
-              </option>
-            </select>
+          <!-- Three Lines (☰ Menu) Button for Language Switcher & Options -->
+          <div class="flex items-center space-x-2 shrink-0">
+            <button type="button" 
+                    @click="menuOpen = true" 
+                    aria-label="Open Language and Settings Menu"
+                    class="min-h-[42px] px-3 py-1.5 bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-white rounded-xl sm:rounded-2xl border border-slate-700 flex items-center space-x-2 touch-press shadow-sm focus:ring-4 focus:ring-indigo-400">
+              <span class="text-xl sm:text-2xl leading-none font-bold" aria-hidden="true">☰</span>
+              <span class="text-xs sm:text-sm font-black text-indigo-300 uppercase tracking-wide">{{ currentLang }}</span>
+            </button>
           </div>
 
         </div>
       </header>
+
+      <!-- SIDEBAR DRAWER / MODAL FOR 3-LINES MENU (Language Switcher & Surveyor Options) -->
+      <div v-if="menuOpen" class="fixed inset-0 z-[100] flex justify-end" role="dialog" aria-modal="true" aria-label="Menu">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" @click="menuOpen = false" aria-hidden="true"></div>
+
+        <!-- Drawer Container -->
+        <div class="relative w-full max-w-sm bg-white text-slate-900 h-full shadow-2xl flex flex-col z-10 overflow-y-auto">
+          
+          <!-- Drawer Header -->
+          <div class="p-4 sm:p-5 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0">
+            <div class="flex items-center space-x-3">
+              <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-black text-lg shadow">Ω</div>
+              <div>
+                <div class="font-black text-base sm:text-lg leading-tight">OmniServey</div>
+                <div class="text-xs text-slate-400 font-medium">{{ currentUser }}</div>
+              </div>
+            </div>
+            <button type="button" 
+                    @click="menuOpen = false" 
+                    aria-label="Close menu"
+                    class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-xl font-black touch-press focus:ring-2 focus:ring-indigo-400">
+              ✕
+            </button>
+          </div>
+
+          <!-- Drawer Body -->
+          <div class="p-4 sm:p-5 space-y-6 flex-1">
+            
+            <!-- Language Section -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-base font-black text-slate-900 flex items-center space-x-2">
+                  <span aria-hidden="true">🌐</span>
+                  <span>{{ t('Select Language') }}</span>
+                </label>
+              </div>
+              <p class="text-xs text-slate-600 font-semibold mb-3">
+                {{ t('Choose your preferred language') }}:
+              </p>
+
+              <!-- Big Touch Cards for 11 Indian Languages -->
+              <div class="grid grid-cols-1 gap-2">
+                <button v-for="lang in languages" :key="lang.code"
+                        type="button"
+                        @click="setLanguage(lang.code)"
+                        :class="currentLang === lang.code ? 'bg-indigo-600 text-white border-indigo-600 ring-2 ring-indigo-400 shadow-md' : 'bg-slate-50 hover:bg-slate-100 text-slate-900 border-slate-200'"
+                        class="min-h-[50px] px-4 py-2.5 rounded-2xl border-2 font-black text-base flex items-center justify-between touch-press transition-all text-left">
+                  <span>{{ lang.name }}</span>
+                  <span v-if="currentLang === lang.code" class="text-white text-lg font-black">✓</span>
+                </button>
+              </div>
+            </div>
+
+            <hr class="border-slate-200">
+
+            <!-- Quick Actions -->
+            <div class="space-y-2.5">
+              <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">{{ t('Quick Actions') }}</div>
+              
+              <button type="button" 
+                      @click="currentView = 'templates'; menuOpen = false"
+                      class="w-full min-h-[48px] px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-2xl flex items-center space-x-3 touch-press">
+                <span class="text-xl">📋</span>
+                <span class="text-base font-bold">{{ t('Surveys') }}</span>
+              </button>
+
+              <button type="button" 
+                      @click="currentView = 'queue'; menuOpen = false"
+                      class="w-full min-h-[48px] px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-2xl flex items-center justify-between touch-press">
+                <div class="flex items-center space-x-3">
+                  <span class="text-xl">📦</span>
+                  <span class="text-base font-bold">{{ t('WAL Queue') }}</span>
+                </div>
+                <span v-if="pendingCount > 0" class="px-2.5 py-1 bg-rose-600 text-white text-xs font-black rounded-full">
+                  {{ pendingCount }}
+                </span>
+              </button>
+
+              <button type="button" 
+                      @click="autoSync(); menuOpen = false"
+                      :disabled="!isOnline || isSyncing"
+                      class="w-full min-h-[48px] px-4 py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border border-indigo-200 font-bold rounded-2xl flex items-center justify-between touch-press disabled:opacity-50">
+                <div class="flex items-center space-x-3">
+                  <span class="text-xl">🔄</span>
+                  <span class="text-base font-bold">{{ isSyncing ? t('Syncing...') : t('Sync Now') }}</span>
+                </div>
+                <span class="text-xs font-black" :class="isOnline ? 'text-emerald-700' : 'text-slate-500'">
+                  {{ isOnline ? 'Online' : 'Offline' }}
+                </span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Drawer Footer -->
+          <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500 font-semibold shrink-0">
+            <span>OmniServey v16 · PWA</span>
+            <button type="button" @click="menuOpen = false" class="font-bold text-slate-700 underline px-2 py-1">
+              {{ t('Close') }}
+            </button>
+          </div>
+
+        </div>
+      </div>
 
       <!-- MAIN CONTENT CONTAINER -->
       <main class="flex-1 max-w-3xl w-full mx-auto p-3 sm:p-6 min-w-0">
@@ -4635,20 +4796,20 @@ const app = createApp({
                   ◀
                 </button>
                 
-                <div role="tablist" aria-label="Survey Sections" 
-                     class="flex-1 min-w-0 flex space-x-2 overflow-x-auto py-1 scroll-smooth no-scrollbar">
-                  <button v-for="(sec, sIdx) in sections" :key="sIdx"
-                          :id="'tab-btn-' + sIdx"
+                <div id="section-tabs-container" role="tablist" aria-label="Survey Sections"
+                     class="flex space-x-2 overflow-x-auto no-scrollbar py-1 px-1 scroll-smooth w-full flex-1">
+                  <button v-for="(sec, idx) in sections" :key="sec.section_code"
+                          :id="'tab-btn-' + idx"
                           type="button"
                           role="tab"
-                          :aria-selected="activeSectionIndex === sIdx ? 'true' : 'false'"
-                          :tabindex="activeSectionIndex === sIdx ? 0 : -1"
-                          @click="activeSectionIndex = sIdx"
-                          @keydown="handleTabKeydown($event, sIdx)"
-                          :class="activeSectionIndex === sIdx ? 'bg-indigo-600 text-white shadow-md font-black' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 font-bold'"
-                          class="min-h-[44px] px-4 py-2 rounded-2xl text-sm sm:text-base whitespace-nowrap shrink-0 transition-all flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    <span v-if="isSectionComplete(sIdx)" aria-hidden="true" class="text-xs">✓</span>
-                    <span>{{ t(sec.section_title) }}</span>
+                          :aria-selected="idx === activeSectionIndex"
+                          :tabindex="idx === activeSectionIndex ? 0 : -1"
+                          @keydown="handleTabKeydown($event, idx)"
+                          @click="activeSectionIndex = idx"
+                          :class="idx === activeSectionIndex ? 'bg-indigo-600 text-white font-black shadow-md' : 'bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold'"
+                          class="min-h-[44px] px-4 py-2 rounded-2xl text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all touch-press flex items-center space-x-2">
+                    <span>{{ idx + 1 }}. {{ t(sec.section_title) }}</span>
+                    <span v-if="isSectionComplete(idx)" aria-label="Completed" class="text-emerald-400 font-bold">✓</span>
                   </button>
                 </div>
 
@@ -4662,325 +4823,316 @@ const app = createApp({
           </div>
 
           <!-- Section Banner -->
-          <div class="bg-indigo-50/80 border-2 border-indigo-200 p-4 sm:p-5 rounded-3xl flex items-center justify-between">
-            <h2 class="text-base sm:text-lg font-black text-indigo-950">
-              {{ t(activeSection.section_title) }}
-            </h2>
-            <span class="text-xs sm:text-sm font-extrabold bg-indigo-200/80 text-indigo-900 px-3 py-1 rounded-full">
-              {{ activeQuestions.length }} {{ t('Questions') }}
-            </span>
+          <div v-if="activeSection" class="bg-indigo-900 text-white p-5 rounded-3xl shadow-md space-y-1">
+            <div class="text-xs font-black uppercase tracking-wider text-indigo-300">
+              {{ t('Page') }} {{ activeSectionIndex + 1 }} / {{ sections.length }}
+            </div>
+            <h2 class="text-xl sm:text-2xl font-black">{{ t(activeSection.section_title) }}</h2>
+            <p v-if="activeSection.description" class="text-xs sm:text-sm text-indigo-200 font-medium">
+              {{ t(activeSection.description) }}
+            </p>
           </div>
 
-          <!-- QUESTION CARDS (Big, Finger-Friendly, High Contrast) -->
-          <div class="space-y-4">
-            
+          <!-- Question Cards List (Google Forms / WhatsApp Style) -->
+          <div class="space-y-6">
             <div v-for="(q, qIndex) in activeQuestions" :key="q.question_code"
-                 :id="'card_' + q.question_code"
-                 :class="[
-                   highlightedQuestion === q.question_code ? 'ring-4 ring-rose-500 bg-rose-50/50' : 'bg-white',
-                   validationErrors.some(e => e.question_code === q.question_code) ? 'border-rose-400' : 'border-slate-200'
-                 ]"
-                 class="elder-card p-5 sm:p-7 rounded-3xl border-2 shadow-sm space-y-4 transition-all">
-
-              <!-- Question Header & One-Tap Voice Assistant -->
+                 :id="'q_wrapper_' + q.question_code"
+                 :class="highlightedQuestion === q.question_code ? 'ring-4 ring-rose-500 border-rose-500' : 'border-slate-200'"
+                 class="elder-card bg-white rounded-3xl p-5 sm:p-7 border-2 shadow-sm space-y-4 transition-all">
+              
+              <!-- Question Header (Number + Label + Voice Assistant Speaker) -->
               <div class="flex items-start justify-between gap-3">
-                
-                <label :id="'q_label_' + q.question_code" :for="'input_' + q.question_code"
-                       class="text-lg sm:text-xl font-black text-slate-900 leading-snug cursor-pointer flex-1">
-                  <span class="text-indigo-600 font-black mr-1">{{ qIndex + 1 }}.</span>
-                  <span>{{ t(q.label_en) }}</span>
-                  <span v-if="q.is_mandatory" class="text-rose-600 ml-1 font-extrabold" aria-hidden="true">*</span>
-                  <span v-if="q.is_mandatory" class="sr-only">(required)</span>
-                </label>
+                <div class="space-y-1 flex-1">
+                  <div class="flex items-center space-x-2">
+                    <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-black shrink-0">
+                      {{ qIndex + 1 }}
+                    </span>
+                    <span v-if="q.is_mandatory" class="text-rose-600 text-xs font-black px-2 py-0.5 bg-rose-50 rounded-full border border-rose-200">
+                      * Required
+                    </span>
+                  </div>
+                  <label :for="'input_' + q.question_code" class="block text-lg sm:text-xl font-black text-slate-900 leading-snug pt-1">
+                    {{ t(q.label_en) }}
+                  </label>
+                  <p v-if="q.help_text" class="text-xs sm:text-sm text-slate-600 font-semibold">
+                    {{ t(q.help_text) }}
+                  </p>
+                </div>
 
-                <!-- Big 🔊 Audio Speaker Button -->
+                <!-- 🔊 ONE-TAP VOICE ASSISTANT BUTTON -->
                 <button type="button" 
                         @click="speakQuestion(q)"
-                        :aria-label="speakingQuestionCode === q.question_code ? 'બોલવાનું બંધ કરો / Stop audio' : 'પ્રશ્ન સાંભળો / Read question aloud'"
-                        :class="speakingQuestionCode === q.question_code ? 'bg-indigo-600 text-white animate-pulse' : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-200'"
-                        class="min-h-[48px] min-w-[48px] p-2.5 rounded-2xl flex items-center justify-center shrink-0 shadow-sm touch-press focus:ring-4 focus:ring-indigo-300 transition-all">
-                  <span aria-hidden="true" class="text-xl">
-                    {{ speakingQuestionCode === q.question_code ? '🔊' : '🔈' }}
-                  </span>
+                        :aria-label="'Read question ' + (qIndex + 1) + ' aloud'"
+                        :class="speakingQuestionCode === q.question_code ? 'bg-amber-500 text-white animate-pulse' : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'"
+                        class="min-h-[48px] min-w-[48px] p-2.5 rounded-2xl flex items-center justify-center shadow-sm touch-press shrink-0 focus:ring-4 focus:ring-indigo-300">
+                  <span aria-hidden="true" class="text-2xl">🔊</span>
                 </button>
-
               </div>
 
-              <!-- ======================================================= -->
-              <!-- QUESTION INPUT VARIANTS                                -->
-              <!-- ======================================================= -->
-
-              <!-- TYPE 1: TEXT / SMALL TEXT -->
-              <div v-if="q.field_type === 'Text' || q.field_type === 'Small Text'">
-                <input :id="'input_' + q.question_code"
-                       type="text" 
-                       v-model="formData[q.question_code]" 
-                       :aria-required="q.is_mandatory ? 'true' : 'false'"
-                       :aria-invalid="validationErrors.some(e => e.question_code === q.question_code) ? 'true' : 'false'"
-                       :placeholder="t('Enter answer...')" 
-                       class="w-full min-h-[56px] px-4 py-3 rounded-2xl border-2 border-slate-300 text-slate-900 text-base sm:text-lg font-medium focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100 outline-none transition-all">
-              </div>
-
-              <!-- TYPE 2: INTEGER / CURRENCY -->
-              <div v-if="q.field_type === 'Integer' || q.field_type === 'Currency (INR)'" class="relative">
-                <span v-if="q.field_type === 'Currency (INR)'" aria-hidden="true" class="absolute left-4 top-3.5 text-slate-600 font-bold text-xl">₹</span>
-                <input :id="'input_' + q.question_code"
-                       type="number" 
-                       v-model="formData[q.question_code]" 
-                       :aria-required="q.is_mandatory ? 'true' : 'false'"
-                       :aria-invalid="validationErrors.some(e => e.question_code === q.question_code) ? 'true' : 'false'"
-                       :class="q.field_type === 'Currency (INR)' ? 'pl-10' : 'pl-4'"
-                       placeholder="0" 
-                       class="w-full min-h-[56px] px-4 py-3 rounded-2xl border-2 border-slate-300 text-slate-900 text-base sm:text-lg font-medium focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100 outline-none transition-all">
-              </div>
-
-              <!-- TYPE 3: SINGLE CHOICE RADIO (Big 60px+ Touch Cards with Yes/No Color Recognition) -->
-              <fieldset v-if="q.field_type === 'Single Choice (Radio)'" 
-                        role="radiogroup" 
-                        :aria-labelledby="'q_label_' + q.question_code"
-                        class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 border-0 m-0 p-0">
-                <legend class="sr-only">{{ t(q.label_en) }}</legend>
-                <div v-for="opt in (q.options || ['Yes', 'No'])" :key="opt"
-                     role="radio"
-                     :aria-checked="formData[q.question_code] === opt ? 'true' : 'false'"
-                     tabindex="0"
-                     @click="selectOption(q.question_code, opt, qIndex)"
-                     @keydown.enter.prevent="selectOption(q.question_code, opt, qIndex)"
-                     @keydown.space.prevent="selectOption(q.question_code, opt, qIndex)"
-                     :class="getOptionStyle(opt, formData[q.question_code] === opt)"
-                     class="flex items-center justify-between p-4 rounded-2xl border-2 cursor-pointer touch-press transition-all min-h-[60px] focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                  <span class="text-base sm:text-lg">{{ t(opt) }}</span>
-                  <div :class="formData[q.question_code] === opt ? 'border-white bg-white' : 'border-slate-400 bg-white'"
-                       class="w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all shrink-0 ml-2">
-                    <span v-if="formData[q.question_code] === opt" class="w-3 h-3 rounded-full bg-indigo-600"></span>
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 1: SELECT / SINGLE CHOICE CARDS -->
+              <!-- ========================================== -->
+              <div v-if="q.field_type === 'Select' || q.field_type === 'Radio'" class="space-y-2.5 pt-1">
+                <div role="radiogroup" :aria-label="t(q.label_en)" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div v-for="opt in q.options" :key="opt"
+                       role="radio"
+                       :aria-checked="formData[q.question_code] === opt"
+                       tabindex="0"
+                       @keydown.space.prevent="selectOption(q.question_code, opt, qIndex)"
+                       @keydown.enter.prevent="selectOption(q.question_code, opt, qIndex)"
+                       @click="selectOption(q.question_code, opt, qIndex)"
+                       :class="getOptionStyle(q.question_code, opt)"
+                       class="min-h-[60px] p-4 rounded-2xl border-2 flex items-center justify-between cursor-pointer touch-press transition-all">
+                    
+                    <span class="text-base sm:text-lg font-black leading-snug">{{ t(opt) }}</span>
+                    
+                    <!-- Radio circle indicator -->
+                    <div :class="formData[q.question_code] === opt ? 'border-indigo-600 bg-indigo-600' : 'border-slate-400 bg-white'"
+                         class="w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 ml-3">
+                      <div v-if="formData[q.question_code] === opt" class="w-2.5 h-2.5 rounded-full bg-white"></div>
+                    </div>
                   </div>
                 </div>
-              </fieldset>
+              </div>
 
-              <!-- TYPE 4: GPS LOCATION (Big One-Click GPS Button) -->
-              <div v-if="q.field_type === 'GPS Location'" class="space-y-3">
-                <button type="button" @click="fetchGPS" :disabled="currentGPS.fetching" 
-                        class="w-full min-h-[58px] bg-slate-900 hover:bg-slate-800 text-white text-base font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center space-x-2.5 touch-press shadow-md focus:ring-4 focus:ring-indigo-300">
-                  <span v-if="currentGPS.fetching" class="animate-spin text-xl" aria-hidden="true">⟳</span>
-                  <span v-else class="text-xl" aria-hidden="true">📍</span>
-                  <span>{{ currentGPS.fetching ? 'Locking Satellite GPS...' : t('Get My Location') }}</span>
-                </button>
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 2: TEXT & DATA INPUTS           -->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Data' || q.field_type === 'Text' || q.field_type === 'Phone'" class="pt-1">
+                <input :id="'input_' + q.question_code"
+                       type="text"
+                       v-model="formData[q.question_code]"
+                       :placeholder="t('Enter answer...')"
+                       :aria-required="q.is_mandatory ? 'true' : 'false'"
+                       class="w-full min-h-[56px] px-4 py-3 bg-slate-50 text-slate-900 text-lg font-bold rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200 outline-none transition-all placeholder:text-slate-400">
+              </div>
 
-                <div v-if="currentGPS.latitude" role="status" class="p-4 bg-emerald-50 border-2 border-emerald-400 rounded-2xl space-y-2">
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm sm:text-base font-extrabold text-emerald-950 flex items-center">
-                      <span aria-hidden="true" class="w-3 h-3 rounded-full bg-emerald-600 mr-2 animate-pulse"></span>
-                      {{ t('Location Acquired') }}: {{ t('GPS Fix Acquired ✓') }}
-                    </span>
-                    <span class="text-xs font-black px-2.5 py-1 rounded-full bg-emerald-200 text-emerald-950 border border-emerald-400">
-                      ±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(0) : 0 }}m
-                    </span>
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 3: NUMERIC / INT / FLOAT        -->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Int' || q.field_type === 'Float' || q.field_type === 'Currency'" class="pt-1">
+                <input :id="'input_' + q.question_code"
+                       type="number"
+                       step="any"
+                       v-model="formData[q.question_code]"
+                       placeholder="0"
+                       :aria-required="q.is_mandatory ? 'true' : 'false'"
+                       class="w-full min-h-[56px] px-4 py-3 bg-slate-50 text-slate-900 text-xl font-mono font-black rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200 outline-none transition-all">
+              </div>
+
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 4: LONG TEXT / TEXTAREA         -->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Long Text' || q.field_type === 'Small Text'" class="pt-1">
+                <textarea :id="'input_' + q.question_code"
+                          rows="4"
+                          v-model="formData[q.question_code]"
+                          :placeholder="t('Enter answer...')"
+                          :aria-required="q.is_mandatory ? 'true' : 'false'"
+                          class="w-full min-h-[100px] px-4 py-3 bg-slate-50 text-slate-900 text-base font-bold rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200 outline-none transition-all placeholder:text-slate-400"></textarea>
+              </div>
+
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 5: GEOLOCATION / GPS LOCK       -->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Geolocation'" class="pt-1 space-y-3">
+                <div v-if="currentGPS.latitude" class="p-4 bg-emerald-50 rounded-2xl border-2 border-emerald-300 space-y-2">
+                  <div class="flex items-center space-x-2 text-emerald-900 font-black text-base">
+                    <span aria-hidden="true" class="text-xl">📍</span>
+                    <span>{{ t('GPS Fix Acquired ✓') }}</span>
                   </div>
-                  
-                  <div class="text-sm font-mono text-emerald-900 font-bold">
-                    Lat: {{ currentGPS.latitude.toFixed(6) }}° · Lng: {{ currentGPS.longitude.toFixed(6) }}°
+                  <div class="font-mono text-sm font-bold text-emerald-800">
+                    {{ currentGPS.latitude.toFixed(5) }}, {{ currentGPS.longitude.toFixed(5) }}
+                    <span class="text-xs font-semibold">(±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(0) : 0 }}m)</span>
                   </div>
-
-                  <div class="pt-1 flex items-center space-x-4 text-sm font-bold">
-                    <a :href="'https://maps.google.com/?q=' + currentGPS.latitude + ',' + currentGPS.longitude" target="_blank"
-                       rel="noopener noreferrer"
-                       class="text-indigo-700 hover:text-indigo-900 underline">
+                  <div class="pt-1 flex items-center space-x-3">
+                    <a :href="'https://www.google.com/maps?q=' + currentGPS.latitude + ',' + currentGPS.longitude" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="text-xs font-black text-emerald-800 underline">
                       {{ t('View on Map →') }}
                     </a>
-                    <button type="button" @click="fetchGPS" class="text-slate-700 hover:text-slate-900 underline">
+                    <button type="button" @click="fetchGPS" class="text-xs font-black text-emerald-900 underline">
                       {{ t('Re-acquire Fix') }}
                     </button>
                   </div>
                 </div>
 
-                <div v-if="currentGPS.error" role="alert" class="p-4 bg-rose-50 border-2 border-rose-300 rounded-2xl text-sm text-rose-900 font-bold">
-                  ⚠️ {{ currentGPS.error }}
+                <div v-else class="space-y-2">
+                  <button type="button" @click="fetchGPS" :disabled="currentGPS.fetching"
+                          class="w-full min-h-[56px] px-5 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-base touch-press flex items-center justify-center space-x-2 shadow-md disabled:opacity-50">
+                    <span aria-hidden="true" class="text-xl">📍</span>
+                    <span>{{ currentGPS.fetching ? 'Acquiring GPS Fix...' : t('Get My Location') }}</span>
+                  </button>
+                  <p v-if="currentGPS.error" class="text-xs font-bold text-rose-600">⚠️ {{ currentGPS.error }}</p>
                 </div>
               </div>
 
-              <!-- TYPE 5: PHOTO CAPTURE (Giant Camera Card) -->
-              <div v-if="q.field_type === 'Photo Upload'" class="space-y-3">
-                <div v-if="!formData[q.question_code]">
-                  <label :for="'photo_input_' + q.question_code" 
-                         class="w-full min-h-[80px] border-3 border-dashed border-indigo-300 hover:border-indigo-600 rounded-3xl flex flex-col items-center justify-center space-y-1 text-base font-bold text-indigo-900 cursor-pointer p-6 bg-indigo-50/50 touch-press focus-within:ring-4 focus-within:ring-indigo-300">
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 6: CAMERA PHOTO ATTACHMENT      -->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Attach Image' || q.field_type === 'Photo'" class="pt-1 space-y-3">
+                <div v-if="formData[q.question_code]" class="space-y-3">
+                  <div class="relative rounded-2xl overflow-hidden border-2 border-slate-300 max-h-64 bg-black">
+                    <img :src="formData[q.question_code]" alt="Uploaded Survey Image" class="w-full h-auto object-contain max-h-64 mx-auto">
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <label :for="'photo_input_' + q.question_code"
+                           class="min-h-[48px] px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 border-2 border-slate-300 rounded-2xl font-black text-sm flex items-center space-x-2 cursor-pointer touch-press">
+                      <span aria-hidden="true">📷</span>
+                      <span>{{ t('Change Photo') }}</span>
+                    </label>
+                    <button type="button" @click="removePhoto(q.question_code)"
+                            class="min-h-[48px] px-5 py-2.5 bg-rose-50 text-rose-700 border-2 border-rose-200 rounded-2xl font-black text-sm touch-press">
+                      {{ t('Remove') }}
+                    </button>
+                  </div>
+                </div>
+
+                <div v-else>
+                  <label :for="'photo_input_' + q.question_code"
+                         class="w-full min-h-[70px] p-4 bg-indigo-50 hover:bg-indigo-100 border-2 border-dashed border-indigo-300 rounded-2xl flex items-center justify-center space-x-3 cursor-pointer touch-press">
                     <span aria-hidden="true" class="text-3xl">📷</span>
-                    <span>{{ t('Take Photo') }}</span>
-                    <input :id="'photo_input_' + q.question_code"
-                           type="file" 
-                           accept="image/*" 
-                           capture="environment" 
-                           :aria-label="t(q.label_en)"
-                           @change="handlePhotoUpload(q.question_code, $event)" 
-                           class="hidden">
+                    <span class="text-base font-black text-indigo-950">{{ t('Take Photo') }}</span>
                   </label>
                 </div>
-                
-                <div v-else class="relative inline-block mt-2">
-                  <img :src="formData[q.question_code]" alt="Uploaded survey photo attachment" class="w-full max-w-sm h-52 object-cover rounded-3xl border-2 border-slate-300 shadow-md">
-                  <button type="button" @click="removePhoto(q.question_code)" 
-                          aria-label="Remove uploaded photo"
-                          class="absolute top-3 right-3 bg-rose-700 hover:bg-rose-800 text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold shadow-lg focus:ring-2 focus:ring-white">
-                    ✕
-                  </button>
-                  <div class="text-xs text-emerald-800 font-bold mt-2">
-                    ✓ Photo Saved with GPS & Date Watermark
-                  </div>
-                </div>
+
+                <input :id="'photo_input_' + q.question_code"
+                       type="file"
+                       accept="image/*"
+                       capture="environment"
+                       @change="handlePhotoUpload($event, q.question_code)"
+                       class="sr-only">
               </div>
 
-              <!-- TYPE 6: TOUCH SIGNATURE PAD -->
-              <div v-if="q.field_type === 'Digital Signature'" class="space-y-3">
-                <div class="relative bg-white rounded-2xl border-2 border-dashed border-slate-300 overflow-hidden">
-                  <canvas :ref="el => initSignaturePad(el, q.question_code)" 
-                          role="img"
-                          :aria-label="t(q.label_en) + ' digital signature drawing canvas'"
-                          tabindex="0"
-                          class="signature-canvas w-full h-44 block focus:ring-2 focus:ring-indigo-500"></canvas>
-                  
-                  <div class="absolute bottom-3 left-4 text-xs sm:text-sm text-slate-500 pointer-events-none select-none font-bold">
-                    ✍️ {{ t('Sign here with finger') }}
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 7: SIGNATURE TOUCHPAD           -->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Signature'" class="pt-1 space-y-3">
+                <div class="border-2 border-slate-400 rounded-2xl overflow-hidden bg-white shadow-inner">
+                  <div class="bg-slate-100 px-3 py-1.5 border-b border-slate-300 text-xs font-bold text-slate-600 flex justify-between items-center">
+                    <span>✍️ {{ t('Sign here with finger') }}</span>
+                    <span v-if="formData[q.question_code]" class="text-emerald-700 font-black">✓ {{ t('Signature Recorded') }}</span>
                   </div>
+                  <canvas :id="'sig_canvas_' + q.question_code"
+                          class="signature-canvas w-full h-44 touch-none"></canvas>
                 </div>
 
-                <div class="flex items-center justify-between text-sm">
-                  <button type="button" @click="clearSignature(q.question_code)" 
-                          class="min-h-[44px] px-4 py-2 text-rose-700 hover:text-rose-900 font-bold touch-press focus:ring-2 focus:ring-rose-500 rounded-xl bg-rose-50">
+                <div class="flex justify-end">
+                  <button type="button" @click="clearSignature(q.question_code)"
+                          class="min-h-[44px] px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl border border-slate-300 touch-press">
                     {{ t('Clear Signature') }}
                   </button>
-                  <span v-if="formData[q.question_code]" role="status" class="text-emerald-800 font-extrabold text-sm">
-                    ✓ {{ t('Signature Recorded') }}
-                  </span>
                 </div>
               </div>
 
-              <!-- TYPE 7: DYNAMIC GRID / REPEATABLE ITEM CARDS -->
-              <div v-if="q.field_type === 'Dynamic Grid' || q.field_type === 'Table' || q.field_type === 'Grid'" class="space-y-4">
+              <!-- ========================================== -->
+              <!-- FIELD TYPE 8: DYNAMIC REPEATABLE ASSET GRID-->
+              <!-- ========================================== -->
+              <div v-else-if="q.field_type === 'Dynamic Grid' || q.field_type === 'Table'" class="pt-1 space-y-3">
+                
                 <div v-if="formData[q.question_code] && formData[q.question_code].length > 0" class="space-y-3">
-                  <div v-for="(row, rIdx) in formData[q.question_code]" :key="rIdx" 
-                       class="p-4 bg-slate-50 border-2 border-slate-300 rounded-2xl space-y-3 relative shadow-sm">
+                  <div v-for="(row, rIdx) in formData[q.question_code]" :key="rIdx"
+                       class="p-4 bg-slate-50 rounded-2xl border-2 border-slate-200 space-y-3">
+                    
                     <div class="flex items-center justify-between">
-                      <span class="text-sm font-extrabold text-indigo-900 bg-indigo-100 px-3 py-1 rounded-xl">
-                        #{{ rIdx + 1 }} {{ t('Item') }}
-                      </span>
-                      <button type="button" @click="removeGridRow(q.question_code, rIdx)" 
-                              class="min-h-[38px] px-3 py-1 text-xs font-black text-rose-700 hover:text-rose-900 bg-rose-100 hover:bg-rose-200 rounded-xl touch-press">
-                        🗑 {{ t('Remove') }}
+                      <span class="text-xs font-black text-slate-600 uppercase">{{ t('Item') }} #{{ rIdx + 1 }}</span>
+                      <button type="button" @click="removeGridRow(q.question_code, rIdx)"
+                              class="text-xs font-black text-rose-600 hover:text-rose-800 p-1">
+                        ✕ {{ t('Remove') }}
                       </button>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 mb-1">{{ t('Equipment / Asset Name') }}</label>
+                      <input type="text" v-model="row.item" :placeholder="t('e.g. Tractor, Water Pump, Sewing Machine')"
+                             class="w-full min-h-[48px] px-3 py-2 bg-white text-slate-900 font-bold rounded-xl border border-slate-300 focus:border-indigo-600 outline-none text-base">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
                       <div>
-                        <label class="block text-xs font-bold text-slate-600 mb-1">{{ t('Equipment / Asset Name') }}</label>
-                        <input type="text" v-model="row.item_name" 
-                               :placeholder="t('e.g. Tractor, Water Pump, Sewing Machine')"
-                               class="w-full min-h-[48px] px-3 py-2 rounded-xl border-2 border-slate-300 text-sm font-medium focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">{{ t('Quantity') }}</label>
+                        <input type="number" v-model="row.qty" min="1"
+                               class="w-full min-h-[48px] px-3 py-2 bg-white text-slate-900 font-black rounded-xl border border-slate-300 focus:border-indigo-600 outline-none text-base font-mono">
                       </div>
-                      <div class="grid grid-cols-2 gap-2">
-                        <div>
-                          <label class="block text-xs font-bold text-slate-600 mb-1">{{ t('Quantity') }}</label>
-                          <input type="number" v-model="row.qty" 
-                                 placeholder="1"
-                                 class="w-full min-h-[48px] px-3 py-2 rounded-xl border-2 border-slate-300 text-sm font-medium focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none">
-                        </div>
-                        <div>
-                          <label class="block text-xs font-bold text-slate-600 mb-1">{{ t('Approx Value (₹)') }}</label>
-                          <input type="number" v-model="row.estimated_val" 
-                                 placeholder="0"
-                                 class="w-full min-h-[48px] px-3 py-2 rounded-xl border-2 border-slate-300 text-sm font-medium focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none">
-                        </div>
+                      <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">{{ t('Approx Value (₹)') }}</label>
+                        <input type="number" v-model="row.val" placeholder="0"
+                               class="w-full min-h-[48px] px-3 py-2 bg-white text-slate-900 font-black rounded-xl border border-slate-300 focus:border-indigo-600 outline-none text-base font-mono">
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Big Add Item Button -->
-                <button type="button" @click="addGridRow(q.question_code)" 
-                        class="w-full min-h-[54px] bg-white hover:bg-indigo-50 border-2 border-dashed border-indigo-400 text-indigo-700 hover:text-indigo-900 rounded-2xl flex items-center justify-center space-x-2 font-black text-base touch-press shadow-sm focus:ring-4 focus:ring-indigo-200 transition-all">
-                  <span class="text-xl" aria-hidden="true">➕</span>
+                <!-- Add Item Button -->
+                <button type="button" @click="addGridRow(q.question_code)"
+                        class="w-full min-h-[52px] px-4 py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border-2 border-indigo-200 rounded-2xl font-black text-base touch-press flex items-center justify-center space-x-2">
                   <span>{{ t('+ Add Item / Asset') }}</span>
                 </button>
               </div>
 
-              <!-- TYPE 8: FALLBACK FOR ANY OTHER UNKNOWN TYPES -->
-              <div v-if="!['Text', 'Small Text', 'Long Text', 'Integer', 'Currency (INR)', 'Single Choice (Radio)', 'Multiple Choice (Checkbox)', 'GPS Location', 'Photo Upload', 'Digital Signature', 'Dynamic Grid', 'Table', 'Grid'].includes(q.field_type)">
+              <!-- Fallback Default Input -->
+              <div v-else class="pt-1">
                 <input :id="'input_' + q.question_code"
-                       type="text" 
-                       v-model="formData[q.question_code]" 
+                       type="text"
+                       v-model="formData[q.question_code]"
                        :placeholder="t('Enter answer...')"
-                       class="w-full min-h-[56px] px-4 py-3 rounded-2xl border-2 border-slate-300 text-slate-900 text-base sm:text-lg font-medium focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100 outline-none transition-all">
+                       class="w-full min-h-[56px] px-4 py-3 bg-slate-50 text-slate-900 text-base font-bold rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 outline-none">
               </div>
 
             </div>
-
           </div>
 
-          <!-- FIXED BOTTOM ACTION BAR (Giant Two-Button Navigation) -->
-          <nav aria-label="Survey Form Navigation" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t-2 border-slate-200 shadow-2xl pb-safe">
-            <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between space-x-3">
+          <!-- FIXED BOTTOM GIANT NAVIGATION DOCK (Elder-Friendly 64px Buttons) -->
+          <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t-2 border-slate-200 p-3 sm:p-4 shadow-2xl">
+            <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
               
-              <!-- CASE 1: NORMAL FORM FILLING (Pages 1 to N-1) -> Two Giant Thumb Buttons -->
-              <template v-if="activeSectionIndex < (sections.length - 1)">
-                <!-- Back Button -->
-                <button type="button" @click="prevSection" :disabled="activeSectionIndex === 0"
-                        class="flex-1 min-h-[56px] px-5 py-3 rounded-2xl border-2 border-slate-300 bg-white hover:bg-slate-50 text-sm sm:text-base font-black text-slate-800 disabled:opacity-30 disabled:pointer-events-none touch-press flex items-center justify-center space-x-2 shadow-sm transition-all focus:ring-2 focus:ring-indigo-500">
-                  <span>{{ t('Back') }}</span>
-                </button>
+              <!-- Back Button -->
+              <button type="button" @click="prevSection" :disabled="activeSectionIndex === 0"
+                      class="flex-1 min-h-[56px] sm:min-h-[64px] bg-slate-100 hover:bg-slate-200 text-slate-900 border-2 border-slate-300 rounded-2xl font-black text-base sm:text-lg flex items-center justify-center space-x-2 touch-press disabled:opacity-40 disabled:cursor-not-allowed">
+                <span>{{ t('Back') }}</span>
+              </button>
 
-                <!-- Next Button -->
-                <button type="button" @click="nextSection"
-                        class="flex-1 min-h-[56px] px-5 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-lg touch-press flex items-center justify-center space-x-2 transition-all focus:ring-2 focus:ring-indigo-400">
-                  <span>{{ t('Next') }}</span>
-                </button>
-              </template>
+              <!-- Save Draft Button -->
+              <button type="button" @click="saveOffline(false)"
+                      aria-label="Save draft to local storage"
+                      class="min-h-[56px] sm:min-h-[64px] px-4 sm:px-5 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-300 rounded-2xl font-bold text-sm flex items-center justify-center space-x-1 touch-press shrink-0 shadow-sm">
+                <span aria-hidden="true" class="text-xl">💾</span>
+                <span class="hidden sm:inline">{{ t('Save Work') }}</span>
+              </button>
 
-              <!-- CASE 2: FINAL PAGE (Page N) -> Visible Back, Save Draft, and Done / Submit -->
-              <template v-else>
-                <!-- Back Button -->
-                <button type="button" @click="prevSection"
-                        class="min-h-[56px] px-4 sm:px-6 py-3 rounded-2xl border-2 border-slate-300 bg-white hover:bg-slate-50 text-sm sm:text-base font-black text-slate-800 touch-press flex items-center justify-center space-x-1 shadow-sm shrink-0 transition-all focus:ring-2 focus:ring-indigo-500">
-                  <span>{{ t('Back') }}</span>
-                </button>
+              <!-- Next OR Final Submit Button -->
+              <button v-if="activeSectionIndex < sections.length - 1"
+                      type="button" @click="nextSection"
+                      class="flex-1 min-h-[56px] sm:min-h-[64px] bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-base sm:text-lg flex items-center justify-center space-x-2 touch-press shadow-lg focus:ring-4 focus:ring-indigo-300">
+                <span>{{ t('Next') }}</span>
+              </button>
 
-                <!-- Save Draft Button -->
-                <button type="button" @click="saveOffline(false)" 
-                        class="min-h-[56px] px-4 sm:px-5 py-3 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white text-sm sm:text-base font-black shadow-md touch-press flex items-center justify-center space-x-1.5 shrink-0 transition-all focus:ring-2 focus:ring-emerald-400">
-                  <span aria-hidden="true">💾</span>
-                  <span>{{ t('Save Work') }}</span>
-                </button>
-
-                <!-- Prominent Done / Submit Button -->
-                <button type="button" @click="commitToWAL"
-                        class="flex-1 min-h-[56px] px-5 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm sm:text-base font-black shadow-xl touch-press flex items-center justify-center space-x-2 transition-all focus:ring-2 focus:ring-indigo-400">
-                  <span>{{ t('Done / Send') }}</span>
-                  <span aria-hidden="true">✓</span>
-                </button>
-              </template>
+              <button v-else
+                      type="button" @click="commitToWAL"
+                      class="flex-1 min-h-[56px] sm:min-h-[64px] bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-base sm:text-lg flex items-center justify-center space-x-2 touch-press shadow-lg focus:ring-4 focus:ring-emerald-300">
+                <span aria-hidden="true">✓</span>
+                <span>{{ t('Done / Send') }}</span>
+              </button>
 
             </div>
-          </nav>
+          </div>
 
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 3: WRITE-AHEAD LOG (WAL) QUEUE       -->
+        <!-- VIEW 3: OFFLINE WAL SUBMISSIONS QUEUE      -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'queue'" class="space-y-5">
-          <div class="bg-white p-5 sm:p-6 rounded-3xl shadow-sm border-2 border-slate-200 space-y-4">
-            <div class="flex items-center justify-between">
-              <div>
-                <h1 class="text-lg sm:text-xl font-black text-slate-900">{{ t('Write-Ahead Log (WAL)') }}</h1>
-                <div class="text-sm text-slate-600 font-semibold">{{ t('Atomic zero-loss local storage queue') }}</div>
-              </div>
-              <button type="button" @click="currentView = 'templates'"
-                      class="min-h-[44px] px-4 py-2 bg-slate-100 text-slate-800 rounded-2xl font-bold text-sm touch-press focus:ring-2 focus:ring-indigo-500">
-                ← {{ t('Back') }}
-              </button>
+        <div v-if="currentView === 'queue'" class="space-y-6">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{{ t('WAL Queue') }}</h1>
+              <p class="text-sm sm:text-base text-slate-600 font-semibold">Local write-ahead transaction log</p>
             </div>
 
-            <div class="flex items-center justify-between pt-2">
-              <button type="button" @click="autoSync" :disabled="isSyncing || !isOnline"
-                      class="min-h-[48px] px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm rounded-2xl shadow-md touch-press disabled:opacity-50 flex items-center space-x-2 focus:ring-4 focus:ring-indigo-300">
-                <span v-if="isSyncing" class="animate-spin text-lg">⟳</span>
+            <div class="flex items-center space-x-2">
+              <button type="button" @click="autoSync" :disabled="!isOnline || isSyncing"
+                      class="min-h-[48px] px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm rounded-2xl touch-press flex items-center space-x-1.5 shadow-md disabled:opacity-50">
                 <span>{{ isSyncing ? t('Syncing...') : t('Sync Now') }}</span>
               </button>
 
