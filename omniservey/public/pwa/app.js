@@ -346,7 +346,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "No surveys recorded yet on this device",
     "Tap '+ Start New Survey' to begin your first interview": "Tap '+ Start New Survey' to begin your first interview",
     "Delete draft?": "Are you sure you want to delete this draft?",
-    "Draft deleted": "Draft removed from local storage"
+    "Draft deleted": "Draft removed from local storage",
+    "Text Size": "Text Size",
+    "Adjust font size for your screen": "Adjust font size for your screen",
+    "Small": "Small",
+    "Medium": "Medium",
+    "Large": "Large",
+    "Text size set to Small": "Text size set to Small",
+    "Text size set to Medium": "Text size set to Medium",
+    "Text size set to Large": "Text size set to Large"
   },
   "hi": {
     "OmniServey": "ओमनीसर्वे",
@@ -710,7 +718,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "इस डिवाइस पर अभी तक कोई सर्वेक्षण दर्ज नहीं है",
     "Tap '+ Start New Survey' to begin your first interview": "पहला इंटरव्यू शुरू करने के लिए '+ नया सर्वेक्षण' दबाएं",
     "Delete draft?": "क्या आप इस ड्राफ्ट को हटाना चाहते हैं?",
-    "Draft deleted": "ड्राफ्ट डिवाइस से हटा दिया गया"
+    "Draft deleted": "ड्राफ्ट डिवाइस से हटा दिया गया",
+    "Text Size": "अक्षरों का आकार",
+    "Adjust font size for your screen": "स्क्रीन के अनुसार अक्षरों का आकार चुनें",
+    "Small": "छोटा",
+    "Medium": "सामान्य",
+    "Large": "बड़ा",
+    "Text size set to Small": "अक्षरों का आकार छोटा किया गया",
+    "Text size set to Medium": "अक्षरों का आकार सामान्य किया गया",
+    "Text size set to Large": "अक्षरों का आकार बड़ा किया गया"
   },
   "mr": {
     "OmniServey": "ओम्नीसर्व्हे",
@@ -1074,7 +1090,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "या डिव्हाइसवर अद्याप कोणतेही सर्वेक्षण नोंदवलेले नाही",
     "Tap '+ Start New Survey' to begin your first interview": "पहिली मुलाखत सुरू करण्यासाठी '+ नवीन सर्वेक्षण' दाबा",
     "Delete draft?": "तुम्हाला हा मसुदा हटवायचा आहे का?",
-    "Draft deleted": "मसुदा हटवला गेला"
+    "Draft deleted": "मसुदा हटवला गेला",
+    "Text Size": "अक्षरांचा आकार",
+    "Adjust font size for your screen": "स्क्रीननुसार अक्षरांचा आकार निवडा",
+    "Small": "लहान",
+    "Medium": "मध्यम",
+    "Large": "मोठा",
+    "Text size set to Small": "अक्षरांचा आकार लहान केला",
+    "Text size set to Medium": "अक्षरांचा आकार मध्यम केला",
+    "Text size set to Large": "अक्षरांचा आकार मोठा केला"
   },
   "gu": {
     "OmniServey": "ઓમ્નીસર્વે",
@@ -1438,7 +1462,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "આ ઉપકરણ પર હજુ સુધી કોઈ સર્વેક્ષણ નોંધાયેલ નથી",
     "Tap '+ Start New Survey' to begin your first interview": "પ્રથમ ઇન્ટરવ્યુ શરૂ કરવા માટે '+ નવું સર્વેક્ષણ' દબાવો",
     "Delete draft?": "શું તમે આ ડ્રાફ્ટ કાઢી નાખવા માંગો છો?",
-    "Draft deleted": "ડ્રાફ્ટ દૂર કર્યો"
+    "Draft deleted": "ડ્રાફ્ટ દૂર કર્યો",
+    "Text Size": "અક્ષરોનું કદ",
+    "Adjust font size for your screen": "સ્ક્રીન મુજબ અક્ષરોનું કદ પસંદ કરો",
+    "Small": "નાનું",
+    "Medium": "સામાન્ય",
+    "Large": "મોટું",
+    "Text size set to Small": "અક્ષરોનું કદ નાનું કર્યું",
+    "Text size set to Medium": "અક્ષરોનું કદ સામાન્ય કર્યું",
+    "Text size set to Large": "અક્ષરોનું કદ મોટું કર્યું"
   },
   "pa": {
     "OmniServey": "ਓਮਨੀਸਰਵੇ",
@@ -1802,7 +1834,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "ਇਸ ਡਿਵਾਈਸ ਤੇ ਅਜੇ ਕੋਈ ਸਰਵੇਖਣ ਦਰਜ ਨਹੀਂ ਹੈ",
     "Tap '+ Start New Survey' to begin your first interview": "ਪਹਿਲਾ ਇੰਟਰਵਿਊ ਸ਼ੁਰੂ ਕਰਨ ਲਈ '+ ਨਵਾਂ ਸਰਵੇਖਣ' ਦਬਾਓ",
     "Delete draft?": "ਕੀ ਤੁਸੀਂ ਇਸ ਡਰਾਫਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
-    "Draft deleted": "ਡਰਾਫਟ ਹਟਾ ਦਿੱਤਾ ਗਿਆ"
+    "Draft deleted": "ਡਰਾਫਟ ਹਟਾ ਦਿੱਤਾ ਗਿਆ",
+    "Text Size": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ",
+    "Adjust font size for your screen": "ਸਕ੍ਰੀਨ ਮੁਤਾਬਕ ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਚੁਣੋ",
+    "Small": "ਛੋਟਾ",
+    "Medium": "ਦਰਮਿਆਨਾ",
+    "Large": "ਵੱਡਾ",
+    "Text size set to Small": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਛੋਟਾ ਕੀਤਾ ਗਿਆ",
+    "Text size set to Medium": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਦਰਮਿਆਨਾ ਕੀਤਾ ਗਿਆ",
+    "Text size set to Large": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਵੱਡਾ ਕੀਤਾ ਗਿਆ"
   },
   "bn": {
     "OmniServey": "অমনিসার্ভে",
@@ -2166,7 +2206,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "এই ডিভাইসে এখনও কোনো জরিপ রেকর্ড করা হয়নি",
     "Tap '+ Start New Survey' to begin your first interview": "প্রথম সাক্ষাৎকার শুরু করতে '+ নতুন জরিপ' চাপুন",
     "Delete draft?": "আপনি কি এই খসড়াটি মুছে ফেলতে চান?",
-    "Draft deleted": "খসড়া মুছে ফেলা হয়েছে"
+    "Draft deleted": "খসড়া মুছে ফেলা হয়েছে",
+    "Text Size": "লেখার আকার",
+    "Adjust font size for your screen": "স্ক্রিন অনুযায়ী অক্ষরের আকার বাছুন",
+    "Small": "ছোট",
+    "Medium": "মাঝারি",
+    "Large": "বড়",
+    "Text size set to Small": "লেখার আকার ছোট করা হয়েছে",
+    "Text size set to Medium": "লেখার আকার মাঝারি করা হয়েছে",
+    "Text size set to Large": "লেখার আকার বড় করা হয়েছে"
   },
   "ta": {
     "OmniServey": "ஓம்னிசர்வே",
@@ -2530,7 +2578,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "இந்த சாதனத்தில் இன்னும் எந்த ஆய்வும் பதிவு செய்யப்படவில்லை",
     "Tap '+ Start New Survey' to begin your first interview": "முதல் நேர்காணலைத் தொடங்க '+ புதிய ஆய்வு' தட்டவும்",
     "Delete draft?": "இந்த வரைவை நீக்க விரும்புகிறீர்களா?",
-    "Draft deleted": "வரைவு நீக்கப்பட்டது"
+    "Draft deleted": "வரைவு நீக்கப்பட்டது",
+    "Text Size": "எழுத்து அளவு",
+    "Adjust font size for your screen": "திரைக்கு ஏற்ப எழுத்து அளவை தேர்வு செய்யவும்",
+    "Small": "சிறியது",
+    "Medium": "நடுத்தரம்",
+    "Large": "பெரியது",
+    "Text size set to Small": "எழுத்து அளவு சிறியதாக மாற்றப்பட்டது",
+    "Text size set to Medium": "எழுத்து அளவு நடுத்தரமாக மாற்றப்பட்டது",
+    "Text size set to Large": "எழுத்து அளவு பெரியதாக மாற்றப்பட்டது"
   },
   "te": {
     "OmniServey": "ఓమ్నీసర్వే",
@@ -2894,7 +2950,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "ఈ పరికరంలో ఇంకా ఎటువంటి సర్వేలు నమోదు కాలేదు",
     "Tap '+ Start New Survey' to begin your first interview": "మొదటి ఇంటర్వ్యూ ప్రారంభించడానికి '+ కొత్త సర్వే' నొక్కండి",
     "Delete draft?": "మీరు ఈ డ్రాఫ్ట్‌ను తొలగించాలనుకుంటున్నారా?",
-    "Draft deleted": "డ్రాఫ్ట్ తొలగించబడింది"
+    "Draft deleted": "డ్రాఫ్ట్ తొలగించబడింది",
+    "Text Size": "అక్షరాల పరిమాణం",
+    "Adjust font size for your screen": "స్క్రీన్‌కు తగినట్లు అక్షరాల పరిమాణం ఎంచుకోండి",
+    "Small": "చిన్నది",
+    "Medium": "మధ్యస్థం",
+    "Large": "పెద్దది",
+    "Text size set to Small": "అక్షరాల పరిమాణం చిన్నదిగా మార్చబడింది",
+    "Text size set to Medium": "అక్షరాల పరిమాణం మధ్యస్థంగా మార్చబడింది",
+    "Text size set to Large": "అక్షరాల పరిమాణం పెద్దదిగా మార్చబడింది"
   },
   "kn": {
     "OmniServey": "ಓಮ್ನಿಸರ್ವೆ",
@@ -3258,7 +3322,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "ಈ ಸಾಧನದಲ್ಲಿ ಇನ್ನೂ ಯಾವುದೇ ಸಮೀಕ್ಷೆಗಳನ್ನು ದಾಖಲಿಸಲಾಗಿಲ್ಲ",
     "Tap '+ Start New Survey' to begin your first interview": "ಮೊದಲ ಸಂದರ್ಶನ ಪ್ರಾರಂಭಿಸಲು '+ ಹೊಸ ಸಮೀಕ್ಷೆ' ಒತ್ತಿರಿ",
     "Delete draft?": "ನೀವು ಈ ಕರಡನ್ನು ಅಳಿಸಲು ಬಯಸುವಿರಾ?",
-    "Draft deleted": "ಕರಡು ಅಳಿಸಲಾಗಿದೆ"
+    "Draft deleted": "ಕರಡು ಅಳಿಸಲಾಗಿದೆ",
+    "Text Size": "ಅಕ್ಷರದ ಗಾತ್ರ",
+    "Adjust font size for your screen": "ಪರದೆಗೆ ತಕ್ಕಂತೆ ಅಕ್ಷರದ ಗಾತ್ರ ಆರಿಸಿ",
+    "Small": "ಸಣ್ಣದು",
+    "Medium": "ಮಧ್ಯಮ",
+    "Large": "ದೊಡ್ಡದು",
+    "Text size set to Small": "ಅಕ್ಷರದ ಗಾತ್ರ ಸಣ್ಣದಾಗಿದೆ",
+    "Text size set to Medium": "ಅಕ್ಷರದ ಗಾತ್ರ ಮಧ್ಯಮವಾಗಿದೆ",
+    "Text size set to Large": "ಅಕ್ಷರದ ಗಾತ್ರ ದೊಡ್ಡದಾಗಿದೆ"
   },
   "ml": {
     "OmniServey": "ഓമ്നിസർവെ",
@@ -3622,7 +3694,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "ഈ ഉപകരണത്തിൽ ഇതുവരെ സർവേകളൊന്നും രേഖപ്പെടുത്തിയിട്ടില്ല",
     "Tap '+ Start New Survey' to begin your first interview": "ആദ്യ അഭിമുഖം ആരംഭിക്കാൻ '+ പുതിയ സർവേ' ക്ലിക്ക് ചെയ്യുക",
     "Delete draft?": "ഈ ഡ്രാഫ്റ്റ് ഇല്ലാതാക്കണോ?",
-    "Draft deleted": "ഡ്രാഫ്റ്റ് നീക്കംചെയ്തു"
+    "Draft deleted": "ഡ്രാഫ്റ്റ് നീക്കംചെയ്തു",
+    "Text Size": "അക്ഷര വലുപ്പം",
+    "Adjust font size for your screen": "സ്‌ക്രീനിനനുസരിച്ച് അക്ഷര വലുപ്പം തിരഞ്ഞെടുക്കുക",
+    "Small": "ചെറുത്",
+    "Medium": "ഇടത്തരം",
+    "Large": "വലുത്",
+    "Text size set to Small": "അക്ഷര വലുപ്പം ചെറുതാക്കി",
+    "Text size set to Medium": "അക്ഷര വലുപ്പം ഇടത്തരമാക്കി",
+    "Text size set to Large": "അക്ഷര വലുപ്പം വലുതാക്കി"
   },
   "ur": {
     "OmniServey": "اومنی سروے",
@@ -3986,7 +4066,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "اس ڈیوائس پر ابھی تک کوئی سروے درج نہیں ہے",
     "Tap '+ Start New Survey' to begin your first interview": "پہلا انٹرویو شروع کرنے کیلئے '+ نیا سروے' دبائیں",
     "Delete draft?": "کیا آپ واقعی یہ ڈرافٹ حذف کرنا چاہتے ہیں؟",
-    "Draft deleted": "ڈرافٹ حذف کر دیا گیا"
+    "Draft deleted": "ڈرافٹ حذف کر دیا گیا",
+    "Text Size": "حروف کا سائز",
+    "Adjust font size for your screen": "اسکرین کے مطابق حروف کا سائز منتخب کریں",
+    "Small": "چھوٹا",
+    "Medium": "درمیانہ",
+    "Large": "بڑا",
+    "Text size set to Small": "حروف کا سائز چھوٹا کر دیا گیا",
+    "Text size set to Medium": "حروف کا سائز درمیانہ کر دیا گیا",
+    "Text size set to Large": "حروف کا سائز بڑا کر دیا گیا"
   },
   "raj": {
     "Listen": "सुणो",
@@ -4280,7 +4368,15 @@ const BUILTIN_TRANSLATIONS = {
     "No surveys recorded yet": "ईं डिवाइस माथे अबार तक कोई सर्वे दर्ज कोनी",
     "Tap '+ Start New Survey' to begin your first interview": "पहलो इंटरव्यू शुरू करण खातर '+ नवो सर्वेक्षण' दबाओ",
     "Delete draft?": "कांई थे ईं ड्राफ्ट ने हटावणो चावो हो?",
-    "Draft deleted": "ड्राफ्ट डिवाइस सूं हटा दियो"
+    "Draft deleted": "ड्राफ्ट डिवाइस सूं हटा दियो",
+    "Text Size": "अक्षरां रो आकार",
+    "Adjust font size for your screen": "स्क्रीन रे हिसाब सूं अक्षरां रो आकार चुणो",
+    "Small": "छोटो",
+    "Medium": "सामान्य",
+    "Large": "बड़ो",
+    "Text size set to Small": "अक्षरां रो आकार छोटो कर दियो",
+    "Text size set to Medium": "अक्षरां रो आकार सामान्य कर दियो",
+    "Text size set to Large": "अक्षरां रो आकार बड़ो कर दियो"
   }
 };
 
@@ -4387,6 +4483,29 @@ const app = createApp({
       announce('Language changed to ' + lName);
       showToast('Language: ' + lName, 'info');
       menuOpen.value = false;
+    }
+
+    const textSize = ref(localStorage.getItem('omniservey_text_size') || 'md');
+
+    function applyTextSize(size) {
+      textSize.value = size;
+      localStorage.setItem('omniservey_text_size', size);
+      if (typeof document !== 'undefined' && document.documentElement) {
+        document.documentElement.classList.remove('text-scale-sm', 'text-scale-md', 'text-scale-lg');
+        document.documentElement.classList.add(`text-scale-${size}`);
+      }
+    }
+
+    function setTextSize(size) {
+      applyTextSize(size);
+      const sizeLabels = {
+        'sm': t('Text size set to Small'),
+        'md': t('Text size set to Medium'),
+        'lg': t('Text size set to Large')
+      };
+      const msg = sizeLabels[size] || 'Text size updated';
+      showToast(msg, 'info');
+      announce(msg);
     }
 
     const templates = ref([]);
@@ -5194,6 +5313,7 @@ const app = createApp({
 
     onMounted(async () => {
       try {
+        applyTextSize(textSize.value);
         await db.open();
         await loadTemplatesFromDB();
         await loadWALFromDB();
@@ -5228,6 +5348,9 @@ const app = createApp({
       currentLang,
       languages,
       setLanguage,
+      textSize,
+      setTextSize,
+      applyTextSize,
       menuOpen,
       templates,
       searchQuery,
@@ -5461,6 +5584,44 @@ const app = createApp({
                   {{ pendingCount }}
                 </span>
               </button>
+            </div>
+
+            <!-- Text Size Setting Section -->
+            <div class="space-y-3 pt-3 border-t border-slate-200">
+              <div class="flex items-center space-x-2 text-slate-900 font-black text-base">
+                <span aria-hidden="true" class="text-xl text-indigo-600">🔤</span>
+                <span>{{ t('Text Size') }}</span>
+              </div>
+              <p class="text-xs text-slate-500 font-medium">
+                {{ t('Adjust font size for your screen') }}:
+              </p>
+
+              <!-- 3 Segmented Buttons: Small / Medium / Large -->
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" 
+                        @click="setTextSize('sm')"
+                        :class="textSize === 'sm' ? 'bg-indigo-600 text-white font-black shadow-md ring-2 ring-indigo-300' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold border border-slate-200'"
+                        class="min-h-[52px] py-2 px-1 rounded-2xl flex flex-col items-center justify-center touch-press transition-all">
+                  <span class="text-sm font-black">A-</span>
+                  <span class="text-xs">{{ t('Small') }}</span>
+                </button>
+
+                <button type="button" 
+                        @click="setTextSize('md')"
+                        :class="textSize === 'md' ? 'bg-indigo-600 text-white font-black shadow-md ring-2 ring-indigo-300' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold border border-slate-200'"
+                        class="min-h-[52px] py-2 px-1 rounded-2xl flex flex-col items-center justify-center touch-press transition-all">
+                  <span class="text-base font-black">A</span>
+                  <span class="text-xs">{{ t('Medium') }}</span>
+                </button>
+
+                <button type="button" 
+                        @click="setTextSize('lg')"
+                        :class="textSize === 'lg' ? 'bg-indigo-600 text-white font-black shadow-md ring-2 ring-indigo-300' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold border border-slate-200'"
+                        class="min-h-[52px] py-2 px-1 rounded-2xl flex flex-col items-center justify-center touch-press transition-all">
+                  <span class="text-xl font-black">A+</span>
+                  <span class="text-xs">{{ t('Large') }}</span>
+                </button>
+              </div>
             </div>
 
             <!-- Language Switcher Section -->
@@ -5888,15 +6049,23 @@ const app = createApp({
             <div class="bg-indigo-950 text-white border-b-2 border-indigo-800/80 px-4 py-3 sm:px-6">
               <div class="max-w-3xl mx-auto space-y-2">
                 
-                <!-- Top Row: Exit Button & Step Indicator -->
+                <!-- Top Row: Exit Button & Step Indicator + Settings Button -->
                 <div class="flex items-center justify-between">
                   <button type="button" @click="currentView = 'dashboard'" 
                           class="min-h-[38px] px-3.5 py-1 text-xs sm:text-sm text-indigo-100 hover:text-white font-bold flex items-center space-x-1.5 touch-press bg-indigo-900 hover:bg-indigo-800 rounded-xl border border-indigo-700">
                     <span>{{ t('Exit Form') }}</span>
                   </button>
                   
-                  <div class="text-xs sm:text-sm font-black text-indigo-200 bg-indigo-900 px-3.5 py-1 rounded-xl border border-indigo-700">
-                    {{ t('Page') }} <span class="text-white font-black">{{ activeSectionIndex + 1 }}</span> / {{ sections.length }}
+                  <div class="flex items-center space-x-2">
+                    <button type="button" @click="menuOpen = true"
+                            aria-label="Settings, Font Size and Language"
+                            class="min-h-[38px] px-2.5 py-1 bg-indigo-900 hover:bg-indigo-800 text-indigo-200 hover:text-white font-black text-xs rounded-xl border border-indigo-700 flex items-center space-x-1 touch-press">
+                      <span aria-hidden="true">🔤</span>
+                      <span class="uppercase font-bold">{{ currentLang }}</span>
+                    </button>
+                    <div class="text-xs sm:text-sm font-black text-indigo-200 bg-indigo-900 px-3 py-1 rounded-xl border border-indigo-700">
+                      {{ t('Page') }} <span class="text-white font-black">{{ activeSectionIndex + 1 }}</span> / {{ sections.length }}
+                    </div>
                   </div>
                 </div>
 

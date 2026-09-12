@@ -14,7 +14,7 @@
 
 html, body {
   font-family: var(--font-family-base);
-  font-size: 18px; /* High-legibility base font size for elderly readers */
+  font-size: 16px; /* Base standard font size */
   line-height: 1.6;
   color: var(--color-text-main);
   background-color: var(--color-background);
@@ -25,6 +25,19 @@ html, body {
   overflow-x: hidden;
   max-width: 100vw;
   box-sizing: border-box;
+}
+
+/* Dynamic Text Scaling Classes */
+html.text-scale-sm {
+  font-size: 14px !important;
+}
+
+html.text-scale-md {
+  font-size: 16px !important;
+}
+
+html.text-scale-lg {
+  font-size: 18px !important;
 }
 
 *, *::before, *::after {

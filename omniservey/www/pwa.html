@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>OmniServey · Simple Offline Survey Platform</title>
 
+  <!-- Instant Text Scale Initializer to prevent layout shift -->
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('omniservey_text_size') || 'md';
+        document.documentElement.classList.add('text-scale-' + s);
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- PWA Metadata & Theme -->
   <meta name="theme-color" content="#0f172a">
   <meta name="mobile-web-app-capable" content="yes">
@@ -15,7 +25,7 @@
 
   <!-- Tailwind CSS & Custom Elder-Friendly Stylesheet -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/omniservey/pwa/style.css?v=20260912_115">
+  <link rel="stylesheet" href="/assets/omniservey/pwa/style.css?v=20260912_125">
   <!-- Core Offline Libraries (Dexie & Vue 3) -->
   <script src="/assets/omniservey/pwa/vendor/dexie.min.js"></script>
   <script src="/assets/omniservey/pwa/vendor/vue.global.prod.js"></script>
@@ -25,7 +35,7 @@
   <div id="app"></div>
 
   <!-- Main Vue Application Controller -->
-  <script src="/assets/omniservey/pwa/app.js?v=20260912_120"></script>
+  <script src="/assets/omniservey/pwa/app.js?v=20260912_125"></script>
 
   <!-- Service Worker Registration for Complete Offline Capability -->
   <script>
