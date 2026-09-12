@@ -5859,8 +5859,8 @@ const app = createApp({
         <!-- ========================================== -->
         <div v-if="currentView === 'form' && activeTemplate" class="space-y-6">
 
-          <!-- Sticky Form Header Bar -->
-          <div class="bg-white rounded-3xl p-4 sm:p-5 border-2 border-slate-200 shadow-sm sticky top-[60px] z-30 space-y-3">
+          <!-- Sticky Form Header Bar (Clean & Compact) -->
+          <div class="bg-white rounded-3xl p-4 sm:p-5 border-2 border-slate-200 shadow-sm sticky top-[60px] z-30 space-y-2.5">
             <div class="flex items-center justify-between">
               <button type="button" @click="currentView = 'dashboard'" 
                       class="min-h-[42px] px-3.5 py-1.5 text-sm sm:text-base text-slate-700 hover:text-slate-900 font-bold flex items-center space-x-1.5 touch-press focus:ring-2 focus:ring-indigo-500 rounded-xl bg-slate-100 hover:bg-slate-200">
@@ -5868,55 +5868,21 @@ const app = createApp({
               </button>
               
               <!-- Clean Step & Page Tracker -->
-              <div class="text-sm sm:text-base font-extrabold text-slate-800 bg-slate-100 px-3.5 py-1.5 rounded-xl border border-slate-200">
-                {{ t('Page') }} <span class="text-indigo-600 font-black">{{ activeSectionIndex + 1 }}</span> {{ t('of') }} {{ sections.length }}
+              <div class="text-xs sm:text-sm font-black text-indigo-700 bg-indigo-50 border border-indigo-200 px-3.5 py-1.5 rounded-xl">
+                {{ t('Page') }} <span class="font-black">{{ activeSectionIndex + 1 }}</span> {{ t('of') }} {{ sections.length }}
               </div>
             </div>
 
             <!-- Survey Title -->
-            <h1 class="text-lg sm:text-2xl font-black text-slate-900 leading-tight">
+            <h1 class="text-base sm:text-xl font-black text-slate-900 leading-snug">
               {{ t(activeTemplate.title) }}
             </h1>
 
-            <!-- Visual Step Dot Indicators -->
-            <div class="flex items-center justify-center space-x-2 pt-1" aria-hidden="true">
-              <div v-for="(sec, idx) in sections" :key="idx"
-                   :class="idx === activeSectionIndex ? 'w-8 bg-indigo-600' : (isSectionComplete(idx) ? 'w-3 bg-emerald-500' : 'w-3 bg-slate-300')"
-                   class="h-3 rounded-full transition-all duration-300"></div>
+            <!-- Sleek Linear Progress Bar -->
+            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden border border-slate-200">
+              <div class="h-full bg-indigo-600 rounded-full transition-all duration-300"
+                   :style="'width: ' + (((activeSectionIndex + 1) / sections.length) * 100) + '%'"></div>
             </div>
-
-            <!-- Section Tabs (Accessible Roving Tabindex) -->
-            <div class="relative pt-2 w-full min-w-0">
-              <div class="flex items-center space-x-1.5 w-full min-w-0">
-                <button type="button" @click="scrollTabs(-1)" aria-label="Scroll tabs left" 
-                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[40px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
-                  ◀
-                </button>
-                
-                <div id="section-tabs-container" role="tablist" aria-label="Survey Sections"
-                     class="flex space-x-2 overflow-x-auto no-scrollbar py-1 px-1 scroll-smooth w-full flex-1">
-                  <button v-for="(sec, idx) in sections" :key="sec.section_code"
-                          :id="'tab-btn-' + idx"
-                          type="button"
-                          role="tab"
-                          :aria-selected="idx === activeSectionIndex"
-                          :tabindex="idx === activeSectionIndex ? 0 : -1"
-                          @keydown="handleTabKeydown($event, idx)"
-                          @click="activeSectionIndex = idx"
-                          :class="idx === activeSectionIndex ? 'bg-indigo-600 text-white font-black shadow-md' : 'bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold'"
-                          class="min-h-[44px] px-4 py-2 rounded-2xl text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all touch-press flex items-center space-x-2">
-                    <span>{{ idx + 1 }}. {{ t(sec.section_title) }}</span>
-                    <span v-if="isSectionComplete(idx)" aria-label="Completed" class="text-emerald-400 font-bold">✓</span>
-                  </button>
-                </div>
-
-                <button type="button" @click="scrollTabs(1)" aria-label="Scroll tabs right" 
-                        class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold shrink-0 min-h-[44px] min-w-[40px] flex items-center justify-center focus:ring-2 focus:ring-indigo-500">
-                  ▶
-                </button>
-              </div>
-            </div>
-
           </div>
 
           <!-- Section Banner -->
