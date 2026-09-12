@@ -236,3 +236,52 @@ def get_bootstrap_data():
 		"user": (user_info.get("full_name") or user_info.get("user") or "Guest Surveyor") if isinstance(user_info, dict) else str(user_info),
 		"templates": authorized
 	}
+
+@frappe.whitelist(allow_guest=True)
+def email_surveyor_backup(recipient_email=None, surveyor_name=None, note=None, data_json=None, data_csv=None):
+	"""
+	Emergency email backup endpoint: sends survey data dump (JSON/CSV) to admin email.
+	"""
+	if not recipient_email:
+		recipient_email = frappe.db.get_single_value("System Settings", "email_notification_recipient") or "admin@ommnomi.local"
+
+	surveyor = surveyor_name or frappe.session.user or "Field Surveyor"
+	now_str = frappe.utils.now_datetime().strftime("%Y-%m-%d %H:%M:%S")
+
+	subject = f"[OmniServey Emergency Data Backup] from {surveyor} ({now_str})"
+	
+	body = f"""
+	<h3>OmniServey Field Device Data Backup</h3>
+	<p><strong>Sent by:</strong> {frappe.utils.escape_html(str(surveyor))}</p>
+	<p><strong>Timestamp:</strong> {now_str}</p>
+	<p><strong>Notes / Error Report:</strong> {frappe.utils.escape_html(str(note or 'Direct Emergency Backup Export from PWA'))}</p>
+	<hr>
+	<p>Attached are the raw JSON database dump and tabular CSV responses from the surveyor's offline device storage.</p>
+	"""
+
+	attachments = []
+	today_date = frappe.utils.today()
+	if data_json:
+		attachments.append({
+			"fname": f"OmniServey_Backup_{today_date}.json",
+			"fcontent": data_json.encode("utf-8") if isinstance(data_json, str) else str(data_json).encode("utf-8")
+		})
+	if data_csv:
+		attachments.append({
+			"fname": f"OmniServey_Responses_{today_date}.csv",
+			"fcontent": data_csv.encode("utf-8") if isinstance(data_csv, str) else str(data_csv).encode("utf-8")
+		})
+
+	try:
+		frappe.sendmail(
+			recipients=[recipient_email],
+			subject=subject,
+			message=body,
+			attachments=attachments,
+			delayed=False
+		)
+		return {"status": "SUCCESS", "message": f"Backup email successfully dispatched to {recipient_email}"}
+	except Exception as e:
+		frappe.log_error("OmniServey Emergency Backup Email Error", str(e))
+		return {"status": "ERROR", "error": str(e), "message": "Server mail dispatch error"}
+

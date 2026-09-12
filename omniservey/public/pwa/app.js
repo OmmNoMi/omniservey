@@ -354,7 +354,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "Large",
     "Text size set to Small": "Text size set to Small",
     "Text size set to Medium": "Text size set to Medium",
-    "Text size set to Large": "Text size set to Large"
+    "Text size set to Large": "Text size set to Large",
+    "Email Data to Admin": "Email Data to Admin",
+    "Emergency Backup & Support": "Emergency Backup & Support",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.",
+    "Admin Email Address": "Admin Email Address",
+    "Additional Note / Error Description": "Additional Note / Error Description (Optional)",
+    "Send via Email / Server": "Send via Email (Server)",
+    "Share via Gmail / WhatsApp": "Share via Gmail / Apps",
+    "Download JSON": "Download JSON",
+    "Download CSV (Excel)": "Download CSV (Excel)",
+    "Backup emailed successfully ✓": "Backup emailed successfully ✓",
+    "Total Device Records": "Total Device Records",
+    "Offline Storage Status": "Offline Storage Status",
+    "Healthy (IndexedDB)": "Healthy (IndexedDB)",
+    "Export & Backup": "Export & Backup",
+    "Send Data to Admin": "Send Data to Admin"
   },
   "hi": {
     "OmniServey": "ओमनीसर्वे",
@@ -726,7 +741,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "बड़ा",
     "Text size set to Small": "अक्षरों का आकार छोटा किया गया",
     "Text size set to Medium": "अक्षरों का आकार सामान्य किया गया",
-    "Text size set to Large": "अक्षरों का आकार बड़ा किया गया"
+    "Text size set to Large": "अक्षरों का आकार बड़ा किया गया",
+    "Email Data to Admin": "एडमिन को डेटा ईमेल करें",
+    "Emergency Backup & Support": "इमरजेंसी बैकअप और सहायता",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "ईमेल या ऐप्स के माध्यम से अपने सभी सर्वे रिकॉर्ड और एरर लॉग एडमिन को भेजें।",
+    "Admin Email Address": "एडमिन का ईमेल पता",
+    "Additional Note / Error Description": "समस्या या टिप्पणी (वैकल्पिक)",
+    "Send via Email / Server": "ईमेल द्वारा भेजें (सर्वर)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp पर शेयर करें",
+    "Download JSON": "JSON डाउनलोड करें",
+    "Download CSV (Excel)": "CSV (Excel) डाउनलोड करें",
+    "Backup emailed successfully ✓": "बैकअप ईमेल सफलतापूर्वक भेजा गया ✓",
+    "Total Device Records": "डिवाइस पर कुल रिकॉर्ड",
+    "Offline Storage Status": "लोकल स्टोरेज स्थिति",
+    "Healthy (IndexedDB)": "सुरक्षित (IndexedDB)",
+    "Export & Backup": "एक्सपोर्ट व बैकअप",
+    "Send Data to Admin": "एडमिन को डेटा भेजें"
   },
   "mr": {
     "OmniServey": "ओम्नीसर्व्हे",
@@ -1098,7 +1128,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "मोठा",
     "Text size set to Small": "अक्षरांचा आकार लहान केला",
     "Text size set to Medium": "अक्षरांचा आकार मध्यम केला",
-    "Text size set to Large": "अक्षरांचा आकार मोठा केला"
+    "Text size set to Large": "अक्षरांचा आकार मोठा केला",
+    "Email Data to Admin": "अ‍ॅडमिनला डेटा ईमेल करा",
+    "Emergency Backup & Support": "आणीबाणी बॅकअप आणि सहाय्य",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "आपले सर्व सर्वेक्षण रेकॉर्ड आणि त्रुटी लॉग ईमेल किंवा अ‍ॅप्सद्वारे अ‍ॅडमिनला पाठवा.",
+    "Admin Email Address": "अ‍ॅडमिनचा ईमेल पत्ता",
+    "Additional Note / Error Description": "समस्या किंवा नोंद (पर्यायी)",
+    "Send via Email / Server": "ईमेलद्वारे पाठवा (सर्व्हर)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp वर शेअर करा",
+    "Download JSON": "JSON डाउनलोड करा",
+    "Download CSV (Excel)": "CSV (Excel) डाउनलोड करा",
+    "Backup emailed successfully ✓": "बॅकअप ईमेल यशस्वीरित्या पाठवला ✓",
+    "Total Device Records": "डिव्हाइसवरील एकूण रेकॉर्ड",
+    "Offline Storage Status": "स्थानिक स्टोरेज स्थिती",
+    "Healthy (IndexedDB)": "सुरक्षित (IndexedDB)",
+    "Export & Backup": "निर्यात आणि बॅकअप",
+    "Send Data to Admin": "अ‍ॅडमिनला डेटा पाठवा"
   },
   "gu": {
     "OmniServey": "ઓમ્નીસર્વે",
@@ -1470,7 +1515,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "મોટું",
     "Text size set to Small": "અક્ષરોનું કદ નાનું કર્યું",
     "Text size set to Medium": "અક્ષરોનું કદ સામાન્ય કર્યું",
-    "Text size set to Large": "અક્ષરોનું કદ મોટું કર્યું"
+    "Text size set to Large": "અક્ષરોનું કદ મોટું કર્યું",
+    "Email Data to Admin": "એડમિનને ડેટા ઇમેઇલ કરો",
+    "Emergency Backup & Support": "ઇમરજન્સી બેકઅપ અને સહાય",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "ઇમેઇલ અથવા એપ્લિકેશન્સ દ્વારા તમારા તમામ સર્વે રેકોર્ડ અને ભૂલ લોગ એડમિનને મોકલો.",
+    "Admin Email Address": "એડમિનનું ઇમેઇલ સરનામું",
+    "Additional Note / Error Description": "સમસ્યા અથવા નોંધ (વૈકલ્પિક)",
+    "Send via Email / Server": "ઇમેઇલ દ્વારા મોકલો (સર્વર)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp પર શેર કરો",
+    "Download JSON": "JSON ડાઉનલોડ કરો",
+    "Download CSV (Excel)": "CSV (Excel) ડાઉનલોડ કરો",
+    "Backup emailed successfully ✓": "બેકઅપ ઇમેઇલ સફળતાપૂર્વક મોકલ્યો ✓",
+    "Total Device Records": "ડિવાઇસ પર કુલ રેકોર્ડ",
+    "Offline Storage Status": "સ્થાનિક સંગ્રહ સ્થિતિ",
+    "Healthy (IndexedDB)": "સુરક્ષિત (IndexedDB)",
+    "Export & Backup": "નિકાસ અને બેકઅપ",
+    "Send Data to Admin": "એડમિનને ડેટા મોકલો"
   },
   "pa": {
     "OmniServey": "ਓਮਨੀਸਰਵੇ",
@@ -1842,7 +1902,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "ਵੱਡਾ",
     "Text size set to Small": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਛੋਟਾ ਕੀਤਾ ਗਿਆ",
     "Text size set to Medium": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਦਰਮਿਆਨਾ ਕੀਤਾ ਗਿਆ",
-    "Text size set to Large": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਵੱਡਾ ਕੀਤਾ ਗਿਆ"
+    "Text size set to Large": "ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ ਵੱਡਾ ਕੀਤਾ ਗਿਆ",
+    "Email Data to Admin": "ਐਡਮਿਨ ਨੂੰ ਡਾਟਾ ਈਮੇਲ ਕਰੋ",
+    "Emergency Backup & Support": "ਐਮਰਜੈਂਸੀ ਬੈਕਅੱਪ ਅਤੇ ਸਹਾਇਤਾ",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "ਆਪਣੇ ਸਾਰੇ ਸਰਵੇਖਣ ਰਿਕਾਰਡ ਈਮੇਲ ਜਾਂ ਐਪਸ ਰਾਹੀਂ ਐਡਮਿਨ ਨੂੰ ਭੇਜੋ।",
+    "Admin Email Address": "ਐਡਮਿਨ ਦਾ ਈਮੇਲ ਪਤਾ",
+    "Additional Note / Error Description": "ਸਮੱਸਿਆ ਜਾਂ ਟਿੱਪਣੀ (ਵਿਕਲਪਿਕ)",
+    "Send via Email / Server": "ਈਮੇਲ ਰਾਹੀਂ ਭੇਜੋ (ਸਰਵਰ)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp 'ਤੇ ਸਾਂਝਾ ਕਰੋ",
+    "Download JSON": "JSON ਡਾਊਨਲੋਡ ਕਰੋ",
+    "Download CSV (Excel)": "CSV (Excel) ਡਾਊਨਲੋਡ ਕਰੋ",
+    "Backup emailed successfully ✓": "ਬੈਕਅੱਪ ਈਮੇਲ ਸਫਲਤਾਪੂਰਵਕ ਭੇਜਿਆ ਗਿਆ ✓",
+    "Total Device Records": "ਡਿਵਾਈਸ 'ਤੇ ਕੁੱਲ ਰਿਕਾਰਡ",
+    "Offline Storage Status": "ਲੋਕਲ ਸਟੋਰੇਜ ਸਥਿਤੀ",
+    "Healthy (IndexedDB)": "ਸੁਰੱਖਿਅਤ (IndexedDB)",
+    "Export & Backup": "ਐਕਸਪੋਰਟ ਅਤੇ ਬੈਕਅੱਪ",
+    "Send Data to Admin": "ਐਡਮਿਨ ਨੂੰ ਡਾਟਾ ਭੇਜੋ"
   },
   "bn": {
     "OmniServey": "অমনিসার্ভে",
@@ -2214,7 +2289,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "বড়",
     "Text size set to Small": "লেখার আকার ছোট করা হয়েছে",
     "Text size set to Medium": "লেখার আকার মাঝারি করা হয়েছে",
-    "Text size set to Large": "লেখার আকার বড় করা হয়েছে"
+    "Text size set to Large": "লেখার আকার বড় করা হয়েছে",
+    "Email Data to Admin": "অ্যাডমিনকে ডেটা ইমেল করুন",
+    "Emergency Backup & Support": "জরুরী ব্যাকআপ এবং সহায়তা",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "ইমেল বা অ্যাপের মাধ্যমে আপনার সমস্ত সমীক্ষা রেকর্ড অ্যাডমিনকে পাঠান।",
+    "Admin Email Address": "অ্যাডমিনের ইমেল ঠিকানা",
+    "Additional Note / Error Description": "সমস্যা বা মন্তব্য (ঐচ্ছিক)",
+    "Send via Email / Server": "ইমেলের মাধ্যমে পাঠান (সার্ভার)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp-এ শেয়ার করুন",
+    "Download JSON": "JSON ডাউনলোড করুন",
+    "Download CSV (Excel)": "CSV (Excel) ডাউনলোড করুন",
+    "Backup emailed successfully ✓": "ব্যাকআপ ইমেল সফলভাবে পাঠানো হয়েছে ✓",
+    "Total Device Records": "ডিভাইসে মোট রেকর্ড",
+    "Offline Storage Status": "স্থানীয় স্টোরেজ স্থিতি",
+    "Healthy (IndexedDB)": "সুরক্ষিত (IndexedDB)",
+    "Export & Backup": "রপ্তানি ও ব্যাকআপ",
+    "Send Data to Admin": "অ্যাডমিনকে ডেটা পাঠান"
   },
   "ta": {
     "OmniServey": "ஓம்னிசர்வே",
@@ -2586,7 +2676,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "பெரியது",
     "Text size set to Small": "எழுத்து அளவு சிறியதாக மாற்றப்பட்டது",
     "Text size set to Medium": "எழுத்து அளவு நடுத்தரமாக மாற்றப்பட்டது",
-    "Text size set to Large": "எழுத்து அளவு பெரியதாக மாற்றப்பட்டது"
+    "Text size set to Large": "எழுத்து அளவு பெரியதாக மாற்றப்பட்டது",
+    "Email Data to Admin": "நிர்வாகிக்கு தரவை மின்னஞ்சல் செய்யவும்",
+    "Emergency Backup & Support": "அவசர காப்புப்பிரதி & ஆதரவு",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "உங்கள் அனைத்து கணக்கெடுப்பு பதிவுகளையும் மின்னஞ்சல் அல்லது பயன்பாடுகள் வழியாக நிர்வாகிக்கு அனுப்பவும்.",
+    "Admin Email Address": "நிர்வாகி மின்னஞ்சல் முகவரி",
+    "Additional Note / Error Description": "சிக்கல் அல்லது குறிப்பு (விருப்பமானது)",
+    "Send via Email / Server": "மின்னஞ்சல் வழியாக அனுப்பவும் (சர்வர்)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp இல் பகிரவும்",
+    "Download JSON": "JSON பதிவிறக்கவும்",
+    "Download CSV (Excel)": "CSV (Excel) பதிவிறக்கவும்",
+    "Backup emailed successfully ✓": "காப்புப்பிரதி மின்னஞ்சல் வெற்றிகரமாக அனுப்பப்பட்டது ✓",
+    "Total Device Records": "மொத்த சாதன பதிவுகள்",
+    "Offline Storage Status": "ஆஃப்லைன் சேமிப்பு நிலை",
+    "Healthy (IndexedDB)": "பாதுகாப்பானது (IndexedDB)",
+    "Export & Backup": "ஏற்றுமதி & காப்புப்பிரதி",
+    "Send Data to Admin": "நிர்வாகிக்கு தரவை அனுப்பவும்"
   },
   "te": {
     "OmniServey": "ఓమ్నీసర్వే",
@@ -2958,7 +3063,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "పెద్దది",
     "Text size set to Small": "అక్షరాల పరిమాణం చిన్నదిగా మార్చబడింది",
     "Text size set to Medium": "అక్షరాల పరిమాణం మధ్యస్థంగా మార్చబడింది",
-    "Text size set to Large": "అక్షరాల పరిమాణం పెద్దదిగా మార్చబడింది"
+    "Text size set to Large": "అక్షరాల పరిమాణం పెద్దదిగా మార్చబడింది",
+    "Email Data to Admin": "అడ్మిన్‌కు డేటాను ఇమెయిల్ చేయండి",
+    "Emergency Backup & Support": "అత్యవసర బ్యాకప్ & మద్దతు",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "మీ అన్ని సర్వే రికార్డులను ఇమెయిల్ లేదా యాప్‌ల ద్వారా అడ్మిన్‌కు పంపండి.",
+    "Admin Email Address": "అడ్మిన్ ఇమెయిల్ చిరునామా",
+    "Additional Note / Error Description": "సమస్య లేదా గమనిక (ఐచ్ఛికం)",
+    "Send via Email / Server": "ఇమెయిల్ ద్వారా పంపండి (సర్వర్)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp లో షేర్ చేయండి",
+    "Download JSON": "JSON డౌన్‌లోడ్ చేయండి",
+    "Download CSV (Excel)": "CSV (Excel) డౌన్‌లోడ్ చేయండి",
+    "Backup emailed successfully ✓": "బ్యాకప్ ఇమెయిల్ విజయవంతంగా పంపబడింది ✓",
+    "Total Device Records": "పరికరంలో మొత్తం రికార్డులు",
+    "Offline Storage Status": "ఆఫ్‌లైన్ నిల్వ స్థితి",
+    "Healthy (IndexedDB)": "సురక్షితం (IndexedDB)",
+    "Export & Backup": "ఎగుమతి & బ్యాకప్",
+    "Send Data to Admin": "అడ్మిన్‌కు డేటాను పంపండి"
   },
   "kn": {
     "OmniServey": "ಓಮ್ನಿಸರ್ವೆ",
@@ -3330,7 +3450,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "ದೊಡ್ಡದು",
     "Text size set to Small": "ಅಕ್ಷರದ ಗಾತ್ರ ಸಣ್ಣದಾಗಿದೆ",
     "Text size set to Medium": "ಅಕ್ಷರದ ಗಾತ್ರ ಮಧ್ಯಮವಾಗಿದೆ",
-    "Text size set to Large": "ಅಕ್ಷರದ ಗಾತ್ರ ದೊಡ್ಡದಾಗಿದೆ"
+    "Text size set to Large": "ಅಕ್ಷರದ ಗಾತ್ರ ದೊಡ್ಡದಾಗಿದೆ",
+    "Email Data to Admin": "ಅಡ್ಮಿನ್‌ಗೆ ಡೇಟಾವನ್ನು ಇಮೇಲ್ ಮಾಡಿ",
+    "Emergency Backup & Support": "ತುರ್ತು ಬ್ಯಾಕಪ್ ಮತ್ತು ಬೆಂಬಲ",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "ನಿಮ್ಮ ಎಲ್ಲಾ ಸಮೀಕ್ಷೆ ದಾಖಲೆಗಳನ್ನು ಇಮೇಲ್ ಅಥವಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳ ಮೂಲಕ ಅಡ್ಮಿನ್‌ಗೆ ಕಳುಹಿಸಿ.",
+    "Admin Email Address": "ಅಡ್ಮಿನ್ ಇಮೇಲ್ ವಿಳಾಸ",
+    "Additional Note / Error Description": "ಸಮಸ್ಯೆ ಅಥವಾ ಟಿಪ್ಪಣಿ (ಐಚ್ಛಿಕ)",
+    "Send via Email / Server": "ಇಮೇಲ್ ಮೂಲಕ ಕಳುಹಿಸಿ (ಸರ್ವರ್)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp ನಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ",
+    "Download JSON": "JSON ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "Download CSV (Excel)": "CSV (Excel) ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "Backup emailed successfully ✓": "ಬ್ಯಾಕಪ್ ಇಮೇಲ್ ಯಶಸ್ವಿಯಾಗಿ ಕಳುಹಿಸಲಾಗಿದೆ ✓",
+    "Total Device Records": "ಸಾಧನದಲ್ಲಿ ಒಟ್ಟು ದಾಖಲೆಗಳು",
+    "Offline Storage Status": "ಆಫ್‌ಲೈನ್ ಸಂಗ್ರಹಣೆ ಸ್ಥಿತಿ",
+    "Healthy (IndexedDB)": "ಸುರಕ್ಷಿತ (IndexedDB)",
+    "Export & Backup": "ರಫ್ತು ಮತ್ತು ಬ್ಯಾಕಪ್",
+    "Send Data to Admin": "ಅಡ್ಮಿನ್‌ಗೆ ಡೇಟಾ ಕಳುಹಿಸಿ"
   },
   "ml": {
     "OmniServey": "ഓമ്നിസർവെ",
@@ -3702,7 +3837,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "വലുത്",
     "Text size set to Small": "അക്ഷര വലുപ്പം ചെറുതാക്കി",
     "Text size set to Medium": "അക്ഷര വലുപ്പം ഇടത്തരമാക്കി",
-    "Text size set to Large": "അക്ഷര വലുപ്പം വലുതാക്കി"
+    "Text size set to Large": "അക്ഷര വലുപ്പം വലുതാക്കി",
+    "Email Data to Admin": "അഡ്മിന് ഡാറ്റ ഇമെയിൽ ചെയ്യുക",
+    "Emergency Backup & Support": "അടിയന്തര ബാക്കപ്പും പിന്തുണയും",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "നിങ്ങളുടെ എല്ലാ സർവേ റെക്കോർഡുകളും ഇമെയിൽ വഴിയോ ആപ്പുകൾ വഴിയോ അഡ്മിന് അയയ്ക്കുക.",
+    "Admin Email Address": "അഡ്മിൻ ഇമെയിൽ വിലാസം",
+    "Additional Note / Error Description": "പ്രശ്നം അല്ലെങ്കിൽ കുറിപ്പ് (ഓപ്ഷണൽ)",
+    "Send via Email / Server": "ഇമെയിൽ വഴി അയയ്ക്കുക (സെർവർ)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp വഴി പങ്കിടുക",
+    "Download JSON": "JSON ഡൗൺലോഡ് ചെയ്യുക",
+    "Download CSV (Excel)": "CSV (Excel) ഡൗൺലോഡ് ചെയ്യുക",
+    "Backup emailed successfully ✓": "ബാക്കപ്പ് ഇമെയിൽ വിജയകരമായി അയച്ചു ✓",
+    "Total Device Records": "ഉപകരണത്തിലെ ആകെ റെക്കോർഡുകൾ",
+    "Offline Storage Status": "ഓഫ്‌ലൈൻ സംഭരണ നില",
+    "Healthy (IndexedDB)": "സുരക്ഷിതം (IndexedDB)",
+    "Export & Backup": "കയറ്റുമതിയും ബാക്കപ്പും",
+    "Send Data to Admin": "അഡ്മിന് ഡാറ്റ അയയ്ക്കുക"
   },
   "ur": {
     "OmniServey": "اومنی سروے",
@@ -4074,7 +4224,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "بڑا",
     "Text size set to Small": "حروف کا سائز چھوٹا کر دیا گیا",
     "Text size set to Medium": "حروف کا سائز درمیانہ کر دیا گیا",
-    "Text size set to Large": "حروف کا سائز بڑا کر دیا گیا"
+    "Text size set to Large": "حروف کا سائز بڑا کر دیا گیا",
+    "Email Data to Admin": "ایڈمن کو ڈیٹا ای میل کریں",
+    "Emergency Backup & Support": "ایمرجنسی بیک اپ اور سپورٹ",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "اپنے تمام سروے ریکارڈز ای میل یا ایپس کے ذریعے ایڈمن کو بھیجیں۔",
+    "Admin Email Address": "ایڈمن کا ای میل پتہ",
+    "Additional Note / Error Description": "مسئلہ یا تفصیل (اختیاری)",
+    "Send via Email / Server": "ای میل کے ذریعے بھیجیں (سرور)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp پر شیئر کریں",
+    "Download JSON": "JSON ڈاؤن لوڈ کریں",
+    "Download CSV (Excel)": "CSV (Excel) ڈاؤن لوڈ کریں",
+    "Backup emailed successfully ✓": "بیک اپ ای میل کامیابی کے ساتھ بھیج دیا گیا ✓",
+    "Total Device Records": "ڈیوائس پر کل ریکارڈز",
+    "Offline Storage Status": "لوکل اسٹوریج کی حیثیت",
+    "Healthy (IndexedDB)": "محفوظ (IndexedDB)",
+    "Export & Backup": "ایکسپورٹ اور بیک اپ",
+    "Send Data to Admin": "ایڈمن کو ڈیٹا بھیجیں"
   },
   "raj": {
     "Listen": "सुणो",
@@ -4376,7 +4541,22 @@ const BUILTIN_TRANSLATIONS = {
     "Large": "बड़ो",
     "Text size set to Small": "अक्षरां रो आकार छोटो कर दियो",
     "Text size set to Medium": "अक्षरां रो आकार सामान्य कर दियो",
-    "Text size set to Large": "अक्षरां रो आकार बड़ो कर दियो"
+    "Text size set to Large": "अक्षरां रो आकार बड़ो कर दियो",
+    "Email Data to Admin": "एडमिन नै डेटा ईमेल करो",
+    "Emergency Backup & Support": "इमरजेंसी बैकअप अर सहायता",
+    "Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.": "ईमेल या ऐप्स रे मारफत आपरा सगळा सर्वे रिकॉर्ड अर एरर लॉग एडमिन नै भेजो।",
+    "Admin Email Address": "एडमिन रो ईमेल पतो",
+    "Additional Note / Error Description": "समस्या या टिप्पणी (ऐच्छिक)",
+    "Send via Email / Server": "ईमेल सूं भेजो (सर्वर)",
+    "Share via Gmail / WhatsApp": "Gmail / WhatsApp माथे शेयर करो",
+    "Download JSON": "JSON डाउनलोड करो",
+    "Download CSV (Excel)": "CSV (Excel) डाउनलोड करो",
+    "Backup emailed successfully ✓": "बैकअप ईमेल भेज दियो ✓",
+    "Total Device Records": "डिवाइस माथे कुल रिकॉर्ड",
+    "Offline Storage Status": "लोकल स्टोरेज स्थिति",
+    "Healthy (IndexedDB)": "सुरक्षित (IndexedDB)",
+    "Export & Backup": "एक्सपोर्ट अर बैकअप",
+    "Send Data to Admin": "एडमिन नै डेटा भेजो"
   }
 };
 
@@ -4460,6 +4640,34 @@ const app = createApp({
     const menuOpen = ref(false);
     const dashboardFilter = ref('all'); // 'all' | 'drafts' | 'pending' | 'synced'
 
+    const toastMessage = ref('');
+    const toastType = ref('info');
+    const toastTimeout = ref(null);
+    const liveAnnouncement = ref('');
+
+    // Vernacular Translator Helper
+    function t(text) {
+      if (!text) return '';
+      const lang = currentLang.value;
+      if (BUILTIN_TRANSLATIONS[lang] && BUILTIN_TRANSLATIONS[lang][text]) {
+        return BUILTIN_TRANSLATIONS[lang][text];
+      }
+      return text;
+    }
+
+    function announce(msg) {
+      liveAnnouncement.value = msg;
+    }
+
+    function showToast(msg, type = 'info') {
+      toastMessage.value = msg;
+      toastType.value = type;
+      if (toastTimeout.value) clearTimeout(toastTimeout.value);
+      toastTimeout.value = setTimeout(() => {
+        toastMessage.value = '';
+      }, 3500);
+    }
+
     const languages = [
       { code: 'en', name: 'English' },
       { code: 'hi', name: 'हिन्दी (Hindi)' },
@@ -4523,13 +4731,9 @@ const app = createApp({
       error: null
     });
 
-    const toastMessage = ref('');
-    const toastType = ref('info');
-    const toastTimeout = ref(null);
     const validationModalOpen = ref(false);
     const validationErrors = ref([]);
     const highlightedQuestion = ref(null);
-    const liveAnnouncement = ref('');
     const currentUser = ref('Hardik Sharma (Field Lead)');
     const walSubmissions = ref([]);
     const pendingCount = ref(0);
@@ -4541,29 +4745,11 @@ const app = createApp({
     const signaturePads = {};
     const currentUUID = ref('');
     const speakingQuestionCode = ref(null);
-
-    // Vernacular Translator Helper
-    function t(text) {
-      if (!text) return '';
-      const lang = currentLang.value;
-      if (BUILTIN_TRANSLATIONS[lang] && BUILTIN_TRANSLATIONS[lang][text]) {
-        return BUILTIN_TRANSLATIONS[lang][text];
-      }
-      return text;
-    }
-
-    function announce(msg) {
-      liveAnnouncement.value = msg;
-    }
-
-    function showToast(msg, type = 'info') {
-      toastMessage.value = msg;
-      toastType.value = type;
-      if (toastTimeout.value) clearTimeout(toastTimeout.value);
-      toastTimeout.value = setTimeout(() => {
-        toastMessage.value = '';
-      }, 3500);
-    }
+    const emergencyModalOpen = ref(false);
+    const adminEmailInput = ref(localStorage.getItem('omniservey_admin_email') || 'admin@ommnomi.local');
+    const emergencyNote = ref('');
+    const isSendingEmail = ref(false);
+    const recentErrors = ref([]);
 
     // Text-to-Speech Engine
     function speakQuestion(q) {
@@ -5279,7 +5465,34 @@ const app = createApp({
       }
     }
 
-    function exportWALBackup() {
+    function generateCSVFromWAL() {
+      const rows = [];
+      rows.push(['"Idempotency Key"', '"Survey Template"', '"Version"', '"Status"', '"Respondent Name"', '"Village/City"', '"District"', '"GPS Latitude"', '"GPS Longitude"', '"GPS Accuracy"', '"Captured Local Time"', '"Synced At"', '"Answers Data"']);
+      
+      for (const sub of (walSubmissions.value || [])) {
+        const resp = sub.respondent || {};
+        const gps = sub.gps || {};
+        const answersStr = JSON.stringify(sub.answers || {}).replace(/"/g, '""');
+        rows.push([
+          `"${sub.idempotency_key || ''}"`,
+          `"${sub.survey_template || ''}"`,
+          `"${sub.template_version || ''}"`,
+          `"${sub.status || ''}"`,
+          `"${resp.primary_name || 'Anonymous'}"`,
+          `"${resp.village_city || ''}"`,
+          `"${resp.district || ''}"`,
+          `"${gps.latitude || ''}"`,
+          `"${gps.longitude || ''}"`,
+          `"${gps.accuracy || ''}"`,
+          `"${sub.captured_at_local || ''}"`,
+          `"${sub.synced_at || ''}"`,
+          `"${answersStr}"`
+        ]);
+      }
+      return "\uFEFF" + rows.map(r => r.join(',')).join('\r\n');
+    }
+
+    function downloadJSONBackup() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(walSubmissions.value, null, 2));
       const downloadAnchor = document.createElement('a');
       downloadAnchor.setAttribute("href", dataStr);
@@ -5287,8 +5500,118 @@ const app = createApp({
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
-      showToast('Offline backup exported', 'success');
-      announce('Offline backup exported');
+      showToast('JSON backup downloaded ✓', 'success');
+      announce('JSON backup downloaded');
+    }
+
+    const exportWALBackup = downloadJSONBackup;
+
+    function downloadCSVBackup() {
+      const csvContent = generateCSVFromWAL();
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", url);
+      downloadAnchor.setAttribute("download", `OmniServey_Responses_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      URL.revokeObjectURL(url);
+      showToast('CSV (Excel) downloaded ✓', 'success');
+      announce('CSV responses downloaded');
+    }
+
+    async function sendEmailDirect() {
+      if (!adminEmailInput.value || !adminEmailInput.value.includes('@')) {
+        showToast('Please enter a valid Admin Email', 'error');
+        return;
+      }
+      localStorage.setItem('omniservey_admin_email', adminEmailInput.value.trim());
+
+      if (!isOnline.value) {
+        showToast('Device is offline: opening mail app...', 'info');
+        shareOrEmailBackup();
+        return;
+      }
+
+      try {
+        isSendingEmail.value = true;
+        const dataJson = JSON.stringify(walSubmissions.value, null, 2);
+        const dataCsv = generateCSVFromWAL();
+
+        const resp = await fetch('/api/method/omniservey.api.survey.email_surveyor_backup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Frappe-CSRF-Token': (window.frappe && window.frappe.csrf_token) || ''
+          },
+          body: JSON.stringify({
+            recipient_email: adminEmailInput.value.trim(),
+            surveyor_name: currentUser.value,
+            note: emergencyNote.value,
+            data_json: dataJson,
+            data_csv: dataCsv
+          })
+        });
+
+        const resData = await resp.json();
+        if (resp.ok && resData.message && resData.message.status === 'SUCCESS') {
+          showToast(t('Backup emailed successfully ✓'), 'success');
+          announce(t('Backup emailed successfully ✓'));
+          emergencyModalOpen.value = false;
+        } else {
+          showToast('Server email fallback: opening device mail app...', 'info');
+          shareOrEmailBackup();
+        }
+      } catch (err) {
+        console.error('Direct email dispatch failed', err);
+        shareOrEmailBackup();
+      } finally {
+        isSendingEmail.value = false;
+      }
+    }
+
+    async function shareOrEmailBackup() {
+      const jsonText = JSON.stringify(walSubmissions.value, null, 2);
+      const csvText = generateCSVFromWAL();
+
+      if (navigator.share && navigator.canShare) {
+        try {
+          const jsonFile = new File([jsonText], `OmniServey_Data_${new Date().toISOString().slice(0, 10)}.json`, { type: 'application/json' });
+          const csvFile = new File([csvText], `OmniServey_Responses_${new Date().toISOString().slice(0, 10)}.csv`, { type: 'text/csv' });
+          
+          if (navigator.canShare({ files: [jsonFile, csvFile] })) {
+            await navigator.share({
+              title: `OmniServey Data Backup - ${currentUser.value}`,
+              text: `OmniServey field backup. Records: ${walSubmissions.value.length}. Note: ${emergencyNote.value || 'N/A'}`,
+              files: [jsonFile, csvFile]
+            });
+            showToast('Shared successfully ✓', 'success');
+            return;
+          }
+        } catch (shareErr) {
+          console.log('Web share cancelled or unsupported', shareErr);
+        }
+      }
+
+      downloadJSONBackup();
+      downloadCSVBackup();
+
+      const recipient = adminEmailInput.value.trim() || 'admin@ommnomi.local';
+      const subject = encodeURIComponent(`[OmniServey Data Backup] Surveyor: ${currentUser.value} (${new Date().toLocaleDateString()})`);
+      const bodyText = encodeURIComponent(
+        `OmniServey Field Backup Summary:\n` +
+        `--------------------------------\n` +
+        `Surveyor: ${currentUser.value}\n` +
+        `Total Records: ${walSubmissions.value.length}\n` +
+        `Pending Sync: ${pendingCount.value}\n` +
+        `Timestamp: ${new Date().toLocaleString()}\n` +
+        `Notes: ${emergencyNote.value || 'None'}\n\n` +
+        `[NOTE: Both JSON and CSV backup files have been auto-downloaded to your device. Please attach them to this email.]`
+      );
+
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${bodyText}`;
+      showToast('Email app opened + backup downloaded', 'info');
     }
 
     const showStickyHeader = ref(true);
@@ -5324,6 +5647,19 @@ const app = createApp({
         console.error('Dexie open error', e);
       }
 
+      window.addEventListener('error', (e) => {
+        recentErrors.value.push({
+          time: new Date().toLocaleTimeString(),
+          message: e.message || 'Script error'
+        });
+      });
+      window.addEventListener('unhandledrejection', (e) => {
+        recentErrors.value.push({
+          time: new Date().toLocaleTimeString(),
+          message: (e.reason && e.reason.message) || String(e.reason)
+        });
+      });
+
       window.addEventListener('scroll', handleScroll, { passive: true });
 
       window.addEventListener('online', () => {
@@ -5351,6 +5687,16 @@ const app = createApp({
       textSize,
       setTextSize,
       applyTextSize,
+      emergencyModalOpen,
+      adminEmailInput,
+      emergencyNote,
+      isSendingEmail,
+      recentErrors,
+      generateCSVFromWAL,
+      downloadJSONBackup,
+      downloadCSVBackup,
+      sendEmailDirect,
+      shareOrEmailBackup,
       menuOpen,
       templates,
       searchQuery,
@@ -5392,7 +5738,7 @@ const app = createApp({
       resumeDraft,
       deleteWALItem,
       autoSync,
-      exportWALBackup,
+      exportWALBackup: downloadJSONBackup,
       fetchGPS,
       handlePhotoUpload,
       removePhoto,
@@ -5467,6 +5813,99 @@ const app = createApp({
         </div>
       </div>
 
+      <!-- EMERGENCY BACKUP & ADMIN EMAIL MODAL -->
+      <div v-if="emergencyModalOpen" 
+           role="dialog" 
+           aria-modal="true" 
+           aria-labelledby="emg_modal_title"
+           class="fixed inset-0 z-[120] bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl border-4 border-rose-500 my-auto">
+          
+          <div class="flex items-start justify-between">
+            <div class="flex items-center space-x-3 text-rose-700">
+              <span aria-hidden="true" class="text-3xl">📧</span>
+              <div>
+                <h2 id="emg_modal_title" class="text-xl sm:text-2xl font-black text-slate-900">{{ t('Emergency Backup & Support') }}</h2>
+                <p class="text-xs text-slate-500 font-bold leading-tight">{{ t('Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.') }}</p>
+              </div>
+            </div>
+            <button type="button" @click="emergencyModalOpen = false" class="text-slate-400 hover:text-slate-600 font-black text-2xl p-1">✕</button>
+          </div>
+
+          <!-- Device Data Snapshot Card -->
+          <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 space-y-1.5">
+            <div class="flex items-center justify-between text-xs font-bold text-slate-700">
+              <span>{{ t('Total Device Records') }}:</span>
+              <span class="text-sm font-black text-indigo-700">{{ walSubmissions.length }} records ({{ pendingCount }} pending)</span>
+            </div>
+            <div class="flex items-center justify-between text-xs font-bold text-slate-700">
+              <span>{{ t('Offline Storage Status') }}:</span>
+              <span class="text-emerald-700 font-black">✓ {{ t('Healthy (IndexedDB)') }}</span>
+            </div>
+          </div>
+
+          <!-- Admin Email Input -->
+          <div class="space-y-1">
+            <label class="block text-xs font-black uppercase tracking-wider text-slate-700">
+              {{ t('Admin Email Address') }}
+            </label>
+            <input type="email" v-model="adminEmailInput" 
+                   placeholder="admin@example.com"
+                   class="w-full min-h-[46px] px-4 py-2 rounded-2xl border-2 border-slate-300 focus:border-indigo-600 font-bold text-sm sm:text-base text-slate-900">
+          </div>
+
+          <!-- Optional Notes / Error Description -->
+          <div class="space-y-1">
+            <label class="block text-xs font-black uppercase tracking-wider text-slate-700">
+              {{ t('Additional Note / Error Description') }}
+            </label>
+            <textarea v-model="emergencyNote" rows="2"
+                      placeholder="Optional details or error you experienced..."
+                      class="w-full px-4 py-2 rounded-2xl border-2 border-slate-300 focus:border-indigo-600 font-medium text-sm text-slate-900"></textarea>
+          </div>
+
+          <!-- Actions Grid -->
+          <div class="space-y-2.5 pt-1">
+            <!-- 1. Direct Server Email -->
+            <button type="button" @click="sendEmailDirect()"
+                    :disabled="isSendingEmail"
+                    class="w-full min-h-[50px] bg-rose-600 hover:bg-rose-700 text-white font-black text-sm sm:text-base py-3 px-5 rounded-2xl shadow-lg flex items-center justify-center space-x-2 touch-press disabled:opacity-50">
+              <span>📧</span>
+              <span>{{ isSendingEmail ? 'Sending...' : t('Send via Email / Server') }}</span>
+            </button>
+
+            <!-- 2. Share via Native Apps / Gmail / WhatsApp -->
+            <button type="button" @click="shareOrEmailBackup()"
+                    class="w-full min-h-[46px] bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border-2 border-indigo-200 font-black text-sm py-2.5 px-4 rounded-2xl flex items-center justify-center space-x-2 touch-press">
+              <span>📲</span>
+              <span>{{ t('Share via Gmail / WhatsApp') }}</span>
+            </button>
+
+            <!-- 3. Direct File Downloads (JSON & CSV) -->
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <button type="button" @click="downloadJSONBackup()"
+                      class="min-h-[44px] bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs py-2 px-3 rounded-2xl flex items-center justify-center space-x-1 touch-press border border-slate-300">
+                <span>💾</span>
+                <span>{{ t('Download JSON') }}</span>
+              </button>
+              <button type="button" @click="downloadCSVBackup()"
+                      class="min-h-[44px] bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold text-xs py-2 px-3 rounded-2xl flex items-center justify-center space-x-1 touch-press border border-emerald-300">
+                <span>📊</span>
+                <span>{{ t('Download CSV (Excel)') }}</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pt-1 flex justify-end">
+            <button type="button" @click="emergencyModalOpen = false" 
+                    class="min-h-[42px] px-6 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-sm rounded-2xl touch-press">
+              {{ t('Close') }}
+            </button>
+          </div>
+
+        </div>
+      </div>
+
       <!-- APP TOP BANNER -->
       <header v-if="currentView !== 'form'" class="bg-slate-950 text-white px-4 py-3 sm:px-6 sticky top-0 z-40 shadow-lg flex items-center justify-between">
         <div class="flex items-center space-x-3 cursor-pointer" @click="currentView = 'dashboard'">
@@ -5485,8 +5924,16 @@ const app = createApp({
           </div>
         </div>
 
-        <!-- Right Side: 3-Lines Menu Button with Current Language Badge -->
+        <!-- Right Side: Email Backup Button + 3-Lines Menu Button -->
         <div class="flex items-center space-x-2">
+          <button type="button" @click="emergencyModalOpen = true"
+                  aria-label="Email Data to Admin"
+                  :title="t('Email Data to Admin')"
+                  class="min-h-[44px] px-3 py-1.5 bg-rose-950/80 hover:bg-rose-900 active:bg-rose-800 text-rose-200 font-bold rounded-2xl flex items-center space-x-1.5 border border-rose-800/80 shadow-sm touch-press focus:ring-4 focus:ring-rose-400">
+            <span aria-hidden="true" class="text-lg">📧</span>
+            <span class="text-xs hidden xs:inline">{{ t('Email Data to Admin') }}</span>
+          </button>
+
           <button type="button" @click="menuOpen = true"
                   aria-label="Open Language and Settings Menu"
                   class="min-h-[44px] px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-white font-black rounded-2xl flex items-center space-x-2 border border-slate-700 shadow-sm touch-press focus:ring-4 focus:ring-indigo-400">
@@ -5645,6 +6092,29 @@ const app = createApp({
                   <span v-if="currentLang === l.code" class="text-white font-black text-sm">✓</span>
                 </button>
               </div>
+            </div>
+
+            <!-- Emergency Backup & Support Section -->
+            <div class="space-y-3 pt-3 border-t border-slate-200">
+              <div class="flex items-center space-x-2 text-slate-900 font-black text-base">
+                <span aria-hidden="true" class="text-xl text-rose-600">📧</span>
+                <span>{{ t('Emergency Backup & Support') }}</span>
+              </div>
+              <p class="text-xs text-slate-500 font-medium">
+                {{ t('Send all survey records and diagnostic logs to your admin or support team via email or WhatsApp.') }}
+              </p>
+
+              <button type="button" 
+                      @click="emergencyModalOpen = true; menuOpen = false"
+                      class="w-full min-h-[48px] px-4 py-3 bg-rose-50 hover:bg-rose-100 text-rose-950 border-2 border-rose-300 font-black rounded-2xl flex items-center justify-between touch-press">
+                <div class="flex items-center space-x-2.5">
+                  <span class="text-xl">📤</span>
+                  <span class="text-sm font-black">{{ t('Email Data to Admin') }}</span>
+                </div>
+                <span class="text-xs bg-rose-600 text-white px-2.5 py-1 rounded-full font-bold">
+                  {{ walSubmissions.length }}
+                </span>
+              </button>
             </div>
 
             <!-- Quick Actions Section -->
@@ -6056,7 +6526,13 @@ const app = createApp({
                     <span>{{ t('Exit Form') }}</span>
                   </button>
                   
-                  <div class="flex items-center space-x-2">
+                  <div class="flex items-center space-x-1.5 sm:space-x-2">
+                    <button type="button" @click="emergencyModalOpen = true"
+                            aria-label="Email Backup to Admin"
+                            :title="t('Email Data to Admin')"
+                            class="min-h-[38px] px-2.5 py-1 bg-rose-900/90 hover:bg-rose-800 text-rose-100 font-bold text-xs rounded-xl border border-rose-700 flex items-center space-x-1 touch-press">
+                      <span aria-hidden="true">📧</span>
+                    </button>
                     <button type="button" @click="menuOpen = true"
                             aria-label="Settings, Font Size and Language"
                             class="min-h-[38px] px-2.5 py-1 bg-indigo-900 hover:bg-indigo-800 text-indigo-200 hover:text-white font-black text-xs rounded-xl border border-indigo-700 flex items-center space-x-1 touch-press">
@@ -6325,10 +6801,10 @@ const app = createApp({
               <p class="text-sm text-slate-600 font-medium">Local SQLite/IndexedDB Write-Ahead Log</p>
             </div>
 
-            <button type="button" @click="exportWALBackup()"
-                    class="min-h-[44px] px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-xl border border-slate-300 touch-press flex items-center space-x-1.5">
-              <span>📥</span>
-              <span>Export</span>
+            <button type="button" @click="emergencyModalOpen = true"
+                    class="min-h-[44px] px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-950 text-xs font-black rounded-2xl border-2 border-rose-300 touch-press flex items-center space-x-1.5 shadow-sm">
+              <span class="text-base">📧</span>
+              <span>{{ t('Email Data to Admin') }}</span>
             </button>
           </div>
 
