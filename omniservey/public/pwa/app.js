@@ -5172,6 +5172,26 @@ const app = createApp({
       announce('Offline backup exported');
     }
 
+    const showStickyHeader = ref(true);
+    let lastScrollY = 0;
+    const scrollThreshold = 10;
+
+    function handleScroll() {
+      const currentScrollY = window.scrollY || window.pageYOffset || 0;
+      if (currentScrollY <= 40) {
+        showStickyHeader.value = true;
+        lastScrollY = currentScrollY;
+        return;
+      }
+      const diff = currentScrollY - lastScrollY;
+      if (diff > scrollThreshold) {
+        showStickyHeader.value = false;
+      } else if (diff < -scrollThreshold) {
+        showStickyHeader.value = true;
+      }
+      lastScrollY = currentScrollY;
+    }
+
     onMounted(async () => {
       try {
         await db.open();
@@ -5183,6 +5203,8 @@ const app = createApp({
       } catch (e) {
         console.error('Dexie open error', e);
       }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
 
       window.addEventListener('online', () => {
         isOnline.value = true;
@@ -5199,6 +5221,7 @@ const app = createApp({
     });
 
     return {
+      showStickyHeader,
       currentView,
       isOnline,
       isSyncing,
@@ -5322,7 +5345,7 @@ const app = createApp({
       </div>
 
       <!-- APP TOP BANNER -->
-      <header class="bg-slate-950 text-white px-4 py-3 sm:px-6 sticky top-0 z-40 shadow-lg flex items-center justify-between">
+      <header v-if="currentView !== 'form'" class="bg-slate-950 text-white px-4 py-3 sm:px-6 sticky top-0 z-40 shadow-lg flex items-center justify-between">
         <div class="flex items-center space-x-3 cursor-pointer" @click="currentView = 'dashboard'">
           <div class="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-xl text-white shadow-md">
             Ω
@@ -5857,43 +5880,47 @@ const app = createApp({
         <!-- ========================================== -->
         <!-- VIEW 3: FORM RUNNER (Elder-Friendly Form)  -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6">
+        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6 pt-28 sm:pt-32">
 
-          <!-- Sticky Form Header Bar (Clean & Compact) -->
-          <div class="bg-white rounded-3xl p-4 sm:p-5 border-2 border-slate-200 shadow-sm sticky top-[60px] z-30 space-y-2.5">
-            <div class="flex items-center justify-between">
-              <button type="button" @click="currentView = 'dashboard'" 
-                      class="min-h-[42px] px-3.5 py-1.5 text-sm sm:text-base text-slate-700 hover:text-slate-900 font-bold flex items-center space-x-1.5 touch-press focus:ring-2 focus:ring-indigo-500 rounded-xl bg-slate-100 hover:bg-slate-200">
-                <span>{{ t('Exit Form') }}</span>
-              </button>
-              
-              <!-- Clean Step & Page Tracker -->
-              <div class="text-xs sm:text-sm font-black text-indigo-700 bg-indigo-50 border border-indigo-200 px-3.5 py-1.5 rounded-xl">
-                {{ t('Page') }} <span class="font-black">{{ activeSectionIndex + 1 }}</span> {{ t('of') }} {{ sections.length }}
+          <!-- UNIFIED SMART AUTO-HIDE SECTION HEADER (Slides up on scroll down, returns on scroll up) -->
+          <div class="fixed top-0 left-0 right-0 z-40 transition-transform duration-300 ease-in-out shadow-xl"
+               :class="showStickyHeader ? 'translate-y-0' : '-translate-y-full'">
+            <div class="bg-indigo-950 text-white border-b-2 border-indigo-800/80 px-4 py-3 sm:px-6">
+              <div class="max-w-3xl mx-auto space-y-2">
+                
+                <!-- Top Row: Exit Button & Step Indicator -->
+                <div class="flex items-center justify-between">
+                  <button type="button" @click="currentView = 'dashboard'" 
+                          class="min-h-[38px] px-3.5 py-1 text-xs sm:text-sm text-indigo-100 hover:text-white font-bold flex items-center space-x-1.5 touch-press bg-indigo-900 hover:bg-indigo-800 rounded-xl border border-indigo-700">
+                    <span>{{ t('Exit Form') }}</span>
+                  </button>
+                  
+                  <div class="text-xs sm:text-sm font-black text-indigo-200 bg-indigo-900 px-3.5 py-1 rounded-xl border border-indigo-700">
+                    {{ t('Page') }} <span class="text-white font-black">{{ activeSectionIndex + 1 }}</span> / {{ sections.length }}
+                  </div>
+                </div>
+
+                <!-- Unified Section Title & Description (The blue card in header!) -->
+                <div v-if="activeSection" class="space-y-0.5 pt-0.5">
+                  <div class="text-[11px] font-black uppercase tracking-wider text-indigo-300 truncate">
+                    {{ t(activeTemplate.title) }}
+                  </div>
+                  <h2 class="text-lg sm:text-2xl font-black text-white leading-tight">
+                    {{ t(activeSection.section_title) }}
+                  </h2>
+                  <p v-if="activeSection.description" class="text-xs sm:text-sm text-indigo-200 font-medium truncate">
+                    {{ t(activeSection.description) }}
+                  </p>
+                </div>
+
+                <!-- Sleek Linear Progress Bar -->
+                <div class="w-full bg-indigo-900/80 h-1.5 rounded-full overflow-hidden">
+                  <div class="h-full bg-indigo-400 rounded-full transition-all duration-300"
+                       :style="'width: ' + (((activeSectionIndex + 1) / sections.length) * 100) + '%'"></div>
+                </div>
+
               </div>
             </div>
-
-            <!-- Survey Title -->
-            <h1 class="text-base sm:text-xl font-black text-slate-900 leading-snug">
-              {{ t(activeTemplate.title) }}
-            </h1>
-
-            <!-- Sleek Linear Progress Bar -->
-            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden border border-slate-200">
-              <div class="h-full bg-indigo-600 rounded-full transition-all duration-300"
-                   :style="'width: ' + (((activeSectionIndex + 1) / sections.length) * 100) + '%'"></div>
-            </div>
-          </div>
-
-          <!-- Section Banner -->
-          <div v-if="activeSection" class="bg-indigo-900 text-white p-5 rounded-3xl shadow-md space-y-1">
-            <div class="text-xs font-black uppercase tracking-wider text-indigo-300">
-              {{ t('Page') }} {{ activeSectionIndex + 1 }} / {{ sections.length }}
-            </div>
-            <h2 class="text-xl sm:text-2xl font-black">{{ t(activeSection.section_title) }}</h2>
-            <p v-if="activeSection.description" class="text-xs sm:text-sm text-indigo-200 font-medium">
-              {{ t(activeSection.description) }}
-            </p>
           </div>
 
           <!-- Question Cards List (Google Forms / WhatsApp Style) -->
