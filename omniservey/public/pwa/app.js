@@ -644,6 +644,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "ड्राफ्ट सेव करें",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ड्राफ्ट सेव करें",
     "ڈرافٹ محفوظ کریں": "ड्राफ्ट सेव करें",
+    "Himalayan Baseline Impact Survey": "हिमालयन बेसलाइन प्रभाव सर्वेक्षण",
+    "1. Household & Demographic Profile": "1. परिवार एवं जनसांख्यिकीय प्रोफ़ाइल",
+    "General identification and household metrics": "सामान्य पहचान एवं घरेलू विवरण",
+    "2. Economic Activity & Livestock": "2. आर्थिक गतिविधि एवं पशुधन",
+    "Revenue, assets, and livestock count": "आय, संपत्तियां और पशुओं की संख्या",
+    "3. Geolocation & Digital Verification": "3. भू-स्थान एवं डिजिटल सत्यापन",
+    "GPS accuracy and field photo capture": "जीपीएस सटीकता एवं फील्ड फोटो",
+    "Full Name of Household Head / Primary Respondent": "परिवार के मुखिया / मुख्य उत्तरदाता का पूरा नाम",
+    "Respondent Classification": "उत्तरदाता का वर्गीकरण",
+    "Individual": "व्यक्तिगत",
+    "Household": "परिवार / घरेलू",
+    "Smallholder Farmer": "छोटे किसान",
+    "Micro Enterprise / Self-Employed": "सूक्ष्म उद्यम / स्वरोजगार",
+    "Primary Contact Phone Number": "मुख्य संपर्क फोन नंबर",
+    "Do you own cattle, sheep, or goats?": "क्या आपके पास गाय, भैंस, भेड़ या बकरी है?",
+    "Total number of milch cattle / animals?": "दुधारू पशुओं / जानवरों की कुल संख्या?",
+    "Estimated Monthly Household Income (INR ₹)": "अनुमानित मासिक घरेलू आय (रु. ₹)",
+    "Farm Equipment & Key Productive Assets": "कृषि उपकरण एवं प्रमुख उत्पादक संपत्तियां",
+    "Capture Field GPS Coordinates (Auto-verified)": "फील्ड जीपीएस निर्देशांक कैप्चर करें (स्वचालित सत्यापित)",
+    "Field Photo of Site / Beneficiary": "स्थल / लाभार्थी का फील्ड फोटो",
+    "Surveyor Sign-off & Digital Signature": "सर्वेक्षक अनुमोदन एवं डिजिटल हस्ताक्षर",
     "Listen": "सुनें",
     "Speaking...": "बोल रहा है...",
     "Page": "पृष्ठ",
@@ -973,6 +994,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "मसुदा जतन करा",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "मसुदा जतन करा",
     "ڈرافٹ محفوظ کریں": "मसुदा जतन करा",
+    "Himalayan Baseline Impact Survey": "हिमालयन बेसलाइन प्रभाव सर्वेक्षण",
+    "1. Household & Demographic Profile": "1. कुटुंब आणि लोकसंख्याशास्त्र प्रोफाइल",
+    "General identification and household metrics": "सामान्य ओळख आणि घरगुती तपशील",
+    "2. Economic Activity & Livestock": "2. आर्थिक क्रियाकलाप आणि पशुधन",
+    "Revenue, assets, and livestock count": "उत्पन्न, मालमत्ता आणि जनावरांची संख्या",
+    "3. Geolocation & Digital Verification": "3. भौगोलिक स्थान आणि डिजिटल पडताळणी",
+    "GPS accuracy and field photo capture": "जीपीएस अचूकता आणि फील्ड फोटो",
+    "Full Name of Household Head / Primary Respondent": "कुटुंबप्रमुखाचे / मुख्य उत्तरदात्याचे पूर्ण नाव",
+    "Respondent Classification": "उत्तरदात्याचे वर्गीकरण",
+    "Individual": "वैयक्तिक",
+    "Household": "कुटुंब / घरगुती",
+    "Smallholder Farmer": "लहान शेतकरी",
+    "Micro Enterprise / Self-Employed": "सूक्ष्म उद्योग / स्वयंरोजगार",
+    "Primary Contact Phone Number": "मुख्य संपर्क फोन नंबर",
+    "Do you own cattle, sheep, or goats?": "तुमच्याकडे गाय, म्हैस, मेंढी किंवा शेळी आहे का?",
+    "Total number of milch cattle / animals?": "एकूण दुभत्या जनावरांची / प्राण्यांची संख्या किती?",
+    "Estimated Monthly Household Income (INR ₹)": "अंदाजे मासिक घरगुती उत्पन्न (रु. ₹)",
+    "Farm Equipment & Key Productive Assets": "शेतीची उपकरणे आणि मुख्य उत्पादक मालमत्ता",
+    "Capture Field GPS Coordinates (Auto-verified)": "फील्ड जीपीएस निर्देशांक मिळवा (स्वयंचलित पडताळणी)",
+    "Field Photo of Site / Beneficiary": "साइट / लाभार्थ्याचा फील्ड फोटो",
+    "Surveyor Sign-off & Digital Signature": "सर्वेक्षक स्वाक्षरी आणि डिजिटल स्वाक्षरी",
     "Listen": "ऐका",
     "Speaking...": "बोलत आहे...",
     "Page": "पान",
@@ -1302,6 +1344,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "ડ્રાફ્ટ સાચવો",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ડ્રાફ્ટ સાચવો",
     "ڈرافٹ محفوظ کریں": "ડ્રાફ્ટ સાચવો",
+    "Himalayan Baseline Impact Survey": "હિમાલયન બેઝલાઇન ઇમ્પેક્ટ સર્વેક્ષણ",
+    "1. Household & Demographic Profile": "1. કુટુંબ અને વસ્તી વિષયક પ્રોફાઇલ",
+    "General identification and household metrics": "સામાન્ય ઓળખ અને ઘરગથ્થુ વિગતો",
+    "2. Economic Activity & Livestock": "2. આર્થિક પ્રવૃત્તિ અને પશુધન",
+    "Revenue, assets, and livestock count": "આવક, સંપત્તિ અને પશુઓની સંખ્યા",
+    "3. Geolocation & Digital Verification": "3. ભૌગોલિક સ્થાન અને ડિજિટલ ચકાસણી",
+    "GPS accuracy and field photo capture": "જીપીએસ સચોટતા અને ક્ષેત્ર ફોટો",
+    "Full Name of Household Head / Primary Respondent": "કુટુંબના વડા / મુખ્ય ઉત્તરદાતાનું પૂરું નામ",
+    "Respondent Classification": "ઉત્તરદાતા વર્ગીકરણ",
+    "Individual": "વ્યક્તિગત",
+    "Household": "ઘરગથ્થુ / કુટુંબ",
+    "Smallholder Farmer": "નાના ખેડૂત",
+    "Micro Enterprise / Self-Employed": "સૂક્ષ્મ સાહસ / સ્વરોજગાર",
+    "Primary Contact Phone Number": "મુખ્ય સંપર્ક ફોન નંબર",
+    "Do you own cattle, sheep, or goats?": "શું તમારી પાસે ગાય, ભેંસ, ઘેટાં અથવા બકરાં છે?",
+    "Total number of milch cattle / animals?": "દૂધાળા પશુઓ / પ્રાણીઓની કુલ સંખ્યા કેટલી?",
+    "Estimated Monthly Household Income (INR ₹)": "અંદાજિત માસિક ઘરગથ્થુ આવક (રૂ. ₹)",
+    "Farm Equipment & Key Productive Assets": "ખેતીના સાધનો અને મુખ્ય ઉત્પાદક સંપત્તિઓ",
+    "Capture Field GPS Coordinates (Auto-verified)": "ફીલ્ડ જીપીએસ કોઓર્ડિનેટ્સ મેળવો (સ્વચાલિત ચકાસાયેલ)",
+    "Field Photo of Site / Beneficiary": "સ્થળ / લાભાર્થીનો ફીલ્ડ ફોટો",
+    "Surveyor Sign-off & Digital Signature": "સર્વેયર મંજૂરી અને ડિજિટલ સહી",
     "Listen": "સાંભળો",
     "Speaking...": "બોલે છે...",
     "Page": "પાનું",
@@ -1631,6 +1694,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
     "ڈرافٹ محفوظ کریں": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
+    "Himalayan Baseline Impact Survey": "ਹਿਮਾਲੀਅਨ ਬੇਸਲਾਈਨ ਪ੍ਰਭਾਵ ਸਰਵੇਖਣ",
+    "1. Household & Demographic Profile": "1. ਪਰਿਵਾਰ ਅਤੇ ਜਨਸੰਖਿਆ ਪ੍ਰੋਫਾਈਲ",
+    "General identification and household metrics": "ਆਮ ਪਛਾਣ ਅਤੇ ਪਰਿਵਾਰਕ ਵੇਰਵੇ",
+    "2. Economic Activity & Livestock": "2. ਆਰਥਿਕ ਗਤੀਵਿਧੀ ਅਤੇ ਪਸ਼ੂ ਧਨ",
+    "Revenue, assets, and livestock count": "ਆਮਦਨ, ਸੰਪਤੀਆਂ ਅਤੇ ਪਸ਼ੂਆਂ ਦੀ ਗਿਣਤੀ",
+    "3. Geolocation & Digital Verification": "3. ਜੀਓਲੋਕੇਸ਼ਨ ਅਤੇ ਡਿਜੀਟਲ ਤਸਦੀਕ",
+    "GPS accuracy and field photo capture": "ਜੀਪੀਐਸ ਸ਼ੁੱਧਤਾ ਅਤੇ ਫੀਲਡ ਫੋਟੋ",
+    "Full Name of Household Head / Primary Respondent": "ਪਰਿਵਾਰ ਦੇ ਮੁਖੀ / ਮੁੱਖ ਜਵਾਬਦੇਹ ਦਾ ਪੂਰਾ ਨਾਮ",
+    "Respondent Classification": "ਜਵਾਬਦੇਹ ਦਾ ਵਰਗੀਕਰਨ",
+    "Individual": "ਵਿਅਕਤੀਗਤ",
+    "Household": "ਘਰੇਲੂ / ਪਰਿਵਾਰ",
+    "Smallholder Farmer": "ਛੋਟੇ ਕਿਸਾਨ",
+    "Micro Enterprise / Self-Employed": "ਸੂਖਮ ਉਦਯੋਗ / ਸਵੈ-ਰੁਜ਼ਗਾਰ",
+    "Primary Contact Phone Number": "ਮੁੱਖ ਸੰਪਰਕ ਫ਼ੋਨ ਨੰਬਰ",
+    "Do you own cattle, sheep, or goats?": "ਕੀ ਤੁਹਾਡੇ ਕੋਲ ਗਾਂ, ਮੱਝ, ਭੇਡ ਜਾਂ ਬੱਕਰੀ ਹੈ?",
+    "Total number of milch cattle / animals?": "ਦੁਧਾਰੂ ਪਸ਼ੂਆਂ / ਜਾਨਵਰਾਂ ਦੀ ਕੁੱਲ ਗਿਣਤੀ?",
+    "Estimated Monthly Household Income (INR ₹)": "ਅੰਦਾਜ਼ਨ ਮਾਸਿਕ ਪਰਿਵਾਰਕ ਆਮਦਨ (ਰੁਪਏ ₹)",
+    "Farm Equipment & Key Productive Assets": "ਖੇਤੀਬਾੜੀ ਉਪਕਰਣ ਅਤੇ ਮੁੱਖ ਉਤਪਾਦਕ ਸੰਪਤੀਆਂ",
+    "Capture Field GPS Coordinates (Auto-verified)": "ਫੀਲਡ ਜੀਪੀਐਸ ਨਿਰਦੇਸ਼ਾਂਕ ਪ੍ਰਾਪਤ ਕਰੋ (ਆਟੋ-ਤਸਦੀਕ)",
+    "Field Photo of Site / Beneficiary": "ਸਾਈਟ / ਲਾਭਪਾਤਰੀ ਦੀ ਫੀਲਡ ਫੋਟੋ",
+    "Surveyor Sign-off & Digital Signature": "ਸਰਵੇਖਕ ਪ੍ਰਵਾਨਗੀ ਅਤੇ ਡਿਜੀਟਲ ਦਸਤਖਤ",
     "Listen": "ਸੁਣੋ",
     "Speaking...": "ਬੋਲ ਰਿਹਾ ਹੈ...",
     "Page": "ਪੰਨਾ",
@@ -1960,6 +2044,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "খসড়া সংরক্ষণ",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "খসড়া সংরক্ষণ",
     "ڈرافٹ محفوظ کریں": "খসড়া সংরক্ষণ",
+    "Himalayan Baseline Impact Survey": "হিমালয়ান বেসলাইন প্রভাব জরিপ",
+    "1. Household & Demographic Profile": "1. পরিবার এবং জনসংখ্যাতাত্ত্বিক প্রোফাইল",
+    "General identification and household metrics": "সাধারণ সনাক্তকরণ এবং পারিবারিক বিবরণ",
+    "2. Economic Activity & Livestock": "2. অর্থনৈতিক কার্যক্রম ও গবাদি পশু",
+    "Revenue, assets, and livestock count": "আয়, সম্পদ এবং পশু গণনা",
+    "3. Geolocation & Digital Verification": "3. ভৌগলিক অবস্থান এবং ডিজিটাল যাচাইকরণ",
+    "GPS accuracy and field photo capture": "জিপিএস নির্ভুলতা এবং ফিল্ড ফটো",
+    "Full Name of Household Head / Primary Respondent": "পরিবারের প্রধান / প্রধান উত্তরদাতার পুরো নাম",
+    "Respondent Classification": "উত্তরদাতার শ্রেণীবিভাগ",
+    "Individual": "ব্যক্তিগত",
+    "Household": "পারিবারিক",
+    "Smallholder Farmer": "ক্ষুদ্র কৃষক",
+    "Micro Enterprise / Self-Employed": "ক্ষুদ্র উদ্যোগ / স্ব-কর্মসংস্থান",
+    "Primary Contact Phone Number": "প্রধান যোগাযোগের ফোন নম্বর",
+    "Do you own cattle, sheep, or goats?": "আপনার কি গরু, ভেড়া বা ছাগল আছে?",
+    "Total number of milch cattle / animals?": "দুধেল গবাদি পশু / পশুর মোট সংখ্যা কত?",
+    "Estimated Monthly Household Income (INR ₹)": "আনুমানিক মাসিক পারিবারিক আয় (টাকা ₹)",
+    "Farm Equipment & Key Productive Assets": "কৃষি সরঞ্জাম এবং প্রধান উৎপাদনশীল সম্পদ",
+    "Capture Field GPS Coordinates (Auto-verified)": "ফিল্ড জিপিএস স্থানাঙ্ক ক্যাপচার করুন (স্বয়ংক্রিয় যাচাইকৃত)",
+    "Field Photo of Site / Beneficiary": "সাইট / সুবিধাভোগীর ফিল্ড ফটো",
+    "Surveyor Sign-off & Digital Signature": "জরিপকারী স্বাক্ষর এবং ডিজিটাল স্বাক্ষর",
     "Listen": "শুনুন",
     "Speaking...": "বলছে...",
     "Page": "পৃষ্ঠা",
@@ -2289,6 +2394,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "வரைவு சேமி",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "வரைவு சேமி",
     "ڈرافٹ محفوظ کریں": "வரைவு சேமி",
+    "Himalayan Baseline Impact Survey": "இமாலய அடிப்படை தாக்கக் கணக்கெடுப்பு",
+    "1. Household & Demographic Profile": "1. குடும்பம் மற்றும் மக்கள்தொகை விவரம்",
+    "General identification and household metrics": "பொதுவான அடையாளம் மற்றும் குடும்ப விவரங்கள்",
+    "2. Economic Activity & Livestock": "2. பொருளாதார நடவடிக்கை மற்றும் கால்நடைகள்",
+    "Revenue, assets, and livestock count": "வருமானம், சொத்துக்கள் மற்றும் கால்நடைகளின் எண்ணிக்கை",
+    "3. Geolocation & Digital Verification": "3. புவி இருப்பிடம் மற்றும் டிஜிட்டல் சரிபார்ப்பு",
+    "GPS accuracy and field photo capture": "ஜிபிஎஸ் துல்லியம் மற்றும் கள புகைப்படம்",
+    "Full Name of Household Head / Primary Respondent": "குடும்பத் தலைவர் / முதன்மை பதிலளிப்பவரின் முழுப் பெயர்",
+    "Respondent Classification": "பதிலளிப்பவர் வகைப்பாடு",
+    "Individual": "தனிநபர்",
+    "Household": "குடும்பம்",
+    "Smallholder Farmer": "சிறு விவசாயி",
+    "Micro Enterprise / Self-Employed": "குறுந்தொழில் / சுயதொழில்",
+    "Primary Contact Phone Number": "முதன்மை தொடர்பு தொலைபேசி எண்",
+    "Do you own cattle, sheep, or goats?": "உங்களிடம் மாடு, ஆடு அல்லது செம்மறியாடு உள்ளதா?",
+    "Total number of milch cattle / animals?": "கறவை மாடுகள் / விலங்குகளின் மொத்த எண்ணிக்கை?",
+    "Estimated Monthly Household Income (INR ₹)": "மதிப்பிடப்பட்ட மாதாந்திர குடும்ப வருமானம் (ரூ. ₹)",
+    "Farm Equipment & Key Productive Assets": "விவசாய உபகரணங்கள் மற்றும் முக்கிய உற்பத்தி சொத்துக்கள்",
+    "Capture Field GPS Coordinates (Auto-verified)": "கள ஜிபிஎஸ் ஆயத்தொலைவுகளைப் பெறுக (தானியங்கி சரிபார்ப்பு)",
+    "Field Photo of Site / Beneficiary": "தளம் / பயனாளியின் கள புகைப்படம்",
+    "Surveyor Sign-off & Digital Signature": "கணக்கெடுப்பாளர் ஒப்புதல் மற்றும் டிஜிட்டல் கையொப்பம்",
     "Listen": "கேளுங்கள்",
     "Speaking...": "பேசுகிறது...",
     "Page": "பக்கம்",
@@ -2618,6 +2744,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "చిత్తుప్రతి భద్రపరచు",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "చిత్తుప్రతి భద్రపరచు",
     "ڈرافٹ محفوظ کریں": "చిత్తుప్రతి భద్రపరచు",
+    "Himalayan Baseline Impact Survey": "హిమాలయన్ బేస్లైన్ ప్రభావ సర్వే",
+    "1. Household & Demographic Profile": "1. కుటుంబ మరియు జనాభా వివరాలు",
+    "General identification and household metrics": "సాధారణ గుర్తింపు మరియు గృహ కొలమానాలు",
+    "2. Economic Activity & Livestock": "2. ఆర్థిక కార్యకలాపాలు & పశుసంపద",
+    "Revenue, assets, and livestock count": "ఆదాయం, ఆస్తులు మరియు పశువుల సంఖ్య",
+    "3. Geolocation & Digital Verification": "3. భౌగోళిక స్థానం & డిజిటల్ ధృవీకరణ",
+    "GPS accuracy and field photo capture": "GPS ఖచ్చితత్వం మరియు ఫీల్డ్ ఫోటో",
+    "Full Name of Household Head / Primary Respondent": "కుటుంబ పెద్ద / ప్రాథమిక ప్రతిస్పందకుడి పూర్తి పేరు",
+    "Respondent Classification": "ప్రతిస్పందకుల వర్గీకరణ",
+    "Individual": "వ్యక్తిగత",
+    "Household": "కుటుంబం",
+    "Smallholder Farmer": "చిన్న రైతు",
+    "Micro Enterprise / Self-Employed": "సూక్ష్మ సంస్థ / స్వయం ఉపాధి",
+    "Primary Contact Phone Number": "ప్రాథమిక సంప్రదింపు ఫోన్ నంబర్",
+    "Do you own cattle, sheep, or goats?": "మీకు ఆవులు, గొర్రెలు లేదా మేకలు ఉన్నాయా?",
+    "Total number of milch cattle / animals?": "మొత్తం పాడి పశువుల / జంతువుల సంఖ్య ఎంత?",
+    "Estimated Monthly Household Income (INR ₹)": "అంచనా వేసిన నెలవారీ గృహ ఆదాయం (INR ₹)",
+    "Farm Equipment & Key Productive Assets": "వ్యవసాయ పరికరాలు మరియు కీలక ఉత్పాదక ఆస్తులు",
+    "Capture Field GPS Coordinates (Auto-verified)": "ఫీల్డ్ GPS కోఆర్డినేట్‌లను పొందండి (స్వయంచాలక ధృవీకరణ)",
+    "Field Photo of Site / Beneficiary": "సైట్ / లబ్ధిదారుడి ఫీల్డ్ ఫోటో",
+    "Surveyor Sign-off & Digital Signature": "సర్వేయర్ ఆమోదం మరియు డిజిటల్ సంతకం",
     "Listen": "వినండి",
     "Speaking...": "మాట్లాడుతోంది...",
     "Page": "పేజీ",
@@ -2947,6 +3094,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "ಕರಡು ಉಳಿಸಿ",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ಕರಡು ಉಳಿಸಿ",
     "ڈرافٹ محفوظ کریں": "ಕರಡು ಉಳಿಸಿ",
+    "Himalayan Baseline Impact Survey": "ಹಿಮಾಲಯನ್ ಬೇಸ್‌ಲೈನ್ ಪ್ರಭಾವ ಸಮೀಕ್ಷೆ",
+    "1. Household & Demographic Profile": "1. ಕುಟುಂಬ ಮತ್ತು ಜನಸಂಖ್ಯಾ ಪ್ರೊಫೈಲ್",
+    "General identification and household metrics": "ಸಾಮಾನ್ಯ ಗುರುತು ಮತ್ತು ಮನೆಯ ವಿವರಗಳು",
+    "2. Economic Activity & Livestock": "2. ಆರ್ಥಿಕ ಚಟುವಟಿಕೆ ಮತ್ತು ಜಾನುವಾರು",
+    "Revenue, assets, and livestock count": "ಆದಾಯ, ಸ್ವತ್ತುಗಳು ಮತ್ತು ಜಾನುವಾರುಗಳ ಸಂಖ್ಯೆ",
+    "3. Geolocation & Digital Verification": "3. ಜಿಯೋಲೋಕೇಶನ್ ಮತ್ತು ಡಿಜಿಟಲ್ ಪರಿಶೀಲನೆ",
+    "GPS accuracy and field photo capture": "ಜಿಪಿಎಸ್ ನಿಖರತೆ ಮತ್ತು ಫೋಟೋ ಸೆರೆಹಿಡಿಯುವಿಕೆ",
+    "Full Name of Household Head / Primary Respondent": "ಕುಟುಂಬದ ಮುಖ್ಯಸ್ಥ / ಪ್ರಾಥಮಿಕ ಪ್ರತಿಕ್ರಿಯೆದಾರರ ಪೂರ್ಣ ಹೆಸರು",
+    "Respondent Classification": "ಪ್ರತಿಕ್ರಿಯೆದಾರರ ವರ್ಗೀಕರಣ",
+    "Individual": "ವೈಯಕ್ತಿಕ",
+    "Household": "ಮನೆತನ / ಕುಟುಂಬ",
+    "Smallholder Farmer": "ಸಣ್ಣ ರೈತ",
+    "Micro Enterprise / Self-Employed": "ಸೂಕ್ಷ್ಮ ಉದ್ಯಮ / ಸ್ವಯಂ ಉದ್ಯೋಗಿ",
+    "Primary Contact Phone Number": "ಪ್ರಾಥಮಿಕ ಸಂಪರ್ಕ ಫೋನ್ ಸಂಖ್ಯೆ",
+    "Do you own cattle, sheep, or goats?": "ನಿಮ್ಮ ಬಳಿ ಹಸು, ಕುರಿ ಅಥವಾ ಮೇಕೆಗಳು ಇವೆಯೇ?",
+    "Total number of milch cattle / animals?": "ಹಾಲು ನೀಡುವ ಜಾನುವಾರುಗಳ / ಪ್ರಾಣಿಗಳ ಒಟ್ಟು ಸಂಖ್ಯೆ ಎಷ್ಟು?",
+    "Estimated Monthly Household Income (INR ₹)": "ಅಂದಾಜು ಮಾಸಿಕ ಕುಟುಂಬದ ಆದಾಯ (ರೂ. ₹)",
+    "Farm Equipment & Key Productive Assets": "ಕೃಷಿ ಉಪಕರಣಗಳು ಮತ್ತು ಪ್ರಮುಖ ಉತ್ಪಾದಕ ಆಸ್ತಿಗಳು",
+    "Capture Field GPS Coordinates (Auto-verified)": "ಫೀಲ್ಡ್ ಜಿಪಿಎಸ್ ನಿರ್ದೇಶಾಂಕಗಳನ್ನು ಪಡೆಯಿರಿ (ಸ್ವಯಂ ಪರಿಶೀಲಿಸಲಾಗಿದೆ)",
+    "Field Photo of Site / Beneficiary": "ಸೈಟ್ / ಫಲಾನುಭವಿಯ ಫೋಟೋ",
+    "Surveyor Sign-off & Digital Signature": "ಸಮೀಕ್ಷಕರ ಅನುಮೋದನೆ ಮತ್ತು ಡಿಜಿಟಲ್ ಸಹಿ",
     "Listen": "ಕೇಳಿ",
     "Speaking...": "ಮಾತನಾಡುತ್ತಿದೆ...",
     "Page": "ಪುಟ",
@@ -3276,6 +3444,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
     "ڈرافٹ محفوظ کریں": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
+    "Himalayan Baseline Impact Survey": "ഹിമാലയൻ ബേസ്‌ലൈൻ ഇംപാക്ട് സർവേ",
+    "1. Household & Demographic Profile": "1. കുടുംബവും ജനസംഖ്യാപരമായ പ്രൊഫൈലും",
+    "General identification and household metrics": "പൊതുവായ തിരിച്ചറിയലും കുടുംബ വിവരങ്ങളും",
+    "2. Economic Activity & Livestock": "2. സാമ്പത്തിക പ്രവർത്തനങ്ങളും കന്നുകാലികളും",
+    "Revenue, assets, and livestock count": "വരുമാനം, ആസ്തികൾ, കന്നുകാലികളുടെ എണ്ണം",
+    "3. Geolocation & Digital Verification": "3. ജിയോലൊക്കേഷനും ഡിജിറ്റൽ പരിശോധനയും",
+    "GPS accuracy and field photo capture": "ജിപിഎസ് കൃത്യതയും ഫീൽഡ് ഫോട്ടോയും",
+    "Full Name of Household Head / Primary Respondent": "കുടുംബനാഥന്റെ / പ്രധാന പ്രതികരിക്കുന്നയാളുടെ പൂർണ്ണ നാമം",
+    "Respondent Classification": "പ്രതികരിക്കുന്നയാളുടെ വർഗ്ഗീകരണം",
+    "Individual": "വ്യക്തിഗത",
+    "Household": "കുടുംബം",
+    "Smallholder Farmer": "ചെറുകിട കർഷകൻ",
+    "Micro Enterprise / Self-Employed": "സൂക്ഷ്മ സംരംഭം / സ്വയംതൊഴിൽ",
+    "Primary Contact Phone Number": "പ്രധാന ഫോൺ നമ്പർ",
+    "Do you own cattle, sheep, or goats?": "നിങ്ങൾക്ക് പശു, ആട് അല്ലെങ്കിൽ ചെമ്മരിയാട് ഉണ്ടോ?",
+    "Total number of milch cattle / animals?": "കറവപ്പശുക്കളുടെ / മൃഗങ്ങളുടെ ആകെ എണ്ണം?",
+    "Estimated Monthly Household Income (INR ₹)": "പ്രതിമാസ കുടുംബ വരുമാനം (രൂപ ₹)",
+    "Farm Equipment & Key Productive Assets": "കാർഷിക ഉപകരണങ്ങളും പ്രധാന ഉൽപാദന ആസ്തികളും",
+    "Capture Field GPS Coordinates (Auto-verified)": "ഫീൽഡ് ജിപിഎസ് കോർഡിനേറ്റുകൾ എടുക്കുക (ഓട്ടോ-പരിശോധിച്ചത്)",
+    "Field Photo of Site / Beneficiary": "സ്ഥലം / ഗുണഭോക്താവിന്റെ ഫോട്ടോ",
+    "Surveyor Sign-off & Digital Signature": "സർവേയർ ഒപ്പും ഡിജിറ്റൽ ഒപ്പും",
     "Listen": "കേൾക്കുക",
     "Speaking...": "സംസാരിക്കുന്നു...",
     "Page": "പേജ്",
@@ -3605,6 +3794,27 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "ڈرافٹ محفوظ کریں",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "ڈرافٹ محفوظ کریں",
     "ڈرافٹ محفوظ کریں": "ڈرافٹ محفوظ کریں",
+    "Himalayan Baseline Impact Survey": "ہمالین بیس لائن اثراتی سروے",
+    "1. Household & Demographic Profile": "1. گھریلو اور آبادیاتی پروفائل",
+    "General identification and household metrics": "عام شناخت اور گھریلو تفصیلات",
+    "2. Economic Activity & Livestock": "2. معاشی سرگرمیاں اور لائیو سٹاک",
+    "Revenue, assets, and livestock count": "آمدنی، اثاثے اور مویشیوں کی تعداد",
+    "3. Geolocation & Digital Verification": "3. جغرافیائی محل وقوع اور ڈیجیٹل تصدیق",
+    "GPS accuracy and field photo capture": "جی پی ایس کی درستگی اور فیلڈ فوٹو",
+    "Full Name of Household Head / Primary Respondent": "گھر کے سربراہ / بنیادی جواب دہندہ کا پورا نام",
+    "Respondent Classification": "جواب دہندہ کی درجہ بندی",
+    "Individual": "انفرادی",
+    "Household": "گھریلو",
+    "Smallholder Farmer": "چھوٹے کسان",
+    "Micro Enterprise / Self-Employed": "مائیکرو انٹرپرائز / خود روزگار",
+    "Primary Contact Phone Number": "بنیادی رابطہ فون نمبر",
+    "Do you own cattle, sheep, or goats?": "کیا آپ کے پاس گائے، بھیڑ یا بکریاں ہیں؟",
+    "Total number of milch cattle / animals?": "دودھ دینے والے مویشیوں / جانوروں کی کل تعداد؟",
+    "Estimated Monthly Household Income (INR ₹)": "تخمینی ماہانہ گھریلو آمدنی (روپے ₹)",
+    "Farm Equipment & Key Productive Assets": "زرعی سامان اور اہم پیداواری اثاثے",
+    "Capture Field GPS Coordinates (Auto-verified)": "فیلڈ جی پی ایس کوآرڈینیٹ حاصل کریں (خودکار تصدیق)",
+    "Field Photo of Site / Beneficiary": "سائٹ / مستفید کنندہ کی فیلڈ تصویر",
+    "Surveyor Sign-off & Digital Signature": "سروے کرنے والے کی منظوری اور ڈیجیٹل دستخط",
     "Listen": "سنیں",
     "Speaking...": "بول رہا ہے...",
     "Page": "صفحہ",
@@ -4143,7 +4353,7 @@ const app = createApp({
     function initAllSignaturePads() {
       if (!activeQuestions.value) return;
       activeQuestions.value.forEach(q => {
-        if (q.field_type === 'Signature') {
+        if (q.field_type === 'Signature' || q.field_type === 'Digital Signature') {
           initSignaturePad(q.question_code);
         }
       });
@@ -4872,7 +5082,7 @@ const app = createApp({
               <!-- ========================================== -->
               <!-- FIELD TYPE 1: SELECT / SINGLE CHOICE CARDS -->
               <!-- ========================================== -->
-              <div v-if="q.field_type === 'Select' || q.field_type === 'Radio'" class="space-y-2.5 pt-1">
+              <div v-if="q.field_type === 'Select' || q.field_type === 'Radio' || q.field_type === 'Single Choice (Radio)' || (q.options && Array.isArray(q.options) && q.options.length > 0)" class="space-y-2.5 pt-1">
                 <div role="radiogroup" :aria-label="t(q.label_en)" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div v-for="opt in q.options" :key="opt"
                        role="radio"
@@ -4908,9 +5118,9 @@ const app = createApp({
               </div>
 
               <!-- ========================================== -->
-              <!-- FIELD TYPE 3: NUMERIC / INT / FLOAT        -->
+              <!-- FIELD TYPE 3: NUMERIC / INT / FLOAT / CURR -->
               <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Int' || q.field_type === 'Float' || q.field_type === 'Currency'" class="pt-1">
+              <div v-else-if="q.field_type === 'Int' || q.field_type === 'Integer' || q.field_type === 'Float' || q.field_type === 'Currency' || q.field_type === 'Currency (INR)'" class="pt-1">
                 <input :id="'input_' + q.question_code"
                        type="number"
                        step="any"
@@ -4935,7 +5145,7 @@ const app = createApp({
               <!-- ========================================== -->
               <!-- FIELD TYPE 5: GEOLOCATION / GPS LOCK       -->
               <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Geolocation'" class="pt-1 space-y-3">
+              <div v-else-if="q.field_type === 'Geolocation' || q.field_type === 'GPS Location' || q.field_type === 'GPS'" class="pt-1 space-y-3">
                 <div v-if="currentGPS.latitude" class="p-4 bg-emerald-50 rounded-2xl border-2 border-emerald-300 space-y-2">
                   <div class="flex items-center space-x-2 text-emerald-900 font-black text-base">
                     <span aria-hidden="true" class="text-xl">📍</span>
@@ -4970,7 +5180,7 @@ const app = createApp({
               <!-- ========================================== -->
               <!-- FIELD TYPE 6: CAMERA PHOTO ATTACHMENT      -->
               <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Attach Image' || q.field_type === 'Photo'" class="pt-1 space-y-3">
+              <div v-else-if="q.field_type === 'Attach Image' || q.field_type === 'Photo' || q.field_type === 'Photo Upload'" class="pt-1 space-y-3">
                 <div v-if="formData[q.question_code]" class="space-y-3">
                   <div class="relative rounded-2xl overflow-hidden border-2 border-slate-300 max-h-64 bg-black">
                     <img :src="formData[q.question_code]" alt="Uploaded Survey Image" class="w-full h-auto object-contain max-h-64 mx-auto">
@@ -5007,7 +5217,7 @@ const app = createApp({
               <!-- ========================================== -->
               <!-- FIELD TYPE 7: SIGNATURE TOUCHPAD           -->
               <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Signature'" class="pt-1 space-y-3">
+              <div v-else-if="q.field_type === 'Signature' || q.field_type === 'Digital Signature'" class="pt-1 space-y-3">
                 <div class="border-2 border-slate-400 rounded-2xl overflow-hidden bg-white shadow-inner">
                   <div class="bg-slate-100 px-3 py-1.5 border-b border-slate-300 text-xs font-bold text-slate-600 flex justify-between items-center">
                     <span>✍️ {{ t('Sign here with finger') }}</span>
