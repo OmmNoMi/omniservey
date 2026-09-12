@@ -25,7 +25,7 @@ const BUILTIN_TRANSLATIONS = {
     "कतार (ऑफलाइन)": "WAL Queue",
     "System": "System",
     "सिस्टम": "System",
-    "Exit Form": "← Exit Form",
+    "Exit Form": "Exit Form",
     "← बाहर निकलें": "Exit Form",
     "Step": "Step",
     "चरण": "Step",
@@ -37,7 +37,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "Questions",
     "Previous": "Previous",
     "← पिछला": "Previous",
-    "Next": "Next →",
+    "Next": "Next",
     "अगला →": "Next",
     "Save Offline": "Save Offline",
     "ऑफलाइन सेव करें": "Save Offline",
@@ -315,31 +315,38 @@ const BUILTIN_TRANSLATIONS = {
     "ಕರಡು ಉಳಿಸಿ": "Save Draft",
     "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക": "Save Draft",
     "ڈرافٹ محفوظ کریں": "Save Draft",
-    "Listen": "Listen",
-    "Speaking...": "Speaking...",
-    "Page": "Page",
-    "Get My Location": "Get My Location",
-    "Location Acquired": "Location Acquired",
-    "Take Photo": "Take Photo",
-    "Change Photo": "Change Photo",
-    "Sign here with finger": "Sign here with finger",
-    "Done / Send": "Done / Send",
-    "Save Work": "Save Work",
-    "Back": "← Back",
-    "+ Add Item / Asset": "+ Add Item / Asset",
-    "Equipment / Asset Name": "Equipment / Asset Name",
-    "Quantity": "Quantity",
-    "Approx Value (₹)": "Approx Value (₹)",
-    "Item": "Item",
-    "Remove": "Remove",
-    "e.g. Tractor, Water Pump, Sewing Machine": "e.g. Tractor, Water Pump, Sewing Machine",
-    "Enter answer...": "Enter answer...",
-    "Select Language": "Select Language",
-    "Language": "Language",
-    "Menu": "Menu",
-    "Choose your preferred language": "Choose your preferred language",
-    "Quick Actions": "Quick Actions",
-    "Syncing...": "Syncing..."
+    "Dashboard": "Dashboard",
+    "Surveyor Dashboard": "Surveyor Dashboard",
+    "Field Work Overview": "Field Work Overview",
+    "Total Recorded": "Total Recorded",
+    "Synced to Server": "Synced to Server",
+    "Pending Sync": "Pending Sync",
+    "Incomplete Drafts": "Incomplete Drafts",
+    "Drafts": "Drafts",
+    "Completed": "Completed",
+    "Today's Goal": "Today's Goal",
+    "surveys completed today": "surveys completed today",
+    "Daily Target Met!": "Daily Target Met!",
+    "Start New Survey": "+ Start New Survey",
+    "Resume Draft": "▶ Resume Draft",
+    "Resume & Complete": "▶ Resume & Complete",
+    "My Submissions & Drafts": "My Submissions & Drafts",
+    "All Records": "All Records",
+    "Complete": "Complete",
+    "Questions Answered": "Questions Answered",
+    "GPS Locked": "GPS Locked",
+    "Photo Attached": "Photo Attached",
+    "Signed": "Signed",
+    "Ready to Sync": "Ready to Sync",
+    "Synced": "Synced",
+    "No respondent name": "Unnamed Respondent",
+    "Village / Location": "Village / Location",
+    "Last edited": "Last edited",
+    "Sync All Pending": "🔄 Sync All Pending",
+    "No surveys recorded yet": "No surveys recorded yet on this device",
+    "Tap '+ Start New Survey' to begin your first interview": "Tap '+ Start New Survey' to begin your first interview",
+    "Delete draft?": "Are you sure you want to delete this draft?",
+    "Draft deleted": "Draft removed from local storage"
   },
   "hi": {
     "OmniServey": "ओमनीसर्वे",
@@ -350,7 +357,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ऑफलाइन",
     "Surveys": "सर्वेक्षण",
     "सर्वेक्षण": "सर्वेक्षण",
-    "WAL Queue": "लोकल कतार",
+    "WAL Queue": "कतार (ऑफलाइन)",
     "कतार (ऑफलाइन)": "कतार (ऑफलाइन)",
     "System": "सिस्टम",
     "सिस्टम": "सिस्टम",
@@ -366,7 +373,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "प्रश्न",
     "Previous": "← पिछला",
     "← पिछला": "← पिछला",
-    "Next": "आगे →",
+    "Next": "अगला →",
     "अगला →": "अगला →",
     "Save Offline": "ऑफलाइन सेव करें",
     "ऑफलाइन सेव करें": "ऑफलाइन सेव करें",
@@ -374,13 +381,13 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "सबमिट करें",
     "Capture GPS Coordinates": "जीपीएस लोकेशन रिकॉर्ड करें",
     "जीपीएस लोकेशन रिकॉर्ड करें": "जीपीएस लोकेशन रिकॉर्ड करें",
-    "GPS Fix Acquired ✓": "जीपीएस लॉक हुआ ✓",
+    "GPS Fix Acquired ✓": "जीपीएस लोकेशन प्राप्त हुआ ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "जीपीएस लोकेशन प्राप्त हुआ ✓",
     "Take Photo / Choose File": "फोटो लें / फाइल चुनें",
     "फोटो लें / फाइल चुनें": "फोटो लें / फाइल चुनें",
     "Sign inside box with finger or stylus": "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें",
-    "Clear Signature": "हस्ताक्षर हटाएं",
+    "Clear Signature": "हस्ताक्षर मिटाएं",
     "हस्ताक्षर मिटाएं": "हस्ताक्षर मिटाएं",
     "Signature Recorded": "हस्ताक्षर दर्ज हुआ",
     "हस्ताक्षर दर्ज हुआ": "हस्ताक्षर दर्ज हुआ",
@@ -404,9 +411,9 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "राइट-अहेड लॉग (WAL कतार)",
     "Atomic zero-loss local storage queue": "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण",
-    "Sync Now": "अभी सिंक करें",
+    "Sync Now": "⟳ अभी सिंक करें",
     "⟳ अभी सिंक करें": "⟳ अभी सिंक करें",
-    "View on Map →": "मानचित्र पर देखें →",
+    "View on Map →": "नक्शे पर देखें →",
     "नक्शे पर देखें →": "नक्शे पर देखें →",
     "Re-acquire Fix": "पुनः प्रयास करें",
     "पुनः प्रयास करें": "पुनः प्रयास करें",
@@ -622,7 +629,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "इंस्टाग्राम (Instagram)",
     "Don't use social media": "सोशल मीडिया का उपयोग नहीं करते",
     "सोशल मीडिया का उपयोग नहीं करते": "सोशल मीडिया का उपयोग नहीं करते",
-    "Draft": "ड्राफ्ट",
+    "Draft": "अधूरा ड्राफ्ट",
     "Save Draft": "ड्राफ्ट सेव करें",
     "ड्राफ्ट": "ड्राफ्ट",
     "मसुदा": "ड्राफ्ट",
@@ -672,31 +679,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "ऋण का उपयोग, मासिक आय में वृद्धि और CRP का योगदान",
     "Smartphone ownership, QR code banking, and social media usage": "स्मार्टफोन स्वामित्व, क्यूआर कोड बैंकिंग और सोशल मीडिया का उपयोग",
     "GPS coordinates fix, site photo capture, and digital signatures": "जीपीएस निर्देशांक लॉक, स्थल का फोटो और डिजिटल हस्ताक्षर",
-    "Listen": "सुनें",
-    "Speaking...": "बोल रहा है...",
-    "Page": "पृष्ठ",
-    "Get My Location": "मेरा स्थान प्राप्त करें",
-    "Location Acquired": "स्थान प्राप्त हुआ",
-    "Take Photo": "फोटो खीचें",
-    "Change Photo": "फोटो बदलें",
-    "Sign here with finger": "यहाँ उंगली से हस्ताक्षर करें",
-    "Done / Send": "जमा करें",
-    "Save Work": "सुरक्षित रखें",
-    "Back": "← पीछे",
-    "+ Add Item / Asset": "+ उपकरण / संपत्ति जोड़ें",
-    "Equipment / Asset Name": "उपकरण / संपत्ति का नाम",
-    "Quantity": "संख्या",
-    "Approx Value (₹)": "अनुमानित मूल्य (₹)",
-    "Item": "वस्तु",
-    "Remove": "हटाएं",
-    "e.g. Tractor, Water Pump, Sewing Machine": "उदा. ट्रैक्टर, पानी पंप, सिलाई मशीन",
-    "Enter answer...": "उत्तर दर्ज करें...",
-    "Select Language": "भाषा चुनें",
-    "Language": "भाषा",
-    "Menu": "मेनू",
-    "Choose your preferred language": "अपनी पसंदीदा भाषा चुनें",
-    "Quick Actions": "त्वरित कार्य",
-    "Syncing...": "सिंक हो रहा है..."
+    "Dashboard": "डैशबोर्ड",
+    "Surveyor Dashboard": "सर्वेक्षक डैशबोर्ड",
+    "Field Work Overview": "फील्ड कार्य प्रगति",
+    "Total Recorded": "कुल सर्वेक्षण",
+    "Synced to Server": "सर्वर पर सिंक",
+    "Pending Sync": "सिंक बाकी (लोकल)",
+    "Incomplete Drafts": "अधूरे ड्राफ्ट",
+    "Drafts": "ड्राफ्ट",
+    "Completed": "पूर्ण",
+    "Today's Goal": "आज का लक्ष्य",
+    "surveys completed today": "सर्वे आज पूरे हुए",
+    "Daily Target Met!": "आज का लक्ष्य पूरा हुआ! 🎉",
+    "Start New Survey": "+ नया सर्वेक्षण शुरू करें",
+    "Resume Draft": "▶ अधूरा फॉर्म पूरा करें",
+    "Resume & Complete": "▶ फॉर्म जारी रखें",
+    "My Submissions & Drafts": "मेरे सर्वेक्षण एवं ड्राफ्ट",
+    "All Records": "सभी रिकॉर्ड",
+    "Complete": "पूर्ण",
+    "Questions Answered": "प्रश्नों के उत्तर दिए",
+    "GPS Locked": "जीपीएस लॉक ✓",
+    "Photo Attached": "फोटो संलग्न ✓",
+    "Signed": "हस्ताक्षर दर्ज ✓",
+    "Ready to Sync": "सिंक हेतु तैयार (100%)",
+    "Synced": "सर्वर पर सुरक्षित",
+    "No respondent name": "अनाम उत्तरदाता",
+    "Village / Location": "गाँव / स्थान",
+    "Last edited": "अंतिम संपादन",
+    "Sync All Pending": "🔄 सभी बाकी फॉर्म सिंक करें",
+    "No surveys recorded yet": "इस डिवाइस पर अभी तक कोई सर्वेक्षण दर्ज नहीं है",
+    "Tap '+ Start New Survey' to begin your first interview": "पहला इंटरव्यू शुरू करने के लिए '+ नया सर्वेक्षण' दबाएं",
+    "Delete draft?": "क्या आप इस ड्राफ्ट को हटाना चाहते हैं?",
+    "Draft deleted": "ड्राफ्ट डिवाइस से हटा दिया गया"
   },
   "mr": {
     "OmniServey": "ओम्नीसर्व्हे",
@@ -707,7 +721,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ऑफलाइन",
     "Surveys": "सर्वेक्षण",
     "सर्वेक्षण": "सर्वेक्षण",
-    "WAL Queue": "स्थानिक रांग",
+    "WAL Queue": "रांग (ऑफलाइन)",
     "कतार (ऑफलाइन)": "रांग (ऑफलाइन)",
     "System": "प्रणाली",
     "सिस्टम": "प्रणाली",
@@ -723,7 +737,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "प्रश्न",
     "Previous": "← मागील",
     "← पिछला": "← मागील",
-    "Next": "पुढे →",
+    "Next": "पुढील →",
     "अगला →": "पुढील →",
     "Save Offline": "ऑफलाइन जतन करा",
     "ऑफलाइन सेव करें": "ऑफलाइन जतन करा",
@@ -731,7 +745,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "सबमिट करा",
     "Capture GPS Coordinates": "जीपीएस स्थान नोंदवा",
     "जीपीएस लोकेशन रिकॉर्ड करें": "जीपीएस स्थान नोंदवा",
-    "GPS Fix Acquired ✓": "GPS प्राप्त झाले ✓",
+    "GPS Fix Acquired ✓": "जीपीएस स्थान प्राप्त झाले ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "जीपीएस स्थान प्राप्त झाले ✓",
     "Take Photo / Choose File": "फोटो घ्या / फाईल निवडा",
     "फोटो लें / फाइल चुनें": "फोटो घ्या / फाईल निवडा",
@@ -739,7 +753,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "आपल्या बोटाने किंवा स्टायलसने बॉक्समध्ये स्वाक्षरी करा",
     "Clear Signature": "स्वाक्षरी पुसा",
     "हस्ताक्षर मिटाएं": "स्वाक्षरी पुसा",
-    "Signature Recorded": "स्वाक्षरी नोंदवली गेली",
+    "Signature Recorded": "स्वाक्षरी नोंदवली",
     "हस्ताक्षर दर्ज हुआ": "स्वाक्षरी नोंदवली",
     "Enter response here...": "येथे उत्तर प्रविष्ट करा...",
     "यहाँ उत्तर दर्ज करें...": "येथे उत्तर प्रविष्ट करा...",
@@ -761,9 +775,9 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "राइट-अहेड लॉग (WAL रांग)",
     "Atomic zero-loss local storage queue": "शून्य डेटा हानी सुरक्षित स्थानिक साठवण",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "शून्य डेटा हानी सुरक्षित स्थानिक साठवण",
-    "Sync Now": "आता सिंक करा",
+    "Sync Now": "⟳ आता सिंक करा",
     "⟳ अभी सिंक करें": "⟳ आता सिंक करा",
-    "View on Map →": "नकाशावर पहा →",
+    "View on Map →": "नక्शावर पहा →",
     "नक्शे पर देखें →": "नక्शावर पहा →",
     "Re-acquire Fix": "पुन्हा प्रयत्न करा",
     "पुनः प्रयास करें": "पुन्हा प्रयत्न करा",
@@ -979,7 +993,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "इन्स्टाग्राम",
     "Don't use social media": "सोशल मीडिया वापरत नाही",
     "सोशल मीडिया का उपयोग नहीं करते": "सोशल मीडिया वापरत नाही",
-    "Draft": "मसुदा",
+    "Draft": "अपूर्ण मसुदा",
     "Save Draft": "मसुदा जतन करा",
     "ड्राफ्ट": "मसुदा",
     "मसुदा": "मसुदा",
@@ -1029,31 +1043,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "कर्जाचा वापर, मासिक उत्पन्नातील वाढ आणि CRP चे योगदान",
     "Smartphone ownership, QR code banking, and social media usage": "स्मार्टफोन मालकी, क्यूआर कोड बँकिंग आणि सोशल मीडियाचा वापर",
     "GPS coordinates fix, site photo capture, and digital signatures": "जीपीएस निर्देशांक, जागेचा फोटो आणि डिजिटल स्वाक्षरी",
-    "Listen": "ऐका",
-    "Speaking...": "बोलत आहे...",
-    "Page": "पान",
-    "Get My Location": "माझे स्थान मिळवा",
-    "Location Acquired": "स्थान प्राप्त झाले",
-    "Take Photo": "फोटो काढा",
-    "Change Photo": "फोटो बदला",
-    "Sign here with finger": "येथे बोटाने स्वाक्षरी करा",
-    "Done / Send": "सबमिट करा",
-    "Save Work": "मसुदा जतन करा",
-    "Back": "← मागे",
-    "+ Add Item / Asset": "+ उपकरण / मालमत्ता जोडा",
-    "Equipment / Asset Name": "उपकरणाचे / मालमत्तेचे नाव",
-    "Quantity": "संख्या",
-    "Approx Value (₹)": "अंदाजे किंमत (₹)",
-    "Item": "वस्तू",
-    "Remove": "काढून टाका",
-    "e.g. Tractor, Water Pump, Sewing Machine": "उदा. ट्रॅक्टर, पाणी पंप, शिलाई मशीन",
-    "Enter answer...": "उत्तर प्रविष्ट करा...",
-    "Select Language": "भाषा निवडा",
-    "Language": "भाषा",
-    "Menu": "मेनू",
-    "Choose your preferred language": "तुमची पसंतीची भाषा निवडा",
-    "Quick Actions": "त्वरित कृती",
-    "Syncing...": "सिंक होत आहे..."
+    "Dashboard": "डॅशबोर्ड",
+    "Surveyor Dashboard": "सर्वेक्षक डॅशबोर्ड",
+    "Field Work Overview": "फील्ड कामाचा आढावा",
+    "Total Recorded": "एकूण सर्वेक्षणे",
+    "Synced to Server": "सर्व्हरवर सिंक",
+    "Pending Sync": "सिंक प्रलंबित",
+    "Incomplete Drafts": "अपूर्ण मसुदे",
+    "Drafts": "मसुदे",
+    "Completed": "पूर्ण",
+    "Today's Goal": "आजचे उद्दिष्ट",
+    "surveys completed today": "सर्वेक्षणे आज पूर्ण झाली",
+    "Daily Target Met!": "आजचे उद्दिष्ट पूर्ण झाले! 🎉",
+    "Start New Survey": "+ नवीन सर्वेक्षण सुरू करा",
+    "Resume Draft": "▶ अपूर्ण फॉर्म पूर्ण करा",
+    "Resume & Complete": "▶ फॉर्म सुरू ठेवा",
+    "My Submissions & Drafts": "माझी सर्वेक्षणे आणि मसुदे",
+    "All Records": "सर्व रेकॉर्ड",
+    "Complete": "पूर्ण",
+    "Questions Answered": "प्रश्नांची उत्तरे दिली",
+    "GPS Locked": "जीपीएस लॉक ✓",
+    "Photo Attached": "फोटो जोडला ✓",
+    "Signed": "स्वाक्षरी झाली ✓",
+    "Ready to Sync": "सिंकसाठी तयार (100%)",
+    "Synced": "सर्व्हरवर सुरक्षित",
+    "No respondent name": "नाव नसलेला उत्तरदाता",
+    "Village / Location": "गाव / ठिकाण",
+    "Last edited": "शेवटचे संपादन",
+    "Sync All Pending": "🔄 सर्व प्रलंबित सिंक करा",
+    "No surveys recorded yet": "या डिव्हाइसवर अद्याप कोणतेही सर्वेक्षण नोंदवलेले नाही",
+    "Tap '+ Start New Survey' to begin your first interview": "पहिली मुलाखत सुरू करण्यासाठी '+ नवीन सर्वेक्षण' दाबा",
+    "Delete draft?": "तुम्हाला हा मसुदा हटवायचा आहे का?",
+    "Draft deleted": "मसुदा हटवला गेला"
   },
   "gu": {
     "OmniServey": "ઓમ્નીસર્વે",
@@ -1064,7 +1085,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ઓફલાઇન",
     "Surveys": "સર્વેક્ષણ",
     "सर्वेक्षण": "સર્વેક્ષણ",
-    "WAL Queue": "ઓફલાઇન કતાર",
+    "WAL Queue": "કતાર (ઓફલાઇન)",
     "कतार (ऑफलाइन)": "કતાર (ઓફલાઇન)",
     "System": "સિસ્ટમ",
     "सिस्टम": "સિસ્ટમ",
@@ -1088,7 +1109,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "સબમિટ કરો",
     "Capture GPS Coordinates": "જીપીએસ સ્થાન મેળવો",
     "जीपीएस लोकेशन रिकॉर्ड करें": "જીપીએસ સ્થાન મેળવો",
-    "GPS Fix Acquired ✓": "GPS મળ્યું ✓",
+    "GPS Fix Acquired ✓": "જીપીએસ સ્થાન પ્રાપ્ત થયું ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "જીપીએસ સ્થાન પ્રાપ્ત થયું ✓",
     "Take Photo / Choose File": "ફોટો લો / ફાઇલ પસંદ કરો",
     "फोटो लें / फाइल चुनें": "ફોટો લો / ફાઇલ પસંદ કરો",
@@ -1096,7 +1117,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "તમારી આંગળી અથવા સ્ટાઇલસથી બૉક્સમાં સહી કરો",
     "Clear Signature": "સહી સાફ કરો",
     "हस्ताक्षर मिटाएं": "સહી સાફ કરો",
-    "Signature Recorded": "સહી નોંધાઈ ગઈ",
+    "Signature Recorded": "સહી નોંધાઈ",
     "हस्ताक्षर दर्ज हुआ": "સહી નોંધાઈ",
     "Enter response here...": "અહીં જવાબ દાખલ કરો...",
     "यहाँ उत्तर दर्ज करें...": "અહીં જવાબ દાખલ કરો...",
@@ -1118,11 +1139,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "રાઇટ-અહેડ લૉગ (WAL કતાર)",
     "Atomic zero-loss local storage queue": "શૂન્ય ડેટા નુકશાન સુરક્ષિત સ્થાનિક સ્ટોરેજ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "શૂન્ય ડેટા નુકશાન સુરક્ષિત સ્થાનિક સ્ટોરેજ",
-    "Sync Now": "હમણાં સિંક કરો",
+    "Sync Now": "⟳ હમણાં સિંક કરો",
     "⟳ अभी सिंक करें": "⟳ હમણાં સિંક કરો",
     "View on Map →": "નકશા પર જુઓ →",
     "नक्शे पर देखें →": "નકશા પર જુઓ →",
-    "Re-acquire Fix": "ફરીથી મેળવો",
+    "Re-acquire Fix": "ફરીથી પ્રયાસ કરો",
     "पुनः प्रयास करें": "ફરીથી પ્રયાસ કરો",
     "Section A: Basic Details": "વિભાગ A: મૂળભૂત વિગતો",
     "भाग क: बुनियादी विवरण": "વિભાગ અ: મૂળભૂત વિગતો",
@@ -1336,7 +1357,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "ઇન્સ્ટાગ્રામ",
     "Don't use social media": "સોશિયલ મીડિયાનો ઉપયોગ કરતા નથી",
     "सोशल मीडिया का उपयोग नहीं करते": "સોશિયલ મીડિયાનો ઉપયોગ કરતા નથી",
-    "Draft": "ડ્રાફ્ટ",
+    "Draft": "અધૂરો ડ્રાફ્ટ",
     "Save Draft": "ડ્રાફ્ટ સાચવો",
     "ड्राफ्ट": "ડ્રાફ્ટ",
     "मसुदा": "ડ્રાફ્ટ",
@@ -1386,31 +1407,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "લોનનો ઉપયોગ, માસિક આવકમાં વૃદ્ધિ અને CRP નું યોગદાન",
     "Smartphone ownership, QR code banking, and social media usage": "સ્માર્ટફોનની માલિકી, ક્યુઆર કોડ બેંકિંગ અને સોશિયલ મીડિયાનો ઉપયોગ",
     "GPS coordinates fix, site photo capture, and digital signatures": "જીપીએસ કોઓર્ડિનેટ્સ, સ્થળનો ફોટો અને ડિજિટલ સહી",
-    "Listen": "સાંભળો",
-    "Speaking...": "બોલે છે...",
-    "Page": "પાનું",
-    "Get My Location": "મારું લોકેશન મેળવો",
-    "Location Acquired": "લોકેશન મળી ગયું",
-    "Take Photo": "ફોટો પાડો",
-    "Change Photo": "ફોટો બદલો",
-    "Sign here with finger": "અહીં આંગળીથી સહી કરો",
-    "Done / Send": "સબમિટ કરો",
-    "Save Work": "ડ્રાફ્ટ સાચવો",
-    "Back": "← પાછળ",
-    "+ Add Item / Asset": "+ સાધન / મિલકત ઉમેરો",
-    "Equipment / Asset Name": "સાધન / મિલકતનું નામ",
-    "Quantity": "સંખ્યા",
-    "Approx Value (₹)": "અંદાજિત કિંમત (₹)",
-    "Item": "વસ્તુ",
-    "Remove": "કાઢી નાખો",
-    "e.g. Tractor, Water Pump, Sewing Machine": "દા.ત. ટ્રેક્ટર, પાણીનો પંપ, સિલાઈ મશીન",
-    "Enter answer...": "જવાબ લખો...",
-    "Select Language": "ભાષા પસંદ કરો",
-    "Language": "ભાષા",
-    "Menu": "મેનુ",
-    "Choose your preferred language": "તમારી મનપસંદ ભાષા પસંદ કરો",
-    "Quick Actions": "ઝડપી ક્રિયાઓ",
-    "Syncing...": "સિંક થઈ રહ્યું છે..."
+    "Dashboard": "ડેશબોર્ડ",
+    "Surveyor Dashboard": "સર્વેયર ડેશબોર્ડ",
+    "Field Work Overview": "ક્ષેત્ર કાર્યની પ્રગતિ",
+    "Total Recorded": "કુલ સર્વેક્ષણો",
+    "Synced to Server": "સર્વર પર સિંક",
+    "Pending Sync": "બાકી સિંક (લોકલ)",
+    "Incomplete Drafts": "અધૂરા ડ્રાફ્ટ્સ",
+    "Drafts": "ડ્રાફ્ટ્સ",
+    "Completed": "પૂર્ણ",
+    "Today's Goal": "આજનો લક્ષ્યાંક",
+    "surveys completed today": "સર્વે આજે પૂર્ણ થયા",
+    "Daily Target Met!": "આજનો લક્ષ્યાંક પૂરો થયો! 🎉",
+    "Start New Survey": "+ નવું સર્વેક્ષણ શરૂ કરો",
+    "Resume Draft": "▶ અધૂરો ફોર્મ પૂર્ણ કરો",
+    "Resume & Complete": "▶ ફોર્મ આગળ વધારો",
+    "My Submissions & Drafts": "મારા સર્વેક્ષણો અને ડ્રાફ્ટ",
+    "All Records": "બધા રેકોર્ડ્સ",
+    "Complete": "પૂર્ણ",
+    "Questions Answered": "પ્રશ્નોના ઉત્તરો આપ્યા",
+    "GPS Locked": "જીપીએસ લોક ✓",
+    "Photo Attached": "ફોટો જોડ્યો ✓",
+    "Signed": "સહી થઈ ✓",
+    "Ready to Sync": "સિંક માટે તૈયાર (100%)",
+    "Synced": "સર્વર પર સુરક્ષિત",
+    "No respondent name": "અનામી ઉત્તરદાતા",
+    "Village / Location": "ગામ / સ્થળ",
+    "Last edited": "છેલ્લું સંપાદન",
+    "Sync All Pending": "🔄 બધા બાકી ફોર્મ સિંક કરો",
+    "No surveys recorded yet": "આ ઉપકરણ પર હજુ સુધી કોઈ સર્વેક્ષણ નોંધાયેલ નથી",
+    "Tap '+ Start New Survey' to begin your first interview": "પ્રથમ ઇન્ટરવ્યુ શરૂ કરવા માટે '+ નવું સર્વેક્ષણ' દબાવો",
+    "Delete draft?": "શું તમે આ ડ્રાફ્ટ કાઢી નાખવા માંગો છો?",
+    "Draft deleted": "ડ્રાફ્ટ દૂર કર્યો"
   },
   "pa": {
     "OmniServey": "ਓਮਨੀਸਰਵੇ",
@@ -1421,15 +1449,15 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ਔਫਲਾਈਨ",
     "Surveys": "ਸਰਵੇਖਣ",
     "सर्वेक्षण": "ਸਰਵੇਖਣ",
-    "WAL Queue": "ਸਥਾਨਕ ਕਤਾਰ",
+    "WAL Queue": "ਕਤਾਰ (ਔਫਲਾਈਨ)",
     "कतार (ऑफलाइन)": "ਕਤਾਰ (ਔਫਲਾਈਨ)",
     "System": "ਸਿਸਟਮ",
     "सिस्टम": "ਸਿਸਟਮ",
-    "Exit Form": "← ਬਾਹਰ ਨਿਕਲੋ",
+    "Exit Form": "← ਬਾਹਰ ਜਾਓ",
     "← बाहर निकलें": "← ਬਾਹਰ ਜਾਓ",
     "Step": "ਕਦਮ",
     "चरण": "ਕਦਮ",
-    "of": "ਵਿੱਚੋਂ",
+    "of": "ਦਾ",
     "का": "ਦਾ",
     "Pages": "ਪੰਨੇ",
     "पृष्ठ": "ਪੰਨੇ",
@@ -1437,7 +1465,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "ਸਵਾਲ",
     "Previous": "← ਪਿਛਲਾ",
     "← पिछला": "← ਪਿਛਲਾ",
-    "Next": "ਅੱਗੇ →",
+    "Next": "ਅਗਲਾ →",
     "अगला →": "ਅਗਲਾ →",
     "Save Offline": "ਔਫਲਾਈਨ ਸੇਵ ਕਰੋ",
     "ऑफलाइन सेव करें": "ਔਫਲਾਈਨ ਸੇਵ ਕਰੋ",
@@ -1445,13 +1473,13 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "ਸਬਮਿਟ ਕਰੋ",
     "Capture GPS Coordinates": "ਜੀਪੀਐਸ ਸਥਾਨ ਰਿਕਾਰਡ ਕਰੋ",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ਜੀਪੀਐਸ ਸਥਾਨ ਰਿਕਾਰਡ ਕਰੋ",
-    "GPS Fix Acquired ✓": "GPS ਲੌਕ ਹੋ ਗਿਆ ✓",
+    "GPS Fix Acquired ✓": "ਜੀਪੀਐਸ ਸਥਾਨ ਪ੍ਰਾਪਤ ਹੋਇਆ ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ਜੀਪੀਐਸ ਸਥਾਨ ਪ੍ਰਾਪਤ ਹੋਇਆ ✓",
     "Take Photo / Choose File": "ਫੋਟੋ ਲਓ / ਫਾਈਲ ਚੁਣੋ",
     "फोटो लें / फाइल चुनें": "ਫੋਟੋ ਲਓ / ਫਾਈਲ ਚੁਣੋ",
     "Sign inside box with finger or stylus": "ਆਪਣੀ ਉਂਗਲ ਜਾਂ ਸਟਾਈਲਸ ਨਾਲ ਬਾਕਸ ਵਿੱਚ ਦਸਤਖਤ ਕਰੋ",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "ਆਪਣੀ ਉਂਗਲ ਜਾਂ ਸਟਾਈਲਸ ਨਾਲ ਬਾਕਸ ਵਿੱਚ ਦਸਤਖਤ ਕਰੋ",
-    "Clear Signature": "ਦਸਤਖਤ ਸਾਫ਼ ਕਰੋ",
+    "Clear Signature": "ਦਸਤਖਤ ਮਿਟਾਓ",
     "हस्ताक्षर मिटाएं": "ਦਸਤਖਤ ਮਿਟਾਓ",
     "Signature Recorded": "ਦਸਤਖਤ ਦਰਜ ਹੋਏ",
     "हस्ताक्षर दर्ज हुआ": "ਦਸਤਖਤ ਦਰਜ ਹੋਏ",
@@ -1475,11 +1503,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "ਰਾਈਟ-ਅਹੈੱਡ ਲੌਗ (WAL ਕਤਾਰ)",
     "Atomic zero-loss local storage queue": "ਜ਼ੀਰੋ ਡੇਟਾ ਨੁਕਸਾਨ ਸੁਰੱਖਿਅਤ ਸਥਾਨਕ ਸਟੋਰੇਜ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "ਜ਼ੀਰੋ ਡੇਟਾ ਨੁਕਸਾਨ ਸੁਰੱਖਿਅਤ ਸਥਾਨਕ ਸਟੋਰੇਜ",
-    "Sync Now": "ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
+    "Sync Now": "⟳ ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
     "⟳ अभी सिंक करें": "⟳ ਹੁਣੇ ਸਿੰਕ ਕਰੋ",
-    "View on Map →": "ਨਕਸ਼ੇ 'ਤੇ ਵੇਖੋ →",
+    "View on Map →": "ਨਕਸ਼ੇ ਤੇ ਦੇਖੋ →",
     "नक्शे पर देखें →": "ਨਕਸ਼ੇ ਤੇ ਦੇਖੋ →",
-    "Re-acquire Fix": "ਮੁੜ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "Re-acquire Fix": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
     "पुनः प्रयास करें": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
     "Section A: Basic Details": "ਭਾਗ A: ਮੁੱਢਲੇ ਵੇਰਵੇ",
     "भाग क: बुनियादी विवरण": "ਭਾਗ ੳ: ਮੁੱਢਲੇ ਵੇਰਵੇ",
@@ -1693,7 +1721,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "ਇੰਸਟਾਗ੍ਰਾਮ",
     "Don't use social media": "ਸੋਸ਼ਲ ਮੀਡੀਆ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰਦੇ",
     "सोशल मीडिया का उपयोग नहीं करते": "ਸੋਸ਼ਲ ਮੀਡੀਆ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰਦੇ",
-    "Draft": "ਡਰਾਫਟ",
+    "Draft": "ਅਧੂਰਾ ਡਰਾਫਟ",
     "Save Draft": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
     "ड्राफ्ट": "ਡਰਾਫਟ",
     "मसुदा": "ਡਰਾਫਟ",
@@ -1743,31 +1771,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "ਕਰਜ਼ੇ ਦੀ ਵਰਤੋਂ, ਮਹੀਨਾਵਾਰ ਆਮਦਨ ਵਿੱਚ ਵਾਧਾ ਅਤੇ CRP ਦਾ ਯੋਗਦਾਨ",
     "Smartphone ownership, QR code banking, and social media usage": "ਸਮਾਰਟਫੋਨ ਮਲਕੀਅਤ, QR ਕੋਡ ਬੈਂਕਿੰਗ ਅਤੇ ਸੋਸ਼ਲ ਮੀਡੀਆ ਦੀ ਵਰਤੋਂ",
     "GPS coordinates fix, site photo capture, and digital signatures": "GPS ਨਿਰਦੇਸ਼ਾਂਕ, ਸਾਈਟ ਫੋਟੋ ਅਤੇ ਡਿਜੀਟਲ ਦਸਤਖਤ",
-    "Listen": "ਸੁਣੋ",
-    "Speaking...": "ਬੋਲ ਰਿਹਾ ਹੈ...",
-    "Page": "ਪੰਨਾ",
-    "Get My Location": "ਮੇਰਾ ਸਥਾਨ ਪ੍ਰਾਪਤ ਕਰੋ",
-    "Location Acquired": "ਸਥਾਨ ਪ੍ਰਾਪਤ ਹੋ ਗਿਆ",
-    "Take Photo": "ਫੋਟੋ ਖਿੱਚੋ",
-    "Change Photo": "ਫੋਟੋ ਬਦਲੋ",
-    "Sign here with finger": "ਇੱਥੇ ਉਂਗਲ ਨਾਲ ਦਸਤਖਤ ਕਰੋ",
-    "Done / Send": "ਜਮ੍ਹਾ ਕਰੋ",
-    "Save Work": "ਡਰਾਫਟ ਸੰਭਾਲੋ",
-    "Back": "← ਪਿੱਛੇ",
-    "+ Add Item / Asset": "+ ਉਪਕਰਣ / ਸੰਪਤੀ ਸ਼ਾਮਲ ਕਰੋ",
-    "Equipment / Asset Name": "ਉਪਕਰਣ / ਸੰਪਤੀ ਦਾ ਨਾਮ",
-    "Quantity": "ਗਿਣਤੀ",
-    "Approx Value (₹)": "ਅੰਦਾਜ਼ਨ ਮੁੱਲ (₹)",
-    "Item": "ਆਈਟਮ",
-    "Remove": "ਹਟਾਓ",
-    "e.g. Tractor, Water Pump, Sewing Machine": "ਜਿਵੇਂ ਟਰੈਕਟਰ, ਪਾਣੀ ਵਾਲਾ ਪੰਪ, ਸਿਲਾਈ ਮਸ਼ੀਨ",
-    "Enter answer...": "ਜਵਾਬ ਦਰਜ ਕਰੋ...",
-    "Select Language": "ਭਾਸ਼ਾ ਚੁਣੋ",
-    "Language": "ਭਾਸ਼ਾ",
-    "Menu": "ਮੇਨੂ",
-    "Choose your preferred language": "ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਚੁਣੋ",
-    "Quick Actions": "ਤੇਜ਼ ਕਾਰਵਾਈਆਂ",
-    "Syncing...": "ਸਿੰਕ ਹੋ ਰਿਹਾ ਹੈ..."
+    "Dashboard": "ਡੈਸ਼ਬੋਰਡ",
+    "Surveyor Dashboard": "ਸਰਵੇਖਕ ਡੈਸ਼ਬੋਰਡ",
+    "Field Work Overview": "ਫੀਲਡ ਕੰਮ ਦੀ ਪ੍ਰਗਤੀ",
+    "Total Recorded": "ਕੁੱਲ ਸਰਵੇਖਣ",
+    "Synced to Server": "ਸਰਵਰ ਤੇ ਸਿੰਕ",
+    "Pending Sync": "ਬਕਾਇਆ ਸਿੰਕ",
+    "Incomplete Drafts": "ਅਧੂਰੇ ਡਰਾਫਟ",
+    "Drafts": "ਡਰਾਫਟ",
+    "Completed": "ਮੁਕੰਮਲ",
+    "Today's Goal": "ਅੱਜ ਦਾ ਟੀਚਾ",
+    "surveys completed today": "ਸਰਵੇਖਣ ਅੱਜ ਪੂਰੇ ਹੋਏ",
+    "Daily Target Met!": "ਅੱਜ ਦਾ ਟੀਚਾ ਪੂਰਾ ਹੋ ਗਿਆ! 🎉",
+    "Start New Survey": "+ ਨਵਾਂ ਸਰਵੇਖਣ ਸ਼ੁਰੂ ਕਰੋ",
+    "Resume Draft": "▶ ਅਧੂਰਾ ਫਾਰਮ ਪੂਰਾ ਕਰੋ",
+    "Resume & Complete": "▶ ਫਾਰਮ ਜਾਰੀ ਰੱਖੋ",
+    "My Submissions & Drafts": "ਮੇਰੇ ਸਰਵੇਖਣ ਅਤੇ ਡਰਾਫਟ",
+    "All Records": "ਸਾਰੇ ਰਿਕਾਰਡ",
+    "Complete": "ਪੂਰਾ",
+    "Questions Answered": "ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦਿੱਤੇ",
+    "GPS Locked": "GPS ਲੌਕ ✓",
+    "Photo Attached": "ਫੋਟੋ ਨੱਥੀ ✓",
+    "Signed": "ਦਸਤਖਤ ਹੋਏ ✓",
+    "Ready to Sync": "ਸਿੰਕ ਲਈ ਤਿਆਰ (100%)",
+    "Synced": "ਸਰਵਰ ਤੇ ਸੁਰੱਖਿਅਤ",
+    "No respondent name": "ਅਣਜਾਣ ਜਵਾਬਦੇਹ",
+    "Village / Location": "ਪਿੰਡ / ਸਥਾਨ",
+    "Last edited": "ਆਖਰੀ ਸੰਪਾਦਨ",
+    "Sync All Pending": "🔄 ਸਾਰੇ ਬਕਾਇਆ ਸਿੰਕ ਕਰੋ",
+    "No surveys recorded yet": "ਇਸ ਡਿਵਾਈਸ ਤੇ ਅਜੇ ਕੋਈ ਸਰਵੇਖਣ ਦਰਜ ਨਹੀਂ ਹੈ",
+    "Tap '+ Start New Survey' to begin your first interview": "ਪਹਿਲਾ ਇੰਟਰਵਿਊ ਸ਼ੁਰੂ ਕਰਨ ਲਈ '+ ਨਵਾਂ ਸਰਵੇਖਣ' ਦਬਾਓ",
+    "Delete draft?": "ਕੀ ਤੁਸੀਂ ਇਸ ਡਰਾਫਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+    "Draft deleted": "ਡਰਾਫਟ ਹਟਾ ਦਿੱਤਾ ਗਿਆ"
   },
   "bn": {
     "OmniServey": "অমনিসার্ভে",
@@ -1778,11 +1813,11 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "অফলাইন",
     "Surveys": "জরিপ",
     "सर्वेक्षण": "জরিপ",
-    "WAL Queue": "স্থানীয় সারি",
+    "WAL Queue": "সারি (অফলাইন)",
     "कतार (ऑफलाइन)": "সারি (অফলাইন)",
     "System": "সিস্টেম",
     "सिस्टम": "সিস্টেম",
-    "Exit Form": "← বের হন",
+    "Exit Form": "← প্রস্থান",
     "← बाहर निकलें": "← প্রস্থান",
     "Step": "ধাপ",
     "चरण": "ধাপ",
@@ -1794,7 +1829,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "প্রশ্ন",
     "Previous": "← পূর্ববর্তী",
     "← पिछला": "← পূর্ববর্তী",
-    "Next": "সামনে →",
+    "Next": "পরবর্তী →",
     "अगला →": "পরবর্তী →",
     "Save Offline": "অফলাইনে সংরক্ষণ করুন",
     "ऑफलाइन सेव करें": "অফলাইনে সংরক্ষণ করুন",
@@ -1802,7 +1837,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "জমা দিন",
     "Capture GPS Coordinates": "জিপিএস লোকেশন সংরক্ষণ করুন",
     "जीपीएस लोकेशन रिकॉर्ड करें": "জিপিএস লোকেশন সংরক্ষণ করুন",
-    "GPS Fix Acquired ✓": "GPS লক হয়েছে ✓",
+    "GPS Fix Acquired ✓": "জিপিএস লোকেশন পাওয়া গেছে ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "জিপিএস লোকেশন পাওয়া গেছে ✓",
     "Take Photo / Choose File": "ছবি তুলুন / ফাইল বাছাই করুন",
     "फोटो लें / फाइल चुनें": "ছবি তুলুন / ফাইল বাছাই করুন",
@@ -1810,7 +1845,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "আপনার আঙুল বা স্টাইলাস দিয়ে বাক্সে স্বাক্ষর করুন",
     "Clear Signature": "স্বাক্ষর মুছুন",
     "हस्ताक्षर मिटाएं": "স্বাক্ষর মুছুন",
-    "Signature Recorded": "স্বাক্ষর সংরক্ষিত হয়েছে",
+    "Signature Recorded": "স্বাক্ষর রেকর্ড করা হয়েছে",
     "हस्ताक्षर दर्ज हुआ": "স্বাক্ষর রেকর্ড করা হয়েছে",
     "Enter response here...": "এখানে উত্তর লিখুন...",
     "यहाँ उत्तर दर्ज करें...": "এখানে উত্তর লিখুন...",
@@ -1832,7 +1867,7 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "রাইট-অ্যাহেড লগ (WAL সারি)",
     "Atomic zero-loss local storage queue": "শূন্য ডেটা ক্ষতি নিরাপদ স্থানীয় সঞ্চয়স্থান",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "শূন্য ডেটা ক্ষতি নিরাপদ স্থানীয় সঞ্চয়স্থান",
-    "Sync Now": "এখন সিঙ্ক করুন",
+    "Sync Now": "⟳ এখনই সিঙ্ক করুন",
     "⟳ अभी सिंक करें": "⟳ এখনই সিঙ্ক করুন",
     "View on Map →": "মানচিত্রে দেখুন →",
     "नक्शे पर देखें →": "মানচিত্রে দেখুন →",
@@ -2050,7 +2085,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "ইনস্টাগ্রাম",
     "Don't use social media": "সোশ্যাল মিডিয়া ব্যবহার করি না",
     "सोशल मीडिया का उपयोग नहीं करते": "সোশ্যাল মিডিয়া ব্যবহার করি না",
-    "Draft": "খসড়া",
+    "Draft": "অসম্পূর্ণ খসড়া",
     "Save Draft": "খসড়া সংরক্ষণ",
     "ड्राफ्ट": "খসড়া",
     "मसुदा": "খসড়া",
@@ -2100,31 +2135,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "ঋণের ব্যবহার, মাসিক আয় বৃদ্ধি এবং CRP-এর অবদান",
     "Smartphone ownership, QR code banking, and social media usage": "স্মার্টফোনের মালিকানা, কিউআর কোড ব্যাংকিং এবং সোশ্যাল মিডিয়ার ব্যবহার",
     "GPS coordinates fix, site photo capture, and digital signatures": "জিপিএস স্থানাঙ্ক, সাইট ছবি এবং ডিজিটাল স্বাক্ষর",
-    "Listen": "শুনুন",
-    "Speaking...": "বলছে...",
-    "Page": "পৃষ্ঠা",
-    "Get My Location": "আমার অবস্থান পান",
-    "Location Acquired": "অবস্থান পাওয়া গেছে",
-    "Take Photo": "ছবি তুলুন",
-    "Change Photo": "ছবি পরিবর্তন করুন",
-    "Sign here with finger": "এখানে আঙুল দিয়ে স্বাক্ষর করুন",
-    "Done / Send": "জমা দিন",
-    "Save Work": "সংরক্ষণ করুন",
-    "Back": "← পেছনে",
-    "+ Add Item / Asset": "+ সরঞ্জাম / সম্পদ যোগ করুন",
-    "Equipment / Asset Name": "সরঞ্জাম / সম্পদের নাম",
-    "Quantity": "পরিমাণ",
-    "Approx Value (₹)": "আনুমানিক মূল্য (₹)",
-    "Item": "আইটেম",
-    "Remove": "মুছুন",
-    "e.g. Tractor, Water Pump, Sewing Machine": "যেমন ট্রাক্টর, জলের পাম্প, সেলাই মেশিন",
-    "Enter answer...": "উত্তর লিখুন...",
-    "Select Language": "ভাষা নির্বাচন করুন",
-    "Language": "ভাষা",
-    "Menu": "মেনু",
-    "Choose your preferred language": "আপনার পছন্দের ভাষা নির্বাচন করুন",
-    "Quick Actions": "দ্রুত পদক্ষেপ",
-    "Syncing...": "সিঙ্ক হচ্ছে..."
+    "Dashboard": "ড্যাশবোর্ড",
+    "Surveyor Dashboard": "সার্ভেয়ার ড্যাশবোর্ড",
+    "Field Work Overview": "ফিল্ড কাজের অগ্রগতি",
+    "Total Recorded": "মোট জরিপ",
+    "Synced to Server": "সার্ভারে সিঙ্ক",
+    "Pending Sync": "অপেক্ষমাণ সিঙ্ক",
+    "Incomplete Drafts": "অসম্পূর্ণ খসড়া",
+    "Drafts": "খসড়া",
+    "Completed": "সম্পূর্ণ",
+    "Today's Goal": "আজকের লক্ষ্য",
+    "surveys completed today": "জরিপ আজ সম্পূর্ণ হয়েছে",
+    "Daily Target Met!": "আজকের লক্ষ্য অর্জিত হয়েছে! 🎉",
+    "Start New Survey": "+ নতুন জরিপ শুরু করুন",
+    "Resume Draft": "▶ অসম্পূর্ণ ফর্ম পূরণ করুন",
+    "Resume & Complete": "▶ ফর্ম পুনরায় শুরু করুন",
+    "My Submissions & Drafts": "আমার জরিপ ও খসড়া",
+    "All Records": "সব রেকর্ড",
+    "Complete": "সম্পূর্ণ",
+    "Questions Answered": "প্রশ্নের উত্তর দেওয়া হয়েছে",
+    "GPS Locked": "জিপিএস লক ✓",
+    "Photo Attached": "ছবি সংযুক্ত ✓",
+    "Signed": "স্বাক্ষরিত ✓",
+    "Ready to Sync": "সিঙ্কের জন্য প্রস্তুত (100%)",
+    "Synced": "সার্ভারে সংরক্ষিত",
+    "No respondent name": "বেনামী উত্তরদাতা",
+    "Village / Location": "গ্রাম / অবস্থান",
+    "Last edited": "সর্বশেষ সম্পাদনা",
+    "Sync All Pending": "🔄 সমস্ত অপেক্ষমাণ সিঙ্ক করুন",
+    "No surveys recorded yet": "এই ডিভাইসে এখনও কোনো জরিপ রেকর্ড করা হয়নি",
+    "Tap '+ Start New Survey' to begin your first interview": "প্রথম সাক্ষাৎকার শুরু করতে '+ নতুন জরিপ' চাপুন",
+    "Delete draft?": "আপনি কি এই খসড়াটি মুছে ফেলতে চান?",
+    "Draft deleted": "খসড়া মুছে ফেলা হয়েছে"
   },
   "ta": {
     "OmniServey": "ஓம்னிசர்வே",
@@ -2133,9 +2175,9 @@ const BUILTIN_TRANSLATIONS = {
     "ऑनलाइन": "ஆன்லைன்",
     "Offline": "ஆஃப்லைன்",
     "ऑफलाइन": "ஆஃப்லைன்",
-    "Surveys": "கணக்கெடுப்புகள்",
+    "Surveys": "கணிப்புகள்",
     "सर्वेक्षण": "கணிப்புகள்",
-    "WAL Queue": "உள்ளூர் வரிசை",
+    "WAL Queue": "வரிசை (ஆஃப்லைன்)",
     "कतार (ऑफलाइन)": "வரிசை (ஆஃப்லைன்)",
     "System": "கணினி",
     "सिस्टम": "கணினி",
@@ -2151,7 +2193,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "கேள்விகள்",
     "Previous": "← முந்தையது",
     "← पिछला": "← முந்தையது",
-    "Next": "அடுத்து →",
+    "Next": "அடுத்தது →",
     "अगला →": "அடுத்தது →",
     "Save Offline": "ஆஃப்லைனில் சேமிக்கவும்",
     "ऑफलाइन सेव करें": "ஆஃப்லைனில் சேமிக்கவும்",
@@ -2159,7 +2201,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "சமர்ப்பிக்கவும்",
     "Capture GPS Coordinates": "ஜிபிஎஸ் இருப்பிடத்தை பதிவு செய்",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ஜிபிஎஸ் இருப்பிடத்தை பதிவு செய்",
-    "GPS Fix Acquired ✓": "GPS பெறப்பட்டது ✓",
+    "GPS Fix Acquired ✓": "ஜிபிஎஸ் நிலை பெறப்பட்டது ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ஜிபிஎஸ் நிலை பெறப்பட்டது ✓",
     "Take Photo / Choose File": "படம் எடுக்கவும் / கோப்பை தேர்ந்தெடுக்கவும்",
     "फोटो लें / फाइल चुनें": "படம் எடுக்கவும் / கோப்பை தேர்ந்தெடுக்கவும்",
@@ -2167,7 +2209,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "விரல் அல்லது ஸ்டைலஸால் பெட்டியில் கையொப்பமிடுங்கள்",
     "Clear Signature": "கையொப்பத்தை அழிக்கவும்",
     "हस्ताक्षर मिटाएं": "கையொப்பத்தை அழிக்கவும்",
-    "Signature Recorded": "கையொப்பம் பதிவானது",
+    "Signature Recorded": "கையொப்பம் பதிவு செய்யப்பட்டது",
     "हस्ताक्षर दर्ज हुआ": "கையொப்பம் பதிவு செய்யப்பட்டது",
     "Enter response here...": "இங்கே பதில் உள்ளிடவும்...",
     "यहाँ उत्तर दर्ज करें...": "இங்கே பதில் உள்ளிடவும்...",
@@ -2189,11 +2231,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "ரைட்-அஹெட் லாக் (WAL வரிசை)",
     "Atomic zero-loss local storage queue": "பூஜ்ஜிய தரவு இழப்பு பாதுகாப்பான உள்ளூர் சேமிப்பு",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "பூஜ்ஜிய தரவு இழப்பு பாதுகாப்பான உள்ளூர் சேமிப்பு",
-    "Sync Now": "இப்போது ஒத்திசைக்கவும்",
+    "Sync Now": "⟳ இப்போது ஒத்திசைக்கவும்",
     "⟳ अभी सिंक करें": "⟳ இப்போது ஒத்திசைக்கவும்",
-    "View on Map →": "வரைபடத்தில் பார்க்க →",
+    "View on Map →": "வரைபடத்தில் பார்க்கவும் →",
     "नक्शे पर देखें →": "வரைபடத்தில் பார்க்கவும் →",
-    "Re-acquire Fix": "மீண்டும் பெறுக",
+    "Re-acquire Fix": "மீண்டும் முயற்சிக்கவும்",
     "पुनः प्रयास करें": "மீண்டும் முயற்சிக்கவும்",
     "Section A: Basic Details": "பிரிவு A: அடிப்படை விவரங்கள்",
     "भाग क: बुनियादी विवरण": "பிரிவு அ: அடிப்படை விவரங்கள்",
@@ -2407,7 +2449,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "இன்ஸ்டாகிராம்",
     "Don't use social media": "சமூக ஊடகங்களைப் பயன்படுத்துவதில்லை",
     "सोशल मीडिया का उपयोग नहीं करते": "சமூக ஊடகங்களைப் பயன்படுத்துவதில்லை",
-    "Draft": "வரைவு",
+    "Draft": "முடிக்கப்படாத வரைவு",
     "Save Draft": "வரைவு சேமி",
     "ड्राफ्ट": "வரைவு",
     "मसुदा": "வரைவு",
@@ -2457,31 +2499,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "கடன் பயன்பாடு, மாதாந்திர வருமான வளர்ச்சி மற்றும் CRP பங்களிப்பு",
     "Smartphone ownership, QR code banking, and social media usage": "ஸ்மார்ட்போன் உரிமை, க்யூஆர் குறியீடு வங்கி மற்றும் சமூக ஊடக பயன்பாடு",
     "GPS coordinates fix, site photo capture, and digital signatures": "ஜிபிஎஸ் ஆயத்தொலைவுகள், தள புகைப்படம் மற்றும் டிஜிட்டல் கையொப்பம்",
-    "Listen": "கேளுங்கள்",
-    "Speaking...": "பேசுகிறது...",
-    "Page": "பக்கம்",
-    "Get My Location": "எனது இருப்பிடத்தைப் பெறுக",
-    "Location Acquired": "இருப்பிடம் பெறப்பட்டது",
-    "Take Photo": "புகைப்படம் எடுங்கள்",
-    "Change Photo": "புகைப்படத்தை மாற்றவும்",
-    "Sign here with finger": "விரலால் கையொப்பமிடுங்கள்",
-    "Done / Send": "சமர்ப்பிக்கவும்",
-    "Save Work": "சேமிக்கவும்",
-    "Back": "← பின்னால்",
-    "+ Add Item / Asset": "+ உபகரணம் / சொத்து சேர்க்க",
-    "Equipment / Asset Name": "உபகரணம் / சொத்தின் பெயர்",
-    "Quantity": "எண்ணிக்கை",
-    "Approx Value (₹)": "தோராய மதிப்பு (₹)",
-    "Item": "பொருள்",
-    "Remove": "நீக்கு",
-    "e.g. Tractor, Water Pump, Sewing Machine": "எ.கா. டிராக்டர், நீர் பம்ப், தையல் இயந்திரம்",
-    "Enter answer...": "பதிலை உள்ளிடவும்...",
-    "Select Language": "மொழியைத் தேர்ந்தெடுக்கவும்",
-    "Language": "மொழி",
-    "Menu": "பட்டி",
-    "Choose your preferred language": "உங்கள் விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்",
-    "Quick Actions": "விரைவு செயல்கள்",
-    "Syncing...": "ஒத்திசைக்கப்படுகிறது..."
+    "Dashboard": "டாஷ்போர்டு",
+    "Surveyor Dashboard": "கள ஆய்வாளர் டாஷ்போர்டு",
+    "Field Work Overview": "களப் பணி மேலோட்டம்",
+    "Total Recorded": "மொத்த ஆய்வுகள்",
+    "Synced to Server": "சர்வரில் ஒத்திசைக்கப்பட்டது",
+    "Pending Sync": "ஒத்திசைவு நிலுவையில்",
+    "Incomplete Drafts": "முடிக்கப்படாத வரைவுகள்",
+    "Drafts": "வரைவுகள்",
+    "Completed": "முடிந்தது",
+    "Today's Goal": "இன்றைய இலக்கு",
+    "surveys completed today": "ஆய்வுகள் இன்று முடிந்தது",
+    "Daily Target Met!": "இன்றைய இலக்கு எட்டப்பட்டது! 🎉",
+    "Start New Survey": "+ புதிய ஆய்வு தொடங்கு",
+    "Resume Draft": "▶ வரைவைத் தொடரவும்",
+    "Resume & Complete": "▶ படிவத்தைத் தொடரவும்",
+    "My Submissions & Drafts": "எனது ஆய்வுகள் & வரைவுகள்",
+    "All Records": "அனைத்து பதிவுகள்",
+    "Complete": "முடிந்தது",
+    "Questions Answered": "கேள்விகளுக்கு பதிலளிக்கப்பட்டது",
+    "GPS Locked": "GPS பூட்டப்பட்டது ✓",
+    "Photo Attached": "புகைப்படம் இணைக்கப்பட்டது ✓",
+    "Signed": "கையொப்பமிடப்பட்டது ✓",
+    "Ready to Sync": "ஒத்திசைக்க தயார் (100%)",
+    "Synced": "சர்வரில் பாதுகாப்பானது",
+    "No respondent name": "பெயரிடப்படாத பதிலளிப்பவர்",
+    "Village / Location": "கிராமம் / இடம்",
+    "Last edited": "கடைசியாக திருத்தப்பட்டது",
+    "Sync All Pending": "🔄 அனைத்தையும் ஒத்திசைக்கவும்",
+    "No surveys recorded yet": "இந்த சாதனத்தில் இன்னும் எந்த ஆய்வும் பதிவு செய்யப்படவில்லை",
+    "Tap '+ Start New Survey' to begin your first interview": "முதல் நேர்காணலைத் தொடங்க '+ புதிய ஆய்வு' தட்டவும்",
+    "Delete draft?": "இந்த வரைவை நீக்க விரும்புகிறீர்களா?",
+    "Draft deleted": "வரைவு நீக்கப்பட்டது"
   },
   "te": {
     "OmniServey": "ఓమ్నీసర్వే",
@@ -2492,7 +2541,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ఆఫ్‌లైన్",
     "Surveys": "సర్వేలు",
     "सर्वेक्षण": "సర్వేలు",
-    "WAL Queue": "స్థానిక క్యూ",
+    "WAL Queue": "క్యూ (ఆఫ్‌లైన్)",
     "कतार (ऑफलाइन)": "క్యూ (ఆఫ్‌లైన్)",
     "System": "సిస్టమ్",
     "सिस्टम": "సిస్టమ్",
@@ -2500,7 +2549,7 @@ const BUILTIN_TRANSLATIONS = {
     "← बाहर निकलें": "← నిష్క్రమించు",
     "Step": "దశ",
     "चरण": "దశ",
-    "of": "లో",
+    "of": "యొక్క",
     "का": "యొక్క",
     "Pages": "పేజీలు",
     "पृष्ठ": "పేజీలు",
@@ -2508,7 +2557,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "ప్రశ్నలు",
     "Previous": "← మునుపటి",
     "← पिछला": "← మునుపటి",
-    "Next": "తరువాత →",
+    "Next": "తదుపరి →",
     "अगला →": "తదుపరి →",
     "Save Offline": "ఆఫ్‌లైన్‌లో భద్రపరచండి",
     "ऑफलाइन सेव करें": "ఆఫ్‌లైన్‌లో భద్రపరచండి",
@@ -2516,15 +2565,15 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "సమర్పించండి",
     "Capture GPS Coordinates": "జీపీఎస్ స్థానాన్ని రికార్డ్ చేయండి",
     "जीपीएस लोकेशन रिकॉर्ड करें": "జీపీఎస్ స్థానాన్ని రికార్డ్ చేయండి",
-    "GPS Fix Acquired ✓": "GPS లాక్ చేయబడింది ✓",
+    "GPS Fix Acquired ✓": "జీపీఎస్ స్థానం పొందబడింది ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "జీపీఎస్ స్థానం పొందబడింది ✓",
     "Take Photo / Choose File": "ఫోటో తీయండి / ఫైల్ ఎంచుకోండి",
     "फोटो लें / फाइल चुनें": "ఫోటో తీయండి / ఫైల్ ఎంచుకోండి",
     "Sign inside box with finger or stylus": "మీ వేలితో లేదా స్టైలస్‌తో పెట్టెలో సంతకం చేయండి",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "మీ వేలితో లేదా స్టైలస్‌తో పెట్టెలో సంతకం చేయండి",
-    "Clear Signature": "సంతకం క్లియర్ చేయండి",
+    "Clear Signature": "సంతకాన్ని క్లియర్ చేయండి",
     "हस्ताक्षर मिटाएं": "సంతకాన్ని క్లియర్ చేయండి",
-    "Signature Recorded": "సంతకం నమోదు చేయబడింది",
+    "Signature Recorded": "సంతకం నమోదైంది",
     "हस्ताक्षर दर्ज हुआ": "సంతకం నమోదైంది",
     "Enter response here...": "ఇక్కడ సమాధానం నమోదు చేయండి...",
     "यहाँ उत्तर दर्ज करें...": "ఇక్కడ సమాధానం నమోదు చేయండి...",
@@ -2546,11 +2595,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "రైట్-అహెడ్ లాగ్ (WAL క్యూ)",
     "Atomic zero-loss local storage queue": "సున్నా డేటా నష్టం సురక్షిత స్థానిక నిల్వ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "సున్నా డేటా నష్టం సురక్షిత స్థానిక నిల్వ",
-    "Sync Now": "ఇప్పుడే సమకాలీకరించండి",
+    "Sync Now": "⟳ ఇప్పుడే సమకాలీకరించండి",
     "⟳ अभी सिंक करें": "⟳ ఇప్పుడే సమకాలీకరించండి",
     "View on Map →": "మ్యాప్‌లో చూడండి →",
     "नक्शे पर देखें →": "మ్యాప్‌లో చూడండి →",
-    "Re-acquire Fix": "మళ్ళీ పొందండి",
+    "Re-acquire Fix": "మళ్లీ ప్రయత్నించండి",
     "पुनः प्रयास करें": "మళ్లీ ప్రయత్నించండి",
     "Section A: Basic Details": "విభాగం A: ప్రాథమిక వివరాలు",
     "भाग क: बुनियादी विवरण": "విభాగం ఎ: ప్రాథమిక వివరాలు",
@@ -2764,7 +2813,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "ఇన్‌స్టాగ్రామ్",
     "Don't use social media": "సోషల్ మీడియా ఉపయోగించరు",
     "सोशल मीडिया का उपयोग नहीं करते": "సోషల్ మీడియా ఉపయోగించరు",
-    "Draft": "చిత్తుప్రతి",
+    "Draft": "అసంపూర్ణ డ్రాఫ్ట్",
     "Save Draft": "చిత్తుప్రతి భద్రపరచు",
     "ड्राफ्ट": "చిత్తుప్రతి",
     "मसुदा": "చిత్తుప్రతి",
@@ -2814,31 +2863,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "రుణ వినియోగం, నెలవారీ ఆదాయ వృద్ధి మరియు CRP సహకారం",
     "Smartphone ownership, QR code banking, and social media usage": "స్మార్ట్‌ఫోన్ యాజమాన్యం, క్యూఆర్ కోడ్ బ్యాంకింగ్ మరియు సోషల్ మీడియా వినియోగం",
     "GPS coordinates fix, site photo capture, and digital signatures": "జీపీఎస్ కోఆర్డినేట్స్, సైట్ ఫోటో మరియు డిజిటల్ సంతకం",
-    "Listen": "వినండి",
-    "Speaking...": "మాట్లాడుతోంది...",
-    "Page": "పేజీ",
-    "Get My Location": "నా స్థానాన్ని పొందండి",
-    "Location Acquired": "స్థానం పొందబడింది",
-    "Take Photo": "ఫోటో తీయండి",
-    "Change Photo": "ఫోటోను మార్చండి",
-    "Sign here with finger": "వేలితో సంతకం చేయండి",
-    "Done / Send": "సమర్పించండి",
-    "Save Work": "సేవ్ చేయండి",
-    "Back": "← వెనుకకు",
-    "+ Add Item / Asset": "+ పరికరం / ఆస్తి జోడించండి",
-    "Equipment / Asset Name": "పరికరం / ఆస్తి పేరు",
-    "Quantity": "పరిమాణం",
-    "Approx Value (₹)": "సుమారు విలువ (₹)",
-    "Item": "వస్తువు",
-    "Remove": "తొలగించు",
-    "e.g. Tractor, Water Pump, Sewing Machine": "ఉదా. ట్రాక్టర్, నీటి పంపు, కుట్టు యంత్రం",
-    "Enter answer...": "సమాధానం నమోదు చేయండి...",
-    "Select Language": "భాషను ఎంచుకోండి",
-    "Language": "భాష",
-    "Menu": "మెనూ",
-    "Choose your preferred language": "మీ ప్రాధాన్యత గల భాషను ఎంచుకోండి",
-    "Quick Actions": "శీఘ్ర చర్యలు",
-    "Syncing...": "సమకాలీకరిస్తోంది..."
+    "Dashboard": "డ్యాష్‌బోర్డ్",
+    "Surveyor Dashboard": "సర్వేయర్ డ్యాష్‌బోర్డ్",
+    "Field Work Overview": "ఫీల్డ్ వర్క్ పురోగతి",
+    "Total Recorded": "మొత్తం సర్వేలు",
+    "Synced to Server": "సర్వర్‌కు సింక్ చేయబడింది",
+    "Pending Sync": "సింక్ పెండింగ్‌లో ఉంది",
+    "Incomplete Drafts": "అసంపూర్ణ డ్రాఫ్ట్‌లు",
+    "Drafts": "డ్రాఫ్ట్‌లు",
+    "Completed": "పూర్తయింది",
+    "Today's Goal": "నేటి లక్ష్యం",
+    "surveys completed today": "సర్వేలు నేడు పూర్తయ్యాయి",
+    "Daily Target Met!": "నేటి లక్ష్యం పూర్తయింది! 🎉",
+    "Start New Survey": "+ కొత్త సర్వే ప్రారంభించండి",
+    "Resume Draft": "▶ డ్రాఫ్ట్‌ను కొనసాగించండి",
+    "Resume & Complete": "▶ ఫారమ్‌ను కొనసాగించండి",
+    "My Submissions & Drafts": "నా సర్వేలు & డ్రాఫ్ట్‌లు",
+    "All Records": "అన్ని రికార్డులు",
+    "Complete": "పూర్తి",
+    "Questions Answered": "ప్రశ్నలకు సమాధానాలు ఇచ్చారు",
+    "GPS Locked": "GPS లాక్ చేయబడింది ✓",
+    "Photo Attached": "ఫోటో జతచేయబడింది ✓",
+    "Signed": "సంతకం చేయబడింది ✓",
+    "Ready to Sync": "సింక్ చేయడానికి సిద్ధంగా ఉంది (100%)",
+    "Synced": "సర్వర్‌లో సురక్షితం",
+    "No respondent name": "పేరులేని ప్రతిస్పందనదారు",
+    "Village / Location": "గ్రామం / ప్రాంతం",
+    "Last edited": "చివరిగా సవరించబడింది",
+    "Sync All Pending": "🔄 పెండింగ్‌లో ఉన్నవన్నీ సింక్ చేయండి",
+    "No surveys recorded yet": "ఈ పరికరంలో ఇంకా ఎటువంటి సర్వేలు నమోదు కాలేదు",
+    "Tap '+ Start New Survey' to begin your first interview": "మొదటి ఇంటర్వ్యూ ప్రారంభించడానికి '+ కొత్త సర్వే' నొక్కండి",
+    "Delete draft?": "మీరు ఈ డ్రాఫ్ట్‌ను తొలగించాలనుకుంటున్నారా?",
+    "Draft deleted": "డ్రాఫ్ట్ తొలగించబడింది"
   },
   "kn": {
     "OmniServey": "ಓಮ್ನಿಸರ್ವೆ",
@@ -2849,7 +2905,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ಆಫ್‌ಲೈನ್",
     "Surveys": "ಸಮೀಕ್ಷೆಗಳು",
     "सर्वेक्षण": "ಸಮೀಕ್ಷೆಗಳು",
-    "WAL Queue": "ಸ್ಥಳೀಯ ಸರತಿ ಸಾಲು",
+    "WAL Queue": "ಕ್ಯೂ (ಆಫ್‌ಲೈನ್)",
     "कतार (ऑफलाइन)": "ಕ್ಯೂ (ಆಫ್‌ಲೈನ್)",
     "System": "ವ್ಯವಸ್ಥೆ",
     "सिस्टम": "ವ್ಯವಸ್ಥೆ",
@@ -2857,7 +2913,7 @@ const BUILTIN_TRANSLATIONS = {
     "← बाहर निकलें": "← ನಿರ್ಗಮಿಸಿ",
     "Step": "ಹಂತ",
     "चरण": "ಹಂತ",
-    "of": "ರಲ್ಲಿ",
+    "of": "ರ",
     "का": "ರ",
     "Pages": "ಪುಟಗಳು",
     "पृष्ठ": "ಪುಟಗಳು",
@@ -2873,13 +2929,13 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "ಸಲ್ಲಿಸಿ",
     "Capture GPS Coordinates": "ಜಿಪಿಎಸ್ ಸ್ಥಳವನ್ನು ದಾಖಲಿಸಿ",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ಜಿಪಿಎಸ್ ಸ್ಥಳವನ್ನು ದಾಖಲಿಸಿ",
-    "GPS Fix Acquired ✓": "GPS ಲಾಕ್ ಆಗಿದೆ ✓",
+    "GPS Fix Acquired ✓": "ಜಿಪಿಎಸ್ ಸ್ಥಳ ಪಡೆಯಲಾಗಿದೆ ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ಜಿಪಿಎಸ್ ಸ್ಥಳ ಪಡೆಯಲಾಗಿದೆ ✓",
     "Take Photo / Choose File": "ಫೋಟೋ ತೆಗೆಯಿರಿ / ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ",
     "फोटो लें / फाइल चुनें": "ಫೋಟೋ ತೆಗೆಯಿರಿ / ಫೈಲ್ ಆಯ್ಕೆಮಾಡಿ",
     "Sign inside box with finger or stylus": "ನಿಮ್ಮ ಬೆರಳು ಅಥವಾ ಸ್ಟೈಲಸ್ ಬಳಸಿ ಸಹಿ ಮಾಡಿ",
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "ನಿಮ್ಮ ಬೆರಳು ಅಥವಾ ಸ್ಟೈಲಸ್ ಬಳಸಿ ಸಹಿ ಮಾಡಿ",
-    "Clear Signature": "ಸಹಿ ತೆರವುಗೊಳಿಸಿ",
+    "Clear Signature": "ಸಹಿಯನ್ನು ಅಳಿಸಿ",
     "हस्ताक्षर मिटाएं": "ಸಹಿಯನ್ನು ಅಳಿಸಿ",
     "Signature Recorded": "ಸಹಿ ದಾಖಲಾಗಿದೆ",
     "हस्ताक्षर दर्ज हुआ": "ಸಹಿ ದಾಖಲಾಗಿದೆ",
@@ -2903,11 +2959,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "ರೈಟ್-ಅಹೆಡ್ ಲಾಗ್ (WAL ಕ್ಯೂ)",
     "Atomic zero-loss local storage queue": "ಶೂನ್ಯ ಡೇಟಾ ನಷ್ಟ ಸುರಕ್ಷಿತ ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣೆ",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "ಶೂನ್ಯ ಡೇಟಾ ನಷ್ಟ ಸುರಕ್ಷಿತ ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣೆ",
-    "Sync Now": "ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
+    "Sync Now": "⟳ ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
     "⟳ अभी सिंक करें": "⟳ ಈಗ ಸಿಂಕ್ ಮಾಡಿ",
     "View on Map →": "ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ →",
     "नक्शे पर देखें →": "ನಕ್ಷೆಯಲ್ಲಿ ನೋಡಿ →",
-    "Re-acquire Fix": "ಮರುಪಡೆಯಿರಿ",
+    "Re-acquire Fix": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
     "पुनः प्रयास करें": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
     "Section A: Basic Details": "ವಿಭಾಗ A: ಮೂಲ ವಿವರಗಳು",
     "भाग क: बुनियादी विवरण": "ವಿಭಾಗ ಎ: ಮೂಲಭೂತ ವಿವರಗಳು",
@@ -3121,7 +3177,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್",
     "Don't use social media": "ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ಬಳಸುವುದಿಲ್ಲ",
     "सोशल मीडिया का उपयोग नहीं करते": "ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ಬಳಸುವುದಿಲ್ಲ",
-    "Draft": "ಕರಡು",
+    "Draft": "ಅಪೂರ್ಣ ಕರಡು",
     "Save Draft": "ಕರಡು ಉಳಿಸಿ",
     "ड्राफ्ट": "ಕರಡು",
     "मसुदा": "ಕರಡು",
@@ -3171,31 +3227,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "ಸಾಲದ ಬಳಕೆ, ಮಾಸಿಕ ಆದಾಯದ ಬೆಳವಣಿಗೆ ಮತ್ತು CRP ಕೊಡುಗೆ",
     "Smartphone ownership, QR code banking, and social media usage": "ಸ್ಮಾರ್ಟ್‌ಫೋನ್ ಮಾಲೀಕತ್ವ, ಕ್ಯೂಆರ್ ಕೋಡ್ ಬ್ಯಾಂಕಿಂಗ್ ಮತ್ತು ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ಬಳಕೆ",
     "GPS coordinates fix, site photo capture, and digital signatures": "ಜಿಪಿಎಸ್ ನಿರ್ದೇಶಾಂಕಗಳು, ಸೈಟ್ ಫೋಟೋ ಮತ್ತು ಡಿಜಿಟಲ್ ಸಹಿ",
-    "Listen": "ಕೇಳಿ",
-    "Speaking...": "ಮಾತನಾಡುತ್ತಿದೆ...",
-    "Page": "ಪುಟ",
-    "Get My Location": "ನನ್ನ ಸ್ಥಳವನ್ನು ಪಡೆಯಿರಿ",
-    "Location Acquired": "ಸ್ಥಳ ಲಭ್ಯವಾಗಿದೆ",
-    "Take Photo": "ಫೋಟೋ ತೆಗೆಯಿರಿ",
-    "Change Photo": "ಫೋಟೋ ಬದಲಾಯಿಸಿ",
-    "Sign here with finger": "ಇಲ್ಲಿ ಬೆರಳಿನಿಂದ ಸಹಿ ಮಾಡಿ",
-    "Done / Send": "ಸಲ್ಲಿಸಿ",
-    "Save Work": "ಉಳಿಸಿ",
-    "Back": "← ಹಿಂದೆ",
-    "+ Add Item / Asset": "+ ಉಪಕರಣ / ಆಸ್ತಿ ಸೇರಿಸಿ",
-    "Equipment / Asset Name": "ಉಪಕರಣ / ಆಸ್ತಿ ಹೆಸರು",
-    "Quantity": "ಪ್ರಮಾಣ",
-    "Approx Value (₹)": "ಅಂದಾಜು ಮೌಲ್ಯ (₹)",
-    "Item": "ವಸ್ತು",
-    "Remove": "ತೆಗೆದುಹಾಕಿ",
-    "e.g. Tractor, Water Pump, Sewing Machine": "ಉದಾ. ಟ್ರ್ಯಾಕ್ಟರ್, ನೀರಿನ ಪಂಪ್, ಹೊಲಿಗೆ ಯಂತ್ರ",
-    "Enter answer...": "ಉತ್ತರವನ್ನು ನಮೂದಿಸಿ...",
-    "Select Language": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
-    "Language": "ಭಾಷೆ",
-    "Menu": "ಮೆನು",
-    "Choose your preferred language": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
-    "Quick Actions": "ತ್ವರಿತ ಕ್ರಿಯೆಗಳು",
-    "Syncing...": "ಸಿಂಕ್ ಆಗುತ್ತಿದೆ..."
+    "Dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "Surveyor Dashboard": "ಸರ್ವೇಯರ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "Field Work Overview": "ಕ್ಷೇತ್ರ ಕಾರ್ಯ ಪ್ರಗತಿ",
+    "Total Recorded": "ಒಟ್ಟು ಸಮೀಕ್ಷೆಗಳು",
+    "Synced to Server": "ಸರ್ವರ್‌ಗೆ ಸಿಂಕ್ ಆಗಿದೆ",
+    "Pending Sync": "ಸಿಂಕ್ ಬಾಕಿ ಇದೆ",
+    "Incomplete Drafts": "ಅಪೂರ್ಣ ಕರಡುಗಳು",
+    "Drafts": "ಕರಡುಗಳು",
+    "Completed": "ಪೂರ್ಣಗೊಂಡಿದೆ",
+    "Today's Goal": "ಇಂದಿನ ಗುರಿ",
+    "surveys completed today": "ಸಮೀಕ್ಷೆಗಳು ಇಂದು ಪೂರ್ಣಗೊಂಡಿವೆ",
+    "Daily Target Met!": "ಇಂದಿನ ಗುರಿ ತಲುಪಿದೆ! 🎉",
+    "Start New Survey": "+ ಹೊಸ ಸಮೀಕ್ಷೆ ಪ್ರಾರಂಭಿಸಿ",
+    "Resume Draft": "▶ ಕರಡನ್ನು ಮುಂದುವರಿಸಿ",
+    "Resume & Complete": "▶ ಫಾರ್ಮ್ ಮುಂದುವರಿಸಿ",
+    "My Submissions & Drafts": "ನನ್ನ ಸಮೀಕ್ಷೆಗಳು ಮತ್ತು ಕರಡುಗಳು",
+    "All Records": "ಎಲ್ಲಾ ದಾಖಲೆಗಳು",
+    "Complete": "ಪೂರ್ಣ",
+    "Questions Answered": "ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಲಾಗಿದೆ",
+    "GPS Locked": "GPS ಲಾಕ್ ಆಗಿದೆ ✓",
+    "Photo Attached": "ಫೋಟೋ ಲಗತ್ತಿಸಲಾಗಿದೆ ✓",
+    "Signed": "ಸಹಿ ಮಾಡಲಾಗಿದೆ ✓",
+    "Ready to Sync": "ಸಿಂಕ್ ಮಾಡಲು ಸಿದ್ಧ (100%)",
+    "Synced": "ಸರ್ವರ್‌ನಲ್ಲಿ ಸುರಕ್ಷಿತ",
+    "No respondent name": "ಹೆಸರಿಲ್ಲದ ಪ್ರತಿಕ್ರಿಯೆದಾರ",
+    "Village / Location": "ಗ್ರಾಮ / ಸ್ಥಳ",
+    "Last edited": "ಕೊನೆಯದಾಗಿ ಸಂಪಾದಿಸಲಾಗಿದೆ",
+    "Sync All Pending": "🔄 ಎಲ್ಲಾ ಬಾಕಿಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಿ",
+    "No surveys recorded yet": "ಈ ಸಾಧನದಲ್ಲಿ ಇನ್ನೂ ಯಾವುದೇ ಸಮೀಕ್ಷೆಗಳನ್ನು ದಾಖಲಿಸಲಾಗಿಲ್ಲ",
+    "Tap '+ Start New Survey' to begin your first interview": "ಮೊದಲ ಸಂದರ್ಶನ ಪ್ರಾರಂಭಿಸಲು '+ ಹೊಸ ಸಮೀಕ್ಷೆ' ಒತ್ತಿರಿ",
+    "Delete draft?": "ನೀವು ಈ ಕರಡನ್ನು ಅಳಿಸಲು ಬಯಸುವಿರಾ?",
+    "Draft deleted": "ಕರಡು ಅಳಿಸಲಾಗಿದೆ"
   },
   "ml": {
     "OmniServey": "ഓമ്നിസർവെ",
@@ -3206,7 +3269,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "ഓഫ്‌ലൈൻ",
     "Surveys": "സർവേകൾ",
     "सर्वेक्षण": "സർവേകൾ",
-    "WAL Queue": "പ്രാദേശിക ക്യൂ",
+    "WAL Queue": "ക്യൂ (ഓഫ്‌ലൈൻ)",
     "कतार (ऑफलाइन)": "ക്യൂ (ഓഫ്‌ലൈൻ)",
     "System": "സിസ്റ്റം",
     "सिस्टम": "സിസ്റ്റം",
@@ -3214,7 +3277,7 @@ const BUILTIN_TRANSLATIONS = {
     "← बाहर निकलें": "← പുറത്തുകടക്കുക",
     "Step": "ഘട്ടം",
     "चरण": "ഘട്ടം",
-    "of": "ൽ",
+    "of": "ന്റെ",
     "का": "ന്റെ",
     "Pages": "പേജുകൾ",
     "पृष्ठ": "പേജുകൾ",
@@ -3230,7 +3293,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "സമർപ്പിക്കുക",
     "Capture GPS Coordinates": "ജിപിഎസ് ലൊക്കേഷൻ രേഖപ്പെടുത്തുക",
     "जीपीएस लोकेशन रिकॉर्ड करें": "ജിപിഎസ് ലൊക്കേഷൻ രേഖപ്പെടുത്തുക",
-    "GPS Fix Acquired ✓": "GPS ലോക്ക് ചെയ്തു ✓",
+    "GPS Fix Acquired ✓": "ജിപിഎസ് ലഭിച്ചു ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "ജിപിഎസ് ലഭിച്ചു ✓",
     "Take Photo / Choose File": "ഫോട്ടോ എടുക്കുക / ഫയൽ തിരഞ്ഞെടുക്കുക",
     "फोटो लें / फाइल चुनें": "ഫോട്ടോ എടുക്കുക / ഫയൽ തിരഞ്ഞെടുക്കുക",
@@ -3260,11 +3323,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "റൈറ്റ്-എഹെഡ് ലോഗ് (WAL ക്യൂ)",
     "Atomic zero-loss local storage queue": "പൂർണ്ണ ഡാറ്റാ സുരക്ഷിത പ്രാദേശിക സംഭരണം",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "പൂർണ്ണ ഡാറ്റാ സുരക്ഷിത പ്രാദേശിക സംഭരണം",
-    "Sync Now": "ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
+    "Sync Now": "⟳ ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
     "⟳ अभी सिंक करें": "⟳ ഇപ്പോൾ സമന്വയിപ്പിക്കുക",
     "View on Map →": "മാപ്പിൽ കാണുക →",
     "नक्शे पर देखें →": "മാപ്പിൽ കാണുക →",
-    "Re-acquire Fix": "വീണ്ടും എടുക്കുക",
+    "Re-acquire Fix": "വീണ്ടും ശ്രമിക്കുക",
     "पुनः प्रयास करें": "വീണ്ടും ശ്രമിക്കുക",
     "Section A: Basic Details": "വിഭാഗം A: പ്രാഥമിക വിവരങ്ങൾ",
     "भाग क: बुनियादी विवरण": "വിഭാഗം എ: അടിസ്ഥാന വിവരങ്ങൾ",
@@ -3478,7 +3541,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "ഇൻസ്റ്റാഗ്രാം",
     "Don't use social media": "സോഷ്യൽ മീഡിയ ഉപയോഗിക്കാറില്ല",
     "सोशल मीडिया का उपयोग नहीं करते": "സോഷ്യൽ മീഡിയ ഉപയോഗിക്കാറില്ല",
-    "Draft": "ഡ്രാഫ്റ്റ്",
+    "Draft": "പൂർത്തിയാകാത്ത ഡ്രാഫ്റ്റ്",
     "Save Draft": "ഡ്രാഫ്റ്റ് സംരക്ഷിക്കുക",
     "ड्राफ्ट": "ഡ്രാഫ്റ്റ്",
     "मसुदा": "ഡ്രാഫ്റ്റ്",
@@ -3528,31 +3591,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "വായ്പാ വിനിയോഗം, പ്രതിമാസ വരുമാന വർദ്ധനവ്, CRP സംഭാവന",
     "Smartphone ownership, QR code banking, and social media usage": "സ്മാർട്ട്ഫോൺ ഉടമസ്ഥത, ക്യുആർ കോഡ് ബാങ്കിംഗ്, സോഷ്യൽ മീഡിയ ഉപയോഗം",
     "GPS coordinates fix, site photo capture, and digital signatures": "ജിപിഎസ് ലൊക്കേഷൻ, സൈറ്റ് ഫോട്ടോ, ഡിജിറ്റൽ ഒപ്പ്",
-    "Listen": "കേൾക്കുക",
-    "Speaking...": "സംസാരിക്കുന്നു...",
-    "Page": "പേജ്",
-    "Get My Location": "എന്റെ ലൊക്കേഷൻ നേടുക",
-    "Location Acquired": "ലൊക്കേഷൻ ലഭിച്ചു",
-    "Take Photo": "ഫോട്ടോ എടുക്കുക",
-    "Change Photo": "ഫോട്ടോ മാറ്റുക",
-    "Sign here with finger": "ഇവിടെ വിരലുകൊണ്ട് ഒപ്പിടുക",
-    "Done / Send": "സമർപ്പിക്കുക",
-    "Save Work": "സൂക്ഷിക്കുക",
-    "Back": "← പുറകിലോട്ട്",
-    "+ Add Item / Asset": "+ ഉപകരണം / ആസ്തി ചേർക്കുക",
-    "Equipment / Asset Name": "ഉപകരണത്തിന്റെ / ആസ്തിയുടെ പേര്",
-    "Quantity": "എണ്ണം",
-    "Approx Value (₹)": "ഏകദേശ മൂല്യം (₹)",
-    "Item": "ഇനം",
-    "Remove": "നീക്കം ചെയ്യുക",
-    "e.g. Tractor, Water Pump, Sewing Machine": "ഉദാ. ട്രാക്ടർ, വാട്ടർ പമ്പ്, തയ്യൽ മെഷീൻ",
-    "Enter answer...": "ഉത്തരം രേഖപ്പെടുത്തുക...",
-    "Select Language": "ഭാഷ തിരഞ്ഞെടുക്കുക",
-    "Language": "ഭാഷ",
-    "Menu": "മെനു",
-    "Choose your preferred language": "നിങ്ങളുടെ പ്രിയപ്പെട്ട ഭാഷ തിരഞ്ഞെടുക്കുക",
-    "Quick Actions": "ദ്രുത പ്രവർത്തനങ്ങൾ",
-    "Syncing...": "സമന്വയിപ്പിക്കുന്നു..."
+    "Dashboard": "ഡാഷ്‌ബോർഡ്",
+    "Surveyor Dashboard": "സർവേയർ ഡാഷ്‌ബോർഡ്",
+    "Field Work Overview": "ഫീൽഡ് വർക്ക് അവലോകനം",
+    "Total Recorded": "ആകെ സർവേകൾ",
+    "Synced to Server": "സെർവറിലേക്ക് സിങ്ക് ചെയ്തു",
+    "Pending Sync": "സിങ്ക് ബാക്കി",
+    "Incomplete Drafts": "പൂർത്തിയാകാത്ത ഡ്രാഫ്റ്റുകൾ",
+    "Drafts": "ഡ്രാഫ്റ്റുകൾ",
+    "Completed": "പൂർത്തിയായി",
+    "Today's Goal": "ഇന്നത്തെ ലക്ഷ്യം",
+    "surveys completed today": "സർവേകൾ ഇന്ന് പൂർത്തിയായി",
+    "Daily Target Met!": "ഇന്നത്തെ ലക്ഷ്യം നേടി! 🎉",
+    "Start New Survey": "+ പുതിയ സർവേ ആരംഭിക്കുക",
+    "Resume Draft": "▶ ഡ്രാഫ്റ്റ് തുടരുക",
+    "Resume & Complete": "▶ ഫോം തുടരുക",
+    "My Submissions & Drafts": "എന്റെ സർവേകളും ഡ്രാഫ്റ്റുകളും",
+    "All Records": "എല്ലാ റെക്കോർഡുകളും",
+    "Complete": "പൂർണ്ണം",
+    "Questions Answered": "ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകി",
+    "GPS Locked": "GPS ലോക്ക് ചെയ്തു ✓",
+    "Photo Attached": "ഫോട്ടോ ചേർത്തു ✓",
+    "Signed": "ഒപ്പിട്ടു ✓",
+    "Ready to Sync": "സിങ്കിന് തയ്യാറാണ് (100%)",
+    "Synced": "സെർവറിൽ സുരക്ഷിതം",
+    "No respondent name": "പേരില്ലാത്ത പ്രതികരണക്കാരൻ",
+    "Village / Location": "ഗ്രാമം / സ്ഥലം",
+    "Last edited": "അവസാനം തിരുത്തിയത്",
+    "Sync All Pending": "🔄 ബാക്കിയുള്ളവ എല്ലാം സിങ്ക് ചെയ്യുക",
+    "No surveys recorded yet": "ഈ ഉപകരണത്തിൽ ഇതുവരെ സർവേകളൊന്നും രേഖപ്പെടുത്തിയിട്ടില്ല",
+    "Tap '+ Start New Survey' to begin your first interview": "ആദ്യ അഭിമുഖം ആരംഭിക്കാൻ '+ പുതിയ സർവേ' ക്ലിക്ക് ചെയ്യുക",
+    "Delete draft?": "ഈ ഡ്രാഫ്റ്റ് ഇല്ലാതാക്കണോ?",
+    "Draft deleted": "ഡ്രാഫ്റ്റ് നീക്കംചെയ്തു"
   },
   "ur": {
     "OmniServey": "اومنی سروے",
@@ -3563,7 +3633,7 @@ const BUILTIN_TRANSLATIONS = {
     "ऑफलाइन": "آف لائن",
     "Surveys": "سروے",
     "सर्वेक्षण": "سروے",
-    "WAL Queue": "مقامی قطار",
+    "WAL Queue": "قطار (آف لائن)",
     "कतार (ऑफलाइन)": "قطار (آف لائن)",
     "System": "سسٹم",
     "सिस्टम": "سسٹم",
@@ -3579,7 +3649,7 @@ const BUILTIN_TRANSLATIONS = {
     "प्रश्न": "سوالات",
     "Previous": "← پچھلا",
     "← पिछला": "← پچھلا",
-    "Next": "آگے →",
+    "Next": "اگلا →",
     "अगला →": "اگلا →",
     "Save Offline": "آف لائن محفوظ کریں",
     "ऑफलाइन सेव करें": "آف لائن محفوظ کریں",
@@ -3587,7 +3657,7 @@ const BUILTIN_TRANSLATIONS = {
     "सबमिट करें": "جمع کرائیں",
     "Capture GPS Coordinates": "جی پی ایس مقام ریکارڈ کریں",
     "जीपीएस लोकेशन रिकॉर्ड करें": "جی پی ایس مقام ریکارڈ کریں",
-    "GPS Fix Acquired ✓": "GPS لاک ہو گیا ✓",
+    "GPS Fix Acquired ✓": "جی پی ایس حاصل ہو گیا ✓",
     "जीपीएस लोकेशन प्राप्त हुआ ✓": "جی پی ایس حاصل ہو گیا ✓",
     "Take Photo / Choose File": "تصویر لیں / فائل منتخب کریں",
     "फोटो लें / फाइल चुनें": "تصویر لیں / فائل منتخب کریں",
@@ -3595,7 +3665,7 @@ const BUILTIN_TRANSLATIONS = {
     "अपनी उंगली या स्टाइलस से बॉक्स में हस्ताक्षर करें": "اپنی انگلی یا اسٹائلس سے باکس میں دستخط کریں",
     "Clear Signature": "دستخط صاف کریں",
     "हस्ताक्षर मिटाएं": "دستخط صاف کریں",
-    "Signature Recorded": "دستخط محفوظ ہو گئے",
+    "Signature Recorded": "دستخط درج ہو گئے",
     "हस्ताक्षर दर्ज हुआ": "دستخط درج ہو گئے",
     "Enter response here...": "یہاں جواب درج کریں...",
     "यहाँ उत्तर दर्ज करें...": "یہاں جواب درج کریں...",
@@ -3617,11 +3687,11 @@ const BUILTIN_TRANSLATIONS = {
     "राइट-अहेड लॉग (WAL कतार)": "رائٹ-اہیڈ لاگ (WAL قطار)",
     "Atomic zero-loss local storage queue": "زیرو ڈیٹا نقصان محفوظ مقامی اسٹوریج",
     "शून्य डेटा हानि सुरक्षित स्थानीय भंडारण": "زیرو ڈیٹا نقصان محفوظ مقامی اسٹوریج",
-    "Sync Now": "ابھی سنک کریں",
+    "Sync Now": "⟳ ابھی سنک کریں",
     "⟳ अभी सिंक करें": "⟳ ابھی سنک کریں",
     "View on Map →": "نقشے پر دیکھیں →",
     "नक्शे पर देखें →": "نقشے پر دیکھیں →",
-    "Re-acquire Fix": "دوبارہ حاصل کریں",
+    "Re-acquire Fix": "دوبارہ کوشش کریں",
     "पुनः प्रयास करें": "دوبارہ کوشش کریں",
     "Section A: Basic Details": "سیکشن A: بنیادی تفصیلات",
     "भाग क: बुनियादी विवरण": "حصہ اول: بنیادی تفصیلات",
@@ -3835,7 +3905,7 @@ const BUILTIN_TRANSLATIONS = {
     "इंस्टाग्राम (Instagram)": "انسٹاگرام",
     "Don't use social media": "سوشل میڈیا استعمال نہیں کرتے",
     "सोशल मीडिया का उपयोग नहीं करते": "سوشل میڈیا استعمال نہیں کرتے",
-    "Draft": "ڈرافٹ",
+    "Draft": "نامکمل ڈرافٹ",
     "Save Draft": "ڈرافٹ محفوظ کریں",
     "ड्राफ्ट": "ڈرافٹ",
     "मसुदा": "ڈرافٹ",
@@ -3885,31 +3955,38 @@ const BUILTIN_TRANSLATIONS = {
     "Loan utilization, monthly income growth, and CRP contribution": "قرض کا استعمال، ماہانہ آمدنی میں اضافہ اور سی آر پی کا تعاون",
     "Smartphone ownership, QR code banking, and social media usage": "اسمارٹ فون کی ملکیت، کیو آر کوڈ بینکنگ اور سوشل میڈیا کا استعمال",
     "GPS coordinates fix, site photo capture, and digital signatures": "جی پی ایس کوآرڈینیٹس، سائٹ کی تصویر اور ڈیجیٹل دستخط",
-    "Listen": "سنیں",
-    "Speaking...": "بول رہا ہے...",
-    "Page": "صفحہ",
-    "Get My Location": "میرا مقام حاصل کریں",
-    "Location Acquired": "مقام حاصل کر لیا گیا",
-    "Take Photo": "تصویر لیں",
-    "Change Photo": "تصویر تبدیل کریں",
-    "Sign here with finger": "یہاں انگلی سے دستخط کریں",
-    "Done / Send": "جمع کرائیں",
-    "Save Work": "محفوظ کریں",
-    "Back": "← پیچھے",
-    "+ Add Item / Asset": "+ سامان / اثاثہ شامل کریں",
-    "Equipment / Asset Name": "سامان / اثاثے کا نام",
-    "Quantity": "تعداد",
-    "Approx Value (₹)": "تخمینی قیمت (₹)",
-    "Item": "آئٹم",
-    "Remove": "حذف کریں",
-    "e.g. Tractor, Water Pump, Sewing Machine": "مثلاً ٹریکٹر، واٹر پمپ، سلائی مشین",
-    "Enter answer...": "جواب درج کریں...",
-    "Select Language": "زبان منتخب کریں",
-    "Language": "زبان",
-    "Menu": "مینو",
-    "Choose your preferred language": "اپنی پسندیدہ زبان منتخب کریں",
-    "Quick Actions": "فوری اقدامات",
-    "Syncing...": "سنک ہو رہا ہے..."
+    "Dashboard": "ڈیش بورڈ",
+    "Surveyor Dashboard": "سروے کرنے والے کا ڈیش بورڈ",
+    "Field Work Overview": "فیلڈ ورک کا جائزہ",
+    "Total Recorded": "کل سروے",
+    "Synced to Server": "سرور پر مطابقت پذیر",
+    "Pending Sync": "باقی سنک",
+    "Incomplete Drafts": "نامکمل ڈرافٹس",
+    "Drafts": "ڈرافٹس",
+    "Completed": "مکمل",
+    "Today's Goal": "آج کا ہدف",
+    "surveys completed today": "سروے آج مکمل ہوئے",
+    "Daily Target Met!": "آج کا ہدف مکمل ہوا! 🎉",
+    "Start New Survey": "+ نیا سروے شروع کریں",
+    "Resume Draft": "▶ نامکمل فارم مکمل کریں",
+    "Resume & Complete": "▶ فارم جاری رکھیں",
+    "My Submissions & Drafts": "میرے سروے اور ڈرافٹس",
+    "All Records": "تمام ریکارڈز",
+    "Complete": "مکمل",
+    "Questions Answered": "سوالات کے جوابات دیئے گئے",
+    "GPS Locked": "GPS لاک ✓",
+    "Photo Attached": "تصویر منسلک ✓",
+    "Signed": "دستخط شدہ ✓",
+    "Ready to Sync": "سنک کیلئے تیار (100%)",
+    "Synced": "سرور پر محفوظ",
+    "No respondent name": "گمنام جواب دہندہ",
+    "Village / Location": "گاؤں / مقام",
+    "Last edited": "آخری ترمیم",
+    "Sync All Pending": "🔄 تمام زیر التواء سنک کریں",
+    "No surveys recorded yet": "اس ڈیوائس پر ابھی تک کوئی سروے درج نہیں ہے",
+    "Tap '+ Start New Survey' to begin your first interview": "پہلا انٹرویو شروع کرنے کیلئے '+ نیا سروے' دبائیں",
+    "Delete draft?": "کیا آپ واقعی یہ ڈرافٹ حذف کرنا چاہتے ہیں؟",
+    "Draft deleted": "ڈرافٹ حذف کر دیا گیا"
   },
   "raj": {
     "Listen": "सुणो",
@@ -4170,7 +4247,40 @@ const BUILTIN_TRANSLATIONS = {
     "Surveyor Sign-off & Digital Signature": "सर्वेक्षक अनुमोदन अर डिजिटल हस्ताक्षर",
     "Section A: Basic Details": "खंड A: मूलभूत जानकारी",
     "District, Block, Village, SHG, and Enterprise identification": "जिल्लो, ब्लॉक, गाँव, SHG अर उद्यम री पहचान",
-    "Section B: Respondent & Household Profile": "खंड B: उत्तरदाता अर पारिवारिक विवरण"
+    "Section B: Respondent & Household Profile": "खंड B: उत्तरदाता अर पारिवारिक विवरण",
+    "Dashboard": "डैशबोर्ड",
+    "Surveyor Dashboard": "सर्वेक्षक डैशबोर्ड",
+    "Field Work Overview": "फील्ड काम री प्रगति",
+    "Total Recorded": "कुल सर्वेक्षण",
+    "Synced to Server": "सर्वर माथे सिंक",
+    "Pending Sync": "सिंक बाकी (लोकल)",
+    "Incomplete Drafts": "अधूरा ड्राफ्ट",
+    "Drafts": "ड्राफ्ट",
+    "Completed": "पूरो हुयो",
+    "Today's Goal": "आज रो लक्ष्य",
+    "surveys completed today": "सर्वे आज पूरा हुया",
+    "Daily Target Met!": "आज रो लक्ष्य पूरो हुयो! 🎉",
+    "Start New Survey": "+ नवो सर्वेक्षण शुरू करो",
+    "Resume Draft": "▶ अधूरो फॉर्म पूरो करो",
+    "Resume & Complete": "▶ फॉर्म आगै बढ़ाओ",
+    "My Submissions & Drafts": "म्हारा सर्वेक्षण अर ड्राफ्ट",
+    "All Records": "सगळा रिकॉर्ड",
+    "Complete": "पूरो",
+    "Questions Answered": "सवालां रा जवाब दिया",
+    "GPS Locked": "जीपीएस लॉक ✓",
+    "Photo Attached": "फोटो जोड़ी ✓",
+    "Signed": "दस्तखत हुया ✓",
+    "Ready to Sync": "सिंक खातर तैयार (100%)",
+    "Synced": "सर्वर माथे सुरक्षित",
+    "Draft": "अधूरो ड्राफ्ट",
+    "No respondent name": "बिना नाम रो उत्तरदाता",
+    "Village / Location": "गाँव / ठौड़",
+    "Last edited": "पिछलो संपादन",
+    "Sync All Pending": "🔄 सगळा बाकी फॉर्म सिंक करो",
+    "No surveys recorded yet": "ईं डिवाइस माथे अबार तक कोई सर्वे दर्ज कोनी",
+    "Tap '+ Start New Survey' to begin your first interview": "पहलो इंटरव्यू शुरू करण खातर '+ नवो सर्वेक्षण' दबाओ",
+    "Delete draft?": "कांई थे ईं ड्राफ्ट ने हटावणो चावो हो?",
+    "Draft deleted": "ड्राफ्ट डिवाइस सूं हटा दियो"
   }
 };
 
@@ -4178,9 +4288,9 @@ const BUILTIN_TRANSLATIONS = {
 const SPEECH_LOCALE_MAP = {
   'en': 'en-IN',
   'hi': 'hi-IN',
-  'gu': 'gu-IN',
-  'mr': 'mr-IN',
   'raj': 'hi-IN',
+  'mr': 'mr-IN',
+  'gu': 'gu-IN',
   'pa': 'pa-IN',
   'bn': 'bn-IN',
   'ta': 'ta-IN',
@@ -4247,11 +4357,12 @@ async function compressImage(file, gpsCoords = null) {
 // 4. Main Vue 3 Application
 const app = createApp({
   setup() {
-    const currentView = ref('templates'); // 'templates' | 'form' | 'queue'
+    const currentView = ref('dashboard'); // 'dashboard' | 'templates' | 'form' | 'queue'
     const isOnline = ref(navigator.onLine);
     const isSyncing = ref(false);
     const currentLang = ref(localStorage.getItem('omniservey_lang') || 'en');
     const menuOpen = ref(false);
+    const dashboardFilter = ref('all'); // 'all' | 'drafts' | 'pending' | 'synced'
 
     const languages = [
       { code: 'en', name: 'English' },
@@ -4300,7 +4411,7 @@ const app = createApp({
     const validationErrors = ref([]);
     const highlightedQuestion = ref(null);
     const liveAnnouncement = ref('');
-    const currentUser = ref('Guest Surveyor');
+    const currentUser = ref('Hardik Sharma (Field Lead)');
     const walSubmissions = ref([]);
     const pendingCount = ref(0);
     const permissionStatus = reactive({
@@ -4390,53 +4501,55 @@ const app = createApp({
 
     function selectOption(questionCode, optionVal, qIndex) {
       formData[questionCode] = optionVal;
-      announce(`Selected ${t(optionVal)}`);
       autoScrollToNextQuestion(qIndex);
     }
 
-    function getOptionStyle(questionCode, option) {
-      const isSelected = (formData[questionCode] === option);
-      const isYes = (option.toLowerCase() === 'yes' || option === 'હા' || option === 'हाँ' || option === 'होय' || option === 'ਹਾਂ');
-      const isNo = (option.toLowerCase() === 'no' || option === 'ના' || option === 'नहीं' || option === 'नाही' || option === 'ਨਹੀਂ');
+    function getOptionStyle(questionCode, optionVal) {
+      const isSelected = formData[questionCode] === optionVal;
+      const lower = String(optionVal).toLowerCase();
 
       if (isSelected) {
-        if (isYes) return 'border-emerald-600 bg-emerald-50 ring-4 ring-emerald-200 text-emerald-950 font-black shadow-md';
-        if (isNo) return 'border-rose-600 bg-rose-50 ring-4 ring-rose-200 text-rose-950 font-black shadow-md';
-        return 'border-indigo-600 bg-indigo-50 ring-4 ring-indigo-200 text-indigo-950 font-black shadow-md';
+        if (lower === 'yes' || lower === 'हाँ' || lower === 'हा') {
+          return 'bg-emerald-600 border-emerald-700 text-white font-black shadow-lg scale-[1.02] ring-4 ring-emerald-200';
+        }
+        if (lower === 'no' || lower === 'नहीं' || lower === 'ना') {
+          return 'bg-rose-600 border-rose-700 text-white font-black shadow-lg scale-[1.02] ring-4 ring-rose-200';
+        }
+        return 'bg-indigo-600 border-indigo-700 text-white font-black shadow-lg scale-[1.02] ring-4 ring-indigo-200';
       }
 
-      if (isYes) return 'border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-900';
-      if (isNo) return 'border-rose-300 bg-white hover:bg-rose-50 text-rose-900';
-      return 'border-slate-300 bg-white hover:bg-slate-50 text-slate-800';
+      // Unselected State
+      if (lower === 'yes' || lower === 'हाँ' || lower === 'हा') {
+        return 'bg-emerald-50 border-emerald-300 text-emerald-950 hover:bg-emerald-100 font-bold';
+      }
+      if (lower === 'no' || lower === 'नहीं' || lower === 'ना') {
+        return 'bg-rose-50 border-rose-300 text-rose-950 hover:bg-rose-100 font-bold';
+      }
+      return 'bg-white border-slate-300 text-slate-900 hover:bg-slate-50 hover:border-indigo-300 font-semibold';
     }
 
     function addGridRow(questionCode) {
       if (!formData[questionCode] || !Array.isArray(formData[questionCode])) {
         formData[questionCode] = [];
       }
-      formData[questionCode].push({ item: '', qty: 1, val: '' });
-      announce('New item row added');
+      formData[questionCode].push({ item_name: '', quantity: '', approx_value: '' });
     }
 
-    function removeGridRow(questionCode, idx) {
+    function removeGridRow(questionCode, rIdx) {
       if (formData[questionCode] && Array.isArray(formData[questionCode])) {
-        formData[questionCode].splice(idx, 1);
-        announce('Item row removed');
+        formData[questionCode].splice(rIdx, 1);
       }
     }
 
     const categories = computed(() => {
-      const cats = new Set(['All']);
-      templates.value.forEach(t => {
-        if (t.project) cats.add(t.project);
-      });
-      return Array.from(cats);
+      const cats = new Set(templates.value.map(t => t.category || 'General'));
+      return ['All', ...Array.from(cats)];
     });
 
     const filteredTemplates = computed(() => {
       return templates.value.filter(t => {
-        const matchesCat = selectedCategory.value === 'All' || t.project === selectedCategory.value;
-        const matchesQuery = !searchQuery.value || 
+        const matchesCat = selectedCategory.value === 'All' || (t.category || 'General') === selectedCategory.value;
+        const matchesQuery = !searchQuery.value ||
           t.title.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
           t.name.toLowerCase().includes(searchQuery.value.toLowerCase());
         return matchesCat && matchesQuery;
@@ -4520,12 +4633,118 @@ const app = createApp({
     async function loadWALFromDB() {
       try {
         const records = await db.wal.toArray();
+        // Sort reverse chronologically
+        records.sort((a, b) => new Date(b.captured_at_local || 0) - new Date(a.captured_at_local || 0));
         walSubmissions.value = records;
         pendingCount.value = records.filter(r => r.status === 'PENDING_SYNC').length;
       } catch (err) {
         console.error('[Dexie] Failed to load WAL', err);
       }
     }
+
+    // ==========================================
+    // SURVEYOR DASHBOARD COMPUTED HELPERS
+    // ==========================================
+    const todayFormattedDate = computed(() => {
+      const d = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      return d.toLocaleDateString(currentLang.value === 'en' ? 'en-US' : 'hi-IN', options);
+    });
+
+    const surveyorStats = computed(() => {
+      const all = walSubmissions.value || [];
+      const completed = all.filter(s => s.status === 'SYNCED').length;
+      const pending = all.filter(s => s.status === 'PENDING_SYNC').length;
+      const drafts = all.filter(s => s.status === 'DRAFT_OFFLINE').length;
+      
+      const todayStr = new Date().toISOString().slice(0, 10);
+      const todayDone = all.filter(s => (s.status === 'SYNCED' || s.status === 'PENDING_SYNC') && s.captured_at_local && s.captured_at_local.startsWith(todayStr)).length;
+      const todayTarget = 10;
+      const todayProgressPct = Math.min(100, Math.round((todayDone / todayTarget) * 100));
+
+      return {
+        totalCount: all.length,
+        completedCount: completed,
+        pendingSyncCount: pending,
+        draftCount: drafts,
+        todayCompleted: todayDone,
+        todayTarget: todayTarget,
+        todayProgressPct: todayProgressPct
+      };
+    });
+
+    function getSubmissionMeta(sub) {
+      const tmpl = templates.value.find(t => t.name === sub.survey_template);
+      const tmplTitle = tmpl ? tmpl.title : sub.survey_template;
+      const totalQuestions = (tmpl && tmpl.schema && tmpl.schema.questions) ? tmpl.schema.questions.length : 10;
+      const items = sub.items || [];
+      const answeredCount = items.filter(i => i.response_value !== undefined && i.response_value !== null && String(i.response_value).trim() !== '').length;
+      const completionPct = Math.min(100, Math.max(0, Math.round((answeredCount / totalQuestions) * 100)));
+
+      let respName = '';
+      let villageName = '';
+      let hasGPS = !!(sub.gps_latitude && sub.gps_longitude);
+      let hasPhoto = false;
+      let hasSignature = false;
+
+      items.forEach(i => {
+        const qCode = (i.question_code || '').toLowerCase();
+        const val = String(i.response_value || '').trim();
+        if (!respName && (qCode.includes('respondent') || qCode.includes('head') || qCode.includes('name') || qCode === 'q7' || qCode === 'q1')) {
+          if (val && !val.startsWith('{') && !val.startsWith('data:')) {
+            respName = val;
+          }
+        }
+        if (!villageName && (qCode.includes('village') || qCode.includes('panchayat') || qCode.includes('district') || qCode === 'q1' || qCode === 'q3')) {
+          if (val && !val.startsWith('{') && !val.startsWith('data:')) {
+            villageName = val;
+          }
+        }
+        if (val.startsWith('data:image')) {
+          if (qCode.includes('sign')) hasSignature = true;
+          else hasPhoto = true;
+        }
+      });
+
+      return {
+        tmplTitle,
+        totalQuestions,
+        answeredCount,
+        completionPct,
+        respName: respName || t('No respondent name'),
+        villageName: villageName || '',
+        hasGPS,
+        hasPhoto,
+        hasSignature,
+        isDraft: sub.status === 'DRAFT_OFFLINE',
+        isPending: sub.status === 'PENDING_SYNC',
+        isSynced: sub.status === 'SYNCED',
+        formattedDate: sub.captured_at_local ? sub.captured_at_local.replace('T', ' ').slice(0, 16) : ''
+      };
+    }
+
+    function perTemplateStats(templateName) {
+      const all = walSubmissions.value || [];
+      const forTmpl = all.filter(s => s.survey_template === templateName);
+      const completed = forTmpl.filter(s => s.status === 'SYNCED' || s.status === 'PENDING_SYNC').length;
+      const drafts = forTmpl.filter(s => s.status === 'DRAFT_OFFLINE').length;
+      const latestDraft = forTmpl.find(s => s.status === 'DRAFT_OFFLINE');
+      return { completed, drafts, latestDraft };
+    }
+
+    const filteredDashboardSubmissions = computed(() => {
+      const all = walSubmissions.value || [];
+      if (dashboardFilter.value === 'drafts') {
+        return all.filter(s => s.status === 'DRAFT_OFFLINE');
+      }
+      if (dashboardFilter.value === 'pending') {
+        return all.filter(s => s.status === 'PENDING_SYNC');
+      }
+      if (dashboardFilter.value === 'synced') {
+        return all.filter(s => s.status === 'SYNCED');
+      }
+      return all;
+    });
 
     async function fetchServerTemplates() {
       try {
@@ -4536,23 +4755,17 @@ const app = createApp({
 
         if (msg.user) {
           if (typeof msg.user === 'object') {
-            currentUser.value = msg.user.full_name || msg.user.user || 'Guest Surveyor';
+            currentUser.value = msg.user.full_name || msg.user.user || 'Hardik Sharma (Field Lead)';
           } else {
             currentUser.value = msg.user;
           }
         }
 
         if (msg.templates && Array.isArray(msg.templates)) {
-          for (const tmpl of msg.templates) {
-            await db.templates.put(JSON.parse(JSON.stringify(tmpl)));
+          for (const tDoc of msg.templates) {
+            await db.templates.put(tDoc);
           }
-          await loadTemplatesFromDB();
-        }
-
-        if (msg.translations && Array.isArray(msg.translations)) {
-          for (const tr of msg.translations) {
-            await db.translations.put(JSON.parse(JSON.stringify(tr)));
-          }
+          templates.value = msg.templates;
         }
       } catch (err) {
         console.warn('[Bootstrap] Server unavailable, relying on offline cache', err);
@@ -4587,6 +4800,7 @@ const app = createApp({
           currentGPS.longitude = resumeSubmission.gps_longitude;
           currentGPS.accuracy = resumeSubmission.gps_accuracy;
         }
+        showToast('Draft restored with previous answers', 'info');
       } else {
         currentUUID.value = generateUUID();
         fetchGPS();
@@ -4693,100 +4907,102 @@ const app = createApp({
     }
 
     function initSignaturePad(questionCode) {
-      const canvas = document.getElementById(`sig_canvas_${questionCode}`);
-      if (!canvas) return;
+      nextTick(() => {
+        const canvas = document.getElementById(`sig_canvas_${questionCode}`);
+        if (!canvas) return;
 
-      const ctx = canvas.getContext('2d');
-      let isDrawing = false;
-
-      function resize() {
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width;
-        canvas.height = rect.height;
+        const ctx = canvas.getContext('2d');
         ctx.lineWidth = 3;
         ctx.lineCap = 'round';
-        ctx.strokeStyle = '#0f172a';
+        ctx.strokeStyle = '#1e1b4b';
 
-        if (formData[questionCode]) {
+        // Load existing signature if present
+        if (formData[questionCode] && typeof formData[questionCode] === 'string' && formData[questionCode].startsWith('data:image')) {
           const img = new Image();
           img.src = formData[questionCode];
-          img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          img.onload = () => {
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          };
         }
-      }
 
-      resize();
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
 
-      function getPos(e) {
-        const rect = canvas.getBoundingClientRect();
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        return {
-          x: clientX - rect.left,
-          y: clientY - rect.top
-        };
-      }
+        function getCanvasCoords(e) {
+          const rect = canvas.getBoundingClientRect();
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+          const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+          return {
+            x: (clientX - rect.left) * (canvas.width / rect.width),
+            y: (clientY - rect.top) * (canvas.height / rect.height)
+          };
+        }
 
-      function startDraw(e) {
-        e.preventDefault();
-        isDrawing = true;
-        const pos = getPos(e);
-        ctx.beginPath();
-        ctx.moveTo(pos.x, pos.y);
-      }
+        function startDraw(e) {
+          e.preventDefault();
+          isDrawing = true;
+          const coords = getCanvasCoords(e);
+          lastX = coords.x;
+          lastY = coords.y;
+        }
 
-      function draw(e) {
-        if (!isDrawing) return;
-        e.preventDefault();
-        const pos = getPos(e);
-        ctx.lineTo(pos.x, pos.y);
-        ctx.stroke();
-      }
+        function draw(e) {
+          if (!isDrawing) return;
+          e.preventDefault();
+          const coords = getCanvasCoords(e);
+          ctx.beginPath();
+          ctx.moveTo(lastX, lastY);
+          ctx.lineTo(coords.x, coords.y);
+          ctx.stroke();
+          lastX = coords.x;
+          lastY = coords.y;
+        }
 
-      function endDraw(e) {
-        if (!isDrawing) return;
-        isDrawing = false;
-        formData[questionCode] = canvas.toDataURL('image/png');
-      }
+        function stopDraw(e) {
+          if (!isDrawing) return;
+          e.preventDefault();
+          isDrawing = false;
+          formData[questionCode] = canvas.toDataURL('image/png');
+        }
 
-      canvas.addEventListener('mousedown', startDraw);
-      canvas.addEventListener('mousemove', draw);
-      canvas.addEventListener('mouseup', endDraw);
-      canvas.addEventListener('touchstart', startDraw, { passive: false });
-      canvas.addEventListener('touchmove', draw, { passive: false });
-      canvas.addEventListener('touchend', endDraw, { passive: false });
+        canvas.onmousedown = startDraw;
+        canvas.onmousemove = draw;
+        canvas.onmouseup = stopDraw;
+        canvas.onmouseleave = stopDraw;
 
-      signaturePads[questionCode] = { canvas, ctx, resize };
+        canvas.ontouchstart = startDraw;
+        canvas.ontouchmove = draw;
+        canvas.ontouchend = stopDraw;
+      });
     }
 
     function clearSignature(questionCode) {
-      const pad = signaturePads[questionCode];
-      if (pad) {
-        pad.ctx.clearRect(0, 0, pad.canvas.width, pad.canvas.height);
+      const canvas = document.getElementById(`sig_canvas_${questionCode}`);
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
       }
       delete formData[questionCode];
       showToast('Signature cleared', 'info');
-      announce('Signature cleared');
     }
 
     async function saveOffline(isFinalSubmit = false) {
       try {
-        if (!activeTemplate.value) {
-          showToast('No active survey template', 'error');
-          return;
-        }
+        if (!activeTemplate.value) return;
 
         const answers = [];
-        for (const [code, val] of Object.entries(formData)) {
+        for (const [qCode, val] of Object.entries(formData)) {
           if (val !== undefined && val !== null && String(val).trim() !== '') {
             answers.push({
-              question_code: code,
+              question_code: qCode,
               response_value: typeof val === 'object' ? JSON.stringify(val) : String(val)
             });
           }
         }
 
         const submission = {
-          idempotency_key: currentUUID.value,
+          idempotency_key: currentUUID.value || generateUUID(),
           survey_template: activeTemplate.value.name,
           template_version: activeTemplate.value.version,
           gps_latitude: currentGPS.latitude || null,
@@ -4802,14 +5018,14 @@ const app = createApp({
         await loadWALFromDB();
 
         if (isFinalSubmit) {
-          showToast('Survey submitted successfully', 'success');
+          showToast('Survey completed & queued for sync ✓', 'success');
           announce('Survey submitted successfully');
           if (isOnline.value) {
             autoSync();
           }
-          currentView.value = 'queue';
+          currentView.value = 'dashboard';
         } else {
-          showToast('Draft saved locally', 'success');
+          showToast(t('Draft saved locally'), 'success');
           announce('Draft saved locally');
         }
       } catch (err) {
@@ -4873,10 +5089,10 @@ const app = createApp({
     }
 
     async function deleteWALItem(idempotency_key) {
-      if (confirm('Delete this record from local storage?')) {
+      if (confirm(t('Delete draft?'))) {
         await db.wal.delete(idempotency_key);
         await loadWALFromDB();
-        showToast('Item removed from local storage', 'info');
+        showToast(t('Draft deleted'), 'info');
         announce('Item removed from local storage');
       }
     }
@@ -4891,6 +5107,8 @@ const app = createApp({
           isSyncing.value = false;
           return;
         }
+
+        showToast(`Syncing ${pending.length} survey(s) with server...`, 'info');
 
         for (const sub of pending) {
           const payload = {
@@ -4933,6 +5151,7 @@ const app = createApp({
           }
         }
         await loadWALFromDB();
+        showToast('Sync complete ✓', 'success');
         announce('Background sync complete');
       } catch (err) {
         console.warn('[Sync] Background sync paused (offline/network error)', err);
@@ -4974,8 +5193,8 @@ const app = createApp({
 
       window.addEventListener('offline', () => {
         isOnline.value = false;
-        showToast('Working offline', 'info');
-        announce('Working in offline mode');
+        showToast('Offline mode active', 'info');
+        announce('Device is offline');
       });
     });
 
@@ -4984,9 +5203,9 @@ const app = createApp({
       isOnline,
       isSyncing,
       currentLang,
-      menuOpen,
       languages,
       setLanguage,
+      menuOpen,
       templates,
       searchQuery,
       selectedCategory,
@@ -5012,6 +5231,12 @@ const app = createApp({
       currentUUID,
       speakingQuestionCode,
       isSectionComplete,
+      todayFormattedDate,
+      surveyorStats,
+      getSubmissionMeta,
+      perTemplateStats,
+      dashboardFilter,
+      filteredDashboardSubmissions,
       startSurvey,
       nextSection,
       prevSection,
@@ -5089,113 +5314,119 @@ const app = createApp({
 
           <div class="pt-2 flex justify-end">
             <button type="button" @click="validationModalOpen = false" 
-                    class="min-h-[48px] px-6 py-2.5 bg-slate-900 text-white rounded-2xl font-black text-base touch-press focus:ring-4 focus:ring-slate-400">
-              {{ t('Understood') }}
+                    class="min-h-[48px] px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-base rounded-2xl touch-press">
+              {{ t('Close') }}
             </button>
           </div>
         </div>
       </div>
 
-      <!-- TOP APP HEADER (Ultra Clean, Zero Overflow) -->
-      <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg border-b border-slate-800 w-full">
-        <div class="max-w-4xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between gap-2 w-full box-border">
-          
-          <!-- Logo & Platform Badge -->
-          <div class="flex items-center space-x-2.5 cursor-pointer shrink-0" @click="currentView = 'templates'">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-lg sm:text-xl shadow-md shrink-0 text-white">
-              Ω
+      <!-- APP TOP BANNER -->
+      <header class="bg-slate-950 text-white px-4 py-3 sm:px-6 sticky top-0 z-40 shadow-lg flex items-center justify-between">
+        <div class="flex items-center space-x-3 cursor-pointer" @click="currentView = 'dashboard'">
+          <div class="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-xl text-white shadow-md">
+            Ω
+          </div>
+          <div>
+            <div class="text-lg sm:text-xl font-black tracking-tight leading-tight flex items-center space-x-2">
+              <span>OmniServey</span>
+              <span class="text-[11px] bg-slate-800 text-indigo-300 font-bold px-2 py-0.5 rounded-full border border-slate-700">v16</span>
             </div>
-            <div class="min-w-0">
-              <div class="flex items-center space-x-1.5">
-                <span class="font-black text-base sm:text-xl tracking-tight leading-none text-white">OmniServey</span>
-                <span class="text-[9px] sm:text-xs font-extrabold bg-indigo-500/30 text-indigo-300 px-1.5 py-0.5 rounded-full border border-indigo-500/40">v16</span>
-              </div>
-              <div class="text-[10px] sm:text-xs text-slate-400 font-semibold truncate">
-                {{ isOnline ? '🟢 Online' : '🟠 Offline' }}
-              </div>
+            <div class="text-xs flex items-center space-x-1.5 font-bold" :class="isOnline ? 'text-emerald-400' : 'text-amber-400'">
+              <span class="inline-block w-2 h-2 rounded-full" :class="isOnline ? 'bg-emerald-400' : 'bg-amber-400 animate-pulse'"></span>
+              <span>{{ isOnline ? 'Online' : 'Offline' }}</span>
             </div>
           </div>
+        </div>
 
-          <!-- Three Lines (☰ Menu) Button for Language Switcher & Options -->
-          <div class="flex items-center space-x-2 shrink-0">
-            <button type="button" 
-                    @click="menuOpen = true" 
-                    aria-label="Open Language and Settings Menu"
-                    class="min-h-[42px] px-3 py-1.5 bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-white rounded-xl sm:rounded-2xl border border-slate-700 flex items-center space-x-2 touch-press shadow-sm focus:ring-4 focus:ring-indigo-400">
-              <span class="text-xl sm:text-2xl leading-none font-bold" aria-hidden="true">☰</span>
-              <span class="text-xs sm:text-sm font-black text-indigo-300 uppercase tracking-wide">{{ currentLang }}</span>
-            </button>
-          </div>
-
+        <!-- Right Side: 3-Lines Menu Button with Current Language Badge -->
+        <div class="flex items-center space-x-2">
+          <button type="button" @click="menuOpen = true"
+                  aria-label="Open Language and Settings Menu"
+                  class="min-h-[44px] px-3.5 py-1.5 bg-slate-800 hover:bg-slate-700 active:bg-slate-600 text-white font-black rounded-2xl flex items-center space-x-2 border border-slate-700 shadow-sm touch-press focus:ring-4 focus:ring-indigo-400">
+            <span aria-hidden="true" class="text-xl">☰</span>
+            <span class="text-xs tracking-wider uppercase bg-indigo-600 text-white px-2 py-0.5 rounded-lg">{{ currentLang }}</span>
+          </button>
         </div>
       </header>
 
-      <!-- SIDEBAR DRAWER / MODAL FOR 3-LINES MENU (Language Switcher & Surveyor Options) -->
-      <div v-if="menuOpen" class="fixed inset-0 z-[100] flex justify-end" role="dialog" aria-modal="true" aria-label="Menu">
-        <!-- Backdrop -->
-        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" @click="menuOpen = false" aria-hidden="true"></div>
+      <!-- NAVIGATION TAB BAR (Dashboard · Surveys · WAL Queue) -->
+      <nav v-if="currentView !== 'form'" aria-label="Main Navigation" class="bg-white border-b border-slate-200 sticky top-[60px] z-30 px-3 py-2 shadow-sm">
+        <div class="max-w-3xl mx-auto flex items-center space-x-2">
+          
+          <button type="button" @click="currentView = 'dashboard'"
+                  :class="currentView === 'dashboard' ? 'bg-indigo-600 text-white shadow-md' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+                  class="flex-1 min-h-[48px] py-2.5 px-3 rounded-2xl font-black text-sm sm:text-base flex items-center justify-center space-x-2 touch-press transition-all">
+            <span class="text-lg">📊</span>
+            <span>{{ t('Dashboard') }}</span>
+          </button>
 
-        <!-- Drawer Container -->
-        <div class="relative w-full max-w-sm bg-white text-slate-900 h-full shadow-2xl flex flex-col z-10 overflow-y-auto">
+          <button type="button" @click="currentView = 'templates'"
+                  :class="currentView === 'templates' ? 'bg-indigo-600 text-white shadow-md' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+                  class="flex-1 min-h-[48px] py-2.5 px-3 rounded-2xl font-black text-sm sm:text-base flex items-center justify-center space-x-2 touch-press transition-all">
+            <span class="text-lg">📋</span>
+            <span>{{ t('Surveys') }}</span>
+          </button>
+
+          <button type="button" @click="currentView = 'queue'"
+                  :class="currentView === 'queue' ? 'bg-indigo-600 text-white shadow-md' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+                  class="flex-1 min-h-[48px] py-2.5 px-3 rounded-2xl font-black text-sm sm:text-base flex items-center justify-center space-x-2 touch-press transition-all">
+            <span class="text-lg">📦</span>
+            <span class="hidden xs:inline">{{ t('WAL Queue') }}</span>
+            <span class="xs:hidden">Queue</span>
+            <span v-if="pendingCount > 0" class="ml-1 px-2 py-0.5 bg-rose-600 text-white text-xs font-black rounded-full">
+              {{ pendingCount }}
+            </span>
+          </button>
+
+        </div>
+      </nav>
+
+      <!-- 3-LINES HAMBURGER MENU DRAWER (Modal Overlay) -->
+      <div v-if="menuOpen" 
+           role="dialog" 
+           aria-modal="true" 
+           aria-label="Menu"
+           class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex justify-end transition-opacity">
+        <div class="bg-white w-full max-w-sm h-full shadow-2xl flex flex-col justify-between overflow-y-auto">
           
           <!-- Drawer Header -->
-          <div class="p-4 sm:p-5 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800 shrink-0">
+          <div class="p-5 bg-slate-900 text-white flex items-center justify-between">
             <div class="flex items-center space-x-3">
-              <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-black text-lg shadow">Ω</div>
+              <div class="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center font-black text-xl text-white">
+                Ω
+              </div>
               <div>
-                <div class="font-black text-base sm:text-lg leading-tight">OmniServey</div>
-                <div class="text-xs text-slate-400 font-medium">{{ currentUser }}</div>
+                <div class="text-lg font-black leading-tight">OmniServey</div>
+                <div class="text-xs text-indigo-300 font-semibold">{{ currentUser }}</div>
               </div>
             </div>
-            <button type="button" 
-                    @click="menuOpen = false" 
-                    aria-label="Close menu"
-                    class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center text-xl font-black touch-press focus:ring-2 focus:ring-indigo-400">
+            <button type="button" @click="menuOpen = false" aria-label="Close menu"
+                    class="p-2 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-black text-lg touch-press">
               ✕
             </button>
           </div>
 
           <!-- Drawer Body -->
-          <div class="p-4 sm:p-5 space-y-6 flex-1">
+          <div class="p-5 space-y-6 flex-1 overflow-y-auto">
             
-            <!-- Language Section -->
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <label class="text-base font-black text-slate-900 flex items-center space-x-2">
-                  <span aria-hidden="true">🌐</span>
-                  <span>{{ t('Select Language') }}</span>
-                </label>
+            <!-- Quick View Navigation -->
+            <div class="space-y-2">
+              <div class="text-xs font-black uppercase tracking-wider text-slate-500">
+                Navigation
               </div>
-              <p class="text-xs text-slate-600 font-semibold mb-3">
-                {{ t('Choose your preferred language') }}:
-              </p>
-
-              <!-- Big Touch Cards for 11 Indian Languages -->
-              <div class="grid grid-cols-1 gap-2">
-                <button v-for="lang in languages" :key="lang.code"
-                        type="button"
-                        @click="setLanguage(lang.code)"
-                        :class="currentLang === lang.code ? 'bg-indigo-600 text-white border-indigo-600 ring-2 ring-indigo-400 shadow-md' : 'bg-slate-50 hover:bg-slate-100 text-slate-900 border-slate-200'"
-                        class="min-h-[50px] px-4 py-2.5 rounded-2xl border-2 font-black text-base flex items-center justify-between touch-press transition-all text-left">
-                  <span>{{ lang.name }}</span>
-                  <span v-if="currentLang === lang.code" class="text-white text-lg font-black">✓</span>
-                </button>
-              </div>
-            </div>
-
-            <hr class="border-slate-200">
-
-            <!-- Quick Actions -->
-            <div class="space-y-2.5">
-              <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">{{ t('Quick Actions') }}</div>
-              
+              <button type="button" 
+                      @click="currentView = 'dashboard'; menuOpen = false"
+                      class="w-full min-h-[48px] px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-2xl flex items-center space-x-3 touch-press">
+                <span class="text-xl">📊</span>
+                <span class="text-base font-bold">{{ t('Dashboard') }}</span>
+              </button>
               <button type="button" 
                       @click="currentView = 'templates'; menuOpen = false"
                       class="w-full min-h-[48px] px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-2xl flex items-center space-x-3 touch-press">
                 <span class="text-xl">📋</span>
                 <span class="text-base font-bold">{{ t('Surveys') }}</span>
               </button>
-
               <button type="button" 
                       @click="currentView = 'queue'; menuOpen = false"
                       class="w-full min-h-[48px] px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-2xl flex items-center justify-between touch-press">
@@ -5207,6 +5438,36 @@ const app = createApp({
                   {{ pendingCount }}
                 </span>
               </button>
+            </div>
+
+            <!-- Language Switcher Section -->
+            <div class="space-y-3">
+              <div class="flex items-center space-x-2 text-slate-900 font-black text-base">
+                <span aria-hidden="true" class="text-xl text-indigo-600">🌐</span>
+                <span>{{ t('Select Language') }}</span>
+              </div>
+              <p class="text-xs text-slate-500 font-medium">
+                {{ t('Choose your preferred language') }}:
+              </p>
+
+              <!-- High-Contrast Language Grid Cards -->
+              <div class="grid grid-cols-1 gap-2">
+                <button v-for="l in languages" :key="l.code"
+                        type="button"
+                        @click="setLanguage(l.code)"
+                        :class="currentLang === l.code ? 'bg-indigo-600 text-white font-black shadow-md ring-2 ring-indigo-300' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold border border-slate-200'"
+                        class="min-h-[48px] px-4 py-2.5 rounded-2xl text-left text-sm sm:text-base flex items-center justify-between touch-press transition-all">
+                  <span>{{ l.name }}</span>
+                  <span v-if="currentLang === l.code" class="text-white font-black text-sm">✓</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Quick Actions Section -->
+            <div class="space-y-3 pt-2 border-t border-slate-200">
+              <div class="text-xs font-black uppercase tracking-wider text-slate-500">
+                {{ t('Quick Actions') }}
+              </div>
 
               <button type="button" 
                       @click="autoSync(); menuOpen = false"
@@ -5239,7 +5500,309 @@ const app = createApp({
       <main class="flex-1 max-w-3xl w-full mx-auto p-3 sm:p-6 min-w-0">
 
         <!-- ========================================== -->
-        <!-- VIEW 1: TEMPLATES DIRECTORY (Simple List)  -->
+        <!-- VIEW 1: SURVEYOR DASHBOARD (Home Screen)   -->
+        <!-- ========================================== -->
+        <div v-if="currentView === 'dashboard'" class="space-y-6">
+
+          <!-- Surveyor Hero Card -->
+          <div class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-5 sm:p-6 shadow-xl border border-indigo-900/50 space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-2xl shadow-md">
+                  👨‍🌾
+                </div>
+                <div>
+                  <div class="text-xs text-indigo-300 font-black uppercase tracking-wider">{{ t('Surveyor Dashboard') }}</div>
+                  <div class="text-lg sm:text-2xl font-black text-white leading-tight">{{ currentUser }}</div>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-1.5 bg-slate-800/80 px-3 py-1.5 rounded-2xl border border-slate-700 text-xs font-black"
+                   :class="isOnline ? 'text-emerald-400' : 'text-amber-400'">
+                <span class="w-2 h-2 rounded-full" :class="isOnline ? 'bg-emerald-400' : 'bg-amber-400'"></span>
+                <span>{{ isOnline ? 'Online' : 'Offline' }}</span>
+              </div>
+            </div>
+
+            <!-- Date & Motivational Subtext -->
+            <div class="text-xs sm:text-sm text-indigo-200/90 font-semibold flex items-center justify-between border-t border-indigo-900/60 pt-3">
+              <span>📅 {{ todayFormattedDate }}</span>
+              <span>💾 100% Offline Safe</span>
+            </div>
+          </div>
+
+          <!-- TODAY'S DAILY GOAL / TARGET CARD -->
+          <div class="bg-white rounded-3xl p-5 sm:p-6 border-2 border-slate-200 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="text-2xl">🎯</span>
+                <div>
+                  <div class="text-base sm:text-lg font-black text-slate-900">{{ t("Today's Goal") }}</div>
+                  <div class="text-xs sm:text-sm text-slate-500 font-semibold">
+                    {{ surveyorStats.todayCompleted }} / {{ surveyorStats.todayTarget }} {{ t('surveys completed today') }}
+                  </div>
+                </div>
+              </div>
+              <div class="text-xl sm:text-2xl font-black text-indigo-600">
+                {{ surveyorStats.todayProgressPct }}%
+              </div>
+            </div>
+
+            <!-- Goal Progress Bar -->
+            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden border border-slate-200">
+              <div class="h-full rounded-full transition-all duration-500"
+                   :class="surveyorStats.todayProgressPct >= 100 ? 'bg-emerald-500' : 'bg-indigo-600'"
+                   :style="'width: ' + surveyorStats.todayProgressPct + '%'"></div>
+            </div>
+
+            <div v-if="surveyorStats.todayProgressPct >= 100" class="text-xs font-black text-emerald-700 bg-emerald-50 p-2 rounded-xl text-center">
+              {{ t('Daily Target Met!') }}
+            </div>
+          </div>
+
+          <!-- 4 STAT KPI SUMMARY CARDS -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            
+            <!-- Card 1: Total Recorded -->
+            <div @click="dashboardFilter = 'all'"
+                 :class="dashboardFilter === 'all' ? 'border-indigo-600 ring-2 ring-indigo-200' : 'border-slate-200'"
+                 class="bg-white p-4 rounded-3xl border-2 shadow-sm cursor-pointer touch-press space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xl">📝</span>
+                <span class="text-2xl font-black text-slate-900">{{ surveyorStats.totalCount }}</span>
+              </div>
+              <div class="text-xs font-black text-slate-600 leading-snug">{{ t('Total Recorded') }}</div>
+            </div>
+
+            <!-- Card 2: Synced to Server -->
+            <div @click="dashboardFilter = 'synced'"
+                 :class="dashboardFilter === 'synced' ? 'border-emerald-600 ring-2 ring-emerald-200' : 'border-slate-200'"
+                 class="bg-emerald-50/60 p-4 rounded-3xl border-2 border-emerald-200 shadow-sm cursor-pointer touch-press space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xl">🟢</span>
+                <span class="text-2xl font-black text-emerald-900">{{ surveyorStats.completedCount }}</span>
+              </div>
+              <div class="text-xs font-black text-emerald-800 leading-snug">{{ t('Synced to Server') }}</div>
+            </div>
+
+            <!-- Card 3: Pending Sync (Ready) -->
+            <div @click="dashboardFilter = 'pending'"
+                 :class="dashboardFilter === 'pending' ? 'border-amber-600 ring-2 ring-amber-200' : 'border-slate-200'"
+                 class="bg-amber-50/60 p-4 rounded-3xl border-2 border-amber-200 shadow-sm cursor-pointer touch-press space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xl">🟡</span>
+                <span class="text-2xl font-black text-amber-900">{{ surveyorStats.pendingSyncCount }}</span>
+              </div>
+              <div class="text-xs font-black text-amber-800 leading-snug">{{ t('Pending Sync') }}</div>
+            </div>
+
+            <!-- Card 4: Incomplete Drafts -->
+            <div @click="dashboardFilter = 'drafts'"
+                 :class="dashboardFilter === 'drafts' ? 'border-blue-600 ring-2 ring-blue-200' : 'border-slate-200'"
+                 class="bg-blue-50/60 p-4 rounded-3xl border-2 border-blue-200 shadow-sm cursor-pointer touch-press space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xl">🔵</span>
+                <span class="text-2xl font-black text-blue-900">{{ surveyorStats.draftCount }}</span>
+              </div>
+              <div class="text-xs font-black text-blue-800 leading-snug">{{ t('Incomplete Drafts') }}</div>
+            </div>
+
+          </div>
+
+          <!-- SURVEY TEMPLATES QUICK START SECTION -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center space-x-2">
+                <span>📋</span>
+                <span>{{ t('Surveys') }}</span>
+              </h2>
+              <button type="button" @click="currentView = 'templates'" class="text-xs font-bold text-indigo-600 hover:underline">
+                View all →
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3">
+              <div v-for="tDoc in templates" :key="tDoc.name"
+                   class="bg-white rounded-3xl p-5 border-2 border-slate-200 shadow-sm hover:border-indigo-400 transition-all space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div>
+                    <h3 class="text-base sm:text-lg font-black text-slate-900 leading-snug">{{ t(tDoc.title) }}</h3>
+                    <div class="flex items-center space-x-2 mt-1">
+                      <span class="text-[11px] font-bold bg-slate-100 text-slate-700 px-2 py-0.5 rounded-lg">{{ tDoc.project }}</span>
+                      <span class="text-[11px] font-bold text-slate-500">v{{ tDoc.version }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Template Mini Stats -->
+                  <div class="flex items-center space-x-2 text-xs font-extrabold shrink-0">
+                    <span class="bg-emerald-100 text-emerald-900 px-2.5 py-1 rounded-xl border border-emerald-200">
+                      ✓ {{ perTemplateStats(tDoc.name).completed }} {{ t('Completed') }}
+                    </span>
+                    <span v-if="perTemplateStats(tDoc.name).drafts > 0" class="bg-blue-100 text-blue-900 px-2.5 py-1 rounded-xl border border-blue-200">
+                      ⏳ {{ perTemplateStats(tDoc.name).drafts }} {{ t('Drafts') }}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Template Action Buttons -->
+                <div class="flex items-center space-x-2 pt-1">
+                  <button type="button" @click="startSurvey(tDoc)"
+                          class="flex-1 min-h-[48px] bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm sm:text-base py-2.5 px-4 rounded-2xl shadow-md touch-press flex items-center justify-center space-x-2">
+                    <span>{{ t('Start New Survey') }}</span>
+                    <span>→</span>
+                  </button>
+
+                  <button v-if="perTemplateStats(tDoc.name).drafts > 0"
+                          type="button" 
+                          @click="resumeDraft(perTemplateStats(tDoc.name).latestDraft)"
+                          class="min-h-[48px] bg-blue-50 hover:bg-blue-100 text-blue-800 border-2 border-blue-300 font-black text-xs sm:text-sm py-2.5 px-4 rounded-2xl touch-press flex items-center space-x-1.5 shrink-0">
+                    <span>{{ t('Resume Draft') }}</span>
+                    <span>({{ perTemplateStats(tDoc.name).drafts }})</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MY SUBMISSIONS & DRAFTS LIST WITH COMPLETION METRICS -->
+          <div class="space-y-4 pt-2">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <h2 class="text-lg sm:text-xl font-black text-slate-900 flex items-center space-x-2">
+                <span>📂</span>
+                <span>{{ t('My Submissions & Drafts') }}</span>
+              </h2>
+
+              <!-- Status Filter Pills -->
+              <div class="flex items-center space-x-1 overflow-x-auto no-scrollbar py-1">
+                <button type="button" @click="dashboardFilter = 'all'"
+                        :class="dashboardFilter === 'all' ? 'bg-slate-900 text-white' : 'bg-white text-slate-700 border border-slate-300'"
+                        class="px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 touch-press">
+                  {{ t('All Records') }} ({{ walSubmissions.length }})
+                </button>
+                <button type="button" @click="dashboardFilter = 'drafts'"
+                        :class="dashboardFilter === 'drafts' ? 'bg-blue-600 text-white' : 'bg-white text-blue-800 border border-blue-200'"
+                        class="px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 touch-press">
+                  🔵 {{ t('Drafts') }} ({{ surveyorStats.draftCount }})
+                </button>
+                <button type="button" @click="dashboardFilter = 'pending'"
+                        :class="dashboardFilter === 'pending' ? 'bg-amber-600 text-white' : 'bg-white text-amber-800 border border-amber-200'"
+                        class="px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 touch-press">
+                  🟡 {{ t('Pending Sync') }} ({{ surveyorStats.pendingSyncCount }})
+                </button>
+                <button type="button" @click="dashboardFilter = 'synced'"
+                        :class="dashboardFilter === 'synced' ? 'bg-emerald-600 text-white' : 'bg-white text-emerald-800 border border-emerald-200'"
+                        class="px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 touch-press">
+                  🟢 {{ t('Synced') }} ({{ surveyorStats.completedCount }})
+                </button>
+              </div>
+            </div>
+
+            <!-- Submissions Card Stream -->
+            <div v-if="filteredDashboardSubmissions.length > 0" class="space-y-3">
+              <div v-for="sub in filteredDashboardSubmissions" :key="sub.idempotency_key"
+                   class="bg-white rounded-3xl p-5 border-2 shadow-sm space-y-3 transition-all"
+                   :class="sub.status === 'DRAFT_OFFLINE' ? 'border-blue-200 hover:border-blue-400' : (sub.status === 'PENDING_SYNC' ? 'border-amber-200 hover:border-amber-400' : 'border-emerald-200')">
+                
+                <!-- Card Top: Respondent & Status Badge -->
+                <div class="flex items-start justify-between gap-2">
+                  <div class="space-y-0.5 min-w-0">
+                    <div class="text-base sm:text-lg font-black text-slate-900 truncate flex items-center space-x-2">
+                      <span>👤</span>
+                      <span>{{ getSubmissionMeta(sub).respName }}</span>
+                    </div>
+                    <div class="text-xs text-slate-500 font-bold truncate">
+                      {{ getSubmissionMeta(sub).villageName ? '📍 ' + getSubmissionMeta(sub).villageName + ' · ' : '' }}
+                      {{ t(getSubmissionMeta(sub).tmplTitle) }}
+                    </div>
+                  </div>
+
+                  <!-- Status Badge -->
+                  <span :class="sub.status === 'SYNCED' ? 'bg-emerald-100 text-emerald-900 border-emerald-300' : (sub.status === 'PENDING_SYNC' ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-blue-100 text-blue-900 border-blue-300')"
+                        class="text-xs font-black px-3 py-1.5 rounded-2xl border shrink-0">
+                    {{ sub.status === 'SYNCED' ? t('Synced') : (sub.status === 'PENDING_SYNC' ? t('Ready to Sync') : t('Draft')) }}
+                  </span>
+                </div>
+
+                <!-- Card Middle: Completion Progress Bar & Ratio -->
+                <div class="space-y-1.5 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                  <div class="flex items-center justify-between text-xs font-extrabold text-slate-700">
+                    <span>
+                      {{ getSubmissionMeta(sub).completionPct }}% {{ t('Complete') }}
+                    </span>
+                    <span>
+                      {{ getSubmissionMeta(sub).answeredCount }} / {{ getSubmissionMeta(sub).totalQuestions }} {{ t('Questions Answered') }}
+                    </span>
+                  </div>
+
+                  <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                    <div class="h-full rounded-full transition-all duration-300"
+                         :class="getSubmissionMeta(sub).completionPct === 100 ? 'bg-emerald-500' : 'bg-blue-600'"
+                         :style="'width: ' + getSubmissionMeta(sub).completionPct + '%'"></div>
+                  </div>
+
+                  <!-- Hardware & Data Badges -->
+                  <div class="flex items-center space-x-2 pt-1 text-[11px] font-bold text-slate-600 flex-wrap gap-y-1">
+                    <span v-if="getSubmissionMeta(sub).hasGPS" class="bg-indigo-50 text-indigo-800 px-2 py-0.5 rounded-lg border border-indigo-200">
+                      {{ t('GPS Locked') }}
+                    </span>
+                    <span v-if="getSubmissionMeta(sub).hasPhoto" class="bg-violet-50 text-violet-800 px-2 py-0.5 rounded-lg border border-violet-200">
+                      {{ t('Photo Attached') }}
+                    </span>
+                    <span v-if="getSubmissionMeta(sub).hasSignature" class="bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-lg border border-emerald-200">
+                      {{ t('Signed') }}
+                    </span>
+                    <span class="text-slate-400 ml-auto">{{ getSubmissionMeta(sub).formattedDate }}</span>
+                  </div>
+                </div>
+
+                <!-- Card Bottom: Actions -->
+                <div class="flex items-center space-x-2 pt-1">
+                  <!-- Resume / Continue Draft Button -->
+                  <button v-if="sub.status === 'DRAFT_OFFLINE'" 
+                          type="button" 
+                          @click="resumeDraft(sub)"
+                          class="flex-1 min-h-[46px] bg-blue-600 hover:bg-blue-700 text-white font-black text-sm py-2.5 px-4 rounded-2xl shadow-md touch-press flex items-center justify-center space-x-2">
+                    <span>{{ t('Resume & Complete') }}</span>
+                    <span>→</span>
+                  </button>
+
+                  <!-- Sync Button if Pending -->
+                  <button v-else-if="sub.status === 'PENDING_SYNC'"
+                          type="button" 
+                          @click="autoSync()"
+                          class="flex-1 min-h-[46px] bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-sm py-2.5 px-4 rounded-2xl shadow-md touch-press flex items-center justify-center space-x-2">
+                    <span>{{ t('Sync Now') }}</span>
+                    <span>🔄</span>
+                  </button>
+
+                  <!-- View / Synced Indicator -->
+                  <div v-else class="flex-1 text-xs font-bold text-emerald-700 flex items-center space-x-1 py-2">
+                    <span>✓</span>
+                    <span>{{ t('Synced') }}</span>
+                  </div>
+
+                  <!-- Delete Item Button -->
+                  <button type="button" @click="deleteWALItem(sub.idempotency_key)"
+                          aria-label="Delete survey draft"
+                          class="min-h-[46px] px-4 py-2 bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 border border-slate-200 rounded-2xl font-black text-xs touch-press">
+                    🗑
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <div v-else class="text-center py-10 bg-white rounded-3xl border-2 border-slate-200 p-6 space-y-2">
+              <div class="text-3xl">📭</div>
+              <div class="text-base font-bold text-slate-800">{{ t('No surveys recorded yet') }}</div>
+              <p class="text-xs text-slate-500 font-medium">{{ t("Tap '+ Start New Survey' to begin your first interview") }}</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ========================================== -->
+        <!-- VIEW 2: TEMPLATES DIRECTORY (Simple List)  -->
         <!-- ========================================== -->
         <div v-if="currentView === 'templates'" class="space-y-6">
           
@@ -5289,26 +5852,17 @@ const app = createApp({
             </div>
           </div>
 
-          <div v-else class="text-center py-16 bg-white rounded-3xl border-2 border-slate-200 p-6 space-y-4">
-            <div aria-hidden="true" class="text-5xl">📋</div>
-            <div class="text-base sm:text-lg font-bold text-slate-800">{{ t('No Survey Templates Found') }}</div>
-            <button type="button" @click="fetchServerTemplates" class="min-h-[48px] px-6 py-2.5 bg-indigo-50 text-indigo-700 rounded-2xl text-sm font-bold border-2 border-indigo-200 focus:ring-2 focus:ring-indigo-500">
-              ⟳ Refresh Templates
-            </button>
-          </div>
-
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 2: DYNAMIC ACTIVE SURVEY FORM         -->
+        <!-- VIEW 3: FORM RUNNER (Elder-Friendly Form)  -->
         <!-- ========================================== -->
-        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6 pb-28 min-w-0">
-          
-          <!-- Top Breadcrumb & Page Progress Header -->
-          <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-sm border-2 border-slate-200 space-y-4 min-w-0">
-            
+        <div v-if="currentView === 'form' && activeTemplate" class="space-y-6">
+
+          <!-- Sticky Form Header Bar -->
+          <div class="bg-white rounded-3xl p-4 sm:p-5 border-2 border-slate-200 shadow-sm sticky top-[60px] z-30 space-y-3">
             <div class="flex items-center justify-between">
-              <button type="button" @click="currentView = 'templates'" 
+              <button type="button" @click="currentView = 'dashboard'" 
                       class="min-h-[42px] px-3.5 py-1.5 text-sm sm:text-base text-slate-700 hover:text-slate-900 font-bold flex items-center space-x-1.5 touch-press focus:ring-2 focus:ring-indigo-500 rounded-xl bg-slate-100 hover:bg-slate-200">
                 <span>{{ t('Exit Form') }}</span>
               </button>
@@ -5390,271 +5944,208 @@ const app = createApp({
                     <span class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-black shrink-0">
                       {{ qIndex + 1 }}
                     </span>
-                    <span v-if="q.is_mandatory" class="text-rose-600 text-xs font-black px-2 py-0.5 bg-rose-50 rounded-full border border-rose-200">
+                    <span v-if="q.is_mandatory" class="text-xs font-extrabold text-rose-600 bg-rose-50 px-2 py-0.5 rounded-md">
                       * Required
                     </span>
                   </div>
-                  <label :for="'input_' + q.question_code" class="block text-lg sm:text-xl font-black text-slate-900 leading-snug pt-1">
+
+                  <label :for="'q_input_' + q.question_code" class="block text-lg sm:text-xl font-black text-slate-900 leading-snug">
                     {{ t(q.label_en) }}
                   </label>
-                  <p v-if="q.help_text" class="text-xs sm:text-sm text-slate-600 font-semibold">
+                  
+                  <p v-if="q.help_text" class="text-xs sm:text-sm text-slate-500 font-medium">
                     {{ t(q.help_text) }}
                   </p>
                 </div>
 
-                <!-- 🔊 ONE-TAP VOICE ASSISTANT BUTTON -->
-                <button type="button" 
-                        @click="speakQuestion(q)"
+                <!-- Text-To-Speech Speaker Button -->
+                <button type="button" @click="speakQuestion(q)"
                         :aria-label="'Read question ' + (qIndex + 1) + ' aloud'"
-                        :class="speakingQuestionCode === q.question_code ? 'bg-amber-500 text-white animate-pulse' : 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'"
-                        class="min-h-[48px] min-w-[48px] p-2.5 rounded-2xl flex items-center justify-center shadow-sm touch-press shrink-0 focus:ring-4 focus:ring-indigo-300">
-                  <span aria-hidden="true" class="text-2xl">🔊</span>
+                        :class="speakingQuestionCode === q.question_code ? 'bg-amber-500 text-slate-950 animate-bounce' : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700'"
+                        class="p-3 rounded-2xl font-black text-lg sm:text-xl shrink-0 touch-press transition-all focus:ring-4 focus:ring-indigo-300 min-h-[48px] min-w-[48px] flex items-center justify-center">
+                  <span aria-hidden="true">{{ speakingQuestionCode === q.question_code ? '🔊' : '🔉' }}</span>
                 </button>
               </div>
 
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 1: SELECT / SINGLE CHOICE CARDS -->
-              <!-- ========================================== -->
-              <div v-if="q.field_type === 'Select' || q.field_type === 'Radio' || q.field_type === 'Single Choice (Radio)' || (q.options && Array.isArray(q.options) && q.options.length > 0)" class="space-y-2.5 pt-1">
-                <div role="radiogroup" :aria-label="t(q.label_en)" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div v-for="opt in q.options" :key="opt"
-                       role="radio"
-                       :aria-checked="formData[q.question_code] === opt"
-                       tabindex="0"
-                       @keydown.space.prevent="selectOption(q.question_code, opt, qIndex)"
-                       @keydown.enter.prevent="selectOption(q.question_code, opt, qIndex)"
-                       @click="selectOption(q.question_code, opt, qIndex)"
-                       :class="getOptionStyle(q.question_code, opt)"
-                       class="min-h-[60px] p-4 rounded-2xl border-2 flex items-center justify-between cursor-pointer touch-press transition-all">
-                    
-                    <span class="text-base sm:text-lg font-black leading-snug">{{ t(opt) }}</span>
-                    
-                    <!-- Radio circle indicator -->
-                    <div :class="formData[q.question_code] === opt ? 'border-indigo-600 bg-indigo-600' : 'border-slate-400 bg-white'"
-                         class="w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 ml-3">
-                      <div v-if="formData[q.question_code] === opt" class="w-2.5 h-2.5 rounded-full bg-white"></div>
+              <!-- ===================================== -->
+              <!-- FIELD TYPE RENDERERS (Elder Friendly) -->
+              <!-- ===================================== -->
+
+              <!-- 1. Large Radio / Single Choice Touch Cards -->
+              <div v-if="(q.field_type === 'Single Choice (Radio)' || q.field_type === 'Select' || q.field_type === 'Radio') && q.options && q.options.length > 0"
+                   role="radiogroup" :aria-label="t(q.label_en)"
+                   class="grid grid-cols-1 gap-2.5 pt-1">
+                <div v-for="(opt, optIdx) in q.options" :key="optIdx"
+                     role="radio"
+                     :aria-checked="formData[q.question_code] === opt"
+                     tabindex="0"
+                     @click="selectOption(q.question_code, opt, qIndex)"
+                     @keydown.enter.space.prevent="selectOption(q.question_code, opt, qIndex)"
+                     :class="getOptionStyle(q.question_code, opt)"
+                     class="min-h-[56px] p-4 rounded-2xl border-2 flex items-center justify-between cursor-pointer touch-press transition-all text-base sm:text-lg">
+                  <span>{{ t(opt) }}</span>
+                  <div class="w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 ml-3"
+                       :class="formData[q.question_code] === opt ? 'border-white bg-white' : 'border-slate-400'">
+                    <div v-if="formData[q.question_code] === opt" class="w-3 h-3 rounded-full bg-indigo-600"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Text / String Input -->
+              <div v-else-if="q.field_type === 'Data' || q.field_type === 'Text' || q.field_type === 'Phone' || q.field_type === 'Heading'">
+                <input :id="'q_input_' + q.question_code"
+                       type="text"
+                       v-model="formData[q.question_code]"
+                       :required="q.is_mandatory"
+                       :placeholder="t('Enter answer...')"
+                       class="w-full min-h-[56px] text-lg sm:text-xl font-bold px-4 py-3.5 bg-slate-50 border-2 border-slate-300 focus:border-indigo-600 focus:bg-white rounded-2xl outline-none shadow-inner transition-all">
+              </div>
+
+              <!-- 3. Number / Integer / Currency Input -->
+              <div v-else-if="q.field_type === 'Int' || q.field_type === 'Currency' || q.field_type === 'Float' || q.field_type === 'Percent'">
+                <input :id="'q_input_' + q.question_code"
+                       type="number"
+                       v-model="formData[q.question_code]"
+                       :required="q.is_mandatory"
+                       :placeholder="t('Enter number...')"
+                       class="w-full min-h-[56px] text-xl sm:text-2xl font-black px-4 py-3.5 bg-slate-50 border-2 border-slate-300 focus:border-indigo-600 focus:bg-white rounded-2xl outline-none shadow-inner transition-all">
+              </div>
+
+              <!-- 4. Textarea / Long Text -->
+              <div v-else-if="q.field_type === 'Long Text' || q.field_type === 'Small Text'">
+                <textarea :id="'q_input_' + q.question_code"
+                          v-model="formData[q.question_code]"
+                          :required="q.is_mandatory"
+                          rows="3"
+                          :placeholder="t('Enter details...')"
+                          class="w-full text-base sm:text-lg font-medium p-4 bg-slate-50 border-2 border-slate-300 focus:border-indigo-600 focus:bg-white rounded-2xl outline-none shadow-inner transition-all"></textarea>
+              </div>
+
+              <!-- 5. Dynamic Asset / Equipment Table Grid -->
+              <div v-else-if="q.field_type === 'Table' || q.field_type === 'Grid'" class="space-y-3">
+                <div v-for="(row, rIdx) in (formData[q.question_code] || [])" :key="rIdx"
+                     class="p-4 bg-slate-50 rounded-2xl border-2 border-slate-200 space-y-3">
+                  <div class="flex items-center justify-between text-xs font-black text-slate-500">
+                    <span>{{ t('Item') }} #{{ rIdx + 1 }}</span>
+                    <button type="button" @click="removeGridRow(q.question_code, rIdx)" class="text-rose-600 hover:text-rose-800 font-black">
+                      ✕ {{ t('Remove') }}
+                    </button>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-black text-slate-700 mb-1">{{ t('Equipment / Asset Name') }}</label>
+                    <input type="text" v-model="row.item_name" :placeholder="t('e.g. Tractor, Water Pump, Sewing Machine')"
+                           class="w-full min-h-[48px] text-base font-bold px-3 py-2 bg-white border border-slate-300 rounded-xl outline-none focus:border-indigo-600">
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-2">
+                    <div>
+                      <label class="block text-xs font-black text-slate-700 mb-1">{{ t('Quantity') }}</label>
+                      <input type="number" v-model="row.quantity" placeholder="1"
+                             class="w-full min-h-[48px] text-base font-bold px-3 py-2 bg-white border border-slate-300 rounded-xl outline-none focus:border-indigo-600">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-black text-slate-700 mb-1">{{ t('Approx Value (₹)') }}</label>
+                      <input type="number" v-model="row.approx_value" placeholder="₹"
+                             class="w-full min-h-[48px] text-base font-bold px-3 py-2 bg-white border border-slate-300 rounded-xl outline-none focus:border-indigo-600">
                     </div>
                   </div>
                 </div>
+
+                <button type="button" @click="addGridRow(q.question_code)"
+                        class="w-full min-h-[48px] border-2 border-dashed border-indigo-400 bg-indigo-50/50 hover:bg-indigo-100 text-indigo-900 font-black text-sm sm:text-base py-3 rounded-2xl touch-press flex items-center justify-center space-x-2">
+                  <span>{{ t('+ Add Item / Asset') }}</span>
+                </button>
               </div>
 
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 2: TEXT & DATA INPUTS           -->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Data' || q.field_type === 'Text' || q.field_type === 'Phone'" class="pt-1">
-                <input :id="'input_' + q.question_code"
-                       type="text"
-                       v-model="formData[q.question_code]"
-                       :placeholder="t('Enter answer...')"
-                       :aria-required="q.is_mandatory ? 'true' : 'false'"
-                       class="w-full min-h-[56px] px-4 py-3 bg-slate-50 text-slate-900 text-lg font-bold rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200 outline-none transition-all placeholder:text-slate-400">
-              </div>
-
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 3: NUMERIC / INT / FLOAT / CURR -->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Int' || q.field_type === 'Integer' || q.field_type === 'Float' || q.field_type === 'Currency' || q.field_type === 'Currency (INR)'" class="pt-1">
-                <input :id="'input_' + q.question_code"
-                       type="number"
-                       step="any"
-                       v-model="formData[q.question_code]"
-                       placeholder="0"
-                       :aria-required="q.is_mandatory ? 'true' : 'false'"
-                       class="w-full min-h-[56px] px-4 py-3 bg-slate-50 text-slate-900 text-xl font-mono font-black rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200 outline-none transition-all">
-              </div>
-
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 4: LONG TEXT / TEXTAREA         -->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Long Text' || q.field_type === 'Small Text'" class="pt-1">
-                <textarea :id="'input_' + q.question_code"
-                          rows="4"
-                          v-model="formData[q.question_code]"
-                          :placeholder="t('Enter answer...')"
-                          :aria-required="q.is_mandatory ? 'true' : 'false'"
-                          class="w-full min-h-[100px] px-4 py-3 bg-slate-50 text-slate-900 text-base font-bold rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200 outline-none transition-all placeholder:text-slate-400"></textarea>
-              </div>
-
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 5: GEOLOCATION / GPS LOCK       -->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Geolocation' || q.field_type === 'GPS Location' || q.field_type === 'GPS'" class="pt-1 space-y-3">
-                <div v-if="currentGPS.latitude" class="p-4 bg-emerald-50 rounded-2xl border-2 border-emerald-300 space-y-2">
-                  <div class="flex items-center space-x-2 text-emerald-900 font-black text-base">
-                    <span aria-hidden="true" class="text-xl">📍</span>
+              <!-- 6. GPS Location Fix Field -->
+              <div v-else-if="q.field_type === 'Geolocation' || q.field_type === 'GPS Coordinates'" class="space-y-3">
+                <div v-if="currentGPS.latitude" class="p-4 bg-emerald-50 rounded-2xl border-2 border-emerald-300 space-y-1">
+                  <div class="text-sm font-black text-emerald-900 flex items-center space-x-1.5">
+                    <span>✓</span>
                     <span>{{ t('GPS Fix Acquired ✓') }}</span>
                   </div>
-                  <div class="font-mono text-sm font-bold text-emerald-800">
-                    {{ currentGPS.latitude.toFixed(5) }}, {{ currentGPS.longitude.toFixed(5) }}
-                    <span class="text-xs font-semibold">(±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(0) : 0 }}m)</span>
+                  <div class="text-xs font-mono font-bold text-emerald-800">
+                    Lat: {{ currentGPS.latitude.toFixed(6) }}, Lng: {{ currentGPS.longitude.toFixed(6) }} (±{{ currentGPS.accuracy ? currentGPS.accuracy.toFixed(0) : 0 }}m)
                   </div>
-                  <div class="pt-1 flex items-center space-x-3">
-                    <a :href="'https://www.google.com/maps?q=' + currentGPS.latitude + ',' + currentGPS.longitude" 
-                       target="_blank" rel="noopener noreferrer"
-                       class="text-xs font-black text-emerald-800 underline">
-                      {{ t('View on Map →') }}
-                    </a>
-                    <button type="button" @click="fetchGPS" class="text-xs font-black text-emerald-900 underline">
-                      {{ t('Re-acquire Fix') }}
-                    </button>
-                  </div>
+                  <a :href="'https://maps.google.com/?q=' + currentGPS.latitude + ',' + currentGPS.longitude" target="_blank"
+                     class="inline-block text-xs font-black text-emerald-700 underline pt-1">
+                    {{ t('View on Map →') }}
+                  </a>
                 </div>
 
-                <div v-else class="space-y-2">
-                  <button type="button" @click="fetchGPS" :disabled="currentGPS.fetching"
-                          class="w-full min-h-[56px] px-5 py-3.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-base touch-press flex items-center justify-center space-x-2 shadow-md disabled:opacity-50">
-                    <span aria-hidden="true" class="text-xl">📍</span>
-                    <span>{{ currentGPS.fetching ? 'Acquiring GPS Fix...' : t('Get My Location') }}</span>
+                <button type="button" @click="fetchGPS()"
+                        :disabled="currentGPS.fetching"
+                        class="w-full min-h-[52px] bg-slate-900 hover:bg-slate-800 text-white font-bold text-base py-3 px-4 rounded-2xl shadow-md touch-press flex items-center justify-center space-x-2 disabled:opacity-50">
+                  <span aria-hidden="true">📍</span>
+                  <span>{{ currentGPS.fetching ? 'Acquiring Satellite Lock...' : (currentGPS.latitude ? t('Re-acquire Fix') : t('Get My Location')) }}</span>
+                </button>
+              </div>
+
+              <!-- 7. Camera / Photo Capture Field -->
+              <div v-else-if="q.field_type === 'Attach Image' || q.field_type === 'Photo'" class="space-y-3">
+                <div v-if="formData[q.question_code]" class="relative rounded-2xl overflow-hidden border-2 border-indigo-400 bg-slate-900">
+                  <img :src="formData[q.question_code]" alt="Captured photo" class="w-full max-h-64 object-contain mx-auto">
+                  <button type="button" @click="removePhoto(q.question_code)"
+                          class="absolute top-3 right-3 bg-rose-600 text-white p-2 rounded-xl text-xs font-black shadow-lg">
+                    ✕ {{ t('Remove') }}
                   </button>
-                  <p v-if="currentGPS.error" class="text-xs font-bold text-rose-600">⚠️ {{ currentGPS.error }}</p>
                 </div>
+
+                <label class="w-full min-h-[52px] bg-indigo-600 hover:bg-indigo-700 text-white font-black text-base py-3 px-4 rounded-2xl shadow-md touch-press flex items-center justify-center space-x-2 cursor-pointer">
+                  <span aria-hidden="true">📷</span>
+                  <span>{{ formData[q.question_code] ? t('Change Photo') : t('Take Photo') }}</span>
+                  <input type="file" accept="image/*" capture="environment" @change="handlePhotoUpload($event, q.question_code)" class="sr-only">
+                </label>
               </div>
 
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 6: CAMERA PHOTO ATTACHMENT      -->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Attach Image' || q.field_type === 'Photo' || q.field_type === 'Photo Upload'" class="pt-1 space-y-3">
-                <div v-if="formData[q.question_code]" class="space-y-3">
-                  <div class="relative rounded-2xl overflow-hidden border-2 border-slate-300 max-h-64 bg-black">
-                    <img :src="formData[q.question_code]" alt="Uploaded Survey Image" class="w-full h-auto object-contain max-h-64 mx-auto">
-                  </div>
-                  <div class="flex items-center space-x-3">
-                    <label :for="'photo_input_' + q.question_code"
-                           class="min-h-[48px] px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 border-2 border-slate-300 rounded-2xl font-black text-sm flex items-center space-x-2 cursor-pointer touch-press">
-                      <span aria-hidden="true">📷</span>
-                      <span>{{ t('Change Photo') }}</span>
-                    </label>
-                    <button type="button" @click="removePhoto(q.question_code)"
-                            class="min-h-[48px] px-5 py-2.5 bg-rose-50 text-rose-700 border-2 border-rose-200 rounded-2xl font-black text-sm touch-press">
-                      {{ t('Remove') }}
-                    </button>
-                  </div>
+              <!-- 8. Finger-Friendly Canvas Signature -->
+              <div v-else-if="q.field_type === 'Signature' || q.field_type === 'Digital Signature'" class="space-y-2">
+                <div class="border-2 border-slate-300 rounded-2xl overflow-hidden bg-white shadow-inner">
+                  <canvas :id="'sig_canvas_' + q.question_code" width="600" height="200"
+                          class="signature-canvas w-full h-40 touch-none"></canvas>
                 </div>
-
-                <div v-else>
-                  <label :for="'photo_input_' + q.question_code"
-                         class="w-full min-h-[70px] p-4 bg-indigo-50 hover:bg-indigo-100 border-2 border-dashed border-indigo-300 rounded-2xl flex items-center justify-center space-x-3 cursor-pointer touch-press">
-                    <span aria-hidden="true" class="text-3xl">📷</span>
-                    <span class="text-base font-black text-indigo-950">{{ t('Take Photo') }}</span>
-                  </label>
-                </div>
-
-                <input :id="'photo_input_' + q.question_code"
-                       type="file"
-                       accept="image/*"
-                       capture="environment"
-                       @change="handlePhotoUpload($event, q.question_code)"
-                       class="sr-only">
-              </div>
-
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 7: SIGNATURE TOUCHPAD           -->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Signature' || q.field_type === 'Digital Signature'" class="pt-1 space-y-3">
-                <div class="border-2 border-slate-400 rounded-2xl overflow-hidden bg-white shadow-inner">
-                  <div class="bg-slate-100 px-3 py-1.5 border-b border-slate-300 text-xs font-bold text-slate-600 flex justify-between items-center">
-                    <span>✍️ {{ t('Sign here with finger') }}</span>
-                    <span v-if="formData[q.question_code]" class="text-emerald-700 font-black">✓ {{ t('Signature Recorded') }}</span>
-                  </div>
-                  <canvas :id="'sig_canvas_' + q.question_code"
-                          class="signature-canvas w-full h-44 touch-none"></canvas>
-                </div>
-
-                <div class="flex justify-end">
-                  <button type="button" @click="clearSignature(q.question_code)"
-                          class="min-h-[44px] px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs rounded-xl border border-slate-300 touch-press">
+                <div class="flex items-center justify-between text-xs text-slate-500 font-bold">
+                  <span>✍️ {{ t('Sign here with finger') }}</span>
+                  <button type="button" @click="clearSignature(q.question_code)" class="text-rose-600 hover:text-rose-800 font-black">
                     {{ t('Clear Signature') }}
                   </button>
                 </div>
               </div>
 
-              <!-- ========================================== -->
-              <!-- FIELD TYPE 8: DYNAMIC REPEATABLE ASSET GRID-->
-              <!-- ========================================== -->
-              <div v-else-if="q.field_type === 'Dynamic Grid' || q.field_type === 'Table'" class="pt-1 space-y-3">
-                
-                <div v-if="formData[q.question_code] && formData[q.question_code].length > 0" class="space-y-3">
-                  <div v-for="(row, rIdx) in formData[q.question_code]" :key="rIdx"
-                       class="p-4 bg-slate-50 rounded-2xl border-2 border-slate-200 space-y-3">
-                    
-                    <div class="flex items-center justify-between">
-                      <span class="text-xs font-black text-slate-600 uppercase">{{ t('Item') }} #{{ rIdx + 1 }}</span>
-                      <button type="button" @click="removeGridRow(q.question_code, rIdx)"
-                              class="text-xs font-black text-rose-600 hover:text-rose-800 p-1">
-                        ✕ {{ t('Remove') }}
-                      </button>
-                    </div>
-
-                    <div>
-                      <label class="block text-xs font-bold text-slate-700 mb-1">{{ t('Equipment / Asset Name') }}</label>
-                      <input type="text" v-model="row.item" :placeholder="t('e.g. Tractor, Water Pump, Sewing Machine')"
-                             class="w-full min-h-[48px] px-3 py-2 bg-white text-slate-900 font-bold rounded-xl border border-slate-300 focus:border-indigo-600 outline-none text-base">
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-2">
-                      <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">{{ t('Quantity') }}</label>
-                        <input type="number" v-model="row.qty" min="1"
-                               class="w-full min-h-[48px] px-3 py-2 bg-white text-slate-900 font-black rounded-xl border border-slate-300 focus:border-indigo-600 outline-none text-base font-mono">
-                      </div>
-                      <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">{{ t('Approx Value (₹)') }}</label>
-                        <input type="number" v-model="row.val" placeholder="0"
-                               class="w-full min-h-[48px] px-3 py-2 bg-white text-slate-900 font-black rounded-xl border border-slate-300 focus:border-indigo-600 outline-none text-base font-mono">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Add Item Button -->
-                <button type="button" @click="addGridRow(q.question_code)"
-                        class="w-full min-h-[52px] px-4 py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border-2 border-indigo-200 rounded-2xl font-black text-base touch-press flex items-center justify-center space-x-2">
-                  <span>{{ t('+ Add Item / Asset') }}</span>
-                </button>
-              </div>
-
-              <!-- Fallback Default Input -->
-              <div v-else class="pt-1">
-                <input :id="'input_' + q.question_code"
-                       type="text"
-                       v-model="formData[q.question_code]"
-                       :placeholder="t('Enter answer...')"
-                       class="w-full min-h-[56px] px-4 py-3 bg-slate-50 text-slate-900 text-base font-bold rounded-2xl border-2 border-slate-300 focus:bg-white focus:border-indigo-600 outline-none">
-              </div>
-
             </div>
           </div>
 
-          <!-- FIXED BOTTOM GIANT NAVIGATION DOCK (Elder-Friendly 64px Buttons) -->
-          <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t-2 border-slate-200 p-3 sm:p-4 shadow-2xl">
-            <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
+          <!-- BOTTOM STICKY NAVIGATION BAR -->
+          <div class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t-2 border-slate-200 p-3 sm:p-4 z-40 shadow-2xl">
+            <div class="max-w-3xl mx-auto flex items-center space-x-2 sm:space-x-3">
               
-              <!-- Back Button -->
-              <button type="button" @click="prevSection" :disabled="activeSectionIndex === 0"
-                      class="flex-1 min-h-[56px] sm:min-h-[64px] bg-slate-100 hover:bg-slate-200 text-slate-900 border-2 border-slate-300 rounded-2xl font-black text-base sm:text-lg flex items-center justify-center space-x-2 touch-press disabled:opacity-40 disabled:cursor-not-allowed">
+              <!-- Back Section Button -->
+              <button type="button" @click="prevSection()"
+                      :disabled="activeSectionIndex === 0"
+                      class="flex-1 min-h-[52px] bg-slate-100 hover:bg-slate-200 text-slate-800 disabled:opacity-30 font-black text-sm sm:text-base py-3 px-4 rounded-2xl touch-press flex items-center justify-center space-x-1">
                 <span>{{ t('Back') }}</span>
               </button>
 
               <!-- Save Draft Button -->
               <button type="button" @click="saveOffline(false)"
                       aria-label="Save draft to local storage"
-                      class="min-h-[56px] sm:min-h-[64px] px-4 sm:px-5 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-300 rounded-2xl font-bold text-sm flex items-center justify-center space-x-1 touch-press shrink-0 shadow-sm">
+                      class="min-h-[52px] px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-base rounded-2xl touch-press border border-slate-300 flex items-center justify-center shrink-0">
                 <span aria-hidden="true" class="text-xl">💾</span>
-                <span class="hidden sm:inline">{{ t('Save Work') }}</span>
               </button>
 
-              <!-- Next OR Final Submit Button -->
+              <!-- Next or Final Submit Button -->
               <button v-if="activeSectionIndex < sections.length - 1"
-                      type="button" @click="nextSection"
-                      class="flex-1 min-h-[56px] sm:min-h-[64px] bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black text-base sm:text-lg flex items-center justify-center space-x-2 touch-press shadow-lg focus:ring-4 focus:ring-indigo-300">
+                      type="button" @click="nextSection()"
+                      class="flex-1 min-h-[52px] bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm sm:text-base py-3 px-4 rounded-2xl shadow-lg touch-press flex items-center justify-center space-x-1">
                 <span>{{ t('Next') }}</span>
               </button>
 
               <button v-else
-                      type="button" @click="commitToWAL"
-                      class="flex-1 min-h-[56px] sm:min-h-[64px] bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-base sm:text-lg flex items-center justify-center space-x-2 touch-press shadow-lg focus:ring-4 focus:ring-emerald-300">
-                <span aria-hidden="true">✓</span>
+                      type="button" @click="commitToWAL()"
+                      class="flex-1 min-h-[52px] bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm sm:text-base py-3 px-4 rounded-2xl shadow-lg touch-press flex items-center justify-center space-x-2">
                 <span>{{ t('Done / Send') }}</span>
+                <span aria-hidden="true">✓</span>
               </button>
 
             </div>
@@ -5663,43 +6154,49 @@ const app = createApp({
         </div>
 
         <!-- ========================================== -->
-        <!-- VIEW 3: OFFLINE WAL SUBMISSIONS QUEUE      -->
+        <!-- VIEW 4: WAL QUEUE (Offline Sync Manager)   -->
         <!-- ========================================== -->
         <div v-if="currentView === 'queue'" class="space-y-6">
-          
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div class="flex items-center justify-between">
             <div>
               <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{{ t('WAL Queue') }}</h1>
-              <p class="text-sm sm:text-base text-slate-600 font-semibold">Local write-ahead transaction log</p>
+              <p class="text-sm text-slate-600 font-medium">Local SQLite/IndexedDB Write-Ahead Log</p>
             </div>
 
-            <div class="flex items-center space-x-2">
-              <button type="button" @click="autoSync" :disabled="!isOnline || isSyncing"
-                      class="min-h-[48px] px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm rounded-2xl touch-press flex items-center space-x-1.5 shadow-md disabled:opacity-50">
-                <span>{{ isSyncing ? t('Syncing...') : t('Sync Now') }}</span>
-              </button>
-
-              <button type="button" @click="exportWALBackup"
-                      class="min-h-[48px] px-4 py-2.5 bg-emerald-50 text-emerald-800 border-2 border-emerald-300 hover:bg-emerald-100 font-black text-sm rounded-2xl touch-press flex items-center space-x-1.5 focus:ring-2 focus:ring-emerald-500">
-                <span aria-hidden="true">💾</span>
-                <span>{{ t('Export Backup') }}</span>
-              </button>
-            </div>
+            <button type="button" @click="exportWALBackup()"
+                    class="min-h-[44px] px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-xl border border-slate-300 touch-press flex items-center space-x-1.5">
+              <span>📥</span>
+              <span>Export</span>
+            </button>
           </div>
 
+          <!-- Pending Sync Hero Alert -->
+          <div v-if="pendingCount > 0" class="p-5 bg-amber-500 text-slate-950 rounded-3xl shadow-md flex items-center justify-between">
+            <div class="space-y-0.5">
+              <div class="text-lg font-black">{{ pendingCount }} survey(s) ready to sync</div>
+              <div class="text-xs font-semibold">{{ isOnline ? 'Network active · Tap to sync now' : 'Device offline · Connect to sync' }}</div>
+            </div>
+            <button type="button" @click="autoSync()"
+                    :disabled="!isOnline || isSyncing"
+                    class="min-h-[48px] px-5 py-2.5 bg-slate-950 text-white hover:bg-slate-900 font-black text-sm rounded-2xl shadow-md touch-press disabled:opacity-50">
+              {{ isSyncing ? t('Syncing...') : t('Sync Now') }}
+            </button>
+          </div>
+
+          <!-- Submissions Stream -->
           <div v-if="walSubmissions.length > 0" class="space-y-3">
             <div v-for="sub in walSubmissions" :key="sub.idempotency_key"
                  class="bg-white p-5 rounded-3xl border-2 border-slate-200 shadow-sm flex items-center justify-between">
               <div class="space-y-1 max-w-[70%]">
                 <div class="text-xs font-mono font-bold text-slate-500">{{ sub.idempotency_key }}</div>
-                <div class="text-sm sm:text-base font-black text-slate-900 truncate">{{ sub.survey_template }}</div>
+                <div class="text-sm sm:text-base font-black text-slate-900 truncate">{{ t(getSubmissionMeta(sub).tmplTitle) }}</div>
                 <div class="text-xs text-slate-600 font-semibold">
-                  {{ sub.captured_at_local ? sub.captured_at_local.replace('T', ' ').slice(0, 19) : '' }} · {{ (sub.items && sub.items.length) || 0 }} answers
+                  👤 {{ getSubmissionMeta(sub).respName }} · {{ getSubmissionMeta(sub).completionPct }}% answered
                 </div>
               </div>
 
               <div class="flex items-center space-x-2">
-                <span :class="sub.status === 'SYNCED' ? 'bg-emerald-100 text-emerald-900 border-emerald-300' : 'bg-amber-100 text-amber-900 border-amber-300'"
+                <span :class="sub.status === 'SYNCED' ? 'bg-emerald-100 text-emerald-900 border-emerald-300' : (sub.status === 'PENDING_SYNC' ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-blue-100 text-blue-900 border-blue-300')"
                       class="text-xs font-black px-3 py-1.5 rounded-full border">
                   {{ sub.status }}
                 </span>
